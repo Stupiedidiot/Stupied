@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Looks like you're lost!">
+    <link rel="stylesheet" id="styles">
+    
+    <Title>Error | Stupied Stuff</Title>
+</head>
+<body>
+<div id="page-format" class="checkered">
+<header><div><div></div><marquee></marquee></div></header>
+<nav></nav>
+<main class="big">
+    <div class="cont">
+        <center>
+            <img id="woof" class="wid-200px">
+            <h2>Yes, I totally understand what you're talking about.</h2>
+            <p>Looks like the link you followed is dead. I might of deleted it or moved it somewhere else.</p>
+        </center>
+    </div>
+</main>
+<footer></footer>
+</div>
+<script>
+    header_label="girlie what??"
+    header_quote="WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP WAKE UP ";
+</script>
+<script id="script"></script>
+<script>
+    url = window.location.pathname;
+    relativePath = "./";
+    urlPath = url.split('/');
+    if(urlPath.length > 2){for(i=0;i<urlPath.length;i++){relativePath+="../"}}
+    
+    document.getElementById("script").src = relativePath+"meta/scripts/main-legacy.js"
+    document.getElementById("styles").href = relativePath+"meta/styles/main-legacy.css"
+    document.getElementById("woof").src = relativePath+"meta/media/hm.png"
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+===========
+ BLOG TAGS
+===========
+-art
+-games
+-devlog
+-comics
+-pictures
+-ramblings
+-meta

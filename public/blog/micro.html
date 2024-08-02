@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../meta/styles/main.css">
+    <title>MicroBlog | Stupied Stuff</title>
+
+    <style>
+        #desc img{
+            border-radius:50%;
+            float:left;
+            margin-right:8px;
+            border:3px solid black;
+        }
+        #desc hr:first-of-type{
+                border:1px solid var(--darker-yellow);
+        }
+        @media only screen and (max-width: 450px) {
+            #desc{
+                text-align: center;
+            }
+            #desc img{
+                float:none;
+                margin-right:0;
+                margin-bottom:8px;
+            }
+            #desc hr:first-of-type{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body id="blog">
+    <div id="container">
+        <nav></nav>
+        <main>
+            <div class="cont-black">
+                <div id="desc" class="cont bg-yellow">
+                    <img src="./../meta/media/pfp.png" style="width:100px;">
+                    <h3>I'm Stupied!</h3><hr>
+                    <p class="txt-darker-yellow">Casual tetris player, frequent art dabbler, and professional moron. Dumping small random thoughts that don't deserve their own post.</p>
+                    <hr class="clear">
+                </div>
+                <div id="microPosts" style="padding-top:5px;max-width:500px;margin:auto;"></div>
+            </div>
+            <div class="cont-black">
+                <p>Planning to change into stickynotes when i have the time lol,,</p>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="./../meta/scripts/main.js"></script>
+</body>
+</html>

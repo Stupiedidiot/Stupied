@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../meta/styles/main-legacy.css">
+
+    <Title>How To Not | Stupied Stuff</Title>
+
+<style>
+    #main_comic{grid-area:main;}
+    #side_comic{grid-area:side;}
+
+    @media only screen and (min-width: 701px) {
+        #comic {
+            z-index:1;
+            display: grid;
+            grid-template-areas:
+            'main side';
+            grid-template-columns:1fr 1fr;
+            gap:10px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-format" class="checkered">
+<header></header>
+<nav></nav>
+<main>
+    <div id="main">
+        <div class="cont">
+            <h1>How To Not</h1>
+            <ol reversed id="comicList"></ol>
+        </div>
+        <div class="cont dark-blue">
+            <p>A guide on how to do stuff by telling you how not to.</p>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</div>
+
+<script src="../../meta/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comics made by Stupied Idiot.">
+    <link rel="stylesheet" href="../meta/styles/main-legacy.css">
+
+    <Title>Comics | Stupied Stuff</Title>
+<style>
+
+    #comicList_Img a {
+        display:inline-block;
+        position: relative;
+    }
+
+    #main_comics{grid-area:main;}
+    #side_comics{grid-area:side;}
+
+    #comics {
+    margin-top:1rem;
+    z-index:1;
+    display: grid;
+    grid-template-areas:
+      'main side';
+      grid-template-columns:3fr 1fr;
+      gap:10px;
+      max-width:1000px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        #comics{
+            display:block;
+        }
+        #side_comics{
+            margin-top:1rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="page-format" class="checkered">
+<header></header>
+<nav></nav>
+<main class="big">
+
+    <div id="comics">
+        <div id="main_comics">
+            <div class="cont no-padding dark-blue">
+                <div class="padding">
+                    <h1>Archive</h1>
+                </div>
+                <div class="cont no-border">
+                    <div id="comicList_Txt"></div>
+                </div>
+            </div>
+         </div>
+        <div id="side_comics">
+            <div class="cont darker-blue">
+                <div class="cont">
+                    <h4>Shorts</h4>
+                    <ul>
+                        <a href="../meta/media/comics/never-satisfied.png"><li>Never Satisfied</li></a>
+                        <a href="../meta/media/comics/excuses.png"><li>Excuses</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="cont">
+                <p>You can do whatever with my stuff, I don't really care.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</div>
+
+<script src="../meta/scripts/main-legacy.js"></script>
+<script src="../meta/scripts/jquery.js"></script>
+
+<script>
+    //For some reason doesn't work unless page refreshes becuase of the grid :(
+    $(window).on("resize",function(){if(window.innerWidth<1200&&window.innerWidth>700){location.reload();}})
+    $(window).on("load",function(){$("#comicList_Img").tjGallery({rowMinHeight:250,selector:"a",margin:15});})
+
+</script>
+</body>
+</html>

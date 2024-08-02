@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP 3 REASONS WHY BEETKE SUCKS!!!!!</title>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=10287&format=png&color=F25081">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Special+Elite&display=swap');
+
+        body{padding:0;margin:0;font-family:"roboto slab";}
+        h1,h2,h3,h4,h5,h6{margin:0;}
+        p,ol{margin-top:0;}
+        p:last-child,ol:last-child{margin-bottom:0;}
+        a{color:#e67687;}
+        
+        footer{
+            min-height:120vh;
+            position: relative;
+        }
+        footer>div {
+            width:90%;
+            max-width:400px;
+            text-align:center;
+            position: absolute;
+            bottom:40%;
+            right:50%;
+            transform: translateX(50%);
+        }
+        #datePost{
+            font-weight:600;
+        }
+        #content{
+            margin-top:4rem;
+        }
+
+        #title{grid-area:title;}
+        #list{grid-area:list;}
+        #image{grid-area:img;}
+
+        #content>#first{
+            background-color:#fff4df;
+            background-size: 20px 20px;
+            background-image:  repeating-linear-gradient(0deg, rgba(255, 158, 176,0.5), rgba(255, 158, 176,0.5) 1px, #fff4df 1px, #fff4df);
+            margin:2rem auto;
+            max-width:580px;
+            padding:10px;
+            display:grid;
+            grid-template-areas:
+            "title title"
+            "list img";
+            grid-template-columns:1fr 20%;
+        }
+
+        #list{
+            z-index:2;
+        }
+        #image{
+            position:relative;
+        }
+        #image img{
+            user-select:none;
+            position:absolute;
+            height:150%;
+            transform:translateX(-20%) translateY(-20%) rotate(10deg);
+            filter:drop-shadow(2px 0 0 #fff4df)drop-shadow(-2px 0 0 #fff4df)drop-shadow(0 2px 0 #fff4df)drop-shadow(0 -2px 0 #fff4df);
+            z-index:1;
+        }
+        #first h2{
+            background-color:#e67687;
+            padding:4px;
+        }
+        #first li{
+            font-weight:600;
+        }
+        ::selection {
+            color: #52330c;
+            background: #95a63a;
+        }
+
+        @media only screen and (max-width: 501px) {
+            #content > #first{
+                display:block;
+            }
+            #first h2{
+                text-align:center;
+            }
+        }
+
+        #third {
+            min-height:20vh;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="first">
+            <div id="title">
+                <h2>TOP 3 REASONS WHY BEETKE SUCKS!!</h2>
+            </div>
+            <div id="list">
+                <ol>
+                    <li>She is a homosexual</li>
+                    <p>Yeah, that's right. She's a woman who likes women, INSANE! Completely unheard of and ludicrous!!</p>
+        
+                    <li>She draws pretty women</li>
+                    <p>Do not be fooled by her art! It is artificially designed to maximize the rate of which women turn gay.</p>
+        
+                    <li>She is a pretty woman!!!</li>
+                    <p>Once you've been radicalized through illustrative propaganda, she will trick you into liking her!!!</p>
+                </ol>
+                <p>If you ever find yourself as a victim to her queerness, just remind her that it has been <span id="datePost"></span> days since Silksong was announced.</p>
+            </div>
+            <div id="image">
+                <img src="./../meta/media/wtv/flower.png">
+            </div>
+        </div>
+        <footer>
+            <div>
+                <p>If it hasn't been obvious enough, this is all satirical.<br>Go check <a href="https://beetke.neocities.org/">beetke’s neocities</a> out :)</p>
+            </div>
+        </footer>
+    </div>
+<script>
+    dateCurrent=new Date().getTime()
+    dateRelease=new Date("2019-02-14T00:00").getTime()
+    dateCount=Math.floor((((dateCurrent-dateRelease)/1000/60)/60)/24)
+    document.getElementById("datePost").innerHTML=dateCount
+    console.log(dateCount)
+</script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./meta/styles/main.css">
+    <title>Stupied Stuff</title>
+<style>
+header{
+    text-align:center;
+    margin-bottom:1rem;
+    margin-top:2rem;
+    font-family:grandstander;
+    font-weight:600;
+}
+
+header div{
+    margin:auto;
+    padding:10px 0;
+    width:fit-content;
+    transform:scale(300%);
+}
+
+header span:not(:first-child){
+    margin-left:-4px;
+}
+
+header span:last-child{
+    padding-left:3px;
+    color:white;
+}
+
+#about{
+    min-height:100px;
+    background-color:var(--teal);
+    position: relative;
+    overflow:hidden;
+}
+
+#about img{
+    position:absolute;
+    top:0;
+    right:0;
+    width:120%;
+    transform:translateX(25%) translateY(-10%);
+    filter:saturate(0%);
+}
+
+#about h1 {
+    position: absolute;
+    color:var(--dark-teal);
+    text-orientation:upright;
+    writing-mode: vertical-lr;
+    top:-5%;
+}
+
+#about:hover{
+    background-color:white;
+}
+
+#about:hover img{
+    filter:saturate(100%);
+}
+
+#about:hover h1{
+    color:var(--teal);
+}
+
+#desc{
+    background-color:var(--dark-teal);
+}
+
+#blog{
+    background-color:var(--yellow);
+    position: relative;
+    overflow:hidden;
+}
+
+#blog #blogDesign{
+    min-height:100px;
+    height:100%;
+}
+
+#blog #blogDesign img{
+    margin-top:10px;
+    width:100%;
+}
+
+#blog h1{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    color:var(--pink);
+}
+
+#blog:hover {
+    background-color:var(--light-yellow);
+}
+
+#blog:hover h1{
+    color:white;
+}
+
+#micro{
+    background-color:white;
+    border-radius:0 0 50% 50%;
+    border-top:0;
+    transform:scaleX(200%);
+    border:3px solid black;
+    border-top:0;
+}
+
+#microContent{
+    padding:2rem 1rem;
+    transform:scaleX(50%);
+}
+
+#comic{
+    overflow:hidden;
+    padding:1rem;
+    min-height:200px;
+    background-color:white;
+    position: relative;
+}
+
+#comic div {
+    height:100%;
+    background-color: #efe2b3;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #f0da8e 25%, transparent 25%), linear-gradient(225deg, #f0da8e 25%, transparent 25%), linear-gradient(45deg, #f0da8e 25%, transparent 25%), linear-gradient(315deg, #f0da8e 25%, #efe2b3 25%);
+    background-position:  30px 0, 30px 0, 0 0, 0 0;
+    background-size: 30px 30px;
+    background-repeat: repeat;
+}
+
+#comic h1{
+    color:white;
+    position: absolute;
+    font-size:5rem;
+    bottom:0;
+    left:0;
+    transform: scaleY(300%) scaleX(150%) translateX(20%);
+}
+
+#comic:hover{
+    background-color:var(--yellow);
+}
+
+#comic:hover h1{
+    color:var(--yellow);
+}
+
+#gallery{
+    overflow:hidden;
+    position: relative;
+}
+
+#gallery div{
+    background-color:white;
+    min-height:200px;
+
+    background-image:url(./meta/media/artwork/2023-36.png);
+    background-position:center 25%;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#gallery h1 {
+    z-index:1;
+    position:absolute;
+    top:50%;
+    right:50%;
+    transform:translateX(50%) translateY(-50%);
+    filter:drop-shadow(3px 0 0 var(--pink))drop-shadow(-3px 0 0 var(--pink))drop-shadow(0 3px 0 var(--pink))drop-shadow(0 -3px 0 var(--pink));
+    color:white;
+    font-size:3rem;
+    letter-spacing:5px;
+}
+
+#gallery:hover div{
+    filter:saturate(20%);
+    box-shadow: inset 0 0 0 2000px rgba(217, 64, 106,0.5);
+    transform:scale(110%);
+}
+
+#gallery:hover h1{
+    filter:none;
+}
+
+#cheeze{
+    background-color:var(--darker-pink);
+    padding:1rem;
+    color:white;
+}
+
+#cheeze a:not(:last-of-type)::after{
+    content:" | ";
+    color:white;
+}
+
+#cheeze a:hover{
+    color:var(--yellow);
+}
+
+main > div{
+    border:4px black solid;
+}
+
+#about{grid-area:about;}
+#desc{grid-area:desc;}
+#blog{grid-area:blog;}
+#comic{grid-area:comics;}
+#gallery{grid-area:gallery;}
+#cheeze{grid-area:cheeze;}
+
+main {
+    display: grid;
+    grid-template-areas:
+    'desc desc about'
+    'blog comics comics'
+    'blog gallery gallery'
+    'cheeze cheeze cheeze';
+    gap:10px;
+    max-width:1000px;
+    grid-template-columns:1fr 1fr 1fr;
+    margin:auto auto;
+    width:95%;
+}
+
+@media only screen and (max-width: 701px) {
+    #about img{
+        width:150%;
+    }
+    #about h1 {
+        top:50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    header div{
+        transform:scale(200%);
+    }
+    main{
+        display:block;
+    }
+    main > div {
+        margin-bottom:10px;
+    }
+    #about img{
+        position:absolute;
+        top:0;
+        right:0;
+        width:85%;
+        transform:translateX(25%) translateY(-20%);
+    }
+    #about h1{
+        text-orientation:initial;
+        writing-mode:initial;
+    }
+    #comic{
+        display:grid;
+    }
+    #comic h1{
+        transform: scaleY(200%) scaleX(80%) translateX(-10%);
+    }
+}
+
+footer{
+    text-align:center;
+    margin:1rem 0;
+    color:white;
+}
+
+.pink{text-shadow: 0 -0.1em var(--pink), 0.1em -0.1em var(--pink), 0.1em 0 var(--pink), 0.1em 0.1em var(--pink), 0 0.1em var(--pink), -0.1em 0.1em var(--pink), -0.1em 0 var(--pink), -0.1em -0.1em var(--pink)}
+.yellow{text-shadow: 0 -0.1em var(--yellow), 0.1em -0.1em var(--yellow), 0.1em 0 var(--yellow), 0.1em 0.1em var(--yellow), 0 0.1em var(--yellow), -0.1em 0.1em var(--yellow), -0.1em 0 var(--yellow), -0.1em -0.1em var(--yellow)}
+.teal{text-shadow: 0 -0.1em var(--teal), 0.1em -0.1em var(--teal), 0.1em 0 var(--teal), 0.1em 0.1em var(--teal), 0 0.1em var(--teal), -0.1em 0.1em var(--teal), -0.1em 0 var(--teal), -0.1em -0.1em var(--teal)}
+
+</style>
+</head>
+<body id="default">
+    <header>
+        <div>
+            <span class="pink">S</span>
+            <span class="yellow">t</span>
+            <span class="teal">u</span>
+            <span class="pink">p</span>
+            <span class="yellow">i</span>
+            <span class="teal">e</span>
+            <span class="pink">d</span>
+            <span>Stuff</span>
+        </div>
+    </header>
+
+    <main>  
+        <div id="about">
+            <a href="./about.html" title="About the Webmaster">
+                <h1>About the Webmaster</h1>
+                <img src="./meta/media/yep.png">
+            </a>
+        </div>
+        
+
+        <div id="desc">
+            <div style="padding:1rem;background-color:white;margin:1rem;">
+                <p>The best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
+                <p>This website is developed by a singular dog! There may be some bugs and empty pages.</p>
+                <hr>
+                <h3 class="txt-teal">Trigger Warning!</h3>
+                <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+            </div>
+        </div>
+
+        <div id="blog">
+            <div id="micro" title="lastest microblog post">
+                <a href="./blog/micro.html">
+                    <div id="microContent"></div>
+                </a>
+            </div>
+            <a href="./blog/index.html" title="screaming into the abyss">
+                <div id="blogDesign">
+                    <h1>BLOG</h1>
+                    <img src="./meta/media/wtv/bruh.png">
+                </div>
+            </a>
+        </div>
+
+        
+        <div id="comic">
+            <a href="./comic/index.html" title="sequential images to tell dumb stories">
+                <h1>COMICS</h1>
+                <div id="test">
+                </div>
+            </a>
+        </div>
+
+        <div id="gallery">
+            <a href="./art/index.html" title="artworks and animation">
+                <h1>GALLERY</h1>
+                <div>
+                </div>
+            </a>
+        </div>
+
+        <div id="cheeze">       
+                <h3 class="txt-pink">Other Stuff</h3>
+                <a href="./chez/beetke.html" title="TOP 3 REASONS TO HAT BEETKE">Beetke Sucks</a>
+                <a href="./chez/dwinky.html" title="oh hail the dimension drifter">Burger</a>
+                <a href="https://literalwiki.neocities.org/" title="fanwiki for anything literalhat related">Literal Wiki</a>
+                <p  class="txt-right txt-dark-pink">Most of these don't have anything yet lol.</p>
+        </div>
+    </main>
+    <footer>
+        <a href="./meta/log.html">Changelog</a> |
+        <a href="#">Sitemap</a> |
+        <a href="#">Chatbox</a>
+    </footer>
+
+    <div class="test"></div>
+    <script src="./meta/scripts/main.js"></script>
+    <script>
+        fetch("./meta/lists/micro.json")
+            .then((response) => response.json())
+            .then((micro) => {
+                getMicroPost(micro,0)
+                addToId("microContent",microPost)
+        });
+        console.log(document.getElementById("test").innerHTML)
+    </script>
+ </body>
+</html>
