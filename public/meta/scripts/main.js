@@ -52,11 +52,12 @@ function viewerGenerate(selector,name){
         }
 }
 addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
-
+var COMICS
 if(url.includes("/comic")===true){
 fetch(json+"comics.json")
     .then((response) => response.json())
     .then((comics) => {
+        COMICS=comics
         getComicIndex(comics)
         if ( currentIndex > -1) {
             if(currentPartIndex> -1){
@@ -71,7 +72,12 @@ fetch(json+"comics.json")
 
                 if (document.title==="") {document.title = comics[currentIndex].parts[currentPartIndex].alt + " | " + comics[currentIndex].alt;}
             } else {
+                comicExtra=-1
                 genComicArchive(comics[currentIndex].parts)
+                if(url.includes("/84")){
+                    comicExtra=findComicIndex(comics,"!84-extras")
+                    genComicArchive(comics[comicExtra].parts,"84-extras")
+                }
             }
 
             keywords+=", "+comics[currentIndex].alt+", "+comics[currentIndex].alt+" Stupied"
@@ -83,17 +89,18 @@ fetch(json+"comics.json")
             for(i=0;i<comics.length;i++){
                 if (comics[i].parts==null){link=comics[i].file+".html" 
                 } else { link=comics[i].file+"/index.html" }
-
-                listItem = createItem("li",{})
-                addTo(listItem,createItem("a",{input:comics[i].alt+" » ",href:link}))
-                addTo(listItem, comics[i].desc)
-                addTo(list,listItem)
+                if(comics[i].file[0]!=="!"){
+                    listItem = createItem("li",{})
+                    addTo(listItem,createItem("a",{input:"<span style='font-family:grandstander'>"+comics[i].alt+"</span> » ",href:link}))
+                    addTo(listItem, comics[i].desc)
+                    addTo(list,listItem)
+                }
             }
             addToId("comicList",list)
         }
     })
     keywords+=", Stupied Comics"
-    addToTag("footer",'<a href="'+relativePath+'meta/log.html">Changelog</a><a href="#">Sitemap</a><a href="'+relativePath+'chat.html">Chatbox</a>')
+    addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
 }
 
 function getComicIndex(z){
@@ -124,7 +131,16 @@ function getComicIndex(z){
         }
     }
 }
-function genComicArchive(z){
+function findComicIndex(z,item){
+    for(i=0;i<z.length;i++){
+        if(z[i].file==item){
+            return i
+        }
+    }
+}
+function genComicArchive(z,destination){
+    if(destination===undefined){destination="comicList"}
+    if(comicExtra===-1){extraPath=""}else{extraPath="./../!"+destination+"/"}
     var result="";
     for(i=0;i<z.length;i++){
         var comicThumb="";
@@ -133,11 +149,11 @@ function genComicArchive(z){
             comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
         }
 
-        comicLink=z[i].file
+        comicLink=extraPath+z[i].file
         comicTitle=z[i].alt
         result+='<a href="'+comicLink+'"><div class="comicListItem">'+comicThumb+'<div class="comicListTitle"><h4>'+comicTitle+'</h4></div><div class="comicListIndex">#'+i+'</div></div></a>'
     }
-    addToId("comicList",result)
+    addToId(destination,result)
 }
 function genComicNextprev(z){
     result=createItem("div",{id:"nextprev"})
@@ -165,7 +181,7 @@ function genComicNextprev(z){
 //should probably change this sad face emoji
 function genComicNext(z){
     if ( z.length < 2 || currentPartIndex === z.length-1 ) {
-		result = createItem("div",{input:"You're all caught up :3",style:"cont"})
+		result = createItem("div",{input:"You're all caught up :3"})
 	} else {
         var comicThumb="";
         if(z[currentPartIndex+1].img!==undefined){
@@ -264,8 +280,8 @@ function convDate(i){
 }
 
 function genNav(z){
-	if ( z.length < 2 ) {
-		result = "<a href='./index.html'>Archive</a>";
+	if ( z.length < 2) {
+		result = "<a href='./index.html'>« Archive  »</a>";
 	} else if ( currentIndex === 0 ) {
 		prevI= z[currentIndex+1].file;
 		result = "<a href='./index.html'>Archive</a> | <a href='./" + prevI + "'>Prev »</a>";
@@ -299,6 +315,7 @@ if(url.includes("/blog")===true){
                 addToId('nextprev',result);
             }else{
                 addToId('blogTitle',"[Unlisted Post]");
+                addToId('nextprev',"<a href='./index.html'>« Archive  »</a>")
                 if (document.title === "") {document.title = "Unlisted Post | Stupied Stuff";}
                 list=createItem("ul",{})
                 for(i=0;i<blogs.length;i++){
@@ -311,7 +328,7 @@ if(url.includes("/blog")===true){
                 addToId("blogList",list)
             }
         })
-        addToTag("nav",'<header>The Abyss</header><a href="'+relativePath+'blog/index.html" title="list of all the blog posts">Archive</a><a href="'+relativePath+'blog/micro.html" title="small random thoughts">Micro</a><a href="'+relativePath+'index.html" title="go back to main page">Surface</a>')
+        addToTag("nav",'<header>The Abyss</header><a href="'+relativePath+'blog/index.html" title="list of all the blog posts">Archive</a><a href="'+relativePath+'blog/micro.html" title="small random thoughts">Micro</a><a href="'+relativePath+'index.html" title="head home">Surface ✮</a>')
 }
 
 if(url.includes("/micro")===true){
@@ -319,7 +336,7 @@ if(url.includes("/micro")===true){
         .then((response) => response.json())
         .then((micro) => {
             microPostCont=createItem("div",{style:"cont"});
-            for(i=0, prevMonth=micro[i].date.substr(5,2);i<micro.length;i++){
+            for(i=1, prevMonth=micro[i].date.substr(5,2);i<micro.length;i++){
                 currentMonth=micro[i].date.substr(5,2)
 
                 getMicroPost(micro,i);

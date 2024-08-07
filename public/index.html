@@ -6,30 +6,6 @@
     <link rel="stylesheet" href="./meta/styles/main.css">
     <title>Stupied Stuff</title>
 <style>
-header{
-    text-align:center;
-    margin-bottom:1rem;
-    margin-top:2rem;
-    font-family:grandstander;
-    font-weight:600;
-}
-
-header div{
-    margin:auto;
-    padding:10px 0;
-    width:fit-content;
-    transform:scale(300%);
-}
-
-header span:not(:first-child){
-    margin-left:-4px;
-}
-
-header span:last-child{
-    padding-left:3px;
-    color:white;
-}
-
 #about{
     min-height:100px;
     background-color:var(--teal);
@@ -238,9 +214,6 @@ main {
 }
 
 @media only screen and (max-width: 450px) {
-    header div{
-        transform:scale(200%);
-    }
     main{
         display:block;
     }
@@ -271,15 +244,10 @@ footer{
     margin:1rem 0;
     color:white;
 }
-
-.pink{text-shadow: 0 -0.1em var(--pink), 0.1em -0.1em var(--pink), 0.1em 0 var(--pink), 0.1em 0.1em var(--pink), 0 0.1em var(--pink), -0.1em 0.1em var(--pink), -0.1em 0 var(--pink), -0.1em -0.1em var(--pink)}
-.yellow{text-shadow: 0 -0.1em var(--yellow), 0.1em -0.1em var(--yellow), 0.1em 0 var(--yellow), 0.1em 0.1em var(--yellow), 0 0.1em var(--yellow), -0.1em 0.1em var(--yellow), -0.1em 0 var(--yellow), -0.1em -0.1em var(--yellow)}
-.teal{text-shadow: 0 -0.1em var(--teal), 0.1em -0.1em var(--teal), 0.1em 0 var(--teal), 0.1em 0.1em var(--teal), 0 0.1em var(--teal), -0.1em 0.1em var(--teal), -0.1em 0 var(--teal), -0.1em -0.1em var(--teal)}
-
 </style>
 </head>
 <body id="default">
-    <header>
+    <header id="stupiedHeader">
         <div>
             <span class="pink">S</span>
             <span class="yellow">t</span>
@@ -351,8 +319,8 @@ footer{
         </div>
     </main>
     <footer>
-        <a href="./meta/log.html">Changelog</a> |
-        <a href="#">Sitemap</a> |
+        <a href="./meta/log.html">Changelog</a>
+        <a href="#">Sitemap</a>
         <a href="#">Chatbox</a>
     </footer>
 
@@ -362,7 +330,7 @@ footer{
         fetch("./meta/lists/micro.json")
             .then((response) => response.json())
             .then((micro) => {
-                getMicroPost(micro,0)
+                getMicroPost(micro,1)
                 addToId("microContent",microPost)
         });
         console.log(document.getElementById("test").innerHTML)

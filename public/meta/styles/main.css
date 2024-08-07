@@ -43,6 +43,10 @@ ol,ul{margin-top:0;}
 a{text-decoration:none;color:inherit;}
 p{margin-top:0;}
 
+p > a {
+    text-decoration:underline;
+}
+
 hr.clear{
     margin:0;
     border:0;
@@ -67,6 +71,8 @@ ul li:nth-child(2n){
 .txt-white{color:white!important;}
 .txt-black{color:black!important;}
 
+.txt-brown{color:var(--brown)!important;}
+
 .txt-lighter-pink{color:var(--lighter-pink)!important;}
 .txt-light-pink{color:var(--light-pink)!important;}
 .txt-pink{color:var(--pink)!important;}
@@ -88,6 +94,7 @@ ul li:nth-child(2n){
 .outlined-white{filter:drop-shadow(2px 0 0 white)drop-shadow(-2px 0 0 white)drop-shadow(0 2px 0 white)drop-shadow(0 -2px 0 white)}
 
 .bg-white{background-color:white!important;}
+.bg-gray{background-color:gray!important;}
 .bg-black{background-color:black!important;}
 
 .bg-lighter-pink{background-color:var(--lighter-pink)!important;}
@@ -113,14 +120,17 @@ ul li:nth-child(2n){
 .no-border{border:0!important;}
 
 .cont.no-padding > .padding:first-child{padding:1rem 1rem 0 1rem!important;}
-
+.cont>.cont{border:3px solid black;}
 .cont{
     background-color:white;
     color:black;
-    border:3px solid black;
+    border:4px solid black;
     padding:1rem;
-    border-radius:5px;
 }
+
+.cont-half{border:4px solid black;}
+.cont-half>div{padding:1rem;}
+
 .cont-paper{
     background-color: #ffffff;
     background-size: 20px 20px;
@@ -128,16 +138,38 @@ ul li:nth-child(2n){
     border:3px solid black;
     padding:1rem;
     color:black;
-    border-radius:5px;
 }
 .cont-black{
     background-color:rgb(0, 0, 0,0.7);
     color:white;
     border:3px solid black;
     padding:1rem;
-    border-radius:5px;
 }
-.cont:not(:first-child),.cont-black:not(:first-child),.cont-paper:not(:first-child){margin-top:5px;}
+.cont:not(:first-child),.cont-half:not(:first-child),.cont-black:not(:first-child),.cont-paper:not(:first-child){margin-top:5px;}
+
+header#stupiedHeader{
+    text-align:center;
+    margin-bottom:1rem;
+    margin-top:2rem;
+    font-family:grandstander;
+    font-weight:600;
+}
+header#stupiedHeader div{
+    margin:auto;
+    padding:10px 0;
+    width:fit-content;
+    transform:scale(300%);
+}
+#stupiedHeader span:not(:first-child){
+    margin-left:-4px;
+}
+header#stupiedHeader span:last-child{
+    padding-left:3px;
+    color:white;
+}
+#stupiedHeader .pink{text-shadow: 0 -0.1em var(--pink), 0.1em -0.1em var(--pink), 0.1em 0 var(--pink), 0.1em 0.1em var(--pink), 0 0.1em var(--pink), -0.1em 0.1em var(--pink), -0.1em 0 var(--pink), -0.1em -0.1em var(--pink)}
+#stupiedHeader .yellow{text-shadow: 0 -0.1em var(--yellow), 0.1em -0.1em var(--yellow), 0.1em 0 var(--yellow), 0.1em 0.1em var(--yellow), 0 0.1em var(--yellow), -0.1em 0.1em var(--yellow), -0.1em 0 var(--yellow), -0.1em -0.1em var(--yellow)}
+#stupiedHeader .teal{text-shadow: 0 -0.1em var(--teal), 0.1em -0.1em var(--teal), 0.1em 0 var(--teal), 0.1em 0.1em var(--teal), 0 0.1em var(--teal), -0.1em 0.1em var(--teal), -0.1em 0 var(--teal), -0.1em -0.1em var(--teal)}
 
 .default{
     background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
@@ -217,6 +249,9 @@ body#blog{
     user-select:none;
 }
 @media only screen and (max-width: 450px) {
+    header#stupiedHeader div{
+        transform:scale(200%);
+    }
     #blog #container header{
         display:block;
         padding-bottom:0;
@@ -228,6 +263,28 @@ body#blog{
         text-align:center;
         padding-bottom:5px;
     }
+}
+
+.comicInfo{
+    max-width:1100px;
+    margin:1rem auto;
+    width:95%;
+    display:grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "list side";
+    grid-template-columns:2fr 1fr;
+    background-color:white;
+    border:3px solid black;
+}
+.comicInfo header{grid-area:header;background-color:gray;}
+.comicInfo nav{grid-area:nav;background-color:dimgray;}
+.comicInfo main{grid-area:list;}
+.comicInfo aside{grid-area:side;padding:1rem;background-color:lightgray;}
+header img{
+    width:100%;
+    display:block;
 }
 
 body#comicViewer{
@@ -309,6 +366,14 @@ body#comicViewer #next a > div{
     user-select:none;
     height:100px;
 }
+body#comicViewer #next > div{
+    margin:auto;
+    background-color: white;
+    border-radius:5px;
+    overflow:hidden;
+    border:3px solid black;
+    padding:1rem;
+}
 body#comicViewer #next img{
     display: block;
     width:100px;
@@ -346,6 +411,10 @@ body#comicViewer #bottom{
     gap:1rem;
     margin:1rem auto;
 }
+footer{margin-bottom:1rem;}
+footer a:not(:last-of-type)::after{
+    content:" | ";
+}
 body#comicViewer footer a:not(:last-of-type)::after{
     content:" | ";
     color:white;
@@ -364,7 +433,6 @@ body#comicViewer #info{
 }
 body#comicViewer footer{
     color:white;
-    margin-bottom:1rem;
     text-align:center;
 }
 body#comicViewer #nextprev span{
@@ -398,6 +466,9 @@ body#comicViewer #nextprev span{
     margin-left:10px;
 }
 @media only screen and (max-width: 650px) {
+    .comicInfo{
+        display: block;
+    }
     body#comicViewer #top{
         grid-template-areas:
         "header extra"
