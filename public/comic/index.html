@@ -1,87 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comics made by Stupied Idiot.">
-    <link rel="stylesheet" href="../meta/styles/main-legacy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../meta/styles/main.css">
+    <title>Comics | Stupied Stuff</title>
+    <style>
+        #main_comics{grid-area:main;}
+        #side_comics{grid-area:side;}
 
-    <Title>Comics | Stupied Stuff</Title>
-<style>
-
-    #comicList_Img a {
-        display:inline-block;
-        position: relative;
-    }
-
-    #main_comics{grid-area:main;}
-    #side_comics{grid-area:side;}
-
-    #comics {
-    margin-top:1rem;
-    z-index:1;
-    display: grid;
-    grid-template-areas:
-      'main side';
-      grid-template-columns:3fr 1fr;
-      gap:10px;
-      max-width:1000px;
-    }
-
-    @media only screen and (max-width: 900px) {
-        #comics{
-            display:block;
+        #comics {
+            width:95%;
+        margin:1rem auto;
+        z-index:1;
+        display: grid;
+        grid-template-areas:
+        'main side';
+        grid-template-columns:3fr 1fr;
+        gap:10px;
+        max-width:1000px;
         }
-        #side_comics{
-            margin-top:1rem;
+
+        #misfits {grid-area:one}
+        #penny {grid-area:two}
+        #adrift {grid-area:three}
+        #eightyFour {grid-area:four}
+        #psych {grid-area:five}
+        #puyo {grid-area:six}
+        #howToNot {grid-area:seven}
+
+        nav#catalog {
+            display: grid;
+            grid-template-areas:
+            'one two two'
+            'one three three'
+            'four four four'
+            'five six seven';
+            gap:5px;
+            width:95%;
+            max-width:500px;
+            grid-template-columns:1fr 1fr 1fr;
+            margin:auto auto;
         }
-    }
-</style>
+
+        nav#catalog > div {
+            min-height:100px;
+            position:relative;
+            overflow:hidden;
+            border:4px solid black;
+            background-color:white;
+        }
+
+        nav#catalog > div img{
+            position: absolute;
+        }
+
+
+        @media only screen and (max-width: 700px) {
+            #comics{
+                display:block;
+            }
+            #side_comics{
+                margin-top:5px;
+            }
+        }
+
+        body#default::before{
+            height:50%;
+        }
+    </style>
 </head>
-<body>
-
-<div id="page-format" class="checkered">
-<header></header>
-<nav></nav>
-<main class="big">
-
+<body id="default">
+    <header id="stupiedHeader">
+        <div>
+            <span class="pink">S</span>
+            <span class="yellow">t</span>
+            <span class="teal">u</span>
+            <span class="pink">p</span>
+            <span class="yellow">i</span>
+            <span class="teal">e</span>
+            <span class="pink">d</span>
+            <span>Stuff</span>
+        </div>
+    </header>
+    <nav id="catalog">
+        <div id="misfits">insert cool thumbnails</div>
+        <div id="penny">wohoooo so cool</div>
+        <div id="adrift">im such an amazing web developer</div>
+        <div id="eightyFour"></div>
+        <div id="psych"></div>
+        <div id="puyo"></div>
+        <div id="howToNot"></div>
+    </nav>
+    
     <div id="comics">
         <div id="main_comics">
-            <div class="cont no-padding dark-blue">
-                <div class="padding">
-                    <h1>Archive</h1>
+            <div class="cont-half">
+                <div class="bg-yellow">
+                    <h1>Comics Archive</h1>
                 </div>
-                <div class="cont no-border">
-                    <div id="comicList_Txt"></div>
+                <div class="bg-white">
+                    <div id="comicList"></div>
                 </div>
+                <div class="bg-yellow txt-right txt-darker-yellow no-padding">my update schedule is frantic and fucked</div>
             </div>
          </div>
         <div id="side_comics">
-            <div class="cont darker-blue">
+            <div class="cont bg-dark-teal">
                 <div class="cont">
                     <h4>Shorts</h4>
                     <ul>
+                        <a href="../meta/media/comics/tummy-ache.png"><li>Tummy Ache</li></a>
                         <a href="../meta/media/comics/never-satisfied.png"><li>Never Satisfied</li></a>
                         <a href="../meta/media/comics/excuses.png"><li>Excuses</li></a>
+                        <a href="../meta/media/comics/birthday.png"><li>Birthday</li></a>
                     </ul>
                 </div>
             </div>
-            <div class="cont">
-                <p>You can do whatever with my stuff, I don't really care.</p>
-            </div>
+            <div class="txt-darker-teal txt-right" style="margin-top:5px;">Will make an RSS feed,, eventually.. maybe</div>
         </div>
     </div>
-</main>
-<footer></footer>
-</div>
-
-<script src="../meta/scripts/main-legacy.js"></script>
-<script src="../meta/scripts/jquery.js"></script>
-
-<script>
-    //For some reason doesn't work unless page refreshes becuase of the grid :(
-    $(window).on("resize",function(){if(window.innerWidth<1200&&window.innerWidth>700){location.reload();}})
-    $(window).on("load",function(){$("#comicList_Img").tjGallery({rowMinHeight:250,selector:"a",margin:15});})
-
-</script>
+    <footer class="txt-center txt-white"></footer>
+    <script src="./../meta/scripts/main.js"></script>
 </body>
 </html>

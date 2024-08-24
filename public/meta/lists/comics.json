@@ -1,14 +1,23 @@
 [
     {
+        "file":"!howto",
+        "alt":"How To Not",
+        "desc":"A guide on how to do stuff by telling you how not to",
+        "parts":[
+            {"file":"live.html","alt":"Live"},
+            {"file":"sit.html","alt":"Sit down"}
+        ]
+    },
+    {
         "file":"misfits",
         "alt":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
-            {
-                "file":"independent.html",
-                "alt":"Independent",
-                "img":"comics/misfits/independent.png"
-            }
+            {"file":"independent.html","alt":"Independent","img":"comics/misfits/independent.png"},
+            {"file":"yapping.html","alt":"Yapping","img":"comics/misfits/independent.png"},
+            {"file":"saved.html","alt":"Saved","img":"comics/misfits/independent.png"},
+            {"file":"letters.html","alt":"Love Letters","img":"comics/misfits/independent.png"},
+            {"file":"siblings.html","alt":"Siblings","img":"comics/misfits/independent.png"}
         ]
     },
     {
@@ -27,13 +36,21 @@
             null
         ],
         "parts":[
-            ["#","NONE OF THIS HAVE ANYTING YET"],
-            ["#","Death"],
-            ["#","Take a Break"],
-            ["#","Sorry"],
-            ["#","Breakfast"],
-            ["#","Uniform"],
-            ["#","Haircut"]
+            {"file":"cover.html","alt":"Cover Art"}
+        ]
+    },
+    {
+        "file":"!84-extras",
+        "alt":"84 Extras",
+        "desc":"Side comics for 84.",
+        "parts":[
+            {"file":"haircut.html","alt":"Haircut"},
+            {"file":"uniform.html","alt":"Uniform"},
+            {"file":"breakfast.html","alt":"Breakfast"},
+            {"file":"sorry.html","alt":"Sorry"},
+            {"file":"break.html","alt":"Take a Break"},
+            {"file":"news.html","alt":"Exciting News"},
+            {"file":"notes.html","alt":"Note Taking"}
         ]
     },
     {
@@ -44,9 +61,9 @@
             null
         ],
         "parts":[
-            ["#","NONE OF THIS HAVE ANYTING YET"],
-            ["#","Ice Cream"],
-            ["#","Tetris"]
+            {"file":"tetris.html","alt":"Tetris"},
+            {"file":"grass.html","alt":"Touch Grass"},
+            {"file":"icecream.html","alt":"Ice Cream"}
         ]
     },
     {
@@ -75,21 +92,18 @@
         ]
     },
     {
-        "file":"howto",
-        "alt":"How To Not",
+        "file":"howto-original",
+        "alt":"How To Not (Original)",
         "desc":"A guide on how to do stuff by telling you how not to",
-        "nav":[
-            null
-        ],
         "parts":[
-            ["0A07.html","Study"],
-            ["0A06.html","Walk Your Pet Fish"],
-            ["0A05.html","Feel Motivated"],
-            ["0A04.html","Do Projects"],
-            ["0A03.html","Procastinate"],
-            ["0A02.html","Be Original"],
-            ["0A01.html","Befriend the Internet"],
-            ["0A00.html","Make a Webcomic"]
+            {"file":"0A00.html","alt":"Make a Webcomic"},
+            {"file":"0A01.html","alt":"Befriend the Internet"},
+            {"file":"0A02.html","alt":"Be Original"},
+            {"file":"0A03.html","alt":"Procastinate"},
+            {"file":"0A04.html","alt":"Do Projects"},
+            {"file":"0A05.html","alt":"Feel Motivated"},
+            {"file":"0A06.html","alt":"Walk Your Pet Fish"},
+            {"file":"0A07.html","alt":"Study"}
         ]
     }
 ]
