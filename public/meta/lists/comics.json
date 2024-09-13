@@ -13,11 +13,7 @@
         "alt":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
-            {"file":"independent.html","alt":"Independent","img":"comics/misfits/independent.png"},
-            {"file":"yapping.html","alt":"Yapping","img":"comics/misfits/independent.png"},
-            {"file":"saved.html","alt":"Saved","img":"comics/misfits/independent.png"},
-            {"file":"letters.html","alt":"Love Letters","img":"comics/misfits/independent.png"},
-            {"file":"siblings.html","alt":"Siblings","img":"comics/misfits/independent.png"}
+            {"file":"independent.html","alt":"Independent","img":"comics/misfits/independent.png"}
         ]
     },
     {
@@ -36,7 +32,9 @@
             null
         ],
         "parts":[
-            {"file":"cover.html","alt":"Cover Art"}
+            {"file":"haircut.html","alt":"Haircut"},
+            {"file":"uniform.html","alt":"Uniform"},
+            {"file":"notes.html","alt":"Note Taking"}
         ]
     },
     {
@@ -44,13 +42,11 @@
         "alt":"84 Extras",
         "desc":"Side comics for 84.",
         "parts":[
-            {"file":"haircut.html","alt":"Haircut"},
-            {"file":"uniform.html","alt":"Uniform"},
+            {"file":"cover.html","alt":"Cover Art"},
             {"file":"breakfast.html","alt":"Breakfast"},
             {"file":"sorry.html","alt":"Sorry"},
             {"file":"break.html","alt":"Take a Break"},
-            {"file":"news.html","alt":"Exciting News"},
-            {"file":"notes.html","alt":"Note Taking"}
+            {"file":"news.html","alt":"Exciting News"}
         ]
     },
     {
