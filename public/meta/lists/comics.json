@@ -32,7 +32,6 @@
             null
         ],
         "parts":[
-            {"file":"haircut.html","alt":"Haircut"},
             {"file":"uniform.html","alt":"Uniform"},
             {"file":"notes.html","alt":"Note Taking"}
         ]
@@ -43,6 +42,7 @@
         "desc":"Side comics for 84.",
         "parts":[
             {"file":"cover.html","alt":"Cover Art"},
+            {"file":"haircut.html","alt":"Haircut"},
             {"file":"breakfast.html","alt":"Breakfast"},
             {"file":"sorry.html","alt":"Sorry"},
             {"file":"break.html","alt":"Take a Break"},
