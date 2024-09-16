@@ -171,6 +171,52 @@ header#stupiedHeader span:last-child{
 #stupiedHeader .yellow{text-shadow: 0 -0.1em var(--yellow), 0.1em -0.1em var(--yellow), 0.1em 0 var(--yellow), 0.1em 0.1em var(--yellow), 0 0.1em var(--yellow), -0.1em 0.1em var(--yellow), -0.1em 0 var(--yellow), -0.1em -0.1em var(--yellow)}
 #stupiedHeader .teal{text-shadow: 0 -0.1em var(--teal), 0.1em -0.1em var(--teal), 0.1em 0 var(--teal), 0.1em 0.1em var(--teal), 0 0.1em var(--teal), -0.1em 0.1em var(--teal), -0.1em 0 var(--teal), -0.1em -0.1em var(--teal)}
 
+.square-gallery{
+    display:flex;
+    flex-wrap: wrap;
+    gap:4px;
+}
+.square-gallery img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+    aspect-ratio:1;
+}
+.square-gallery a, .square-gallery > img{
+    width:calc((100% - 8px)/3);
+}
+
+.justified-gallery {
+    --space: 5px;
+    --min-height: 200px;
+}
+
+.justified-gallery {
+display: flex;
+flex-wrap: wrap;
+grid-gap: var(--space);
+list-style: none;
+margin: 0 !important; /* We use !important to avoid gaps in some environments. */
+padding: 0 !important; /* We use !important to avoid gaps in some environments. */
+}
+
+.justified-gallery > * {
+width:100%;
+flex-grow: calc(var(--width) * (100000 / var(--height)));
+flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+aspect-ratio: var(--width) / var(--height);
+position: relative;
+overflow: hidden;
+margin: 0 !important; /* We use !important to avoid gaps in some environments. */
+padding: 0 !important; /* We use !important to avoid gaps in some environments. */
+}
+
+.justified-gallery > * > img {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
 .yt-embed {
     position: relative;
     overflow: hidden;
@@ -201,12 +247,12 @@ header#stupiedHeader span:last-child{
     background-position:bottom;
 }
 
-body#default{
+body.default-skewed{
     background-color:black;
     position:relative;
 }
 
-body#default::before{
+body.default-skewed::before{
     content:"";
     z-index:-1;
     height:80%;
@@ -220,6 +266,27 @@ body#default::before{
     top:10%;
     right:50%;
     transform: translateX(50%) skewY(-2deg);
+}
+body#gallery #container{
+    max-width:900px;
+    margin:2rem auto 1rem auto;
+    background-color:white;
+    border:4px solid black;
+}
+body#gallery nav {
+    position: relative;
+    background-color:lightgray;
+    text-align: center;
+    user-select:none;
+    display: flex;
+}
+body#gallery nav a{
+    display:block;
+    margin:15px 10px;
+    cursor: pointer;
+}
+body#gallery #container main > div:not(:target) {
+    display:none;
 }
 
 body#blog{
@@ -260,6 +327,10 @@ body#blog{
     color:var(--dark-teal);
     padding-bottom:1rem;
 }
+#blog main .justified-gallery{
+margin-bottom:5px!important;
+}
+
 #blog #nextprev{
     margin-top:1rem;
     text-align: center;
@@ -448,7 +519,7 @@ body#comicViewer #info{
     background-color:var(--lighter-teal);
     border:3px solid black;
 }
-body#comicViewer footer{
+body#comicViewer footer, body#gallery footer{
     color:white;
     text-align:center;
 }

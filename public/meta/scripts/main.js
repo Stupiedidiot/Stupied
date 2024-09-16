@@ -52,7 +52,16 @@ function viewerGenerate(selector,name){
         }
 }
 addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
-var COMICS
+
+if(url.includes("/art")===true){
+    if (window.location.href.includes("#")===false){
+        current=document.querySelector("#container main > div").id
+        window.location.href="#"+current
+    }
+    addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
+}
+
+var COMICS //????
 if(url.includes("/comic")===true){
 fetch(json+"comics.json")
     .then((response) => response.json())
