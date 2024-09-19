@@ -3,7 +3,6 @@ url = window.location.pathname;
     urlPath = url.split('/');
     if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
 json = relativePath+"meta/lists/";
-keywords="Stupied, Stupied Idiot, StupiedIdiot"
 function addTo(item,input){
     if (item) {
         if(typeof input=="string"){
@@ -38,18 +37,6 @@ function addToQuery(query,input) {
 function wrap(el, wrapper) {
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
-}
-function viewerGenerate(selector,name){
-	if(name===undefined){
-		name="general"
-	}
-    selector += " > img"
-    var images = document.querySelectorAll(selector);
-        for (var i = 0; i < images.length; ++i){
-			source = images[i].src;
-            link=createItem("a",{href:source})
-			imageHref = wrap(images[i],link);
-        }
 }
 addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
 
@@ -89,7 +76,6 @@ fetch(json+"comics.json")
                 }
             }
 
-            keywords+=", "+comics[currentIndex].alt+", "+comics[currentIndex].alt+" Stupied"
             if(typeof document.querySelector('meta[name="description"]'==null)){
                 addToTag("head", '<meta name="desc" content="'+comics[currentIndex].desc+'">');
             }
@@ -108,7 +94,6 @@ fetch(json+"comics.json")
             addToId("comicList",list)
         }
     })
-    keywords+=", Stupied Comics"
     addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
 }
 
@@ -385,11 +370,3 @@ function getMicroPost(micro,i){
     addTo(microPost,microDate)
     addTo(microPost,microTxt)
 }
-
-window.addEventListener("load", function(){
-    if(document.querySelector('meta[name="keywords"]')){
-        document.querySelector('meta[name="keywords"]').content+=keywords
-    } else {
-        addToTag("head", '<meta name="keywords" content="'+keywords+'">');
-    }
-});
