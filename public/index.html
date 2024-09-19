@@ -20,6 +20,7 @@
     box-shadow:0 0 20px 0px black;
     border-radius:10px;
     overflow:hidden;
+    z-index:-3;
 }
 header{
     position: relative;
@@ -38,6 +39,7 @@ nav{
     --gap:20px;
     background: black;
     background: linear-gradient(180deg, black 25%, var(--teal) 100%);
+    border-bottom:2px solid var(--dark-teal);
     display:flex;
     color:white;
     padding:5px 20px;
@@ -62,6 +64,7 @@ footer{
     justify-content:center;
     background: black;
     background: linear-gradient(180deg, var(--teal) 0%,black 75%);
+    border-top:2px solid var(--dark-teal);
     display:flex;
     color:white;
     padding:5px 0;
@@ -128,7 +131,7 @@ footer > a:nth-child(n+2)::before{
     height:100%;
     background-color: var(--light-teal);
     opacity: 1;
-    background-image:  linear-gradient(135deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(225deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(45deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(315deg, var(--lighter-teal) 25%, var(--light-teal) 25%);
+    background-image:  linear-gradient(135deg, #f0da8e 25%, transparent 25%), linear-gradient(225deg, #f0da8e 25%, transparent 25%), linear-gradient(45deg, #f0da8e 25%, transparent 25%), linear-gradient(315deg, #f0da8e 25%, #efe2b3 25%);
     background-position:  30px 0, 30px 0, 0 0, 0 0;
     background-size: 30px 30px;
     background-repeat: repeat;
@@ -141,7 +144,7 @@ footer > a:nth-child(n+2)::before{
     bottom:0;
     left:0;
     transform: scaleY(300%) scaleX(150%) translateX(20%);
-    text-shadow:0 0 5px white;
+    text-shadow:0 0 3px white;
 }
 
 #gallery{
@@ -157,8 +160,6 @@ footer > a:nth-child(n+2)::before{
     background-position:center 25%;
     background-size:cover;
     background-repeat: no-repeat;
-    filter:saturate(20%);
-    box-shadow: inset 0 0 0 2000px rgba(56, 121, 123, 0.2);
 }
 
 #gallery h1 {
@@ -190,6 +191,23 @@ footer > a:nth-child(n+2)::before{
     grid-template-columns:1fr 1fr 1fr;
 }
 
+.doll{
+    width:180px;
+    position: relative;
+}
+
+.doll img{
+    width:100%;
+    position:absolute;
+    top:-50px;
+    display:block;
+}
+
+#desc{
+    width:80%;
+    max-width:650px;
+}
+
 @media only screen and (max-width: 701px) {
     #about img{
         width:150%;
@@ -201,6 +219,12 @@ footer > a:nth-child(n+2)::before{
 }
 
 @media only screen and (max-width: 450px) {
+    #desc{
+        width:auto;
+    }
+    .doll{
+        display: none;
+    }
     #hell-yeah{
         display:block;
     }
@@ -235,20 +259,20 @@ footer > a:nth-child(n+2)::before{
                 <img src="./meta/media/art/2024-24.png">
             </a>
         </header>
-        <nav>
-            <a href="./about.html">about</a>
-            <a href="./art/index.html">art</a>
-            <a href="./blog/index.html">blog</a>
-            <a href="./comic/index.html">comic</a>
-        </nav>
+        <nav></nav>
         <main>
-            <div class="padding">
-                <h1>Henlo There!!!</h1>
-                <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
-                <p>This website is developed by a singular dog! It will forever be in a work in progress :]</p>
-                <hr>
-                <h3 class="txt-teal">Trigger Warning!</h3>
-                <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+            <div class="padding" style="display: flex;">
+                <div id="desc">
+                    <h1>Henlo There!!!</h1>
+                    <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
+                    <p>This website is developed by a singular dog! It will forever be in a work in progress :]</p>
+                    <hr>
+                    <h3 class="txt-teal">Trigger Warning!</h3>
+                    <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+                </div>
+                <div class="doll">
+                    <img src="./meta/media/1.png">
+                </div>
             </div>
             <div id="hell-yeah" class="padding">
                 <div id="blog">

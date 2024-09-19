@@ -48,6 +48,13 @@ if(url.includes("/art")===true){
     addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
 }
 
+addToQuery("#main nav",
+    '<a href="./about.html">about</a>'+
+    '<a href="./art/index.html">art</a>'+
+    '<a href="./blog/index.html">blog</a>'+
+    '<a href="./comic/index.html">comic</a>'
+)
+
 var COMICS //????
 if(url.includes("/comic")===true){
 fetch(json+"comics.json")
