@@ -157,24 +157,23 @@ height: 100%;
 }
 
 body.default{
-    background:white;
+    background:black;
 }
 
 body.default::before{
     content:"";
     z-index:-1;
-    height:85vh;
+    height:100%;
     width:100%;
-    max-width:1200px;
-    background: conic-gradient(var(--light-teal) 90deg, var(--lighter-teal) 90deg 180deg, var(--light-teal) 180deg 270deg, var(--lighter-teal) 270deg);
+    max-width:1000px;
+    background: conic-gradient(var(--dark-brown) 90deg, var(--brown) 90deg 180deg, var(--dark-brown) 180deg 270deg, var(--brown) 270deg);
     background-repeat: repeat;
     background-size: 100px 100px;
     background-position: top left;
-    position: fixed;
-    top:50%;
+    position: absolute;
+    top:10vh;
     right:50%;
-    transform: translateX(50%) translateY(-50%);
-    border:3px solid var(--light-teal);
+    transform: translateX(50%) skew(-1deg);
 }
 
 body#comicViewer{
