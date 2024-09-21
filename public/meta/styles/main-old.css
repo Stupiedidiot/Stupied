@@ -239,9 +239,9 @@ height: 100%;
     background-repeat: repeat;
     background-size: 100px 100px;
 }
-.misfits{
+.bg-misfits{
     background-color: #3cb6b9;
-    background-image: url(./../../meta/media/wtv/tile-clouds.png);
+    background-image: url(./../media/wtv/tile-clouds.png);
     background-attachment: fixed;
     background-repeat:repeat-x;
     background-position:bottom;

@@ -45,14 +45,19 @@ if(url.includes("/art")===true){
         current=document.querySelector("#container main > div").id
         window.location.href="#"+current
     }
-    addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
 }
 
-addToQuery("#main nav",
-    '<a href="./about.html">about</a>'+
-    '<a href="./art/index.html">art</a>'+
-    '<a href="./blog/index.html">blog</a>'+
-    '<a href="./comic/index.html">comic</a>'
+addToId("mainHead",'<a href="'+relativePath+'index.html">This header is temporary Yahhh :D</a>')
+addToId("mainNav",
+    '<a href="'+relativePath+'about.html">about</a>'+
+    '<a href="'+relativePath+'art/index.html">art</a>'+
+    '<a href="'+relativePath+'blog/index.html">blog</a>'+
+    '<a href="'+relativePath+'comic/index.html">comic</a>'
+)
+addToId("mainFoot",
+    '<a href="'+relativePath+'meta/log.html">changelog</a>' +
+    '<a href="#">sitemap</a>' +
+    '<a href="'+relativePath+'chat.html">chatbox</a>'
 )
 
 var COMICS //????

@@ -7,79 +7,6 @@
     <title>Stupied Stuff</title>
     
 <style>
-.padding{
-    padding:1rem;
-}
-
-#container{
-    margin:1rem auto;
-    max-width:850px;
-    width:95%;
-    background-color:white;
-    border:4px solid black;
-    box-shadow:0 0 20px 0px black;
-    border-radius:10px;
-    overflow:hidden;
-    z-index:-3;
-}
-header{
-    position: relative;
-}
-
-header img{
-    display:block;
-    width:100%;
-    height:150px;
-    object-fit: cover;
-    filter: saturate(0) brightness(90%);
-    z-index:1;
-}
-
-nav{
-    --gap:20px;
-    background: black;
-    background: linear-gradient(180deg, black 25%, var(--teal) 100%);
-    border-bottom:2px solid var(--dark-teal);
-    display:flex;
-    color:white;
-    padding:5px 20px;
-    gap:var(--gap);
-}
-nav > a{
-    display: block;
-    text-shadow:0 0 5px white;
-}
-nav > a:nth-child(n+2)::before{
-    content:"|";
-    margin-right:var(--gap);
-}
-main .padding:not(:last-child){
-    padding-bottom:0;
-}
-main img{
-    width:100%;
-}
-footer{
-    --gap:20px;
-    justify-content:center;
-    background: black;
-    background: linear-gradient(180deg, var(--teal) 0%,black 75%);
-    border-top:2px solid var(--dark-teal);
-    display:flex;
-    color:white;
-    padding:5px 0;
-    gap:var(--gap);
-}
-
-footer > a{
-    display: block;
-    text-shadow:0 0 5px white;
-}
-footer > a:nth-child(n+2)::before{
-    content:"|";
-    margin-right:var(--gap);
-}
-
 #blog{
     background-color:var(--teal);
     background:linear-gradient(white 0%, var(--teal) 80%);
@@ -131,7 +58,7 @@ footer > a:nth-child(n+2)::before{
     height:100%;
     background-color: var(--light-teal);
     opacity: 1;
-    background-image:  linear-gradient(135deg, #f0da8e 25%, transparent 25%), linear-gradient(225deg, #f0da8e 25%, transparent 25%), linear-gradient(45deg, #f0da8e 25%, transparent 25%), linear-gradient(315deg, #f0da8e 25%, #efe2b3 25%);
+    background-image:  linear-gradient(135deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(225deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(45deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(315deg, var(--lighter-teal) 25%, var(--light-teal) 25%);
     background-position:  30px 0, 30px 0, 0 0, 0 0;
     background-size: 30px 30px;
     background-repeat: repeat;
@@ -160,6 +87,8 @@ footer > a:nth-child(n+2)::before{
     background-position:center 25%;
     background-size:cover;
     background-repeat: no-repeat;
+    filter:saturate(20%);
+    box-shadow: inset 0 0 0 2000px rgba(56, 121, 123, 0.2);
 }
 
 #gallery h1 {
@@ -189,6 +118,7 @@ footer > a:nth-child(n+2)::before{
     'blog gallery gallery';
     gap:5px;
     grid-template-columns:1fr 1fr 1fr;
+    user-select:none;
 }
 
 .doll{
@@ -199,7 +129,7 @@ footer > a:nth-child(n+2)::before{
 .doll img{
     width:100%;
     position:absolute;
-    top:-50px;
+    top:-110px;
     display:block;
 }
 
@@ -218,7 +148,7 @@ footer > a:nth-child(n+2)::before{
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
     #desc{
         width:auto;
     }
@@ -231,17 +161,6 @@ footer > a:nth-child(n+2)::before{
     #hell-yeah > div {
         margin-bottom:10px;
     }
-    #about img{
-        position:absolute;
-        top:0;
-        right:0;
-        width:85%;
-        transform:translateX(25%) translateY(-20%);
-    }
-    #about h1{
-        text-orientation:initial;
-        writing-mode:initial;
-    }
     #comic{
         display:grid;
     }
@@ -253,15 +172,10 @@ footer > a:nth-child(n+2)::before{
 </head>
 <body id="main" class="default">
     <div id="container">
-        <header>
-            <a href="#">
-                <p style="position:absolute;top:0;right:0;z-index:1;color:white;">like literally everthing on this website, this header is temporary. (I am mentally unwell)</p>
-                <img src="./meta/media/art/2024-24.png">
-            </a>
-        </header>
-        <nav></nav>
+        <header id="mainHead"></header>
+        <nav id="mainNav"></nav>
         <main>
-            <div class="padding" style="display: flex;">
+            <div class="padding" style="display:flex;">
                 <div id="desc">
                     <h1>Henlo There!!!</h1>
                     <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
@@ -271,7 +185,7 @@ footer > a:nth-child(n+2)::before{
                     <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
                 </div>
                 <div class="doll">
-                    <img src="./meta/media/1.png">
+                    <img src="./meta/media/1.png" class="outlined-white">
                 </div>
             </div>
             <div id="hell-yeah" class="padding">
@@ -306,12 +220,14 @@ footer > a:nth-child(n+2)::before{
                     </a>
                 </div>
             </div>
+            <!--<div id="cheeze" class="padding">       
+                <h3>Other Stuff</h3>
+                <a href="./chez/beetke.html" title="TOP 3 REASONS TO HAT BEETKE">Beetke Sucks</a>
+                <a href="./chez/dwinky.html" title="oh hail the dimension drifter">Burger</a>
+                <a href="https://literalwiki.neocities.org/" title="fanwiki for anything literalhat related">Literal Wiki</a>
+            </div>!-->
         </main>
-        <footer>
-            <a href="#">changelog</a>
-            <a href="#">sitemap</a>
-            <a href="#">chatbox</a>
-        </footer>
+        <footer id="mainFoot"></footer>
     </div>
 <script src="./meta/scripts/main.js"></script>
 <script>
