@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../meta/styles/main-old.css">
-    <title>Comics | Stupied Stuff</title>
+    <link rel="stylesheet" href="./../meta/styles/comic.css">
+    <title>Comics | Stupied</title>
     <style>
         #main_comics{grid-area:main;}
         #side_comics{grid-area:side;}
@@ -41,6 +41,7 @@
             max-width:500px;
             grid-template-columns:1fr 1fr 1fr;
             margin:auto auto;
+            margin-top:1rem;
         }
 
         nav#catalog > div {
@@ -65,24 +66,12 @@
             }
         }
 
-        body#default::before{
+        body.default::before{
             height:50%;
         }
     </style>
 </head>
-<body class="default-skewed">
-    <header id="stupiedHeader">
-        <div>
-            <span class="pink">S</span>
-            <span class="yellow">t</span>
-            <span class="teal">u</span>
-            <span class="pink">p</span>
-            <span class="yellow">i</span>
-            <span class="teal">e</span>
-            <span class="pink">d</span>
-            <span>Stuff</span>
-        </div>
-    </header>
+<body class="default">
     <nav id="catalog">
         <div id="misfits">insert cool thumbnails</div>
         <div id="penny">wohoooo so cool</div>
@@ -106,7 +95,7 @@
             </div>
          </div>
         <div id="side_comics">
-            <div class="cont bg-dark-teal">
+            <div class="cont bg-teal">
                 <div class="cont">
                     <h4>Shorts</h4>
                     <ul>
@@ -117,7 +106,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="txt-darker-teal txt-right" style="margin-top:5px;">Will make an RSS feed,, eventually.. maybe</div>
         </div>
     </div>
     <footer class="txt-center txt-white"></footer>

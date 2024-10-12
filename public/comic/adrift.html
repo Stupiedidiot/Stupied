@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../meta/styles/main-legacy.css">
-    <Title>Adrift | Stupied Stuff</Title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../meta/styles/comic.css"> 
+    <title></title>
 </head>
-<body>
-
-<div id="page-format" style='background-image:url("./../meta/media/wtv/tile-raindrops.gif");background-repeat: repeat-x;background-color:black; background-attachment: fixed;'>
-<header></header>
-<nav></nav>
-<main>
-    <div id="main">
-        <div class="cont no-padding">
-            <img src="../meta/media/comics/adrift/banner.png">
-        </div>
-        <div class="cont no-padding">
+<body id="comicViewer">
+<div id="container">
+    <div id="top"></div>
+    <main  style='background-image:url("./../meta/media/wtv/tile-raindrops.gif");background-repeat: repeat-x;background-color:black; background-attachment: fixed;'>
+        <div id="clipper" class="images">
             <img src="../meta/media/comics/adrift/01.png">
             <img src="../meta/media/comics/adrift/02.png">
             <img src="../meta/media/comics/adrift/03.png">
@@ -30,15 +25,19 @@
             <img src="../meta/media/comics/adrift/12.png">
             <img src="../meta/media/comics/adrift/13.png">
             <img src="../meta/media/comics/adrift/14.png">
-            <img src="../meta/media/comics/adrift/15.png">
         </div>
-
-        <div id="comments" class="cont"></div>
+    </main>
+    <div id="bottom">
+        <aside>
+            <nav id="next"></nav>
+            <div id="info">
+                <h3>June 17, 2023</h3>
+            </div>
+        </aside>
+        <div id="comments"></div>
     </div>
-</main>
-<footer></footer>
+    <footer></footer>
 </div>
-
-<script src="../meta/scripts/main-legacy.js"></script>
+<script src="../../meta/scripts/main.js"></script>
 </body>
 </html>

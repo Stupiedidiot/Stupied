@@ -1,0 +1,249 @@
+@import url("./global.css");
+
+.padding{padding:1rem!important;}
+.no-padding{padding: 0!important;}
+.no-border{border:0!important;}
+
+.cont.no-padding > .padding:first-child{padding:1rem 1rem 0 1rem!important;}
+.cont>.cont{border:3px solid black;}
+.cont{
+    background-color:white;
+    color:black;
+    border:4px solid black;
+    padding:1rem;
+}
+
+.cont-half{border:4px solid black;}
+.cont-half>div{padding:1rem;}
+
+.cont-paper{
+    background-color: #ffffff;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, #ffffff 1px, #ffffff);
+    border:3px solid black;
+    padding:1rem;
+    color:black;
+}
+.cont-black{
+    background-color:rgb(0, 0, 0,0.7);
+    color:white;
+    border:3px solid black;
+    padding:1rem;
+}
+.cont:not(:first-child),.cont-half:not(:first-child),.cont-black:not(:first-child),.cont-paper:not(:first-child){margin-top:5px;}
+
+
+.comicInfo{
+    max-width:1100px;
+    margin:1rem auto;
+    width:95%;
+    display:grid;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "list side";
+    grid-template-columns:2fr 1fr;
+    background-color:white;
+    border:3px solid black;
+}
+.comicInfo header{grid-area:header;background-color:gray;}
+.comicInfo nav{grid-area:nav;background-color:dimgray;}
+.comicInfo main{grid-area:list;}
+.comicInfo aside{grid-area:side;padding:1rem;background-color:lightgray;}
+.comicInfo header img{width:100%;display:block;}
+
+body#comicViewer{
+    background-color:black;
+}
+body#comicViewer #container{
+    max-width:1800px;
+    margin:0 auto;
+    background-color:black;
+}
+
+body#comicViewer #top header{grid-area:header;}
+body#comicViewer #top #nextprev{grid-area:nextprev;}
+body#comicViewer #top #extra{grid-area:extra;}
+
+body#comicViewer #top{
+    padding:1rem;
+    user-select:none;
+    background-color:black;
+    color:white;
+    display:grid;
+    grid-template-areas:
+    "header nextprev extra";
+    grid-template-columns:repeat(3,1fr);
+}
+
+body#comicViewer #top, #bottom{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+body#comicViewer #top header{
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+body#comicViewer #info{
+    margin:10px 0;
+}
+body#comicViewer header a{
+    font-family: grandstander;
+    font-weight:600;
+    color:var(--teal);
+}
+body#comicViewer header a::after{
+    content:" / ";
+}
+
+body#comicViewer main{
+    padding:5px 0;
+}
+
+body#comicViewer .images{
+    max-width:800px;
+    margin:5px auto;
+    border:3px solid black;
+}
+
+body#comicViewer .images img{
+    width:100%;
+    display:block;
+}
+
+body#comicViewer #nextprev{
+    text-align:center;
+}
+
+body#comicViewer #extra{
+    text-align:right;
+}
+body#comicViewer #next a > div{
+    margin:auto;
+    background-color: white;
+    border-radius:5px;
+    overflow:hidden;
+    border:3px solid black;
+    display:flex;
+    user-select:none;
+    height:100px;
+}
+body#comicViewer #next > div{
+    margin:auto;
+    background-color: white;
+    border-radius:5px;
+    overflow:hidden;
+    border:3px solid black;
+    padding:1rem;
+}
+body#comicViewer #next img{
+    display: block;
+    width:100px;
+    height:100px;
+    object-fit:cover;
+}
+body#comicViewer #next-title{
+    flex:1;
+    position: relative;
+}
+body#comicViewer #next-title-content{
+    position: absolute;
+    bottom:50%;
+    left:10px;
+    transform: translateY(50%);
+}
+body#comicViewer #bottom{
+    background-color:white;
+    padding:10px;
+}
+
+body#comicViewer #bottom #info > div{
+    padding:5px 1rem;
+}
+
+body#comicViewer #bottom aside {grid-area:side;}
+#bottom #comments {grid-area:comments;}
+
+body#comicViewer #bottom{
+    display:grid;
+    grid-template-areas:
+    "comments side"
+    "comments side";
+    grid-template-columns:2fr 1fr;
+    gap:1rem;
+    margin:1rem auto;
+}
+body#comicViewer footer a:not(:last-of-type)::after{
+    content:" | ";
+    color:white;
+}
+body#comicViewer #comments{
+    background-color: white;
+}
+body#comicViewer #info > h3{
+    background-color:var(--teal);
+    padding:5px;
+}
+body#comicViewer #info{
+    border-radius:5px;
+    background-color:var(--lighter-teal);
+    border:3px solid black;
+}
+body#comicViewer footer, body#gallery footer{
+    color:white;
+    text-align:center;
+}
+body#comicViewer #nextprev span{
+    padding:0 1rem;
+}
+.comicListItem{
+    display:flex;
+    height:5rem;
+}
+.comicListItem:nth-of-type(n+2){
+    border-top:1.5px solid #f5f5f5;
+}
+.comicListIndex{
+    margin:1.5rem 5px 0 5px;
+}
+.comicListThumbnail img{
+    display:block;
+    width:5rem;
+    height:5rem;
+    object-fit:cover;
+}
+.comicListTitle{
+    flex:1;
+    position: relative;
+    overflow:hidden;
+}
+.comicListTitle h4{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left:10px;
+}
+@media only screen and (max-width: 650px) {
+    .comicInfo{
+        display: block;
+    }
+    body#comicViewer #top{
+        grid-template-areas:
+        "header extra"
+        "nextprev nextprev";
+        grid-template-columns:90% 10%;
+    }
+    body#comicViewer #bottom{
+        display: block;
+        background-color:black;
+    }
+    body#comicViewer #nextprev{margin-top:5px}
+    body#comicViewer #comments{
+        padding:1rem;
+        border:3px solid black;
+        border-radius:5px;
+    }
+}

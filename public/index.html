@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./meta/styles/main.css">
-    <title>Stupied Stuff</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./meta/styles/global.css">
+  <title>Stupied</title>
 <style>
 #blog{
-    background-color:var(--teal);
-    background:linear-gradient(white 0%, var(--teal) 80%);
+  background:linear-gradient(white 0%, var(--teal) 80%);
     position: relative;
     overflow:hidden;
 }
@@ -29,7 +27,6 @@
     bottom:10px;
     right:10px;
     color:white;
-    text-shadow:0 0 5px white;
 }
 
 #micro{
@@ -55,13 +52,13 @@
 }
 
 #comic div {
-    height:100%;
-    background-color: var(--light-teal);
-    opacity: 1;
-    background-image:  linear-gradient(135deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(225deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(45deg, var(--lighter-teal) 25%, transparent 25%), linear-gradient(315deg, var(--lighter-teal) 25%, var(--light-teal) 25%);
-    background-position:  30px 0, 30px 0, 0 0, 0 0;
-    background-size: 30px 30px;
-    background-repeat: repeat;
+  height:100%;
+  background-color: #efe2b3;
+  opacity: 1;
+  background-image:  linear-gradient(135deg, #f0da8e 25%, transparent 25%), linear-gradient(225deg, #f0da8e 25%, transparent 25%), linear-gradient(45deg, #f0da8e 25%, transparent 25%), linear-gradient(315deg, #f0da8e 25%, #efe2b3 25%);
+  background-position:  30px 0, 30px 0, 0 0, 0 0;
+  background-size: 30px 30px;
+  background-repeat: repeat;
 }
 
 #comic h1{
@@ -71,7 +68,6 @@
     bottom:0;
     left:0;
     transform: scaleY(300%) scaleX(150%) translateX(20%);
-    text-shadow:0 0 3px white;
 }
 
 #gallery{
@@ -87,8 +83,7 @@
     background-position:center 25%;
     background-size:cover;
     background-repeat: no-repeat;
-    filter:saturate(20%);
-    box-shadow: inset 0 0 0 2000px rgba(56, 121, 123, 0.2);
+    transition:0.2s ease-in;
 }
 
 #gallery h1 {
@@ -97,14 +92,23 @@
     top:50%;
     right:50%;
     transform:translateX(50%) translateY(-50%);
+    filter:drop-shadow(3px 0 0 var(--pink))drop-shadow(-3px 0 0 var(--pink))drop-shadow(0 3px 0 var(--pink))drop-shadow(0 -3px 0 var(--pink));
     color:white;
     font-size:3rem;
     letter-spacing:5px;
-    text-shadow:0 0 5px white;
+}
+
+#gallery:hover div{
+    filter:saturate(20%);
+    box-shadow: inset 0 0 0 2000px rgba(217, 64, 106,0.5);
+    transform:scale(110%);
+}
+
+#gallery:hover h1{
+    filter:none;
 }
 #hell-yeah > div{
-    border:2px var(--dark-teal) solid;
-    border-radius:5px;
+    border:4px black solid;
 }
 
 #blog{grid-area:blog;}
@@ -121,16 +125,23 @@
     user-select:none;
 }
 
-.doll{
-    width:180px;
-    position: relative;
+@media only screen and (min-width: 481px) {
+    .doll{
+        width:180px;
+        position: relative;
+    }
+
+    .doll img{
+        width:100%;
+        position:absolute;
+        top:-110px;
+        display:block;
+        transition:0.2s ease-in;
+    }
 }
 
-.doll img{
-    width:100%;
-    position:absolute;
-    top:-110px;
-    display:block;
+.doll img:hover{
+    transform: scale(110%) rotate(5deg);
 }
 
 #desc{
@@ -138,22 +149,19 @@
     max-width:650px;
 }
 
-@media only screen and (max-width: 701px) {
-    #about img{
-        width:150%;
-    }
-    #about h1 {
-        top:50%;
-        transform: translateY(-50%);
-    }
+#about{
+    display:flex;margin-bottom:1rem;background-color:white;padding:1rem 0 1rem 1rem;border:4px solid black;
 }
 
 @media only screen and (max-width: 480px) {
+    #about{
+        display: block;padding:1rem;
+    }
     #desc{
         width:auto;
     }
     .doll{
-        display: none;
+        display:none;
     }
     #hell-yeah{
         display:block;
@@ -168,70 +176,80 @@
         transform: scaleY(200%) scaleX(80%) translateX(-10%);
     }
 }
+
+#blog img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 </style>
 </head>
-<body id="main" class="default">
-    <div id="container">
-        <header id="mainHead"></header>
-        <nav id="mainNav"></nav>
-        <main>
-            <div class="padding" style="display:flex;">
-                <div id="desc">
-                    <h1>Henlo There!!!</h1>
-                    <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
-                    <p>This website is developed by a singular dog! It will forever be in a work in progress :]</p>
-                    <hr>
-                    <h3 class="txt-teal">Trigger Warning!</h3>
-                    <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
-                </div>
-                <div class="doll">
-                    <img src="./meta/media/1.png" class="outlined-white">
-                </div>
-            </div>
-            <div id="hell-yeah" class="padding">
-                <div id="blog">
-                    <div id="micro" title="lastest microblog post">
-                        <a href="./blog/micro.html">
-                            <div id="microContent"></div>
-                        </a>
-                    </div>
-                    <a href="./blog/index.html" title="screaming into the abyss">
-                        <div id="blogDesign">
-                            <h1>BLOG</h1>
-                            <img src="./meta/media/wtv/bruh.png">
-                        </div>
-                    </a>
-                </div>
-        
-                
-                <div id="comic">
-                    <a href="./comic/index.html" title="sequential images to tell dumb stories">
-                        <h1>COMICS</h1>
-                        <div id="test">
-                        </div>
-                    </a>
-                </div>
-        
-                <div id="gallery">
-                    <a href="./art/index.html" title="artworks and animation">
-                        <h1>GALLERY</h1>
-                        <div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!--<div id="cheeze" class="padding">       
-                <h3>Other Stuff</h3>
-                <a href="./chez/beetke.html" title="TOP 3 REASONS TO HAT BEETKE">Beetke Sucks</a>
-                <a href="./chez/dwinky.html" title="oh hail the dimension drifter">Burger</a>
-                <a href="https://literalwiki.neocities.org/" title="fanwiki for anything literalhat related">Literal Wiki</a>
-            </div>!-->
-        </main>
-        <footer id="mainFoot"></footer>
+<body class="default">
+<main style="max-width:800px;margin:1rem auto;">
+    <div id="about">
+        <div id="desc">
+            <h1>Henlo There!!!</h1>
+            <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
+            <p>This website is developed by a singular dog! I love it to bit and will forever be in a work in progress :]</p>
+            <hr>
+            <h3 class="txt-teal">Trigger Warning!</h3>
+            <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+        </div>
+        <div class="doll">
+            <a href="about.html"><img src="./meta/media/1.png" class="outlined-white"></a>
+        </div>
     </div>
+    <div id="hell-yeah">
+        <div id="blog">
+            <div id="micro" title="lastest microblog post">
+                <a href="./blog/micro.html">
+                    <div id="microContent"></div>
+                </a>
+            </div>
+            <a href="./blog/index.html" title="screaming into the abyss">
+                <div id="blogDesign">
+                    <h1>BLOG</h1>
+                    <img src="./meta/media/wtv/bruh.png">
+                </div>
+            </a>
+        </div>
+
+
+        <div id="comic">
+            <a href="./comic/index.html" title="sequential images to tell dumb stories">
+                <h1>COMICS</h1>
+                <div id="test">
+                </div>
+            </a>
+        </div>
+
+        <div id="gallery">
+            <a href="./art/index.html" title="artworks and animation">
+                <h1>GALLERY</h1>
+                <div>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+<footer></footer>
 <script src="./meta/scripts/main.js"></script>
+<script src="./meta/scripts/blog.js"></script>
 <script>
-    fetch("./meta/lists/micro.json")
+    fetch("./meta/scripts/micro.json")
         .then((response) => response.json())
         .then((micro) => {
             getMicroPost(micro,1)
