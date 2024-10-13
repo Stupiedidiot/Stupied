@@ -9,6 +9,15 @@ masterlist = [
         ]
     },
     {
+        "folder":"muse-adriade",
+        "alt":"Muse Ariadne",
+        "desc":"Writing club thingy wohooo",
+        "parts":[
+            //{"file":"2024-02-05","alt":"Repetitive"},
+            {"file":"2024-10-07","alt":"Seclusion"}
+        ]
+    },
+    {
         "folder":"misfits",
         "alt":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
