@@ -13,7 +13,8 @@ masterlist = [
         "alt":"Muse Ariadne",
         "desc":"Writing club thingy wohooo",
         "parts":[
-            //{"file":"2024-02-05","alt":"Repetitive"},
+            {"file":"2024-02-05","alt":"Writing is Hard"},
+            //{"file":"2024-05-20","alt":"Evidence"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
     },
@@ -188,18 +189,23 @@ function writeComicArchive(){
     }
 }
 
+// Change how the archive looks cuz it's ugly >:(
 function writePartsArchive(id,folder,first,last){
     var result="";
     for(i=first;i<last;i++){
+    /**
+        Add back thumbnails eventually,,
+        
         var comicThumb="";
         if(masterlist[folder].parts[i].img!==undefined){
             comicThumb=relativePath+"meta/media/"+masterlist[folder].parts[i].img
             comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
         }
+    **/
 
         comicLink=masterlist[folder].parts[i].file+".html"
         comicTitle=masterlist[folder].parts[i].alt
-        result+='<a href="'+comicLink+'"><div class="comicListItem">'+comicThumb+'<div class="comicListTitle"><h4>'+comicTitle+'</h4></div><div class="comicListIndex">#'+i+'</div></div></a>'
+        result+='<a href="'+comicLink+'"><div class="comicListItem"><div class="comicListTitle"><h4>'+comicTitle+'</h4></div><div class="comicListIndex">#'+i+'</div></div></a>'
     }
     addToId(id,result)
 }

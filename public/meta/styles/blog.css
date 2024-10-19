@@ -71,6 +71,9 @@ body#blog{
     color:var(--dark-teal);
     padding-bottom:1rem;
 }
+#blog footer{
+    margin-top:1rem;  
+}
 #blog main .justified-gallery{
 margin-bottom:5px!important;
 }
