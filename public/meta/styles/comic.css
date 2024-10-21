@@ -207,13 +207,19 @@ body#comicViewer #nextprev span{
 }
 .comicListItem{
     display:flex;
-    margin:1rem 1rem;
-}
-.comicListItem:nth-of-type(n+2){
-    border-top:1.5px solid #f5f5f5;
+    padding:1rem;
 }
 .comicListTitle{
     flex:1;
+}
+.comicListIndex{
+    position:relative;
+    min-width:30px
+}
+.comicListIndex span{
+    position:absolute;
+    top:50%;right:0;
+    transform:translateY(-50%);
 }
 @media only screen and (max-width: 650px) {
     .comicInfo{
@@ -235,4 +241,32 @@ body#comicViewer #nextprev span{
         border:3px solid black;
         border-radius:5px;
     }
+}
+
+/** Muse Adriade **/
+body.muse, body.hat{
+    --light-pink:#edb18b;
+    --pink:#ed4d46;
+    --teal:#ed4d46;
+    --yellow:#efe4b0;
+}
+
+body.muse ::selection {
+    color: #52330c;
+    background: #95a63a;
+}
+
+body.muse .note{
+    background-color:var(--yellow);
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(0deg, var(--light-pink), var(--light-pink) 2px, var(--yellow) 2px, var(--yellow));
+}
+
+/** Eighty Four **/
+body.eighty-four #info > h3{
+    background-color:var(--yellow)!important;
+}
+
+body.eighty-four header a{
+    color:var(--yellow)!important;
 }

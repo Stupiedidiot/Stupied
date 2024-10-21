@@ -1,4 +1,5 @@
 masterlist = [
+    /*
     {
         "folder":"!howto",
         "alt":"How To Not",
@@ -7,14 +8,16 @@ masterlist = [
             {"file":"live","alt":"Live"},
             {"file":"sit","alt":"Sit down"}
         ]
-    },
+    }
+    */
     {
         "folder":"muse-adriade",
         "alt":"Muse Ariadne",
         "desc":"Writing club thingy wohooo",
         "parts":[
             {"file":"2024-02-05","alt":"Writing is Hard"},
-            //{"file":"2024-05-20","alt":"Evidence"},
+            //{"file":"2024-04-08","alt":"I Hate You"},
+            {"file":"2024-05-20","alt":"Evidence"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
     },
@@ -23,49 +26,39 @@ masterlist = [
         "alt":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
-            {"file":"independent","alt":"Independent","img":"comics/misfits/independent.png"}
+            {"file":"independent","alt":"Independent","img":"comics/misfits/independent.png"},
+            //{"file":"yapping","alt":"Yapping"},
+            //{"file":"saved","alt":"Saved"},
+            //{"file":"letters","alt":"Letters"},
+            //{"file":"siblings","alt":"Siblings"}
         ]
     },
     {
         "folder":"puyo",
         "alt":"Maguro's Thing",
-        "desc":"Idk some dumb Puyo comic I made,,",
-        "nav":[
-            null
-        ]
+        "desc":"Idk some dumb Puyo comic I made,,"
     },
     {
         "folder":"84",
         "alt":"84",
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
-        "nav":[
-            null
-        ],
         "parts":[
             {"file":"uniform","alt":"Uniform"},
             {"file":"notes","alt":"Note Taking"}
-        ]
-    },
-    {
-        "folder":"!84-extras",
-        "alt":"84 Extras",
-        "desc":"Side for 84.",
-        "parts":[
+            /*
             {"file":"cover","alt":"Cover Art"},
             {"file":"haircut","alt":"Haircut"},
             {"file":"breakfast","alt":"Breakfast"},
             {"file":"sorry","alt":"Sorry"},
             {"file":"break","alt":"Take a Break"},
             {"file":"news","alt":"Exciting News"}
+            */
         ]
     },
     {
         "folder":"psych",
         "alt":"Psych!",
         "desc":"Being a psychic sucks actually.",
-        "nav":[
-            null
-        ],
         "parts":[
             {"file":"tetris","alt":"Tetris"},
             {"file":"grass","alt":"Touch Grass"},
@@ -76,22 +69,20 @@ masterlist = [
         "folder":"adrift",
         "alt":"Adrift",
         "desc":"It's clearance signing and Adrina has an essay to finish.",
-        "nav":[
-            null
-        ]
     },
     {
         "folder":"hat",
-        "alt":"Hat",
-        "desc":"Random Literal Hat related Comics",
+        "alt":"LiteralHat",
+        "desc":"Random LiteralHat related Comics",
+        "parts":[
+            {"file":"index","alt":"Clipper"},
+            {"file":"lost","alt":"Lost","img":"comics/hat/0A01-00.png"}
+        ]
     },
     {
         "folder":"penny",
         "alt":"Penny's Perfect Present",
         "desc":"She wants to get her mom a gift for an upcoming event.",
-        "nav":[
-            null
-        ]
     },
     {
         "folder":"howto-original",
@@ -132,7 +123,6 @@ if ( currentIndex > -1) {
 
         addToId("top",'<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>')
         if (document.title==="") {document.title = masterlist[currentIndex].alt + " | " + "Stupied"}
-        console.log("woof")
     }
 } else {
     writeComicArchive()
@@ -145,6 +135,7 @@ function searchComicIndex(){
     
     // Setup stuff
     fileList = url.split("/");
+    if(fileList[fileList.length-1]===""){fileList[fileList.length-1]="index"}
     currentFolder=fileList[fileList.length-1]
     currentFolder = currentFolder.replaceAll(".html","")
     currentFile=currentFolder
@@ -193,21 +184,19 @@ function writeComicArchive(){
 function writePartsArchive(id,folder,first,last){
     var result="";
     for(i=first;i<last;i++){
-    /**
-        Add back thumbnails eventually,,
-        
-        var comicThumb="";
-        if(masterlist[folder].parts[i].img!==undefined){
-            comicThumb=relativePath+"meta/media/"+masterlist[folder].parts[i].img
-            comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
-        }
-    **/
-
-        comicLink=masterlist[folder].parts[i].file+".html"
-        comicTitle=masterlist[folder].parts[i].alt
-        result+='<a href="'+comicLink+'"><div class="comicListItem"><div class="comicListTitle"><h4>'+comicTitle+'</h4></div><div class="comicListIndex">#'+i+'</div></div></a>'
+        result += getPart(folder,i)
     }
     addToId(id,result)
+}
+
+function getPart(folder,x){
+        comicLink=masterlist[folder].parts[x].file+".html"
+        comicTitle=masterlist[folder].parts[x].alt
+        result='<a href="'+comicLink+'"><div class="comicListItem">'+
+        '<div class="comicListTitle"><h4>'+comicTitle+'</h4></div>'+
+        '<div class="comicListIndex"><span>#'+x+'</span></div>'+
+        '</div></a>'
+        return result
 }
 
 function writeComicNextprev(){
