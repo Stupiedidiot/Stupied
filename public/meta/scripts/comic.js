@@ -1,15 +1,4 @@
 masterlist = [
-    /*
-    {
-        "folder":"!howto",
-        "alt":"How To Not",
-        "desc":"A guide on how to do stuff by telling you how not to",
-        "parts":[
-            {"file":"live","alt":"Live"},
-            {"file":"sit","alt":"Sit down"}
-        ]
-    }
-    */
     {
         "folder":"muse-adriade",
         "alt":"Muse Ariadne",
@@ -27,8 +16,8 @@ masterlist = [
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
             {"file":"independent","alt":"Independent","img":"comics/misfits/independent.png"},
-            //{"file":"yapping","alt":"Yapping"},
-            //{"file":"saved","alt":"Saved"},
+            {"file":"yapping","alt":"Yapping"},
+            {"file":"saved","alt":"Saved"},
             //{"file":"letters","alt":"Letters"},
             //{"file":"siblings","alt":"Siblings"}
         ]
@@ -44,12 +33,12 @@ masterlist = [
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
         "parts":[
             {"file":"uniform","alt":"Uniform"},
-            {"file":"notes","alt":"Note Taking"}
+            {"file":"notes","alt":"Note Taking"},
+            //{"file":"haircut","alt":"Haircut"},
             /*
             {"file":"cover","alt":"Cover Art"},
-            {"file":"haircut","alt":"Haircut"},
-            {"file":"breakfast","alt":"Breakfast"},
             {"file":"sorry","alt":"Sorry"},
+            {"file":"breakfast","alt":"Breakfast"},
             {"file":"break","alt":"Take a Break"},
             {"file":"news","alt":"Exciting News"}
             */
@@ -62,7 +51,9 @@ masterlist = [
         "parts":[
             {"file":"tetris","alt":"Tetris"},
             {"file":"grass","alt":"Touch Grass"},
-            {"file":"icecream","alt":"Ice Cream"}
+            {"file":"icecream","alt":"Ice Cream"},
+            //{"file":"man-down","alt":"But, Psyyy--"},
+            //{"file":"hell","alt":"I like You"}
         ]
     },
     {

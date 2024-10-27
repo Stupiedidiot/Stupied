@@ -209,6 +209,11 @@ body#comicViewer #nextprev span{
     display:flex;
     padding:1rem;
 }
+
+.comicListItem:hover{
+    background-color:rgb(239, 239, 239);
+}
+
 .comicListTitle{
     flex:1;
 }

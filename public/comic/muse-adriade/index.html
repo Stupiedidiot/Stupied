@@ -7,6 +7,10 @@
     <title></title>
     
     <style>
+        body{
+            overflow-x: hidden;
+        }
+
         #title{grid-area:title;}
         #list{grid-area:list;}
         #image{grid-area:img;}
@@ -47,9 +51,9 @@
             #image img{height:130%;transform:translateX(-30%) translateY(-15%) rotate(10deg);}
         }
 
-        #comicList{background-color:white;border:3px solid var(--pink);transform:rotate(-1deg);}
-        footer{color:black;}
-        footer a::after{color: black!important;;}
+        #recentList{background-color:white;border:3px solid var(--pink);transform:rotate(-1deg);}
+        #recentList .comicListItem:hover{background-color:white;}
+        #comicList .comicListItem:hover{background-color:var(--pink);color:white;}
     </style>
 </head>
 <body class="muse">
@@ -60,18 +64,29 @@
         </div>
         <div id="list">
             <p style="margin-top:5px;">My entries for a writing club that posts new prompts weekly!! Trying to get better with writing :'D</p>
-            <div id="comicList"></div>
-            <div style="text-align:right;margin-top:10px;">
-                <a href="https://museariadne.neocities.org/" target="_blank"><img style="width:100px;"src="./button.png"></a>
-            </div>
+            <h3>Most Recent:</h3>
+            <div id="recentList"></div>
+            
+            <div style="float:right;margin-top:10px;"><a href="https://museariadne.neocities.org/" target="_blank"><img style="width:100px;"src="./button.png"></a></div>
+            <footer style="margin-top:1rem; margin-bottom:0;"></footer>
         </div>
+
         <div id="image">
             <img src="./../../meta/media/wtv/flower.png">
         </div>
     </div>
 
-    <footer></footer>
+    <div style="width:90%;max-width:450px;margin:auto;padding:1rem 0;">
+        <h2 style="color:var(--pink);">Archive</h2>
+        <div id="comicList"></div>
+    </div>
 
     <script src="../../meta/scripts/main.js"></script>
+    <script>
+        window.onload = function(){
+            recentParts=getPart(currentIndex,1)
+            addToId("recentList",recentParts)
+        }
+    </script>
 </body>
 </html>

@@ -155,14 +155,14 @@ body.default::before{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }  
 header.stupied{text-align:center;margin-top:1rem;}
-header.stupied img{animation:shake 5s;animation-iteration-count:infinite;max-width:250px;width:90%;}
+header.stupied img{max-width:250px;width:90%;}
 
 footer a:not(:last-of-type)::after{
     content:" | ";
-    color:white;
 }
 footer{
-    color:white;
     text-align:center;
-    margin-bottom:3rem;
+    margin-bottom:1rem;
 }
+
+body.default footer{color:white;}
