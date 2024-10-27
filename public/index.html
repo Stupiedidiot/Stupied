@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./meta/styles/global.css">
-  <title>stupied! (*^▽^*)/</title>
+  <title>stupied stuff!</title>
 <style>
 #about-mobile{
     min-height:120px;
@@ -225,26 +225,22 @@
 }
 
 @keyframes jump {
-    0% {transform:translateY(5%);}
-    90% {transform:translateY(-5%);}
+    50% {transform:translateY(5%);}
+    100% {transform:translateY(-5%);}
 }
 
-@keyframes wave {
-    0% {transform:translateY(10px);}
-    50% {transform:translateY(-20px);}
+@keyframes fall {
+    50% {transform:translateY(-5%);}
+    100% {transform:translateY(5%);}
 }
 
 .meow span{display: inline-block;}
 
 .meow span:nth-of-type(n){
-    animation:jump 0.5s;animation-iteration-count:infinite; 
+    animation:jump 1s;animation-iteration-count:infinite; 
 }
 .meow span:nth-of-type(2n){
-    animation:jump 1s;animation-iteration-count:infinite;
-}
-
-.meow span:nth-of-type(3n){
-    animation: jump 1.5s;animation-iteration-count:infinite;
+    animation:fall 1s;animation-iteration-count:infinite;
 }
 </style>
 </head>
@@ -273,7 +269,7 @@
             <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
         </div>
         <div class="doll">
-            <a href="about.html"><img src="./meta/media/1.png" class="outlined-white"></a>
+            <a href="about.html" title="About the Webmaster!"><img src="./meta/media/1.png" class="outlined-white"></a>
         </div>
     </div>
 

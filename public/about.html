@@ -1,177 +1,147 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Small bio and a list of most of my socials.">
-    <meta name="keywords" content="Stupied, Stupied Idiot, StupiedIdiot, Stupied_Idiot, Stupied Stuff">
-    <link rel="stylesheet" href="./meta/styles/main-legacy.css">
-
-    <Title>Meet the Artist! - Stupied</Title>
-</head>
-<body>
-
-<div id="page-format" class="checkered">
-<header></header>
-<nav></nav>
-<main>
-    <div id="main">
-        <div class="cont">
-            <img style="width:100%;max-width:150px;" class="outlined float-right" src="./meta/media/yep.png">
-            <div id="bio" class="cont blue no-shadow" style="margin-bottom:1rem;">
-                <h1>Henlo I'm Stupied!</h1>
-            
-                <p>I'm a wannabe artist who thinks they're cooler than what they actually are. I draw and write awful comics and program a bit.</p>
-                
-                <p>I'm extremely impulsive, so please don't expect any consistency from me.</p>
-            </div>
-
-            <div id="socials">
-                <h1>Socials</h1>
-                <ol style="column-count:2;width:300px;">
-                    <li><a href="https://www.instagram.com/stupied.idiot/" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.webtoons.com/en/creator/stupied" target="_blank">Webtoons</a></li>
-                    <li><a href="https://www.youtube.com/channel/UCkMvv6NaerYdYbqTZ08RBFg" target="_blank">Youtube</a></li>
-                    <li><a href="https://scratch.mit.edu/users/Stupied_Idiot/" target="_blank">Scratch</a></li>
-                    <li><a href="https://www.twitter.com/stupiedidiot" target="_blank">Twitter</a></li>
-                    <li><a href="https://artfight.net/~Stupied_idiot" target="_blank">Artfight</a></li>
-                </ol>
-            </div>
-
-            <div id="likes" class="cont pink no-shadow">
-                <h3>Stuff I love:</h3>
-                <ul>
-                    <li>Turbo - Woah that snail is fast!!</li>
-                    <li>Spore creature creator</li>
-                    <li>Scott Pilgrim vs the World!!!</li>
-                    <li>Comics in general really</li>
-                    <li>Hermitcraft and Life Series SMP</li>
-                    <li>Puzzle games - Tetris, Puyo, Baba is You, etc.</li>
-                    <li>Pop rock music</li>
-                    <li>Scrabble</li>
-                <ul>
-            </div>
-        </div>
-
-        <div class="cont">
-            <h1 style="font-size: 4rem;">About me</h1>
-            <hr>
-            <h1>>What's in the name?</h1>
-            <p>Pronounced as it's sounds (ˈstü-'pīd), my pen name dates back to my elementary years. I consider myself quite literate but I lack skills in spelling. I found it funny that no one ever bothered correcting the way I spelled stupid up until grade 6. So I decided to proudly wear this mistake lol.</p>
-
-
-            <h1>>Where can I learn about your ocs?</h1>
-            <p>I have an unhealthy amount of ocs. I've developed a fear of sharing about them, for reason that are too lengthy to explain here. I will make comics about them soon, I promise. xD</p>
-
-
-            <h1>>What are your inspirations?</h1>
-            <p>When it comes to my art specifically: <a href="https://literalhat.com/" target="_blank">Literal hat</a>, <a href="https://linktr.ee/sevenchiart" target="_blank">Sevenchiart</a>, <a href="https://m.youtube.com/channel/UCD4XIm3ZFhT72WjqhIXMN9w&ved=2ahUKEwjD1YXjlrT_AhWW8DgGHZZACOwQFnoECAkQAQ&usg=AOvVaw3t_heI4_JaJqKk6-5WVG6W" target="_blank">LavenderTowne</a>, and <a href="https://www.instagram.com/carles_dalmau/" target="_blank">Carles Dalmau</a> comes to mind. I am inspired by a lot of things and it's difficult to pin point them all!</p>
-
-            <h1>>Do you do commissions?</h1>
-            <p>I've done quite a hefty amount of them, but the paranoia never seems to go away. I tend to stress about whether or not my art is worth the price I give it. Feel free to personally ask me, but know that there is no guarantee. <a href="./artwork/commissions.html">Click for more details</a></p>
-        </div>
-
-        <div id="fact" class="cont dark-blue">
-            <h3>Random Fact Generator! <button id="factButton" style="margin:5px"onclick="generateFact()">Generate!</button></h3>
-                <div id="factContainer" class="cont no-border"><p>Click the button for random facts of whatever my 2 brain cells can think off.</p></div>
-                <div style="text-align:right; margin-top:5px;"></div>
-        </div>
-    </div>
-    <div id="side">
-    </div>
-</main>
-<footer></footer>
-</div>
-<script src="./meta/scripts/main-legacy.js"></script>
-<script>
-    facts = [
-        "Snails have toothed tongue called radula. They use it to scrap and cut food.",
-        "They might be giants is awful. If you think their music sounds great, please get some better tunes.",
-        "In the 2nd Cornetto film, ‘Hot Fuzz’, Nicholas was meant to have a love interest. This was soon scrapped and most of her lines was given to his best friend, Danny.", 
-        "Snails breathe through their skin pores!",
-        "If any of my siblings are reading this, know that you suck.",
-        "Snails are cool.",
-        "Turbo’s real name is Theo.",
-        "Whiplash’s real name is Whitney. He ran away from the winery family business, Chubby Snails, where he would have become the business’s mascot.",
-        "This fact was written by the webmaster’s sister.",
-        "Portal’s advance chamber 16 sucks and I hate it with a burning passion. Especially because my younger brother was able to solve it in the stupidest way possible, building a box fort.",
-        "Portal 2 has some funny hidden dialogue whenever you get you softlock yourself. This one’s my <a href=\"https://www.youtube.com/watch?v=-_wriFk5Ylc\" target=\"_blank\"> favorite.</a>",
-        "Scott Pilgrim had a  <a href=\"https://scottpilgrim.fandom.com/wiki/Pilgrim_family_dog\" target=\"_blank\">dog</a>. He literally only appears in one panel.",
-        "The boiling point of water is 100 °C",
-        "Sig is one of the few characters in Puyo Puyo who is not generally symmetrical. As a side-effect, he is given 2 different sets of art, one for facing left and one for facing right.",
-        "Sig can sleep with his eyes open.",
-        "Accuracy refers to how close a set is to a given true value, while precision refers to how consistent they are on getting a relative value.",
-        "Raffina has weaker magical powers than her peers. To keep up, the pouch she uses is a 'magic amplifier' that gathers tiny traces of magic from the surroundings and amplifies their power of her melee attacks.",
-        "The English version of Puyo Pop Fever refers to Lidelle as 'Rider', 'Rita', and 'Ridel' on separate occasions, the last of which more closely resembles a direct romanization of リデル.",
-        "Raffina and Lidelle are in love, it's true they told me!",
-        "In order to standardize the quality of Tetris games, the <a href=\"https://harddrop.com/wiki/Tetris_Guideline\">tetris guidelines</a> was made. It is a set of rules every modern tetris game(2001-present) must follow. This includes the colors of the tetraminos, the way the pieces rotate, the probabilities of getting a specific piece and so much more.",
-        "<a href=\"beetke.neocities.org\">beetke</a> is a loser!!"
-    ];
-    
-    const factsTotal = facts.length;
-    
-    function generateFact(){
-        if (facts.length>0) {
-            var rng= [Math.floor(Math.random()*facts.length)];
-            document.getElementById('factContainer').innerHTML="<p>" + facts[rng] + "</p>";
-            facts.splice(rng, 1);
-        } else {
-            document.getElementById('factContainer').innerHTML="<p><img class='wid-100px float-left' src=\"./meta/media/wtv/snailbread.png\"><span style='font-family:grand;font-weight:bold;color:var(--color2-1);'>Congratulations!</span> You've read through all <span style='font-weight:bold;'>" + factsTotal + "</span> facts! Have a snail bread!!!</p><hr class='clear'>";
-        }
-    }
-    </script>
-</body>
-</html>
-<!---
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./meta/styles/global.css">
-  <title>Are you Stupied?? | Hell Yeah</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./meta/styles/global.css">
+    <title>Henlo I'm Stupied!!</title>
+
+<style>
+body{
+    background-image:url(./meta/media/wtv/bg-ocean.jpg);
+    background-repeat: no-repeat;
+    background-color:white;
+    background-attachment: fixed;
+    background-size:100% 100%; object-fit: cover;
+}
+#about{
+    background-color:rgba(0, 0, 0, 0.7);
+    box-shadow:0px 0px 20px 3px black;
+    max-width:700px; width:90%;
+    margin:5rem auto 1rem auto;
+    backdrop-filter: blur(1px);
+    border-radius:10px;
+}
+#about > div{
+    display:flex;
+}
+#about-txt{
+    flex:2;
+    padding:1rem 1rem 1rem 0;
+}
+#about-txt h2{
+    color:var(--teal);
+    filter: drop-shadow(0 0 3px var(--teal));
+}
+
+#about-txt p{
+    color:white;
+    filter: drop-shadow(0 0 3px white);
+}
+
+#doll{
+    flex:1;
+    position: relative;
+    min-width:100px;
+}
+
+#doll img{
+    width:110%;
+    border-radius:100%;
+    position:absolute;
+    top:50%;right:8%;
+    transform: translateY(-50%);
+    box-shadow:0px 0px 20px 3px black;
+}
+
+#socials{
+    text-align:right;
+}
+#socials img{
+    filter: drop-shadow(0 0 3px var(--teal));
+    padding:5px;
+    width:35px;
+}
+#socials img:hover{
+    filter: drop-shadow(0 0 3px white);
+}
+@media only screen and (max-width: 360px) {
+    #socials{
+    text-align:center;
+    max-width:200px;
+    margin:auto;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #about > div{
+        display:block;
+    }
+    #about-txt{
+        padding-left:1rem;
+        padding-top:0;
+        text-align:center;
+    }
+    #doll{
+        text-align:center;
+    }
+    #doll img{
+        position: relative;
+        width:100%;max-width:200px;
+        top:0;right:0;
+        transform:translateY(-10%);
+    }
+    #socials{
+    text-align:center;
+    }
+    #socials img{
+        width:40px;
+    }
+}
+</style>
+
 </head>
 <body>
-    <img style="width:100%;max-width:150px;" class="white-outlined" src="./meta/media/2.png">
-    <h1>Henlo I'm Stupied!</h1>
-    <p>I'm a wannabe artist who thinks they're cooler than what they actually are. I draw and write awful comics and program a bit.</p>
-    <p>I'm extremely impulsive, so please don't expect any consistency from me.</p>
+    <div id="about">
+        <div>
+            <div id="doll">
+                <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/media/pfp.png"></a>
+            </div>
+            <div id="about-txt">
+                <h2>Henlo I'm Stupied!</h2>
+                <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+                <p>I try my best to minimize social media usage, so apologies if I seem unresponsive.</p>
 
-    <h1>Socials</h1>
-    <ol style="column-count:2;width:300px;">
-        <li><a href="https://www.instagram.com/stupied.idiot/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.webtoons.com/en/creator/stupied" target="_blank">Webtoons</a></li>
-        <li><a href="https://www.youtube.com/channel/UCkMvv6NaerYdYbqTZ08RBFg" target="_blank">Youtube</a></li>
-        <li><a href="https://scratch.mit.edu/users/Stupied_Idiot/" target="_blank">Scratch</a></li>
-        <li><a href="https://www.twitter.com/stupiedidiot" target="_blank">Twitter</a></li>
-        <li><a href="https://artfight.net/~Stupied_idiot" target="_blank">Artfight</a></li>
-    </ol>
+                <div id="socials">
+                    <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account"><img src="./meta/media/icons/instagram.png"></a>
+                    <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here"><img src="./meta/media/icons/webtoon.png"></a>
+                    <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos"><img src="./meta/media/icons/youtube.png"></a>
+                    <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated"><img src="./meta/media/icons/artfight.png"></a>
+                    <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D"><img src="./meta/media/icons/tetrio.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="color:white;text-align:center;filter: drop-shadow(0 0 3px white);">
+        <a href="./index.html">« head home » </a>
+    </div>
+<!--
+    <div id="list">
+        <ul>
+            <li>Kyman Truther</li>
+            <li>Scrabble Tryhard</li>
+            <li>7-2 Well Supremacy</li>
+            <li>Late 2000s games >></li>
+            <li>Owns a million OCs</li>
+        </ul>
+    </div>
 
-    <ul>
-        <li>Turbo - Woah that snail is fast!!</li>
-        <li>Spore creature creator</li>
-        <li>Scott Pilgrim vs the World!!!</li>
-        <li>Comics in general really</li>
-        <li>Hermitcraft and Life Series SMP</li>
-        <li>Puzzle games - Tetris, Puyo, Baba is You, etc.</li>
-        <li>Pop rock music</li>
-        <li>Scrabble</li>
-    <ul>
+    <img src="./meta/media/wtv/stamp-02.PNG">
+    <img src="./meta/media/wtv/stamp-05.PNG">
 
-    <h1>>What's in the name?</h1>
-    <p>Pronounced as it's sounds (ˈstü-'pīd), my pen name dates back to my elementary years. I consider myself quite literate but I lack skills in spelling. I found it funny that no one ever bothered correcting the way I spelled stupid up until grade 6. So I decided to proudly wear this mistake lol.</p>
-
-
-    <h1>>Where can I learn about your ocs?</h1>
-    <p>I have an unhealthy amount of ocs. I've developed a fear of sharing about them, for reason that are too lengthy to explain here. I will make comics about them soon, I promise. xD</p>
-
-
-    <h1>>What are your inspirations?</h1>
-    <p>When it comes to my art specifically: <a href="https://literalhat.com/" target="_blank">Literal hat</a>, <a href="https://linktr.ee/sevenchiart" target="_blank">Sevenchiart</a>, <a href="https://m.youtube.com/channel/UCD4XIm3ZFhT72WjqhIXMN9w&ved=2ahUKEwjD1YXjlrT_AhWW8DgGHZZACOwQFnoECAkQAQ&usg=AOvVaw3t_heI4_JaJqKk6-5WVG6W" target="_blank">LavenderTowne</a>, and <a href="https://www.instagram.com/carles_dalmau/" target="_blank">Carles Dalmau</a> comes to mind. I am inspired by a lot of things and it's difficult to pin point them all!</p>
-
-    <h1>>Do you do commissions?</h1>
-    <p>I've done quite a hefty amount of them, but the paranoia never seems to go away. I tend to stress about whether or not my art is worth the price I give it. Feel free to personally ask me, but know that there is no guarantee. <a href="./art/commissions.html">Click for more details</a></p>
-
+    <div id="note">
+        
+    </div>
+-->
 <script src="./meta/scripts/main.js"></script>
 </body>
 </html>
--->
