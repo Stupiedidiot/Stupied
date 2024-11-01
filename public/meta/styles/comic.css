@@ -166,7 +166,6 @@ body#comicViewer #bottom{
 }
 
 body#comicViewer #bottom #info > div{
-    background-color:white;
     padding:5px 1rem;
 }
 
@@ -192,10 +191,11 @@ body#comicViewer #comments{
 body#comicViewer #info > h3{
     background-color:var(--teal);
     padding:5px;
+    border-radius:2px 2px 0 0;
 }
 body#comicViewer #info{
     border-radius:5px;
-    background-color:var(--lighter-teal);
+    background-color:white;
     border:3px solid black;
 }
 body#comicViewer footer, body#gallery footer{

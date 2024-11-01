@@ -5,8 +5,12 @@ masterlist = [
         "desc":"Writing club thingy wohooo",
         "parts":[
             {"file":"2024-02-05","alt":"Writing is Hard"},
+            //{"file":"2024-02-12","alt":"Foreign Film"},
+            {"file":"2024-02-26","alt":"Blue Bird","img":"comics/muse-ariadne/blue-bird.png"},
             //{"file":"2024-04-08","alt":"I Hate You"},
-            {"file":"2024-05-20","alt":"Evidence"},
+            //{"file":"2024-05-13","alt":"Total Domination"},
+            {"file":"2024-05-20","alt":"The Odd Siblings","img":"comics/muse-ariadne/odd-siblings.png"},
+            //{"file":"2024-08-26","alt":"Laundry Day"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
     },
@@ -49,11 +53,11 @@ masterlist = [
         "alt":"Psych!",
         "desc":"Being a psychic sucks actually.",
         "parts":[
-            {"file":"tetris","alt":"Tetris"},
+            //{"file":"tetris","alt":"Tetris"},
             {"file":"grass","alt":"Touch Grass"},
             {"file":"icecream","alt":"Ice Cream"},
-            //{"file":"man-down","alt":"But, Psyyy--"},
-            //{"file":"hell","alt":"I like You"}
+            {"file":"man-down","alt":"But, Psyyy--","img":"comics/psych/man-down.png"},
+            {"file":"hell","alt":"I like You"}
         ]
     },
     {

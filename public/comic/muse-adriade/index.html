@@ -60,7 +60,7 @@
 
     <div class="main-container note">
         <div id="title">
-            <h2>muse adriade</h2>
+            <h2>muse ariadne</h2>
         </div>
         <div id="list">
             <p style="margin-top:5px;">My entries for a writing club that posts new prompts weekly!! Trying to get better with writing :'D</p>
@@ -80,11 +80,11 @@
         <h2 style="color:var(--pink);">Archive</h2>
         <div id="comicList"></div>
     </div>
-
     <script src="../../meta/scripts/main.js"></script>
     <script>
         window.onload = function(){
             recentParts=getPart(currentIndex,1)
+            recentParts+=getPart(currentIndex,2)
             addToId("recentList",recentParts)
         }
     </script>
