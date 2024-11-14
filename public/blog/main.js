@@ -6,6 +6,43 @@ masterlist = [
     {"file":"2023-08-19-Minecraft.html","alt":"Minecraft irl!?!?!?","tags":["pictures"]}
 ]
 
+const url = window.location.pathname;
+relativePath = "./";
+urlPath = url.split('/');
+if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
+
+function addTo(item,input){
+    if (item) {
+        if(typeof input=="string"){
+            item.innerHTML+=input;
+        } else {
+            item.append(input);
+        }
+    }
+}
+
+addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/favicon.ico"></link>');
+addToId("comments",' <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>');
+
+window.onload = function(){
+    if(document.getElementById("comments")){
+        if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
+    }
+}
+
+function addToTag(tag,input) {
+    tag = document.getElementsByTagName(tag)[0]
+    addTo(tag,input)
+}
+function addToId(id,input) {
+    id = document.getElementById(id)
+    addTo(id,input)
+}
+function addToQuery(query,input) {
+    query = document.querySelector(query)
+    addTo(query,input)
+}
+
 function getIndex(z){
 	currentIndex = -1;
 	currentFile = url.substring(url.lastIndexOf('/'));
@@ -99,15 +136,14 @@ function genNav(z){
 	}
 }
 
-if(url.includes("/blog")===true){
-    getIndex(masterlist)
+getIndex(masterlist)
     if ( currentIndex > -1) {
         genNav(masterlist);
         currentTitle = getTitle(currentIndex, masterlist);
         currentDate = getDate(currentIndex, masterlist);
         if (document.title === "") {
             currentDate=currentDate.replaceAll("-00","")
-            document.title = currentDate + " | Stupied Stuff";
+            document.title = currentDate + " | Stupied";
         }
         currentDate = convDate(currentDate);
         addToId('blogTitle',currentTitle);
@@ -116,61 +152,16 @@ if(url.includes("/blog")===true){
     }else{
         addToId('blogTitle',"[Unlisted Post]");
         addToId('nextprev',"<a href='./index.html'>« Archive  »</a>")
-        if (document.title === "") {document.title = "Unlisted Post | Stupied Stuff";}
-        list=createItem("ul",{})
+        if (document.title === "") {document.title = "Unlisted Post | Stupied";}
+        list=""
         for(i=0;i<masterlist.length;i++){
-            listItem = createItem("li",{})
             date = getDate(i, masterlist);
             title = getTitle(i, masterlist);
-            addTo(listItem,createItem("a",{input:'<span style="font-family:grandstander;">'+date+" »</span> <span class='txt-darker-yellow'>"+title+"</span>",href:masterlist[i].file}))
-            addTo(list,listItem)
+			link= masterlist[i].file
+			item='<li><a href="'+link+'"><span>'+date+" »</span> <span class='txt-darker-yellow'>"+title+'</span></a></li>'
+            list+=item
         }
+		list="<ul>"+list+"</ul>"
         addToId("blogList",list)
     }
-    addToTag("nav",'<header>The Abyss</header><a href="'+relativePath+'blog/index.html" title="list of all the blog posts">Archive</a><a href="'+relativePath+'blog/micro.html" title="small random thoughts">Micro</a><a href="'+relativePath+'index.html" title="head home">Surface ✮</a>')
-}
-
-if(url.includes("/micro")===true){
-    fetch(relativePath+"/meta/scripts/micro.json")
-        .then((response) => response.json())
-        .then((micro) => {
-            microPostCont=createItem("div",{style:"cont"});
-            for(i=1, prevMonth=micro[i].date.substr(5,2);i<micro.length;i++){
-                currentMonth=micro[i].date.substr(5,2)
-
-                getMicroPost(micro,i);
-                if(currentMonth===prevMonth){
-                    addTo(microPostCont,microPost)
-                } else {
-                    addToId("microPosts",microPostCont)
-                    microPostCont=createItem("div",{style:"cont"});
-                    prevMonth=currentMonth
-                    addTo(microPostCont,microPost)
-                }
-            }
-            addToId("microPosts",microPostCont)
-            x=document.querySelectorAll("#microPosts div > div:not(:first-child)")
-            for(i=0;i<x.length;i++){
-                x[i].prepend(createItem("hr",{}))
-            }
-    })
-}
-
-function getDateMicro(micro,i){
-    microDate=(new Date().getTime()-new Date(micro[i].date).getTime())/1000
-    if (microDate<60){microDate=Math.floor(microDate); if(microDate===1){microDate+=" second ago"}else{microDate+=" seconds ago"}}
-    if (microDate<3600){microDate=Math.floor(microDate/60);if(microDate===1){microDate+=" minute ago"}else{microDate+=" minutes ago"}}
-    if (microDate<86400){microDate=Math.floor((microDate/60)/60);if(microDate===1){microDate+=" hour ago"}else{microDate+=" hours ago"}}
-    if (microDate<31540000){microDate=Math.floor(((microDate/60)/60)/24);if(microDate===1){microDate+=" day ago"}else{microDate+=" days ago"}}
-    if (microDate>31540000){microDate=Math.floor((((microDate/60)/60)/24)/365.25);if(microDate===1){microDate+=" year ago"}else{microDate+=" years ago"}}
-
-    microDate=createItem("a",{input:createItem("h4",{input:micro[i].status+" "+microDate,title:micro[i].date.replaceAll("T"," | ")}),id:"microBlogLink"})
-}
-
-function getMicroPost(micro,i){
-    getDateMicro(micro,i)
-    microTxt= createItem("p",{input:micro[i].txt})
-    microPost=createItem("div",{input:""})
-    addTo(microPost,microDate)
-    addTo(microPost,microTxt)
-}
+    addToTag("nav",'<header>The Abyss</header><a href="'+relativePath+'blog/index.html" title="list of all the blog posts">Archive</a><a href="https://status.cafe/users/stupied" title="small random thoughts">Status</a><a href="'+relativePath+'index.html" title="head home">Surface ✮</a>')

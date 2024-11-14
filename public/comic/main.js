@@ -6,10 +6,10 @@ masterlist = [
         "parts":[
             {"file":"2024-02-05","alt":"Writing is Hard"},
             //{"file":"2024-02-12","alt":"Foreign Film"},
-            {"file":"2024-02-26","alt":"Blue Bird","img":"comics/muse-ariadne/blue-bird.png"},
+            {"file":"2024-02-26","alt":"Blue Bird","img":"blue-bird.png"},
             //{"file":"2024-04-08","alt":"I Hate You"},
             //{"file":"2024-05-13","alt":"Total Domination"},
-            {"file":"2024-05-20","alt":"The Odd Siblings","img":"comics/muse-ariadne/odd-siblings.png"},
+            {"file":"2024-05-20","alt":"The Odd Siblings","img":"odd-siblings.png"},
             //{"file":"2024-08-26","alt":"Laundry Day"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
@@ -19,7 +19,7 @@ masterlist = [
         "alt":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
-            {"file":"independent","alt":"Independent","img":"comics/misfits/independent.png"},
+            {"file":"independent","alt":"Independent","img":"independent.png"},
             {"file":"yapping","alt":"Yapping"},
             {"file":"saved","alt":"Saved"},
             //{"file":"letters","alt":"Letters"},
@@ -56,7 +56,7 @@ masterlist = [
             //{"file":"tetris","alt":"Tetris"},
             {"file":"grass","alt":"Touch Grass"},
             {"file":"icecream","alt":"Ice Cream"},
-            {"file":"man-down","alt":"But, Psyyy--","img":"comics/psych/man-down.png"},
+            {"file":"man-down","alt":"But, Psyyy--","img":"man-down.png"},
             {"file":"hell","alt":"I like You"}
         ]
     },
@@ -71,7 +71,7 @@ masterlist = [
         "desc":"Random LiteralHat related Comics",
         "parts":[
             {"file":"index","alt":"Clipper"},
-            {"file":"lost","alt":"Lost","img":"comics/hat/0A01-00.png"}
+            {"file":"lost","alt":"Lost","img":"0A01-00.png"}
         ]
     },
     {
@@ -95,6 +95,58 @@ masterlist = [
         ]
     }
 ]
+
+const url = window.location.pathname;
+relativePath = "./";
+urlPath = url.split('/');
+if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
+
+function addTo(item,input){
+    if (item) {
+        if(typeof input=="string"){
+            item.innerHTML+=input;
+        } else {
+            item.append(input);
+        }
+    }
+}
+
+function addToTag(tag,input) {
+    tag = document.getElementsByTagName(tag)[0]
+    addTo(tag,input)
+}
+function addToId(id,input) {
+    id = document.getElementById(id)
+    addTo(id,input)
+}
+function addToQuery(query,input) {
+    query = document.querySelector(query)
+    addTo(query,input)
+}
+function wrap(el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+}
+function createItem(item,{id,style,input,src,href,title}){
+    item = document.createElement(item)
+    if(id!==undefined){item.id = id}
+    if(style!==undefined){item.classList.add(style)}
+    if(src!==undefined){item.src = src}
+    if(href!==undefined){item.href = href}
+    if(title!==undefined){item.title = title}
+    if(input!==undefined){addTo(item,input)}
+    return item
+}
+addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
+addToId("comments",' <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>');
+
+window.onload = function(){
+    if(document.getElementById("comments")){
+        if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
+    }
+}
+addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
+
 maxParts=0
 searchComicIndex()
 if ( currentIndex > -1) {
@@ -168,7 +220,7 @@ function writeComicArchive(){
         // Hides anything starting with !
         if(masterlist[i].folder[0]!=="!"){
             listItem = createItem("li",{})
-            addTo(listItem,createItem("a",{input:"<span style='font-family:grandstander'>"+masterlist[i].alt+"</span> » ",href:link}))
+            addTo(listItem,createItem("a",{input:"<span>"+masterlist[i].alt+"</span> » ",href:link}))
             addTo(listItem, masterlist[i].desc)
             addTo(list,listItem)
         }
@@ -224,7 +276,7 @@ function writeComicNext(){
 	} else {
         var comicThumb="";
         if(masterlist[currentIndex].parts[currentPartIndex+1].img!==undefined){
-            comicThumb=relativePath+"meta/media/"+masterlist[currentIndex].parts[currentPartIndex+1].img
+            comicThumb="./img/"+masterlist[currentIndex].parts[currentPartIndex+1].img
             comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
         }
         nextI= masterlist[currentIndex].parts[currentPartIndex+1].file+".html"

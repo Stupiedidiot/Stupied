@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'grandstander';
-    src: url('./grandstander.ttf') format('truetype');
-    font-weight:normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --pink: #d9406a;
@@ -20,7 +15,7 @@ body{
 
 h1,h2,h3,h4,h5,h6{
     margin:0;
-    font-family:grandstander;
+    font-family:grandstander
 }
 
 ol,ul{margin-top:0;}
@@ -47,17 +42,6 @@ ul{
 ul li:nth-child(2n){
     list-style-type:"✮ ";
 }
-.txt-pink{color:var(--pink)!important;}
-.txt-yellow{color:var(--yellow)!important;}
-.txt-teal{color:var(--teal)!important;}
-
-.bg-yellow{background-color:var(--yellow)!important;}
-.bg-teal{background-color:var(--teal)!important;}
-
-.bg-white{background-color:white!important;}
-.bg-light-gray{background-color:lightgray!important;}
-.bg-gray{background-color:gray!important;}
-.bg-black{background-color:black!important;}
 
 .outlined-white{filter:drop-shadow(2px 0 0 white)drop-shadow(-2px 0 0 white)drop-shadow(0 2px 0 white)drop-shadow(0 -2px 0 white)}
 
@@ -116,6 +100,27 @@ height: 100%;
 .float-right,.float-left{float:none;margin:0 auto;}
 }
 
+
+@font-face {
+    font-family: 'grandstander';
+    src: url('./grandstander.ttf') format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+
+
+.txt-pink{color:var(--pink)!important;}
+.txt-yellow{color:var(--yellow)!important;}
+.txt-teal{color:var(--teal)!important;}
+
+.bg-yellow{background-color:var(--yellow)!important;}
+.bg-teal{background-color:var(--teal)!important;}
+
+.bg-white{background-color:white!important;}
+.bg-light-gray{background-color:lightgray!important;}
+.bg-gray{background-color:gray!important;}
+.bg-black{background-color:black!important;}
+
 .default{
     background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
     background-repeat: repeat;
@@ -148,19 +153,7 @@ body.default::before{
     right:50%;
     transform: translateX(50%) skewY(-2deg);
 }
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}  
+
 header.stupied{text-align:center;margin-top:1rem;}
 header.stupied img{max-width:250px;width:90%;}
 

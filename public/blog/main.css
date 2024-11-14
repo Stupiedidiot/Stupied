@@ -1,4 +1,4 @@
-@import url("./global.css");
+@import url("./../meta/main.css");
 
 :root {
     --light-yellow:#efc73e;
@@ -34,7 +34,7 @@
 .cont:not(:first-child),.cont-half:not(:first-child),.cont-black:not(:first-child),.cont-paper:not(:first-child){margin-top:5px;}
 
 body#blog{
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../media/wtv/tile-ocean.png);
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/tile-ocean.png);
     background-color:black;
 }
 
@@ -71,6 +71,7 @@ body#blog{
     color:var(--dark-teal);
     padding-bottom:1rem;
 }
+#blogList a > span:first-child{font-family: grandstander;}
 #blog footer{
     margin-top:1rem;  
 }

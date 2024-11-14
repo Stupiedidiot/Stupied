@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../meta/styles/comic.css">
+    <link rel="stylesheet" href="./../main.css">
     <title></title>
     
     <style>
@@ -67,12 +67,12 @@
             <h3>Most Recent:</h3>
             <div id="recentList"></div>
             
-            <div style="float:right;margin-top:10px;"><a href="https://museariadne.neocities.org/" target="_blank"><img style="width:100px;"src="./button.png"></a></div>
+            <div style="float:right;margin-top:10px;"><a href="https://museariadne.neocities.org/" target="_blank"><img style="width:100px;"src="./img/button.png"></a></div>
             <footer style="margin-top:1rem; margin-bottom:0;"></footer>
         </div>
 
         <div id="image">
-            <img src="./../../meta/media/wtv/flower.png">
+            <img src="./img/flower.png">
         </div>
     </div>
 
@@ -80,13 +80,11 @@
         <h2 style="color:var(--pink);">Archive</h2>
         <div id="comicList"></div>
     </div>
-    <script src="../../meta/scripts/main.js"></script>
+    <script src="./../main.js"></script>
     <script>
-        window.onload = function(){
-            recentParts=getPart(currentIndex,1)
-            recentParts+=getPart(currentIndex,2)
-            addToId("recentList",recentParts)
-        }
+        recentParts=getPart(currentIndex,1)
+        recentParts+=getPart(currentIndex,2)
+        addToId("recentList",recentParts)
     </script>
 </body>
 </html>

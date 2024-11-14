@@ -3,19 +3,6 @@ const url = window.location.pathname;
     urlPath = url.split('/');
     if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
 
-addScript("blog")
-addScript("comic")
-
-function addScript(x){
-    if(url.includes(x)){
-        head = document.getElementsByTagName('head')[0];
-        script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = relativePath + 'meta/scripts/' + x + '.js';
-        head.appendChild(script);
-    }
-}
-
 function addTo(item,input){
     if (item) {
         if(typeof input=="string"){

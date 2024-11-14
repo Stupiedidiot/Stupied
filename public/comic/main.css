@@ -1,4 +1,4 @@
-@import url("./global.css");
+@import url("./../meta/main.css");
 
 .padding{padding:1rem!important;}
 .no-padding{padding: 0!important;}
@@ -32,6 +32,7 @@
 }
 .cont:not(:first-child),.cont-half:not(:first-child),.cont-black:not(:first-child),.cont-paper:not(:first-child){margin-top:5px;}
 
+#comicList a > span:first-child{font-family: grandstander;}
 
 .comicInfo{
     max-width:1100px;

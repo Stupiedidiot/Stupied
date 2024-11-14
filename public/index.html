@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./meta/styles/global.css">
+  <link rel="stylesheet" href="./meta/main.css">
   <title>stupied stuff!</title>
 <style>
 #about-mobile{
@@ -64,9 +64,16 @@
     border-top:0;
 }
 
-#microContent{
+#statuscafe {
     padding:2rem 1rem;
     transform:scaleX(50%);
+}
+#statuscafe-username{
+    font-family:grandstander;
+    font-weight: bold;
+}
+#statuscafe-username a{
+    display:none;
 }
 
 #comic{
@@ -117,7 +124,7 @@
     background-color:white;
     min-height:200px;
 
-    background-image:url(./meta/media/art/2023-36.png);
+    background-image:url(./art/img/2023-roar.png);
     background-position:center 25%;
     background-size:cover;
     background-repeat: no-repeat;
@@ -224,6 +231,20 @@
   animation-iteration-count: infinite;
 }
 
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}  
+
 @keyframes jump {
     50% {transform:translateY(5%);}
     100% {transform:translateY(-5%);}
@@ -247,13 +268,13 @@
 <body class="default">
 <main style="max-width:800px;margin:1rem auto;">
     <header class="stupied">
-        <img src="./meta/media/stupied-1.png">
+        <img src="./meta/stupied-1.png">
     </header>
 
     <div id="about-mobile">
         <a href="./about.html" title="About the Webmaster">
             <h1>About the Webmaster</h1>
-            <img src="./meta/media/1.png">
+            <img src="./meta/1.png">
         </a>
     </div>
 
@@ -269,21 +290,21 @@
             <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
         </div>
         <div class="doll">
-            <a href="about.html" title="About the Webmaster!"><img src="./meta/media/1.png" class="outlined-white"></a>
+            <a href="about.html" title="About the Webmaster!"><img src="./meta/1.png" class="outlined-white"></a>
         </div>
     </div>
 
     <div id="hell-yeah">
         <div id="blog">
-            <div id="micro" title="lastest microblog post">
-                <a href="./blog/micro.html">
-                    <div id="microContent"></div>
+            <div id="micro" title="status.cafe updates!">
+                <a href="https://status.cafe/users/stupied">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=stupied" defer></script>
                 </a>
             </div>
             <a href="./blog/index.html" title="screaming into the abyss">
                 <div id="blogDesign">
                     <h1>BLOG</h1>
-                    <img src="./meta/media/wtv/bruh.png">
+                    <img src="./meta/bruh.png">
                 </div>
             </a>
         </div>
@@ -293,7 +314,7 @@
             <a href="./comic/index.html" title="sequential images to tell dumb stories">
                 <h1>LIBRARY</h1>
                 <div>
-                    <img src="./meta/media/comics/84/doll-ashley.png">
+                    <img src="./comic/84/img/doll-ashley.png">
                 </div>
             </a>
         </div>
@@ -308,15 +329,6 @@
     </div>
 </main>
 <footer></footer>
-<script src="./meta/scripts/main.js"></script>
-<script src="./meta/scripts/blog.js"></script>
-<script>
-    fetch("./meta/scripts/micro.json")
-        .then((response) => response.json())
-        .then((micro) => {
-            getMicroPost(micro,1)
-            addToId("microContent",microPost)
-    });
-</script>
+<script src="./meta/main.js"></script>
 </body>
 </html>
