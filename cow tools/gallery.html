@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../public/meta/main.css">
+  <title>What in the What</title>
+</head>
+<body>
+<div>
+  <div style="padding:1rem;text-align: center;">
+    <button id="output" onclick="copyText()">Copy Inner HTML</button>
+    <button id="output" onclick="copyTextArray()">Copy Array</button>
+  </div>
+  <div id="input" class="justified-gallery">
+
+  </div>
+</div>
+
+
+<script>
+  images=document.querySelectorAll("#input>img")
+  test=""
+
+  window.onload = function(){
+      for(i=0;i<images.length;i++){
+      source = images[i].src.replaceAll("http://127.0.0.1:5500/public/art/img/","");
+
+      imgWidth=images[i].offsetWidth
+      imgHeight=images[i].offsetHeight
+      images[i].style.setProperty("--width", imgWidth);
+      images[i].style.setProperty("--height", imgHeight);
+      
+      test+='{"img":"'+source+'"},'
+      }
+  }
+  function copyText(){
+  text=document.getElementById("input").innerHTML
+  text=text.replaceAll("./../public/art",".")
+  navigator.clipboard.writeText(text);
+  alert("text copied")
+  }
+
+  function copyTextArray(){
+  navigator.clipboard.writeText(test);
+  alert("text copied")
+  }
+</script>
+<script src="./../public/meta/scripts/main.js"></script>
+</body>
+</html>
