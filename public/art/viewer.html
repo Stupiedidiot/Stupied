@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stupied</title>
+</head>
+<body>
+<div id="image"></div>
+<h1 id="title"></h1>
+<div id="desc"></div>
+<div id="comments"></div>
+
+<script src="./../meta/main.js"></script>
+<script>
+    const urlQuery = new URLSearchParams(window.location.search)
+    currentImage = urlQuery.get('item')
+
+    fetch("./main.json")
+        .then((response) => response.json())
+        .then((art) => {
+          if(currentImage===null){
+            currentImage=art[0].img
+            window.location.href = "./viewer.html?item="+currentImage;
+          }
+
+          imageLink='./img/'+currentImage
+          image='<a href="'+imageLink+'"><img src="'+imageLink+'"></a>'
+          addToId("image",image)
+
+          currentIndex=getIndex(art,currentImage)
+          if (currentIndex>-1){
+            if(art[currentIndex].title!==undefined){
+            addToId("title",art[currentIndex].title)
+            }
+            if(art[currentIndex].desc!==undefined){
+              addToId("desc",art[currentIndex].desc)
+            }
+          }
+    })
+    
+    function getIndex(json,current){
+      for(i=0;i<json.length;i++){
+            if(json[i].img===current){
+              index=i
+              return index
+            }
+        }
+        return -1
+    }
+</script>
+</body>
+</html>

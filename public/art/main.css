@@ -1,0 +1,22 @@
+@import url(./../meta/main.css);
+
+:root{
+    --dark-brown:#1d1515;
+    --brown:#615651;
+    --blue:#5177a9;
+    --wheat:#e9eae2;
+}
+
+body{
+    background-color:var(--wheat);
+    color:var(--blue);
+}
+
+body>div {
+    padding:1rem;
+    max-width:700px;
+    margin:1rem auto;
+    border:3px solid var(--blue);
+    border-radius: 5px;
+    box-shadow: 3px 8px var(--blue);
+}
