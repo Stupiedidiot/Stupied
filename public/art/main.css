@@ -1,0 +1,131 @@
+@import url(./../meta/main.css);
+
+:root{
+    --dark-brown:#1d1515;
+    --brown:#615651;
+    --blue:#5177a9;
+    --wheat:#e9eae2;
+}
+
+body{
+    background-color:var(--wheat);
+    color:var(--blue);
+}
+
+body > #main-content,
+body > #aside-1-content,
+body > #aside-2-content {
+  display: none;
+}
+
+#container header{grid-area:header;}
+#container main{grid-area:main;}
+#container #aside-1{grid-area:aside1;}
+#container aside-2{grid-area:aside2;}
+#container footer{grid-area:footer;}
+
+#container{
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'main aside1'
+    'main aside2'
+    'footer aside2';
+    gap:10px;
+    grid-template-columns:2fr auto;
+    grid-template-rows:auto auto 1fr auto;
+    max-width:1000px;
+    margin:1rem auto;
+}
+
+#container main, #container #aside-1{
+    border:3px solid var(--blue);
+    border-radius: 5px; 
+    box-shadow: 3px 3px var(--blue);
+}
+
+#container #main-content{
+    padding:1rem;
+}
+
+header img{
+  width:100%;
+}
+
+#aside-1{
+    padding:0 1rem;
+    width:200px;
+    position:relative;
+}
+
+#aside-1 > div{
+  margin-bottom:1rem;
+}
+
+#aside-1 #aside-1-img{
+  width:100%;
+  max-width:150px;
+  position:relative;
+  top:-1rem;
+  left:50%;
+  transform: translateX(-50%);
+  border:3px solid var(--blue);
+}
+
+nav{
+  position:relative;
+  text-align: center;
+  top:-0.5rem;
+}
+
+nav > a{
+  color:white;
+  background-color:var(--blue);
+  display:inline-block;
+  padding:5px;
+  border-radius:30px;
+  margin-bottom:5px;
+}
+
+#aside-2{
+  width:200px;
+  padding:1rem;
+}
+
+@media only screen and (max-width: 650px) {
+  #container{display:block;}
+  #container > *{margin-bottom:1rem;}
+  #aside-1,#aside-2{width:auto;}
+
+  #aside-1 #aside-1-img{max-width:120px;}
+}
+
+@media only screen and (max-width: 650px) and (min-width:400px) {
+  #aside-1 #aside-1-img{grid-area:img;}
+  #aside-1 nav{grid-area:link;}
+  #aside-1 > div{grid-area:extra;}
+
+  #aside-1{
+    display:grid;
+    grid-template-areas:
+    'img why'
+    'img link'
+    'img extra';
+    grid-template-columns:auto 1fr;
+    grid-template-rows:0 auto 1fr;
+    min-height:120px;
+  }
+
+  #aside-1 #aside-1-img{
+    left:-0.5rem;
+    transform:none;
+  }
+
+  #aside-1 nav{
+    top:0; margin:1rem 0 0 0.5rem; text-align:left;
+  }
+  #aside-1 > div {margin-left:0.5rem;}
+}
+
+#image img{width:100%;}
+#comments{margin-top:1rem;}
