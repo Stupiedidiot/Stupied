@@ -12,6 +12,7 @@ body{
     color:var(--blue);
 }
 
+<<<<<<< HEAD
 body > #main-content,
 body > #aside-1-content,
 body > #aside-2-content {
@@ -129,3 +130,13 @@ nav > a{
 
 #image img{width:100%;}
 #comments{margin-top:1rem;}
+=======
+body>div {
+    padding:1rem;
+    max-width:700px;
+    margin:1rem auto;
+    border:3px solid var(--blue);
+    border-radius: 5px;
+    box-shadow: 3px 8px var(--blue);
+}
+>>>>>>> 6a8299406e78d4dbc89bd49192df6f869cd85f20

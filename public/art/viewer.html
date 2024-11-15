@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
   <link rel="stylesheet" href="./main.css">
   <title>Stupied</title>
 </head>
@@ -19,6 +20,17 @@
 </div>
 
 <script src="./main.js"></script>
+=======
+  <title>Stupied</title>
+</head>
+<body>
+<div id="image"></div>
+<h1 id="title"></h1>
+<div id="desc"></div>
+<div id="comments"></div>
+
+<script src="./../meta/main.js"></script>
+>>>>>>> 6a8299406e78d4dbc89bd49192df6f869cd85f20
 <script>
     const urlQuery = new URLSearchParams(window.location.search)
     currentImage = urlQuery.get('item')
@@ -32,16 +44,28 @@
           }
 
           imageLink='./img/'+currentImage
+<<<<<<< HEAD
           image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
           document.getElementById("image").innerHTML=image
+=======
+          image='<a href="'+imageLink+'"><img src="'+imageLink+'"></a>'
+          addToId("image",image)
+>>>>>>> 6a8299406e78d4dbc89bd49192df6f869cd85f20
 
           currentIndex=getIndex(art,currentImage)
           if (currentIndex>-1){
             if(art[currentIndex].title!==undefined){
+<<<<<<< HEAD
               document.getElementById("title").innerHTML=art[currentIndex].title
             }
             if(art[currentIndex].desc!==undefined){
               document.getElementById("desc").innerHTML=art[currentIndex].desc
+=======
+            addToId("title",art[currentIndex].title)
+            }
+            if(art[currentIndex].desc!==undefined){
+              addToId("desc",art[currentIndex].desc)
+>>>>>>> 6a8299406e78d4dbc89bd49192df6f869cd85f20
             }
           }
     })
