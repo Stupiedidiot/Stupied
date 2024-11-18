@@ -37,11 +37,9 @@ const url = window.location.pathname;relativePath = "./";
 const header='\
 '
 
-// <img src="' + relativePath + 'img/banner.png">\
-
 const navigation ='\
 <div>\
-    <a href="#"><img src="' + relativePath + '../meta/pfp.png"></a>\
+    <a href="#"><img src="' + relativePath + '../art/img/gif/2024-00.gif"></a>\
     <h3>'+ blogname +'</h3>\
 	<nav>\
 		<a href="' + relativePath + 'index.html">Home</a>\
@@ -56,7 +54,7 @@ const navigation ='\
 const footer ='\
 <p>\
 '+blogname+' is written by <a href="'+userlink+'">'+username+'</a>. \
-Created with <a href="https://stupied.neocities.org/blog/tabvoid/">Tabvoid</a>\
+Created with <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>\
 </p>\
 '
 
@@ -86,7 +84,7 @@ if(e=document.querySelector("header")){e.innerHTML=(header);}
 if(e=document.querySelector("#nav")){e.innerHTML=(navigation);}
 if(e=document.querySelector("footer")){e.innerHTML=(footer);}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'style/favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
 
 currentIndex = getIndex(posts)
 if(currentIndex>-1){

@@ -1,8 +1,8 @@
 @import url("./../../meta/main.css");
 
 :root {
-    --body-font:'Courier New', Courier, monospace;
-    --display-font:'Courier New', Courier, monospace;
+    --body-font:Arial, Helvetica, sans-serif;
+    --display-font:grandstander;
     --accent-color:#5177a9;;
 }
 
@@ -162,6 +162,9 @@ footer a{
     #nav img, #nav h3{display:none;}
     nav a{
         display:inline-block;
+    }
+    main{
+        min-height:80vh;
     }
 }
 
