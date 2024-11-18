@@ -2,14 +2,20 @@ function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appe
 
 //template stuff
 const navigation =
-'<a href="./index.html">\
+'<a href="./../about.html">\
   <img id="aside-1-img" src="./img/2024-raffidelle.png">\
 </a>\
 <nav>\
-  <a href="#">about</a>\
+  <a href="./index.html">home</a>\
   <a href="./archive.html">archive</a>\
-  <a href="#">shop</a>\
+  <a href="#">code</a>\
+  <a href="#">commissions</a>\
 </nav>'
+
+const footer =
+'<a href="#">Sitemap</a>\
+<a href="./../index.html">Home</a>\
+<a href="./../chat.html">Chatbox</a>'
 
 const template =
 '<div id="container">\
@@ -17,7 +23,7 @@ const template =
   <div id="aside-1">'+navigation+'</div>\
   <main></main>\
   <div id="aside-2"></div>\
-  <footer></footer>\
+  <footer>'+footer+'</footer>\
 </div>'
 
 document.getElementsByTagName("body")[0].innerHTML+=template
@@ -26,6 +32,8 @@ document.getElementsByTagName("body")[0].innerHTML+=template
 if(e=document.getElementById("main-content")){document.querySelector("#container main").append(e)}
 if(e=document.getElementById("aside-1-content")){document.querySelector("#container #aside-1").append(e)}
 if(e=document.getElementById("aside-2-content")){document.querySelector("#container #aside-2").append(e)}
+
+if(document.title===""){document.title="gallery // stupied"}else{document.title+= " - gallery // stupied";}
 
 //adding links to iamges
 images=document.querySelectorAll(".justified-gallery img")
