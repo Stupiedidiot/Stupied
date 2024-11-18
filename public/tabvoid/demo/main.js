@@ -29,7 +29,7 @@ const posts=[
 		desc:"This post has a description!"
 	},
 	{
-		file:"2024-11-18-Farwell.html",
+		file:"2024-11-18-Farewell.html",
 		alt:"Till We Meet Again",
 		desc:"All properties is filled out",
 		img:"img/placeholder.png"
@@ -74,7 +74,7 @@ const navigation ='\
 const footer ='\
 <p>\
 '+blogname+' is written by <a href="'+userlink+'">'+username+'</a>. \
-Created with <a href="https://stupied.neocities.org/blog/tabvoid/">Tabvoid</a>\
+Created with <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>\
 </p>\
 '
 

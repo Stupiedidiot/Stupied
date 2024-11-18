@@ -178,6 +178,9 @@ footer a{
     nav a{
         display:inline-block;
     }
+    main {
+        min-height:80vh;
+    }
 }
 
 #nextprev {text-align:center;user-select:none;}
