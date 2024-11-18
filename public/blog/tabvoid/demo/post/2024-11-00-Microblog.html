@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=./../style/main.css>
+    <title></title>
+
+<style>
+/** You can use internal css for classes exclusive to one page**/
+    .micro{
+        margin:1rem 0.5rem;
+        padding:1rem;
+        background-color:var(--accent-color);
+        border:3px solid black;
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="main-content">
+        <div id="blog-title"></div>
+        <div id="blog-date"></div>
+        <p>If you don't a page to specify a day, just leave it as 00 and it will be removed from the "blog-date" element</p>
+        <p>Another neat thing about this you can put as many "main-content" elements you'd like!</p>
+    </div>
+
+    <div class="main-content" style="padding:1rem 0;">
+        <img src="./../img/placeholder.png">
+        <p>You could remove the padding of certain elements</p>
+    </div>
+
+    <div class="main-content micro">
+        <h4>2024/11/18</h4>
+        <p>Or maybe segrate into their own parts</p>
+    </div>
+
+    <div class="main-content micro">
+        <h4>2024/11/19</h4>
+        <img src="./../img/placeholder.png">
+    </div>
+
+    <div class="main-content">
+        <div id="nextprev"></div>
+    </div>
+
+<script src="./../main.js"></script>
+</body>
+</html>

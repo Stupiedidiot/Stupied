@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=./style/main.css>
+    <title>Archive</title>
+<style>
+    .card a[href="./post/0000-00-00-Themes.html"]{flex:100%;}
+</style>
+</head>
+<body>
+
+    <div class="main-content">
+        <h1>Post Archive</h1>
+        <div id="blog-archive" class="card">
+        </div>
+
+        <div style="margin-top:1rem;text-align:right;">
+            <select id="listClass">
+                <option value="card">Card</option>
+                <option value="cinematic">Cinematic</option>
+                <option value="compact">Compact</option>
+            </select>
+            <button id="listClassChange">Change List Type</button>
+        </div>         
+    </div>
+
+<script src="./main.js"></script>
+<script>
+    const options = [
+        "card",
+        "cinematic",
+        "compact"
+    ]
+    const btn = document.getElementById("listClassChange");
+    const sb = document.getElementById("listClass");
+    btn.onclick = (event) => {
+        event.preventDefault();
+        test(options[sb.selectedIndex]);
+    };
+    
+    function test(selectedClass,e=document.getElementById("blog-archive")){
+        e.classList=selectedClass
+    }
+</script>
+</body>
+</html>

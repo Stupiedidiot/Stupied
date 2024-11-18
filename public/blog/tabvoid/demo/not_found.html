@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style" rel=stylesheet>
+    <title>Not Found</title>
+</head>
+<body>
+
+    <div class="main-content">
+        <h1>Page not Found</h1>
+        <p>The page you are looking for appears to be missing</p>
+    </div>
+
+<script id="script"></script>
+<script>
+    url = window.location.pathname;relativePath = "./";
+    if(url.includes("post")){relativePath="./../";}
+
+    document.getElementById("script").src= relativePath + "main.js"
+    document.getElementById("style").href= relativePath + "style/main.css"
+</script>
+</body>
+</html>

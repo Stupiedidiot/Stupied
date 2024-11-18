@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=./style/main.css>
+    <title></title>
+    <style>
+        h1 span{
+            color:lightgrey;
+            font-size:1rem;
+        }
+        @media only screen and (max-width: 590px) {
+            h1 span{display:none;}
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1 class="txt-accent">TABVOID<span> - Get Really Real!</span></h1>
+        <p>Tabvoid is some javascript code written for weblogging. It aims to be a flexible solution for my fellow impulsive (re)designers.</p>
+
+        <p>Tabvoid works similarly with <a href="https://zonelets.net">Zonelets</a>, with a few minor difference such as:</p>
+        <ul>
+            <li>The body tags only contain the post's content while the pages format is inputted using javascript.</li>
+            <li>Posts data is stored in an object instead of an array; this allows more customization.</li>
+            <li>It assumes that you are already familiar with html and css.</li>
+        </ul>
+
+        <p>If all of this sounds interesting to you, click on the links below to get started!</p>
+
+        <div id="blog-recent" class="card no-date no-img no-desc"></div>
+    </div>
+
+<script src="./main.js"></script>
+</body>
+</html>
