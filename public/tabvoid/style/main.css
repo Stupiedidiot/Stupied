@@ -1,20 +1,7 @@
-:root {
-    --body-font:'Courier New', Courier, monospace;
-    --display-font:'Courier New', Courier, monospace;
-    --accent-color:#1ba4a2;
-    /* Declare variables you can use later :D */
-}
+@import url(./custom.css);
 
 body{
     padding:0;margin:0;
-}
-
-body{
-    background-image:url(./bg.png);
-    background-size:100%;
-    background-attachment:fixed;
-    background-color:var(--accent-color);
-    font-family:var(--body-font);
 }
 
 body>.main-content{display:none;}
@@ -38,8 +25,6 @@ hr.clear{
 p:last-child,ol:last-child,ul:last-child{
     margin-bottom:0;
 }
-
-.txt-accent{color:var(--accent-color)}
 
 .yt-embed {
     position: relative;
@@ -78,7 +63,6 @@ p:last-child,ol:last-child,ul:last-child{
 #container footer{grid-area:footer;}
 
 #container{
-    background-color:rgba(0, 0, 0, 0.8);
     margin: auto;
     max-width:800px;
     display: grid;
@@ -98,19 +82,9 @@ header img{
     object-fit:cover;
     display:block;
 }
-header{
-    --accent-color:#0f8382;
-    --second-color:#01393a;
-    min-height:100px;
-    background-image:linear-gradient(#00000000 0%, black 130%), linear-gradient(45deg, var(--accent-color) 15.38%, var(--second-color) 15.38%, var(--second-color) 30.77%, var(--accent-color) 30.77%, var(--accent-color) 34.62%, var(--second-color) 34.62%, var(--second-color) 50%, var(--accent-color) 50%, var(--accent-color) 65.38%, var(--second-color) 65.38%, var(--second-color) 80.77%, var(--accent-color) 80.77%, var(--accent-color) 84.62%, var(--second-color) 84.62%, var(--second-color) 100%);
-    background-size: 100px 100px;
-    position: relative;
-    overflow:hidden;
-}
 
 #nav{
     user-select:none;
-    background-color:lightgray;
     position: relative;
 }
 
@@ -138,36 +112,25 @@ nav a{
     padding:8px 16px;
 }
 
-nav a:hover{
-    background-color:var(--accent-color)!important;
-}
-
 footer{
     user-select:none; padding:1rem;
-    background-color:var(--accent-color);
 }
 footer a{
     color:black;
 }
 
-.main-content{padding:0 1rem;color:white;}
+.main-content{
+    padding:0 1rem;
+}
 
 .main-content:first-child{padding-top:1rem;}
 .main-content:last-child{padding-bottom:1rem;}
-
-.main-content p{text-align:justify;}
 
 .main-content img{
     width:100%;
 }
 
 #blog-date{color:var(--accent-color);}
-
-@media only screen and (min-width: 551px) {
-    nav a:nth-of-type(2n+1){
-        background-color: rgb(189, 189, 189);
-    }
-}
 
 @media only screen and (max-width: 550px) {
     #container{
@@ -212,7 +175,6 @@ footer a{
     text-align:center;
     flex:1 25%;
     min-width:130px;
-    background-color:rgb(0, 0, 0);
     border-radius:10px;
 }
 
@@ -315,8 +277,4 @@ footer a{
 
 .compact a:hover .blog-item{
     background-color:var(--accent-color);
-}
-
-#comments{
-    margin-top:2rem;
 }

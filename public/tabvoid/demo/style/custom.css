@@ -1,0 +1,36 @@
+:root {
+    --body-font:'Courier New', Courier, monospace;
+    --display-font:'Courier New', Courier, monospace;
+    --accent-color:#dca10a;
+    /* Declare variables you can use later :D */
+}
+
+body{
+    background-image:url(./bg.png);
+    background-size:100%;
+    background-attachment:fixed;
+    background-color:var(--accent-color);
+    font-family:var(--body-font);
+}
+
+#container{
+    background-color:white;
+}
+
+#nav{
+    background-color:lightgray;
+}
+
+nav a:hover{
+    background-color:var(--accent-color)!important;
+}
+
+footer{
+    background-color:var(--accent-color);
+}
+
+@media only screen and (min-width: 551px) {
+    nav a:nth-of-type(2n+1){
+        background-color: rgb(189, 189, 189);
+    }
+}
