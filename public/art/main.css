@@ -89,11 +89,6 @@ nav > a{
   margin-bottom:5px;
 }
 
-#aside-2{
-  width:200px;
-  padding:1rem;
-}
-
 @media only screen and (max-width: 650px) {
   #container{display:block;}
   #container > *{margin-bottom:1rem;}

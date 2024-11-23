@@ -4,12 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./main.css">
-  <title>Stupied</title>
+  <title></title>
+<style>
+  footer{
+    color:var(--wheat);
+  }
+  #image img{
+    display: block;
+  }
+
+  #nextprev{
+    color: var(--wheat);
+    background-color:black;
+    text-align:center;
+    padding:1rem 0;
+  }
+  #nextprev a:hover{
+    color:var(--blue);
+  }
+
+  
+#container main, #container #aside-1{
+    border:3px solid black;
+}
+</style>
 </head>
-<body>
+<body style="background-color:var(--dark-brown);">
 
 <div id="main-content" style="padding:0;">
   <div id="image"></div>
+  <div id="nextprev"></div>
   <div id="comments" style="padding:0 1rem;margin-bottom:1rem;"></div>
 </div>
 
@@ -31,7 +55,7 @@
         .then((art) => {
           if(currentImage===null){
             currentImage=art[0].img
-            window.location.href = "./viewer.html?item="+currentImage;
+            window.location.href = "./viewer?item="+currentImage;
           }
 
           imageLink='./img/'+currentImage
@@ -42,22 +66,48 @@
           if (currentIndex>-1){
             if(art[currentIndex].title!==undefined){
               document.getElementById("title").innerHTML=art[currentIndex].title
+              document.title = art[currentIndex].title +" // stupied"
+            } else {
+              fauxTitle = art[currentIndex].img.slice(5,art[currentIndex].img.length-4)
+              fauxTitle = fauxTitle.replaceAll("-"," ")
+              document.getElementById("title").innerHTML=fauxTitle
+              document.title = fauxTitle + " // stupied"
             }
+
             if(art[currentIndex].desc!==undefined){
               document.getElementById("desc").innerHTML=art[currentIndex].desc
             }
           }
+          nextprev=genNav(art)
+          document.getElementById("nextprev").innerHTML=nextprev
     })
     
     function getIndex(json,current){
       for(i=0;i<json.length;i++){
-            if(json[i].img===current){
+            if(json[i].img.toLowerCase()===current.toLowerCase()){
               index=i
               return index
             }
         }
         return -1
     }
+
+    function genNav(e){
+    if ( e.length < 2) {
+      result = "<a href='archive.html'>« Home  »</a>";
+    } else if ( currentIndex === 0 ) {
+      prevI= "./viewer?item=" + e[currentIndex+1].img;
+      result = "<a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
+    } else if ( currentIndex === e.length - 1 ) {
+      nextI= "./viewer?item=" + e[currentIndex-1].img;
+      result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a>";
+    } else if ( 0 < currentIndex && currentIndex < e.length - 1 ) {
+      prevI= "./viewer?item=" + e[currentIndex+1].img;
+      nextI= "./viewer?item=" + e[currentIndex-1].img;
+      result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
+    }
+    return result
+  }
 </script>
 </body>
 </html>

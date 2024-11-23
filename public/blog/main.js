@@ -39,7 +39,7 @@ const header='\
 
 const navigation ='\
 <div>\
-    <a href="#"><img src="' + relativePath + '../art/img/gif/2024-00.gif"></a>\
+    <a href="#"><img src="' + relativePath + '../art/img/gif/2024-psyche-gaming.gif"></a>\
     <h3>'+ blogname +'</h3>\
 	<nav>\
 		<a href="' + relativePath + 'index.html">Home</a>\

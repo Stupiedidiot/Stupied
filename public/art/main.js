@@ -14,7 +14,7 @@ const navigation =
 
 const footer =
 '<a href="#">Sitemap</a>\
-<a href="./../index.html">Home</a>\
+<a href="./../index.html">Head Back</a>\
 <a href="./../chat.html">Chatbox</a>'
 
 const template =
@@ -35,13 +35,15 @@ if(e=document.getElementById("aside-2-content")){document.querySelector("#contai
 
 if(document.title===""){document.title="gallery // stupied"}else{document.title+= " - gallery // stupied";}
 
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../meta/favicon.ico"></link>'
+
 //adding links to iamges
 images=document.querySelectorAll(".justified-gallery img")
 for(i=0;i<images.length;i++){
   //get image links
   link=images[i].src
   link=link.lastIndexOf('/', link.lastIndexOf('/')-1)+1
-  link="./viewer.html?item="+images[i].src.slice(link,link.length)
+  link="./viewer?item="+images[i].src.slice(link,link.length)
   link=link.replaceAll("img/","")
 
   //make n wrap anchor tag
