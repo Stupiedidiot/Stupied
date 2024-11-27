@@ -80,10 +80,6 @@ for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
 
-if(e=document.querySelector("header")){e.innerHTML=(header);}
-if(e=document.querySelector("#nav")){e.innerHTML=(navigation);}
-if(e=document.querySelector("footer")){e.innerHTML=(footer);}
-
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
 
 currentIndex = getIndex(posts)

@@ -362,7 +362,7 @@
     {
         "img": "2022-library.png",
         "title":"Library Redraw",
-        "desc":"<p><a href='./viewer?item=2021-library.png'>the original</a></p>"
+        "desc":"<p><a href='./viewer.html?item=2021-library.png'>the original</a></p>"
     },
     {
         "img": "2022-knives.png",

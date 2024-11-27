@@ -43,7 +43,7 @@ for(i=0;i<images.length;i++){
   //get image links
   link=images[i].src
   link=link.lastIndexOf('/', link.lastIndexOf('/')-1)+1
-  link="./viewer?item="+images[i].src.slice(link,link.length)
+  link="./viewer.html?item="+images[i].src.slice(link,link.length)
   link=link.replaceAll("img/","")
 
   //make n wrap anchor tag
@@ -61,4 +61,13 @@ window.onload = function(){
     if(document.getElementById("comments")){
         if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
     }
+}
+
+// erm
+if (e=window.location.href){
+  if(e.includes("https://stupied.neocities.org/art/viewer")){
+    if(e.includes(".html")){
+      window.location.pathname=window.location.pathname.replaceAll(".html","")
+    }
+  }
 }

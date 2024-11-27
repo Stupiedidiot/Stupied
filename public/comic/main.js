@@ -10,7 +10,7 @@ masterlist = [
             //{"file":"2024-04-08","alt":"I Hate You"},
             //{"file":"2024-05-13","alt":"Total Domination"},
             {"file":"2024-05-20","alt":"The Odd Siblings","img":"odd-siblings.png"},
-            //{"file":"2024-08-26","alt":"Laundry Day"},
+            {"file":"2024-08-26","alt":"Laundry Day"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
     },
@@ -22,8 +22,8 @@ masterlist = [
             {"file":"independent","alt":"Independent","img":"independent.png"},
             {"file":"yapping","alt":"Yapping"},
             {"file":"saved","alt":"Saved"},
-            //{"file":"letters","alt":"Letters"},
-            //{"file":"siblings","alt":"Siblings"}
+            {"file":"letters","alt":"Letters"},
+            {"file":"siblings","alt":"Siblings"}
         ]
     },
     {
@@ -80,8 +80,8 @@ masterlist = [
         "desc":"She wants to get her mom a gift for an upcoming event.",
     },
     {
-        "folder":"howto-original",
-        "alt":"How To Not (Original)",
+        "folder":"howto",
+        "alt":"How To Not",
         "desc":"A guide on how to do stuff by telling you how not to",
         "parts":[
             {"file":"0A00","alt":"Make a Webcomic"},
@@ -101,79 +101,84 @@ relativePath = "./";
 urlPath = url.split('/');
 if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
 
-function addTo(item,input){
-    if (item) {
-        if(typeof input=="string"){
-            item.innerHTML+=input;
-        } else {
-            item.append(input);
-        }
-    }
+const footer = '\
+<a href="#">Sitemap</a>\
+<a href="'+relativePath+'index.html">Home</a>\
+<a href="'+relativePath+'chat.html">Chatbox</a>\
+'
+
+const template ='\
+<div id="container">\
+    <div id="top"></div>\
+    <main class="default"></main>\
+    <div id="bottom">\
+        <aside>\
+            <nav id="next"></nav>\
+            <div id="info"></div>\
+        </aside>\
+        <div id="comments"></div>\
+    </div>\
+    <footer></footer>\
+</div>\
+'
+
+if(document.querySelector("body").id==="comicViewer"){
+    document.querySelector("body").innerHTML+=template
 }
 
-function addToTag(tag,input) {
-    tag = document.getElementsByTagName(tag)[0]
-    addTo(tag,input)
+main=document.querySelectorAll(".main-content");
+for(i=0; i<main.length; i++){
+    document.querySelector("#container main").append(main[i]);
 }
-function addToId(id,input) {
-    id = document.getElementById(id)
-    addTo(id,input)
-}
-function addToQuery(query,input) {
-    query = document.querySelector(query)
-    addTo(query,input)
-}
-function wrap(el, wrapper) {
-    el.parentNode.insertBefore(wrapper, el);
-    wrapper.appendChild(el);
-}
-function createItem(item,{id,style,input,src,href,title}){
-    item = document.createElement(item)
-    if(id!==undefined){item.id = id}
-    if(style!==undefined){item.classList.add(style)}
-    if(src!==undefined){item.src = src}
-    if(href!==undefined){item.href = href}
-    if(title!==undefined){item.title = title}
-    if(input!==undefined){addTo(item,input)}
-    return item
-}
-addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
-addToId("comments",' <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>');
 
-window.onload = function(){
-    if(document.getElementById("comments")){
-        if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
-    }
-}
-addToTag("footer",'<a href="#">Sitemap</a><a href="'+relativePath+'index.html">Home</a><a href="'+relativePath+'chat.html">Chatbox</a>')
+if(e=document.getElementById("info-content")){document.getElementById("info").append(e)}
 
 maxParts=0
 searchComicIndex()
 if ( currentIndex > -1) {
     // Check if viewing a comic
     if(currentPartIndex > -1){
-        result=createItem("header",{input:createItem("a",{input:masterlist[currentIndex].alt,href:"./index.html"})})
-        addTo(result,createItem("span",{input:masterlist[currentIndex].parts[currentPartIndex].alt}))
-        addToId("top",result)
+        result = document.createElement("header")
+
+        comicTitle = document.createElement("a")
+        comicTitle.innerHTML = masterlist[currentIndex].alt
+        comicTitle.href = "./index.html"
+
+        partTitle = document.createElement("span")
+        partTitle.innerHTML = masterlist[currentIndex].parts[currentPartIndex].alt
+
+        result.append(comicTitle)
+        result.append(partTitle)
+
+        document.getElementById("top").append(result)
         
         writeComicNextprev(masterlist[currentIndex].parts)
         writeComicNext(masterlist[currentIndex].parts)
         
-        addToId("top",'<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>')
         if (document.title==="") {document.title = masterlist[currentIndex].parts[currentPartIndex].alt + " | " + masterlist[currentIndex].alt;}
     } else {
         writePartsArchive("comicList", currentIndex, 0, maxParts)
 
-        result=createItem("header",{input:createItem("a",{input:"Stupied",href:"./index.html"})})
-        addTo(result,createItem("span",{input:masterlist[currentIndex].alt}))
-        addToId("top",result)
+        result = document.createElement("header")
 
-        addToId("top",'<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>')
+        comicTitle = document.createElement("a")
+        comicTitle.innerHTML = "Stupied"
+        comicTitle.href = "./index.html"
+
+        partTitle = document.createElement("span")
+        partTitle.innerHTML = masterlist[currentIndex].alt
+
+        result.append(comicTitle)
+        result.append(partTitle)
+
+        document.getElementById("top").append(result)
+
         if (document.title==="") {document.title = masterlist[currentIndex].alt + " | " + "Stupied"}
     }
+    document.getElementById("top").innerHTML+='<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>'
 } else {
     writeComicArchive()
-    addToId("comicList",list)
+    document.getElementById("comicList").append(list)
 }
 
 function searchComicIndex(){
@@ -211,7 +216,7 @@ function searchComicIndex(){
 }
 
 function writeComicArchive(){
-    list=createItem("ul",{})
+    list=document.createElement("ul")
     for(i=0;i<masterlist.length;i++){
         // Checks if there's an index
         if (masterlist[i].parts==null){link=masterlist[i].folder+".html" 
@@ -219,10 +224,15 @@ function writeComicArchive(){
         
         // Hides anything starting with !
         if(masterlist[i].folder[0]!=="!"){
-            listItem = createItem("li",{})
-            addTo(listItem,createItem("a",{input:"<span>"+masterlist[i].alt+"</span> » ",href:link}))
-            addTo(listItem, masterlist[i].desc)
-            addTo(list,listItem)
+            listItem = document.createElement("li")
+            itemLink = document.createElement("a")
+            itemLink.innerHTML = "<span>"+masterlist[i].alt+"</span> » "
+            itemLink.href = link
+
+            listItem.append(itemLink)
+            listItem.innerHTML += masterlist[i].desc
+
+            list.append(listItem)
         }
     }
 }
@@ -233,7 +243,7 @@ function writePartsArchive(id,folder,first,last){
     for(i=first;i<last;i++){
         result += getPart(folder,i)
     }
-    addToId(id,result)
+    if(e=document.getElementById(id)){e.innerHTML += result}
 }
 
 function getPart(folder,x){
@@ -247,32 +257,48 @@ function getPart(folder,x){
 }
 
 function writeComicNextprev(){
-    result=createItem("div",{id:"nextprev"})
-    span=createItem("span",{input:"#"+currentPartIndex})
-    if ( masterlist[currentIndex].parts.length < 2 ) {
-		addTo(result,span)
-	} else if ( currentPartIndex === 0 ) {
-		nextI= masterlist[currentIndex].parts[currentPartIndex+1].file+".html";
-		addTo(result,span)
-        addTo(result,createItem("a",{href:nextI,input:"<button title='next part'>►</button>"}))
-	} else if ( currentPartIndex === masterlist[currentIndex].parts.length-1 ) {
-        prevI= masterlist[currentIndex].parts[currentPartIndex-1].file+".html";
-        addTo(result,createItem("a",{href:prevI,input:"<button title='previous part'>◄</button>"}))
+    result = document.createElement("div")
+    result.id = "nextprev"
 
-		addTo(result,span)
+    span = document.createElement("span")
+    span.innerHTML = "#"+currentPartIndex
+
+    if ( masterlist[currentIndex].parts.length < 2 ) {
+        result.append(span)
+	} else if ( currentPartIndex === 0 ) {
+        nextI = document.createElement("a")
+        nextI.innerHTML = "<button title='next part'>►</button>"
+        nextI.href = masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
+
+        result.append(span)
+        result.append(nextI)
+	} else if ( currentPartIndex === masterlist[currentIndex].parts.length-1 ) {
+        prevI = document.createElement("a")
+        prevI.innerHTML = "<button title='previous part'>◄</button>"
+        prevI.href = masterlist[currentIndex].parts[currentPartIndex-1].file+".html"
+
+        result.append(prevI)
+        result.append(span)
 	} else if ( 0 < currentPartIndex && currentPartIndex < masterlist[currentIndex].parts.length - 1 ) {
-		prevI= masterlist[currentIndex].parts[currentPartIndex-1].file+".html";
-		nextI= masterlist[currentIndex].parts[currentPartIndex+1].file+".html";
-        addTo(result,createItem("a",{href:prevI,input:"<button title='previous part'>◄</button>"}))
-        addTo(result,span)
-        addTo(result,createItem("a",{href:nextI,input:"<button title='next part'>►</button>"}))
+        nextI = document.createElement("a")
+        nextI.innerHTML = "<button title='next part'>►</button>"
+        nextI.href = masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
+
+        prevI = document.createElement("a")
+        prevI.innerHTML = "<button title='previous part'>◄</button>"
+        prevI.href = masterlist[currentIndex].parts[currentPartIndex-1].file+".html"
+
+        result.append(prevI)
+        result.append(span)
+        result.append(nextI)
+
 	}
-    addToId("top",result)
+    document.getElementById("top").append(result)
 }
 
 function writeComicNext(){
     if ( masterlist[currentIndex].parts.length < 2 || currentPartIndex === masterlist[currentIndex].parts.length-1 ) {
-		result = createItem("div",{input:"You're all caught up :3"})
+        result = "<div>You're all caught up :3</div>"
 	} else {
         var comicThumb="";
         if(masterlist[currentIndex].parts[currentPartIndex+1].img!==undefined){
@@ -284,5 +310,14 @@ function writeComicNext(){
 
         result='<a href="'+nextI+'"><div>'+comicThumb+'<div id="next-title"><div id="next-title-content"><h4>Next Part</h4><span>'+comicTitle+'</span></div></div></div></a>'
 	}
-    addToId("next",result)
+    document.getElementById("next").innerHTML=result
+}
+
+// COMMENTS
+if (e=document.getElementById("comments")){e.innerHTML='<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>'}
+
+window.onload = function(){
+    if(document.getElementById("comments")){
+        if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
+    }
 }
