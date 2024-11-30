@@ -198,18 +198,19 @@ body::before{
         width:100%;
         position:absolute;
         top:50%;
-        transform: translateY(-50%);
+        transform: translateX(-10%) translateY(-50%) scaleX(-1);
         display:block;
     }
 }
 
 .doll img:hover{
-    transform: translateY(-50%) scale(110%) rotate(5deg);
+    transform:translateX(-10%)  translateY(-50%) scaleX(-1) scale(110%) rotate(5deg);
 }
 
 #desc{
     width:80%;
     max-width:650px;
+    margin-right:1rem;
 }
 
 #about{
@@ -305,6 +306,9 @@ footer{
     </div>
 
     <div id="about">
+        <div class="doll">
+            <a href="about.html" title="About the Webmaster!"><img src="./meta/dawg-sitting.png" class="outlined-white"></a>
+        </div>
         <div id="desc">
             <h1 class="meow">
                 <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span><span>!</span>
@@ -314,9 +318,6 @@ footer{
             <hr>
             <h3 class="txt-yellow">Trigger Warning!</h3>
             <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
-        </div>
-        <div class="doll">
-            <a href="about.html" title="About the Webmaster!"><img src="./meta/dawg-sitting.png" class="outlined-white"></a>
         </div>
     </div>
 

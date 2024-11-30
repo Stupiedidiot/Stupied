@@ -10,7 +10,7 @@ masterlist = [
             //{"file":"2024-04-08","alt":"I Hate You"},
             //{"file":"2024-05-13","alt":"Total Domination"},
             {"file":"2024-05-20","alt":"The Odd Siblings","img":"odd-siblings.png"},
-            {"file":"2024-08-26","alt":"Laundry Day"},
+            //{"file":"2024-08-26","alt":"Laundry Day"},
             {"file":"2024-10-07","alt":"Seclusion"}
         ]
     },
@@ -22,8 +22,8 @@ masterlist = [
             {"file":"independent","alt":"Independent","img":"independent.png"},
             {"file":"yapping","alt":"Yapping"},
             {"file":"saved","alt":"Saved"},
-            {"file":"letters","alt":"Letters"},
-            {"file":"siblings","alt":"Siblings"}
+            //{"file":"letters","alt":"Letters"},
+            //{"file":"siblings","alt":"Siblings"}
         ]
     },
     {
@@ -132,6 +132,8 @@ for(i=0; i<main.length; i++){
 }
 
 if(e=document.getElementById("info-content")){document.getElementById("info").append(e)}
+
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
 
 maxParts=0
 searchComicIndex()

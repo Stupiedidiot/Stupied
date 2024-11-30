@@ -3,7 +3,7 @@ function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appe
 //template stuff
 const navigation =
 '<a href="./../about.html">\
-  <img id="aside-1-img" src="./img/2024-raffidelle.png">\
+  <img id="aside-1-img" src="./../meta/pfp-transparent.png">\
 </a>\
 <nav>\
   <a href="./index.html">home</a>\
@@ -28,8 +28,11 @@ const template =
 
 document.getElementsByTagName("body")[0].innerHTML+=template
 
+main=document.querySelectorAll(".main-content");
+for(i=0; i<main.length; i++){
+    document.querySelector("#container main").append(main[i]);
+}
 
-if(e=document.getElementById("main-content")){document.querySelector("#container main").append(e)}
 if(e=document.getElementById("aside-1-content")){document.querySelector("#container #aside-1").append(e)}
 if(e=document.getElementById("aside-2-content")){document.querySelector("#container #aside-2").append(e)}
 

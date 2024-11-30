@@ -1,18 +1,11 @@
 @import url(./../meta/main.css);
 
-:root{
-    --dark-brown:#1d1515;
-    --brown:#615651;
-    --blue:#5177a9;
-    --wheat:#e9eae2;
-}
-
 body{
     background-color:var(--blue);
     color:var(--dark-brown);
 }
 
-body > #main-content,
+body > .main-content,
 body > #aside-1-content,
 body > #aside-2-content {
   display: none;
@@ -39,15 +32,16 @@ body > #aside-2-content {
     margin:1rem auto;
 }
 
-#container main, #container #aside-1{
+#container .main-content, #container #aside-1{
     border:3px solid var(--dark-brown);
     border-radius: 5px; 
     box-shadow: 3px 3px var(--dark-brown);
     background-color:var(--wheat);
 }
 
-#container #main-content{
+#container .main-content{
     padding:1rem;
+    margin-bottom:1rem;
 }
 
 header img{
@@ -71,7 +65,6 @@ header img{
   top:-1rem;
   left:50%;
   transform: translateX(-50%);
-  border:3px solid var(--dark-brown);
 }
 
 nav{
