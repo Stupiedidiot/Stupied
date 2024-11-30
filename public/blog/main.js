@@ -82,6 +82,14 @@ for(i=0; i<main.length; i++){
 
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
 
+if(e=document.querySelector("span#pageDesc")){
+	pageDesc = `<meta name="description" content="`+e.innerHTML+`">`
+} else {
+	pageDesc = `<meta name="description" content="The blog of Stupied :D">`
+}
+
+document.querySelector("head").innerHTML+=pageDesc
+
 currentIndex = getIndex(posts)
 if(currentIndex>-1){
 	currentTitle = getTitle(currentIndex,posts)

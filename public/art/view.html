@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./main.css">
+  <meta name="description" content="Art by Stupied :]">
   <title></title>
 <style>
   footer{
@@ -42,9 +43,6 @@
   <div id="desc"></div>
 </div>
 
-<div id="aside-2-content">
-</div>
-
 <script src="./main.js"></script>
 <script>
     const urlQuery = new URLSearchParams(window.location.search)
@@ -55,7 +53,7 @@
         .then((art) => {
           if(currentImage===null){
             currentImage=art[0].img
-            window.location.href = "./viewer.html?item="+currentImage;
+            window.location.href = "./view.html?item="+currentImage;
           }
 
           imageLink='./img/'+currentImage.toLowerCase()
@@ -78,7 +76,7 @@
             }
 
             if(art[currentIndex].desc!==undefined){
-              document.getElementById("desc").innerHTML=art[currentIndex].desc
+              document.getElementById("desc").innerHTML = art[currentIndex].desc
             }
           }
           nextprev=genNav(art)
@@ -99,14 +97,14 @@
     if ( e.length < 2) {
       result = "<a href='archive.html'>« Home  »</a>";
     } else if ( currentIndex === 0 ) {
-      prevI= "./viewer.html?item=" + e[currentIndex+1].img;
+      prevI= "./view.html?item=" + e[currentIndex+1].img;
       result = "<a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
     } else if ( currentIndex === e.length - 1 ) {
-      nextI= "./viewer.html?item=" + e[currentIndex-1].img;
+      nextI= "./view.html?item=" + e[currentIndex-1].img;
       result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a>";
     } else if ( 0 < currentIndex && currentIndex < e.length - 1 ) {
-      prevI= "./viewer.html?item=" + e[currentIndex+1].img;
-      nextI= "./viewer.html?item=" + e[currentIndex-1].img;
+      prevI= "./view.html?item=" + e[currentIndex+1].img;
+      nextI= "./view.html?item=" + e[currentIndex-1].img;
       result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
     }
     return result

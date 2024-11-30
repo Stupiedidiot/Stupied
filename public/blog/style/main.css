@@ -1,16 +1,7 @@
-@import url("./../../meta/main.css");
-
-:root {
-    --body-font:Arial, Helvetica, sans-serif;
-    --display-font:grandstander;
-    --accent-color:#5177a9;
-}
+@import url(./custom.css);
 
 body{
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./../img/tile-ocean.png);
-    background-color:black;
-    background-color:var(--accent-color);
-    font-family:var(--body-font);
+    padding:0;margin:0;
 }
 
 body>.main-content{display:none;}
@@ -72,7 +63,6 @@ p:last-child,ol:last-child,ul:last-child{
 #container footer{grid-area:footer;}
 
 #container{
-    background-color:white;
     margin: auto;
     max-width:800px;
     display: grid;
@@ -95,7 +85,6 @@ header img{
 
 #nav{
     user-select:none;
-    background-color:lightgray;
     position: relative;
 }
 
@@ -123,13 +112,8 @@ nav a{
     padding:8px 16px;
 }
 
-nav a:hover{
-    background-color:var(--accent-color)!important;
-}
-
 footer{
     user-select:none; padding:1rem;
-    background-color:var(--accent-color);
 }
 footer a{
     color:black;
@@ -148,12 +132,6 @@ footer a{
 
 #blog-date{color:var(--accent-color);}
 
-@media only screen and (min-width: 551px) {
-    nav a:nth-of-type(2n+1){
-        background-color: rgb(189, 189, 189);
-    }
-}
-
 @media only screen and (max-width: 550px) {
     #container{
         display:block;
@@ -163,7 +141,7 @@ footer a{
     nav a{
         display:inline-block;
     }
-    main{
+    main {
         min-height:80vh;
     }
 }
@@ -300,25 +278,4 @@ footer a{
 
 .compact a:hover .blog-item{
     background-color:var(--accent-color);
-}
-
-#nextprev{
-    margin-bottom:1rem;
-}
-
-#comments {
-    margin-top:3rem;
-}
-
-.main-content .justified-gallery{
-    margin-bottom:5px!important;
-}
-
-footer{
-    text-align:left;
-    margin-bottom:0;
-}
-
-footer a:not(:last-of-type)::after{
-    content:"";
 }

@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --pink: #d9406a;
+:root{
+    --dark-brown:#1d1515;
+    --brown:#615651;
+    --blue:#5177a9;
     --yellow: #deab31;
-    --teal: #63bbb5;
-    --brown: #3d2d28;
-    --dark-brown: #312422;
+    --wheat:#e9eae2;
 }
 
 body{
@@ -98,21 +98,11 @@ height: 100%;
 .float-right,.float-left{float:none;margin:0 auto;}
 }
 
-
-@font-face {
-    font-family: 'grandstander';
-    src: url('./grandstander.ttf') format('truetype');
-    font-weight:normal;
-    font-style: normal;
-}
-
-
-.txt-pink{color:var(--pink)!important;}
 .txt-yellow{color:var(--yellow)!important;}
-.txt-teal{color:var(--teal)!important;}
+.txt-blue{color:var(--blue)!important;}
 
 .bg-yellow{background-color:var(--yellow)!important;}
-.bg-teal{background-color:var(--teal)!important;}
+.bg-blue{background-color:var(--blue)!important;}
 
 .bg-white{background-color:white!important;}
 .bg-light-gray{background-color:lightgray!important;}
@@ -120,13 +110,15 @@ height: 100%;
 .bg-black{background-color:black!important;}
 
 .default{
+    --dark-brown: #312422;
+    --brown: #3d2d28;
     background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
     background-repeat: repeat;
     background-size: 100px 100px;
 }
 .bg-misfits{
     background-color: #3cb6b9;
-    background-image: url(./../media/wtv/tile-clouds.png);
+    background-image: url(./img/tile-clouds.png);
     background-attachment: fixed;
     background-repeat:repeat-x;
     background-position:bottom;
@@ -154,13 +146,5 @@ body.default::before{
 
 header.stupied{text-align:center;margin-top:1rem;}
 header.stupied img{max-width:250px;width:90%;}
-
-footer a:not(:last-of-type)::after{
-    content:" | ";
-}
-footer{
-    text-align:center;
-    margin-bottom:1rem;
-}
 
 body.default footer{color:white;}

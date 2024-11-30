@@ -8,140 +8,116 @@
 
 <style>
 body{
-    background-image:url(./meta/img/bg-ocean.jpg);
-    background-repeat: no-repeat;
-    background-color:white;
-    background-attachment: fixed;
-    background-size:100% 100%; object-fit: cover;
-}
-#about{
-    background-color:rgba(0, 0, 0, 0.7);
-    box-shadow:0px 0px 20px 3px black;
-    max-width:700px; width:90%;
-    margin:5rem auto 1rem auto;
-    backdrop-filter: blur(1px);
-    border-radius:10px;
-}
-#about > div{
-    display:flex;
-}
-#about-txt{
-    flex:2;
-    padding:1rem 1rem 1rem 0;
-}
-#about-txt h2{
-    color:var(--teal);
-    filter: drop-shadow(0 0 3px var(--teal));
+    background-color:var(--wheat);
+    overflow-x:hidden;
+    user-select: none;
 }
 
-#about-txt p{
-    color:white;
-    filter: drop-shadow(0 0 3px white);
+#container{
+    margin:1rem auto;
+    max-width:500px;
+    width:95%;
+}
+
+#about{
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: 4rem 1rem;
 }
 
 #doll{
-    flex:1;
     position: relative;
-    min-width:100px;
+    max-width:250px;
+    margin: 0 0 0 auto;
 }
 
 #doll img{
-    width:110%;
-    border-radius:100%;
-    position:absolute;
-    top:50%;right:8%;
-    transform: translateY(-50%);
-    box-shadow:0px 0px 20px 3px black;
+    position: absolute;
+    width: 130%;
+    top:0;left:0;
+    transform:translateX(-15%) translateY(-30%) rotate(3deg);
 }
 
-#socials{
-    text-align:right;
+#list{
+    padding:1.5rem;
 }
-#socials img{
-    filter: drop-shadow(0 0 3px var(--teal));
-    padding:5px;
-    width:35px;
+
+#list h1{color: var(--blue);}
+
+#list ul{
+    padding-left:1rem;
 }
-#socials img:hover{
-    filter: drop-shadow(0 0 3px white);
+
+#extra{
+    display: flex;
 }
-@media only screen and (max-width: 360px) {
-    #socials{
-    text-align:center;
-    max-width:200px;
-    margin:auto;
-    }
-}
+
 @media only screen and (max-width: 480px) {
-    #about > div{
-        display:block;
-    }
-    #about-txt{
-        padding-left:1rem;
-        padding-top:0;
+
+}
+
+@media only screen and (max-width: 380px) {
+    #list{
         text-align:center;
     }
-    #doll{
-        text-align:center;
-    }
-    #doll img{
-        position: relative;
-        width:100%;max-width:200px;
-        top:0;right:0;
-        transform:translateY(-10%);
-    }
-    #socials{
-    text-align:center;
-    }
-    #socials img{
-        width:40px;
+
+    #list>div{
+        display: inline-block;
+        margin-top: 170px;
+        text-align: left;
     }
 }
+
 </style>
 
 </head>
 <body>
-    <div id="about">
-        <div>
-            <div id="doll">
-                <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/pfp.png"></a>
-            </div>
-            <div id="about-txt">
-                <h2>Henlo I'm Stupied!</h2>
-                <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
-                <p>I try my best to minimize social media usage, so apologies if I seem unresponsive.</p>
+    <div id="container">
+        <div id="about">
+            <h2>Henlo I'm Stupied!</h2>
+            <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+            <p>I try my best to minimize social media usage, so apologies if I seem unresponsive.</p>
+        </div>
+        <div id="doll">
+            <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/dawg-napping.png"></a>
+        </div>
 
-                <div id="socials">
-                    <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account"><img src="./meta/img/icon-instagram.png"></a>
-                    <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here"><img src="./meta/img/icon-webtoon.png"></a>
-                    <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos"><img src="./meta/img/icon-youtube.png"></a>
-                    <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated"><img src="./meta/img/icon-artfight.png"></a>
-                    <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D"><img src="./meta/img/icon-tetrio.png"></a>
-                </div>
+        <div id="list">
+            <div>
+                <h1>About Me!</h1>
+                <ul>
+                    <li>Kyman Truther</li>
+                    <li>Scrabble Tryhard</li>
+                    <li>7-2 Well Supremacy</li>
+                    <li>Late 2000s games >></li>
+                    <li>Owns a million OCs</li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div style="color:white;text-align:center;filter: drop-shadow(0 0 3px white);">
-        <a href="./index.html">« head home » </a>
-    </div>
-<!--
-    <div id="list">
-        <ul>
-            <li>Kyman Truther</li>
-            <li>Scrabble Tryhard</li>
-            <li>7-2 Well Supremacy</li>
-            <li>Late 2000s games >></li>
-            <li>Owns a million OCs</li>
-        </ul>
+
+        <div style="text-align:center; font-family: grandstander; color: var(--blue);margin: 2rem 0;">
+            <a href="./index.html">Head Back</a>
+        </div>
+
+        <!--
+        <div id="extra">
+            <div id="stamp">
+                <img src="./meta/img/stamp-lesbian.png">
+                <img src="./meta/img/stamp-south-park.png">
+            </div>
+        </div>
+
+        <div id="socials">
+            <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account"><img src="./meta/img/icon-instagram.png"></a>
+            <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here"><img src="./meta/img/icon-webtoon.png"></a>
+            <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos"><img src="./meta/img/icon-youtube.png"></a>
+            <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated"><img src="./meta/img/icon-artfight.png"></a>
+            <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D"><img src="./meta/img/icon-tetrio.png"></a>
+        </div>
+        -->
+
     </div>
 
-    <img src="./meta/media/wtv/stamp-02.PNG">
-    <img src="./meta/media/wtv/stamp-05.PNG">
-
-    <div id="note">
-        
-    </div>
--->
 <script src="./meta/main.js"></script>
 </body>
 </html>

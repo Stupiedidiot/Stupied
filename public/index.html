@@ -6,9 +6,14 @@
   <link rel="stylesheet" href="./meta/main.css">
   <title>stupied stuff!</title>
 <style>
+
+body::before{
+    max-height: 600px;
+}
+
 #about-mobile{
     min-height:120px;
-    background-color:var(--pink);
+    background-color:var(--yellow);
     position: relative;
     overflow:hidden;
 }
@@ -19,7 +24,7 @@
     position:absolute;
     top:-10%;
     right:0;
-    width:60%;
+    width:50%;
     transform:translateX(25%) translateY(-15%);
     filter:saturate(0%);
 }
@@ -31,7 +36,7 @@
 }
 
 #blog{
-  background:linear-gradient(white 0%, var(--teal) 80%);
+  background:var(--blue);
     position: relative;
     overflow:hidden;
 }
@@ -85,10 +90,12 @@
 }
 
 #comic div {
+  --color-1:#efe2b3;
+  --color-2:#f0da8e;
   height:100%;
-  background-color: #efe2b3;
+  background-color: var(--color-1);
   opacity: 1;
-  background-image:  linear-gradient(135deg, #f0da8e 25%, transparent 25%), linear-gradient(225deg, #f0da8e 25%, transparent 25%), linear-gradient(45deg, #f0da8e 25%, transparent 25%), linear-gradient(315deg, #f0da8e 25%, #efe2b3 25%);
+  background-image:  linear-gradient(135deg, var(--color-2) 25%, transparent 25%), linear-gradient(225deg, var(--color-2) 25%, transparent 25%), linear-gradient(45deg, var(--color-2) 25%, transparent 25%), linear-gradient(315deg, var(--color-2) 25%, var(--color-1) 25%);
   background-position:  30px 0, 30px 0, 0 0, 0 0;
   background-size: 30px 30px;
   background-repeat: repeat;
@@ -98,21 +105,25 @@
     color:white;
     position: absolute;
     font-size:5rem;
-    bottom:0;
+    bottom:10%;
     left:0;
-    transform: scaleY(300%) scaleX(150%) translateX(20%);
+    transform: scaleY(300%) scaleX(150%) translateX(25%);
 }
 
 #comic img {
     position: absolute;
     top:-15%;
-    right:-80%;
-    width:75%;
-    transition: 0.5s ease-in;
+    right:-10%;
+    width:60%;
 }
 
-#comic:hover img {
-    right:-10%;
+#comic:hover div{
+    background-color:white;
+    background-image: none;
+}
+
+#comic:hover h1{
+    color:black;
 }
 
 #gallery{
@@ -124,20 +135,17 @@
     background-color:white;
     min-height:200px;
 
-    background-image:url(./art/img/2023-roar.png);
-    background-position:center 25%;
-    background-size:cover;
+    background-image:url(./art/img/2024-introspection.png);
+    background-position:right center;
+    background-size:140%;
     background-repeat: no-repeat;
-    transition:0.2s ease-in;
 }
 
 #gallery h1 {
     z-index:1;
     position:absolute;
-    top:50%;
-    right:50%;
-    transform:translateX(50%) translateY(-50%);
-    filter:drop-shadow(3px 0 0 var(--pink))drop-shadow(-3px 0 0 var(--pink))drop-shadow(0 3px 0 var(--pink))drop-shadow(0 -3px 0 var(--pink));
+    bottom:10%;
+    right:5%;
     color:white;
     font-size:3rem;
     letter-spacing:5px;
@@ -145,13 +153,22 @@
 
 #gallery:hover div{
     filter:saturate(20%);
-    box-shadow: inset 0 0 0 2000px rgba(217, 64, 106,0.5);
     transform:scale(110%);
 }
 
 #gallery:hover h1{
     filter:none;
 }
+
+#chez {
+    margin: 2rem 3rem;
+    color:var(--wheat);
+}
+
+#chez a:hover{
+    color:var(--yellow);
+}
+
 #hell-yeah > div{
     border:4px black solid;
 }
@@ -163,31 +180,31 @@
 #hell-yeah {
     display: grid;
     grid-template-areas:
-    'blog comics comics'
-    'blog gallery gallery';
+    'comics blog'
+    'gallery blog';
     gap:5px;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     user-select:none;
 }
 
 @media only screen and (min-width: 481px) {
     #about-mobile{display:none;}
     .doll{
-        width:180px;
+        width:200px;
         position: relative;
     }
 
     .doll img{
         width:100%;
         position:absolute;
-        top:-110px;
+        top:50%;
+        transform: translateY(-50%);
         display:block;
-        transition:0.2s ease-in;
     }
 }
 
 .doll img:hover{
-    transform: scale(110%) rotate(5deg);
+    transform: translateY(-50%) scale(110%) rotate(5deg);
 }
 
 #desc{
@@ -219,7 +236,7 @@
         display:grid;
     }
     #comic h1{
-        transform: scaleY(200%) scaleX(80%) translateX(-10%);
+        transform: scaleY(200%) scaleX(100%) translateX(10%);
     }
     #comic img {
         right:-10%;
@@ -263,6 +280,15 @@
 .meow span:nth-of-type(2n){
     animation:fall 1s;animation-iteration-count:infinite;
 }
+
+footer a:not(:last-of-type)::after{
+  content:" | ";
+}
+footer{
+  text-align:center;
+  margin-bottom:1rem;
+}
+
 </style>
 </head>
 <body class="default">
@@ -274,7 +300,7 @@
     <div id="about-mobile">
         <a href="./about.html" title="About the Webmaster">
             <h1>About the Webmaster</h1>
-            <img src="./meta/1.png">
+            <img src="./meta/dawg-sitting.png">
         </a>
     </div>
 
@@ -286,11 +312,11 @@
             <p>This is the best place to watch my dwindling mental state. I put my comics and random thoughts in here. Kinda my piss poor attempt of lessening my social media usage by wasting time coding stuff. I think it's mostly working lol.</p>
             <p>This website is developed by a singular dog! I love it to absolute bits and will forever be in a work in progress :]</p>
             <hr>
-            <h3 class="txt-pink">Trigger Warning!</h3>
+            <h3 class="txt-yellow">Trigger Warning!</h3>
             <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
         </div>
         <div class="doll">
-            <a href="about.html" title="About the Webmaster!"><img src="./meta/1.png" class="outlined-white"></a>
+            <a href="about.html" title="About the Webmaster!"><img src="./meta/dawg-sitting.png" class="outlined-white"></a>
         </div>
     </div>
 
@@ -327,8 +353,17 @@
             </a>
         </div>
     </div>
+
+    <div id="chez">
+        <div>
+            <h3 style="color: var(--blue);">Other Stuff</h3>
+            <a href="https://literalwiki.neocities.org/">LiteralWiki</a> | 
+            <a href="./tabvoid/index.html">Tabvoid</a> | 
+            <a href="./chez/rocks/index.html">Rock Collection</a> | 
+            <a href="./chez/jigsaws/index.html">Jigsaw Collection</a>
+        </div>
+    </div>
 </main>
-<footer></footer>
 <script src="./meta/main.js"></script>
 </body>
 </html>

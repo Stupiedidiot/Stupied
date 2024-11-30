@@ -43,7 +43,7 @@ for(i=0;i<images.length;i++){
   //get image links
   link=images[i].src
   link=link.lastIndexOf('/', link.lastIndexOf('/')-1)+1
-  link="./viewer.html?item="+images[i].src.slice(link,link.length)
+  link="./view.html?item="+images[i].src.slice(link,link.length)
   link=link.replaceAll("img/","")
 
   //make n wrap anchor tag
@@ -64,10 +64,9 @@ window.onload = function(){
 }
 
 // erm
-if (e=window.location.href){
-  if(e.includes("https://stupied.neocities.org/art/viewer")){
-    if(e.includes(".html")){
-      window.location.pathname=window.location.pathname.replaceAll(".html","")
-    }
+url=window.location.href
+if(url.includes("https://stupied.neocities.org/art/view")){
+  if(url.includes(".html")){
+    window.location.pathname=window.location.pathname.replaceAll(".html","")
   }
 }

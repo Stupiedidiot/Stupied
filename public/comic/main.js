@@ -118,7 +118,7 @@ const template ='\
         </aside>\
         <div id="comments"></div>\
     </div>\
-    <footer></footer>\
+    <footer>' + footer + '</footer>\
 </div>\
 '
 
@@ -150,7 +150,7 @@ if ( currentIndex > -1) {
         result.append(comicTitle)
         result.append(partTitle)
 
-        document.getElementById("top").append(result)
+        if(e=document.getElementById("top")){e.append(result)}
         
         writeComicNextprev(masterlist[currentIndex].parts)
         writeComicNext(masterlist[currentIndex].parts)
@@ -171,11 +171,11 @@ if ( currentIndex > -1) {
         result.append(comicTitle)
         result.append(partTitle)
 
-        document.getElementById("top").append(result)
+        if(e=document.getElementById("top")){e.append(result)}
 
         if (document.title==="") {document.title = masterlist[currentIndex].alt + " | " + "Stupied"}
     }
-    document.getElementById("top").innerHTML+='<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>'
+    if(e=document.getElementById("top")){e.innerHTML+='<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>'}
 } else {
     writeComicArchive()
     document.getElementById("comicList").append(list)

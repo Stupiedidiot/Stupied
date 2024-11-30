@@ -83,9 +83,10 @@
     </div>
     <script src="./../main.js"></script>
     <script>
-        recentParts=getPart(currentIndex,1)
-        recentParts+=getPart(currentIndex,2)
-        addToId("recentList",recentParts)
+        recentList=getPart(currentIndex,3)
+        recentList+=getPart(currentIndex,1)
+        recentList+=getPart(currentIndex,2)
+        document.getElementById("recentList").innerHTML=recentList
     </script>
 </body>
 </html>

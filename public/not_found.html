@@ -36,8 +36,12 @@
     relativePath = "./";
     urlPath = url.split('/');
     if(urlPath.length > 2){for(i=0;i<urlPath.length;i++){relativePath+="../"}}
+
+    if(url.includes("art/viewer")){
+        window.location.pathname=window.location.pathname.replaceAll("viewer","view")
+    }
     
-    document.getElementById("image").src = relativePath+"meta/beanie.png"
+    document.getElementById("image").src = relativePath+"meta/dawg-napping.png"
     document.getElementById("image-container").href = relativePath+"index.html"
     document.getElementById("script").src = relativePath+"meta/main.js"
     document.getElementById("styles").href = relativePath+"meta/main.css"
