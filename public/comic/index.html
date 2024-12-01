@@ -10,15 +10,11 @@
         #side_comics{grid-area:side;}
 
         #comics {
-            width:95%;
+        width:95%;
         margin:1rem auto;
         z-index:1;
-        display: grid;
-        grid-template-areas:
-        'main side';
-        grid-template-columns:3fr 1fr;
         gap:10px;
-        max-width:1000px;
+        max-width:600px;
         }
 
         #misfits {grid-area:one}
@@ -55,6 +51,12 @@
             position: absolute;
         }
 
+        @media only screen and (min-width: 600px) {
+            #comicList ul{
+                columns: 2;
+            }
+        }
+
 
         @media only screen and (max-width: 700px) {
             #comics{
@@ -82,7 +84,7 @@
         <div id="eightyFour"></div>
         <div id="psych"></div>
         <div id="puyo"></div>
-        <div id="howToNot"></div>
+        <div id="howTo"></div>
     </nav>
     
     <div id="comics">
@@ -97,24 +99,9 @@
                 <div class="bg-yellow txt-right txt-darker-yellow no-padding">my update schedule is frantic and fucked</div>
             </div>
          </div>
-        <div id="side_comics">
-            <div class="cont bg-blue">
-                <div class="cont">
-                    <h4>Shorts</h4>
-                    <ul>
-                        <a href="./img/tummy-ache.png"><li>Tummy Ache</li></a>
-                        <a href="./img/never-satisfied.png"><li>Never Satisfied</li></a>
-                        <a href="./img/excuses.png"><li>Excuses</li></a>
-                        <a href="./img/birthday.png"><li>Birthday</li></a>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
     <footer class="txt-center txt-white">
-        <a href="#">Sitemap</a>
-        <a href="./../index.html">Home</a>
-        <a href="./../chat.html">Chatbox</a>
+        <a href="./../index.html">Head Home</a>
     </footer>
     <script src="./main.js"></script>
 </body>

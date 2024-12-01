@@ -3,44 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../main.css"> 
+    <link rel="stylesheet" href="./../main.css">
     <title>84 | Stupied</title>
 <style>
     body{
         background-color: rgb(255, 209, 103);
-        background-image:url(./test.jpg);
-        background-repeat: repeat;
-        background-size: 800px 800px;
     }
-    .box{
-        background-color: antiquewhite;
-        padding:1rem;
-        border:3px solid black;
-        border-radius:10px;
+    #container{
         max-width:900px;
         margin:auto;
+        padding:1rem 0;
+        background-image:url(./test.jpg);
+        background-position: 50%;
+        background-repeat: repeat-y;
+        background-size: 90% 100%;
+        min-height:100vh;
+    }
+
+    .box{
+        background-color: antiquewhite;
+        padding:2rem 1rem 1rem 1rem;
+        border:3px solid black;
+        border-radius:10px;
     }
     .ribbon{
         background-color:var(--yellow);
-        max-width:900px;
-        margin:auto;
+        position: relative;
+        margin:auto 1rem;
+        padding:1rem;
+        bottom:-2rem;
+
+        --r: 1rem;
+        padding-inline: calc(var(--r) + .3em);
+        line-height: 1;
+        clip-path: polygon(0 0,100% 0,calc(100% - var(--r)) 50%,100% 100%,0 100%, var(--r) 50%);
+        width: fit-content;
     }
 
     #comicList .comicListItem:hover{background-color:var(--yellow);color:white;}
 </style>
 </head>
 <body>
-    <nav>
-        <h3>Eighty Four</h3>
-        <a href="#">about</a>
-        <a href="#">characters</a>
-        <a href="#">chapters</a>
-    </nav>
-    <h1 class="ribbon">Eighty Four</h1>
-    <div class="box">
-        <p>Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop. In order to get out she must solve a series of crimes. Her only frame of reference being her notebook, which is mysteriously unaffected by the time loop.</p>
-        <p>These comics are just small side stories I made during my free time.</p>
-        <div id="comicList"></div>
+    <div id="container">
+        <h1 class="ribbon">Eighty Four</h1>
+        <nav>
+            <a href="#">about</a>
+            <a href="#">characters</a>
+            <a href="#">chapters</a>
+        </nav>
+        <div class="box">
+            <p>Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop. In order to get out she must solve a series of crimes. Her only frame of reference being her notebook, which is mysteriously unaffected by the time loop.</p>
+            <p>These comics are just small side stories I made during my free time.</p>
+            <div id="comicList"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, officia vero minus aliquam ea, eligendi ipsa maxime quos reprehenderit velit harum voluptatem distinctio nihil quisquam. Sequi maiores iste facere cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perferendis rerum repellendus soluta dignissimos nam illo quisquam eius, eaque illum corrupti aliquam. Ipsum, veritatis? Eius, quae iure! Omnis, voluptas tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni commodi veniam quam fugiat harum mollitia tenetur dolorem ducimus nisi consectetur repellat dolore labore minima sapiente voluptas, autem pariatur. Facere, nobis.</p>
+        </div>
+        <footer>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur deserunt voluptatibus asperiores. Dolores ab omnis necessitatibus quod veniam magni optio. Commodi rem, cumque eveniet non hic eum quidem tenetur deleniti.</footer>
     </div>
 
 

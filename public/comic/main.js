@@ -1,97 +1,108 @@
 masterlist = [
     {
         "folder":"muse-adriade",
-        "alt":"Muse Ariadne",
-        "desc":"Writing club thingy wohooo",
+        "title":"Muse Ariadne",
+        "desc":"Stuff for a writing club thingy wohooo!!",
         "parts":[
-            {"file":"2024-02-05","alt":"Writing is Hard"},
-            //{"file":"2024-02-12","alt":"Foreign Film"},
-            {"file":"2024-02-26","alt":"Blue Bird","img":"blue-bird.png"},
-            //{"file":"2024-04-08","alt":"I Hate You"},
-            //{"file":"2024-05-13","alt":"Total Domination"},
-            {"file":"2024-05-20","alt":"The Odd Siblings","img":"odd-siblings.png"},
-            //{"file":"2024-08-26","alt":"Laundry Day"},
-            {"file":"2024-10-07","alt":"Seclusion"}
-        ]
+            {"file":"2024-02-05","title":"Writing is Hard"},
+            //{"file":"2024-02-12","title":"Foreign Film"},
+            {"file":"2024-02-26","title":"Blue Bird","img":"blue-bird.png"},
+            //{"file":"2024-04-08","title":"I Hate You"},
+            //{"file":"2024-05-13","title":"Total Domination"},
+            {"file":"2024-05-20","title":"The Odd Siblings","img":"odd-siblings.png"},
+            //{"file":"2024-08-26","title":"Laundry Day"},
+            {"file":"2024-10-07","title":"Seclusion"}
+        ],
     },
     {
         "folder":"misfits",
-        "alt":"The Misfits",
+        "title":"The Misfits",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games",
         "parts":[
-            {"file":"independent","alt":"Independent","img":"independent.png"},
-            {"file":"yapping","alt":"Yapping"},
-            {"file":"saved","alt":"Saved"},
-            //{"file":"letters","alt":"Letters"},
-            //{"file":"siblings","alt":"Siblings"}
+            {"file":"independent","title":"Independent","img":"independent.png"},
+            {"file":"yapping","title":"Yapping"},
+            {"file":"saved","title":"Saved"},
+            //{"file":"letters","title":"Letters"},
+            //{"file":"siblings","title":"Siblings"}
         ]
     },
     {
         "folder":"puyo",
-        "alt":"Maguro's Thing",
+        "title":"Maguro's Thing",
         "desc":"Idk some dumb Puyo comic I made,,"
     },
     {
         "folder":"84",
-        "alt":"84",
+        "title":"84",
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
         "parts":[
-            {"file":"uniform","alt":"Uniform"},
-            {"file":"notes","alt":"Note Taking"},
-            //{"file":"haircut","alt":"Haircut"},
+            {"file":"uniform","title":"Uniform"},
+            {"file":"notes","title":"Note Taking"}
+            //{"file":"haircut","title":"Haircut"},
             /*
-            {"file":"cover","alt":"Cover Art"},
-            {"file":"sorry","alt":"Sorry"},
-            {"file":"breakfast","alt":"Breakfast"},
-            {"file":"break","alt":"Take a Break"},
-            {"file":"news","alt":"Exciting News"}
+            {"file":"cover","title":"Cover Art"},
+            {"file":"sorry","title":"Sorry"},
+            {"file":"breakfast","title":"Breakfast"},
+            {"file":"break","title":"Take a Break"},
+            {"file":"news","title":"Exciting News"}
             */
         ]
     },
     {
         "folder":"psych",
-        "alt":"Psych!",
+        "title":"Psych!",
         "desc":"Being a psychic sucks actually.",
         "parts":[
-            //{"file":"tetris","alt":"Tetris"},
-            {"file":"grass","alt":"Touch Grass"},
-            {"file":"icecream","alt":"Ice Cream"},
-            {"file":"man-down","alt":"But, Psyyy--","img":"man-down.png"},
-            {"file":"hell","alt":"I like You"}
+            //{"file":"tetris","title":"Tetris"},
+            {"file":"grass","title":"Touch Grass"},
+            {"file":"icecream","title":"Ice Cream"},
+            {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
+            {"file":"hell","title":"I like You"}
         ]
     },
     {
         "folder":"adrift",
-        "alt":"Adrift",
-        "desc":"It's clearance signing and Adrina has an essay to finish.",
+        "title":"Adrift",
+        "desc":"It's clearance signing and Adrina has an essay to finish."
     },
     {
         "folder":"hat",
-        "alt":"LiteralHat",
+        "title":"LiteralHat",
         "desc":"Random LiteralHat related Comics",
         "parts":[
-            {"file":"index","alt":"Clipper"},
-            {"file":"lost","alt":"Lost","img":"0A01-00.png"}
+            {"file":"index","title":"Clipper"},
+            {"file":"lost","title":"Lost","img":"0A01-00.png"}
         ]
     },
     {
         "folder":"penny",
-        "alt":"Penny's Perfect Present",
-        "desc":"She wants to get her mom a gift for an upcoming event.",
+        "title":"Penny's Perfect Present",
+        "desc":"She wants to get her mom a gift for an upcoming event."
+    },
+    {
+        "folder":"misc",
+        "title":"Miscellaneous Comics",
+        "desc":"Dumping random comics n stuff that aren't for anything specific",
+                "parts":[
+            {"file":"2022-04-08","title":"Birthday"},
+            {"file":"2023-08-31","title":"Excuse"},
+            {"file":"2023-09-05","title":"Never Satisfied"},
+            {"file":"2024-08-21","title":"Tummy Ache"}
+        ]
     },
     {
         "folder":"howto",
-        "alt":"How To Not",
+        "title":"How To Not",
         "desc":"A guide on how to do stuff by telling you how not to",
         "parts":[
-            {"file":"0A00","alt":"Make a Webcomic"},
-            {"file":"0A01","alt":"Befriend the Internet"},
-            {"file":"0A02","alt":"Be Original"},
-            {"file":"0A03","alt":"Procastinate"},
-            {"file":"0A04","alt":"Do Projects"},
-            {"file":"0A05","alt":"Feel Motivated"},
-            {"file":"0A06","alt":"Walk Your Pet Fish"},
-            {"file":"0A07","alt":"Study"}
+            {"file":"0A00","title":"Make a Webcomic"},
+            {"file":"0A01","title":"Befriend the Internet"},
+            {"file":"0A02","title":"Be Original"},
+            {"file":"0A03","title":"Procastinate"},
+            {"file":"0A04","title":"Do Projects"},
+            {"file":"0A05","title":"Feel Motivated"},
+            {"file":"0A06","title":"Walk Your Pet Fish"},
+            {"file":"0A07","title":"Study"}
         ]
     }
 ]
@@ -103,7 +114,7 @@ if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
 
 const footer = '\
 <a href="#">Sitemap</a>\
-<a href="'+relativePath+'index.html">Home</a>\
+<a href="'+relativePath+'comic/index.html">Home</a>\
 <a href="'+relativePath+'chat.html">Chatbox</a>\
 '
 
@@ -143,11 +154,11 @@ if ( currentIndex > -1) {
         result = document.createElement("header")
 
         comicTitle = document.createElement("a")
-        comicTitle.innerHTML = masterlist[currentIndex].alt
+        comicTitle.innerHTML = masterlist[currentIndex].title
         comicTitle.href = "./index.html"
 
         partTitle = document.createElement("span")
-        partTitle.innerHTML = masterlist[currentIndex].parts[currentPartIndex].alt
+        partTitle.innerHTML = masterlist[currentIndex].parts[currentPartIndex].title
 
         result.append(comicTitle)
         result.append(partTitle)
@@ -157,30 +168,31 @@ if ( currentIndex > -1) {
         writeComicNextprev(masterlist[currentIndex].parts)
         writeComicNext(masterlist[currentIndex].parts)
         
-        if (document.title==="") {document.title = masterlist[currentIndex].parts[currentPartIndex].alt + " | " + masterlist[currentIndex].alt;}
+        if (document.title==="") {document.title = masterlist[currentIndex].parts[currentPartIndex].title + " | " + masterlist[currentIndex].title;}
     } else {
+        console.log("woof")
         writePartsArchive("comicList", currentIndex, 0, maxParts)
 
         result = document.createElement("header")
 
         comicTitle = document.createElement("a")
         comicTitle.innerHTML = "Stupied"
-        comicTitle.href = "./index.html"
+        comicTitle.href = "./../index.html"
 
         partTitle = document.createElement("span")
-        partTitle.innerHTML = masterlist[currentIndex].alt
+        partTitle.innerHTML = masterlist[currentIndex].title
 
         result.append(comicTitle)
         result.append(partTitle)
 
         if(e=document.getElementById("top")){e.append(result)}
 
-        if (document.title==="") {document.title = masterlist[currentIndex].alt + " | " + "Stupied"}
+        if (document.title==="") {document.title = masterlist[currentIndex].title + " | " + "Stupied"}
     }
     if(e=document.getElementById("top")){e.innerHTML+='<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>'}
 } else {
     writeComicArchive()
-    document.getElementById("comicList").append(list)
+    if(e=document.getElementById("comicList")){e.append(list)}
 }
 
 function searchComicIndex(){
@@ -207,7 +219,7 @@ function searchComicIndex(){
     }
     
     // Find Index of Part
-    if(fileList.length>3 && masterlist[currentIndex].parts!==null){
+    if(fileList.length > 3 && masterlist[currentIndex].parts!== undefined){
         maxParts= masterlist[currentIndex].parts.length
         for (i = 0; i < maxParts; i++) {
             if ( masterlist[currentIndex].parts[i].file===currentFile) {
@@ -221,21 +233,15 @@ function writeComicArchive(){
     list=document.createElement("ul")
     for(i=0;i<masterlist.length;i++){
         // Checks if there's an index
-        if (masterlist[i].parts==null){link=masterlist[i].folder+".html" 
-        } else { link=masterlist[i].folder+"/index.html" }
-        
-        // Hides anything starting with !
-        if(masterlist[i].folder[0]!=="!"){
-            listItem = document.createElement("li")
-            itemLink = document.createElement("a")
-            itemLink.innerHTML = "<span>"+masterlist[i].alt+"</span> » "
-            itemLink.href = link
+        link="./view.html?item="+masterlist[i].folder
 
-            listItem.append(itemLink)
-            listItem.innerHTML += masterlist[i].desc
+        listItem = document.createElement("li")
+        itemLink = document.createElement("a")
+        itemLink.innerHTML = "<span>"+masterlist[i].title+"</span>"
+        itemLink.href = link
 
-            list.append(listItem)
-        }
+        listItem.append(itemLink)
+        list.append(listItem)
     }
 }
 
@@ -250,7 +256,7 @@ function writePartsArchive(id,folder,first,last){
 
 function getPart(folder,x){
         comicLink=masterlist[folder].parts[x].file+".html"
-        comicTitle=masterlist[folder].parts[x].alt
+        comicTitle=masterlist[folder].parts[x].title
         result='<a href="'+comicLink+'"><div class="comicListItem">'+
         '<div class="comicListTitle"><h4>'+comicTitle+'</h4></div>'+
         '<div class="comicListIndex"><span>#'+x+'</span></div>'+
@@ -308,7 +314,7 @@ function writeComicNext(){
             comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
         }
         nextI= masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
-        comicTitle=masterlist[currentIndex].parts[currentPartIndex+1].alt
+        comicTitle=masterlist[currentIndex].parts[currentPartIndex+1].title
 
         result='<a href="'+nextI+'"><div>'+comicThumb+'<div id="next-title"><div id="next-title-content"><h4>Next Part</h4><span>'+comicTitle+'</span></div></div></div></a>'
 	}
@@ -322,4 +328,10 @@ window.onload = function(){
     if(document.getElementById("comments")){
         if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24lorU9Glfj8bQyg9yk9caG%2F"+"&opts=16798&num=10&ts=1699153972795");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
     }
+}
+
+if(url.includes("https://stupied.neocities.org/chez/jigsaws/view")){
+  if(url.includes(".html")){
+    window.location.pathname=window.location.pathname.replaceAll(".html","")
+  }
 }

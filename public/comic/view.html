@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title></title>
+<style>
+  body.default::before{
+    max-height:200px;
+  }
+  #container{
+      display:flex;
+      background-color:white;
+      max-width: 700px;
+      margin: auto;
+      border: 3px solid black;
+      overflow: hidden;
+  }
+  #thumb{
+    flex:1;
+  }
+  #thumb img{
+    width: 100%;height:100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #side {
+    flex:2;
+    padding:1rem;
+    position:relative;
+  }
+
+  #side > div {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+  #link{
+    margin-top:1rem;
+  }
+  
+  #nextprev{
+    color: white;
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body class="default">
+  <header class="stupied">
+    <img src="./../meta/stupied-1.png">
+  </header>
+
+  <div id="container">
+    <div id="thumb"></div>
+    <div id="side">
+      <div>
+        <div id="title"></div>
+        <div id="desc"></div>
+        <div id="link"></div>
+      </div>
+    </div>
+  </div>
+  <div id="nextprev"></div>
+
+<script src="./main.js"></script>
+<script>
+    const urlQuery = new URLSearchParams(window.location.search)
+    currentComic = urlQuery.get('item')
+
+    if(currentComic===null){
+        currentComic=masterlist[0].folder
+        window.location.href = "./view.html?item="+currentComic;
+    }
+
+    currentIndex = getIndex(masterlist,currentComic)
+
+    comicThumb = document.createElement("img")
+    comicThumb.src = "./" + masterlist[currentIndex].folder + "/img/main.png"
+    document.getElementById("thumb").append(comicThumb)
+
+    comicTitle = document.createElement("h1")
+    comicTitle.innerHTML = masterlist[currentIndex].title
+    document.getElementById("title").append(comicTitle)
+
+    document.title = masterlist[currentIndex].title +" | stupied"
+
+    document.getElementById("desc").innerHTML = masterlist[currentIndex].desc
+
+    comicLink = document.createElement("a")
+    comicLink.innerHTML = "Click to Read »"
+    comicLink.href = "./" + masterlist[currentIndex].folder + "/index.html"
+
+    document.getElementById("link").append(comicLink)
+
+    nextprev=genNav(masterlist)
+    document.getElementById("nextprev").innerHTML = nextprev
+    
+    function getIndex(json,current){
+      for(i=0;i<json.length;i++){
+            if(json[i].folder===current){
+              index=i
+              return index
+            }
+        }
+        return -1
+    }
+
+    function genNav(e){
+      result=""
+      
+      if(prevI = e[currentIndex-1]){
+        prevI= "./view.html?item=" + prevI.folder;
+        result+= "<a href='./" + prevI + "'>« Next</a> | "
+      }
+
+      result+="<a href='index.html'>Home</a>"
+
+      if(nextI = e[currentIndex+1]){
+        nextI= "./view.html?item=" + nextI.folder;
+        result+= "<a href='./" + nextI + "'> | Prev »</a>"
+      }
+      return result
+  }
+</script>
+</body>
+</html>

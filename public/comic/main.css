@@ -59,17 +59,17 @@
 
 body#comicViewer{background-color:black;}
 
-#container{
+body#comicViewer #container{
     background-color:black;
     max-width:1800px;
     margin:0 auto;
 }
 
-#top header{grid-area:header;}
-#top #nextprev{grid-area:nextprev;}
-#top #extra{grid-area:extra;}
+body#comicViewer #top header{grid-area:header;}
+body#comicViewer #top #nextprev{grid-area:nextprev;}
+body#comicViewer #top #extra{grid-area:extra;}
 
-#top{
+body#comicViewer #top{
     padding:1rem;
     user-select:none;
     background-color:black;
@@ -80,46 +80,46 @@ body#comicViewer{background-color:black;}
     grid-template-columns:repeat(3,1fr);
 }
 
-#top, #bottom{
+body#comicViewer #top, body#comicViewer #bottom{
     max-width:1000px;
     margin:0 auto;
 }
 
-#top header{
+body#comicViewer #top header{
     white-space:nowrap; 
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-#info{
+body#comicViewer #info{
     margin:10px 0;
 }
-header a{
+body#comicViewer header a{
     font-family: grandstander;
     font-weight:600;
     color:var(--blue);
 }
-header a::after{
+body#comicViewer header a::after{
     content:" / ";
 }
 
-main{
+body#comicViewer main{
     padding:5px 0;
 }
 
-.main-content{
+body#comicViewer .main-content{
     max-width:800px;
     margin:5px auto;
     border:4px solid black;
     background-color:white;
 }
 
-.main-content img{
+body#comicViewer .main-content img{
     width:100%;
     display:block;
 }
 
-.main-content div{
+body#comicViewer .main-content div{
     padding:1rem;
 }
 
@@ -127,10 +127,10 @@ main{
     text-align:center;
 }
 
-#extra{
+body#comicViewer #extra{
     text-align:right;
 }
-#next a > div{
+body#comicViewer #next a > div{
     margin:auto;
     background-color: white;
     border-radius:5px;
@@ -140,7 +140,7 @@ main{
     user-select:none;
     height:100px;
 }
-#next > div{
+body#comicViewer #next > div{
     margin:auto;
     background-color: white;
     border-radius:5px;
@@ -148,35 +148,35 @@ main{
     border:3px solid black;
     padding:1rem;
 }
-#next img{
+body#comicViewer #next img{
     display: block;
     width:100px;
     height:100px;
     object-fit:cover;
 }
-#next-title{
+body#comicViewer #next-title{
     flex:1;
     position: relative;
 }
-#next-title-content{
+body#comicViewer #next-title-content{
     position: absolute;
     bottom:50%;
     left:10px;
     transform: translateY(50%);
 }
-#bottom{
+body#comicViewer #bottom{
     background-color:white;
     padding:10px;
 }
 
-#bottom #info-content > div{
+body#comicViewer #bottom #info-content > div{
     padding:5px 1rem;
 }
 
-#bottom aside {grid-area:side;}
-#bottom #comments {grid-area:comments;}
+body#comicViewer #bottom aside {grid-area:side;}
+body#comicViewer #bottom #comments {grid-area:comments;}
 
-#bottom{
+body#comicViewer #bottom{
     display:grid;
     grid-template-areas:
     "comments side"
@@ -185,19 +185,19 @@ main{
     gap:1rem;
     margin:1rem auto;
 }
-footer a:not(:last-of-type)::after{
+body#comicViewer footer a:not(:last-of-type)::after{
     content:" | ";
     color:white;
 }
-#comments{
+body#comicViewer #comments{
     background-color: white;
 }
-#info-content > h3{
+body#comicViewer #info-content > h3{
     background-color:var(--blue);
     padding:5px;
     border-radius:2px 2px 0 0;
 }
-#info{
+body#comicViewer #info{
     border-radius:5px;
     background-color:white;
     border:3px solid black;
@@ -235,18 +235,18 @@ footer, body#gallery footer{
     .comicInfo{
         display: block;
     }
-    #top{
+    body#comicViewer #top{
         grid-template-areas:
         "header extra"
         "nextprev nextprev";
         grid-template-columns:90% 10%;
     }
-    #bottom{
+    body#comicViewer #bottom{
         display: block;
         background-color:black;
     }
     #nextprev{margin-top:5px}
-    #comments{
+    body#comicViewer #comments{
         padding:1rem;
         border:3px solid black;
         border-radius:5px;

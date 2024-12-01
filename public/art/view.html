@@ -51,19 +51,19 @@
     fetch("./main.json")
         .then((response) => response.json())
         .then((art) => {
-          if(currentImage===null){
-            currentImage=art[0].img
+          if(currentImage === null){
+            currentImage = art[0].img
             window.location.href = "./view.html?item="+currentImage;
           }
 
           imageLink='./img/'+currentImage.toLowerCase()
           image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
-          document.getElementById("image").innerHTML=image
+          document.getElementById("image").innerHTML = image
 
           currentIndex=getIndex(art,currentImage)
           if (currentIndex>-1){
             if(art[currentIndex].title!==undefined){
-              document.getElementById("title").innerHTML=art[currentIndex].title
+              document.getElementById("title").innerHTML = art[currentIndex].title
               document.title = art[currentIndex].title +" // stupied"
             } else {
               e = art[currentIndex].img
@@ -95,7 +95,7 @@
 
     function genNav(e){
     if ( e.length < 2) {
-      result = "<a href='archive.html'>« Home  »</a>";
+      result = "<a href='archive.html'>« Home »</a>";
     } else if ( currentIndex === 0 ) {
       prevI= "./view.html?item=" + e[currentIndex+1].img;
       result = "<a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
