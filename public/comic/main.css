@@ -57,10 +57,13 @@
 .comicInfo aside{grid-area:side;padding:1rem;background-color:lightgray;}
 .comicInfo header img{width:100%;display:block;}
 
-body#comicViewer{background-color:black;}
+body#comicViewer{
+    --bg-color:black;
+    --txt-color:white;
+    background-color:var(--bg-color);
+}
 
 body#comicViewer #container{
-    background-color:black;
     max-width:1800px;
     margin:0 auto;
 }
@@ -72,8 +75,8 @@ body#comicViewer #top #extra{grid-area:extra;}
 body#comicViewer #top{
     padding:1rem;
     user-select:none;
-    background-color:black;
-    color:white;
+    background-color:var(--bg-color);
+    color:var(--txt-color);
     display:grid;
     grid-template-areas:
     "header nextprev extra";
@@ -279,6 +282,23 @@ body.eighty-four #info-content > h3{
 
 body.eighty-four header a{
     color:var(--yellow)!important;
+}
+
+body.eighty-four .default{
+    background-color: #ffda8e;
+    background-image: url(./84/img/bg.png);
+    background-size: 650px;
+}
+
+body.eighty-four, body.eighty-four #bottom, body.eighty-four #top{
+    --bg-color:white!important;
+    --txt-color:black!important;
+}
+
+body.eighty-four main{
+    border: 3px solid var(--yellow);
+    border-right:0;
+    border-left:0;
 }
 
 /** Misfits **/
