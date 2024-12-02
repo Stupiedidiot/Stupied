@@ -67,8 +67,51 @@
             }
         }
 
-        body.default::before{
-            height:50%;
+        body{
+            user-select: none;
+        }
+
+        .item-container{
+            display:flex;
+            background-color:white;
+            max-width: 700px;
+            margin: auto;
+            border: 3px solid black;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .item-thumb{
+            flex:1;
+        }
+        .item-thumb img{
+            width: 100%;height:100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-side {
+            flex:2;
+            padding:1rem;
+            position:relative;
+        }
+
+        .item-side > div {
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+        }
+
+        .item-link{
+            margin-top:1rem;
+        }
+
+        @media only screen and (min-width: 550px) {
+        #comicArchive{
+            margin: auto;
+            columns: 2;
+            column-gap: 1rem;
+            max-width:900px;
+        }
         }
     </style>
 </head>
@@ -76,8 +119,8 @@
     <header class="stupied">
         <img src="./../meta/stupied-1.png">
     </header>
-
-    <nav id="catalog">
+<!--
+        <nav id="catalog">
         <div id="misfits">insert cool thumbnails</div>
         <div id="penny">wohoooo so cool</div>
         <div id="adrift">im such an amazing web developer</div>
@@ -100,9 +143,39 @@
             </div>
          </div>
     </div>
-    <footer class="txt-center txt-white">
-        <a href="./../index.html">Head Home</a>
+-->
+
+    <div id="comicArchive"></div>
+
+    <footer class="txt-left txt-white" style="max-width:900px;">
+        <a href="./../index.html">Head Home »</a>
     </footer>
+
     <script src="./main.js"></script>
+    <script>
+    result=""
+    for(i=0;i<masterlist.length;i++){
+        itemThumb = '<img  src="./' + masterlist[i].folder + '/img/main.png">'
+        itemTitle = '<h1>' + masterlist[i].title + '</h1>'
+        itemDesc = masterlist[i].desc
+        itemLink = '<a href="./' + masterlist[i].folder + '/index.html">Click to Read »</a>'
+
+        item ='\
+        <div class="item-container">\
+        <div class="item-thumb">' + itemThumb + '</div>\
+        <div class="item-side">\
+            <div>\
+            <div class="item-title">' + itemTitle + '</div>\
+            <div class="item-desc">' + itemDesc + '</div>\
+            <div class="item-link">' + itemLink + '</div>\
+            </div>\
+        </div>\
+        </div>\
+        '
+        result += item
+    }
+    document.getElementById("comicArchive").innerHTML = result
+
+    </script>
 </body>
 </html>
