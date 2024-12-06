@@ -40,7 +40,7 @@ function createItem(item,{id,style,input,src,href,title}){
     if(input!==undefined){addTo(item,input)}
     return item
 }
-addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/media/favicon.ico"></link>');
+addToTag("head", '<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/favicon.ico"></link>');
 addToId("comments",' <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>');
 
 window.onload = function(){

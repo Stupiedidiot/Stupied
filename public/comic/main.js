@@ -22,7 +22,7 @@ masterlist = [
             {"file":"independent","title":"Independent","img":"independent.png"},
             {"file":"yapping","title":"Yapping"},
             {"file":"saved","title":"Saved"},
-            //{"file":"letters","title":"Letters"},
+            {"file":"letters","title":"Letters"},
             //{"file":"siblings","title":"Siblings"}
         ]
     },
@@ -144,7 +144,7 @@ for(i=0; i<main.length; i++){
 
 if(e=document.getElementById("info-content")){document.getElementById("info").append(e)}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../favicon.ico"></link>'
 
 maxParts=0
 searchComicIndex()
