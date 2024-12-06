@@ -94,18 +94,17 @@
     }
 
     function genNav(e){
-    if ( e.length < 2) {
-      result = "<a href='archive.html'>« Home »</a>";
-    } else if ( currentIndex === 0 ) {
+    result=""
+    if(e[currentIndex+1]){
       prevI= "./view.html?item=" + e[currentIndex+1].img;
-      result = "<a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
-    } else if ( currentIndex === e.length - 1 ) {
+      result+="<a href='./" + prevI + "'>« Prev</a> | "
+    }
+
+    result+="<a href='index.html'>Home</a>"
+
+    if(e[currentIndex-1]){
       nextI= "./view.html?item=" + e[currentIndex-1].img;
-      result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a>";
-    } else if ( 0 < currentIndex && currentIndex < e.length - 1 ) {
-      prevI= "./view.html?item=" + e[currentIndex+1].img;
-      nextI= "./view.html?item=" + e[currentIndex-1].img;
-      result = "<a href='./" + nextI + "'>« Next</a> | <a href='archive.html'>Home</a> | <a href='./" + prevI + "'>Prev »</a>";
+      result+=" | <a href='./" + nextI + "'>Next »</a>"
     }
     return result
   }
