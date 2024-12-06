@@ -80,7 +80,7 @@ for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../favicon.ico"></link>'
 
 if(e=document.querySelector("span#pageDesc")){
 	pageDesc = `<meta name="description" content="`+e.innerHTML+`">`
