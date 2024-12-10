@@ -8,7 +8,6 @@ const navigation =
 <nav>
   <a href="./index.html">home</a>
   <a href="./archive.html">archive</a>
-  <a href="#">code</a>
   <a href="#">commissions</a>
 </nav>`
 
@@ -19,7 +18,7 @@ const footer =
 
 const lightbox =`
 <div id="lightbox">
-  <button href="MEOW" onclick="closeLightBox()">X</button>
+  <button onclick="closeLightBox()">X</button>
   <div>
     <img src="#">
     <a id="lightbox-prev">« Prev</a> |
@@ -32,7 +31,11 @@ const lightbox =`
 const template =lightbox + `
 <div id="container">
   <header></header>
-  <div id="aside-1">`+navigation+`</div>
+  <div id="aside-container">
+    <div id="aside-1">
+      `+navigation+`
+    </div>
+  </div>
   <main></main>
   <footer>`+footer+`</footer>
 </div>`
@@ -48,7 +51,7 @@ if(e=document.getElementById("aside-1-content")){document.querySelector("#contai
 
 if(document.title===""){document.title="gallery // stupied"}else{document.title+= " - gallery // stupied";}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../meta/favicon.ico"></link>'
 
 //adding links to iamges
 images=document.querySelectorAll(".justified-gallery img")

@@ -9,7 +9,26 @@
 <body>
 
 <div class="main-content">
-  <h1>Featured Gallery :3</h1>
+
+  <h1 style="background-color:var(--dark-brown);">Stupied Art!</h1>
+  
+  <div id="about">
+    <div id="list">
+      <p>
+        Instagram used to be the main website I would post art in but I've grown tired of the lack of customizability.
+      </p>
+
+      <p>
+        You are allowed to do whatever with my art for personal use. The things I do is out of love and passion, so please don't exploit them from profit :(
+      </p>
+    </div>
+    <div id="recent">
+      <h5>Most Recent Drawing,,</h5>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
   <div class="justified-gallery" style="--min-height: 100px;margin-bottom:var(--space);">
     <img src="./img/2022-scott.png" style="--width: 922; --height: 890;">
     <img src="./img/2024-introspection.png" style="--width: 922; --height: 1149;">
@@ -23,9 +42,72 @@
 </div>
 
 <div id="aside-1-content">
-  <p>All the images r in the archive thingy</p>
+  <h3>Hell Yeah</h3>
+  <ul style="margin-bottom:0;padding-left:1rem;columns:2;max-width: 200px;">
+    <li><a href="./2024.html">2024</a></li>
+    <li><a href="./video.html">videos</a></li>
+    <li><a href="./artfight.html">artfight</a></li>
+    <li><a href="./fanart.html">fanart</a></li>
+  </ul>
 </div>
 
+<style>
+  #about{
+    padding:1rem 1rem 0 1rem;
+    display:flex;
+    gap:1rem
+  }
+
+  #list{
+    flex: 2;
+    margin-bottom: 1rem;
+  }
+
+  #recent{
+    flex: 2;
+    border: 2px solid var(--dark-brown);
+    box-shadow: 0 0 0 3px var(--wheat);
+    border-radius: 5px;
+    max-width:300px;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-2rem) rotate(2deg);
+  }
+
+  #recent h5 {
+    position: absolute;
+    margin-left: 10px;
+    bottom: 5%;
+    right: 5%;
+    color: white;
+    z-index: 1;
+  }
+
+  #recent img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+
 <script src="./main.js"></script>
+<script>
+
+  fetch("./main.json")
+        .then((response) => response.json())
+        .then((art) => {
+          recentLink=document.createElement("a")
+          recentLink.href="viewer.html?"+art[0].img
+          
+          recent=document.createElement("img")
+          recent.src="./img/" + art[0].img
+          recentLink.append(recent)
+
+          document.getElementById("recent").append(recentLink)
+    })
+</script>
+
 </body>
 </html>
