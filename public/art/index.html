@@ -19,7 +19,7 @@
       </p>
 
       <p>
-        You are allowed to do whatever with my art for personal use. The things I do is out of love and passion, so please don't exploit them from profit :(
+        You are allowed to do whatever with my art for personal use. The things I do is out of love and passion, so I'd appreciate it if you don't exploit it for profit.
       </p>
     </div>
     <div id="recent">
@@ -99,7 +99,7 @@
         .then((response) => response.json())
         .then((art) => {
           recentLink=document.createElement("a")
-          recentLink.href="viewer.html?"+art[0].img
+          recentLink.href="view.html?"+art[0].img
           
           recent=document.createElement("img")
           recent.src="./img/" + art[0].img

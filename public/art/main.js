@@ -8,7 +8,7 @@ const navigation =
 <nav>
   <a href="./index.html">home</a>
   <a href="./archive.html">archive</a>
-  <a href="#">commissions</a>
+  <a href="./commission.html">commissions</a>
 </nav>`
 
 const footer =

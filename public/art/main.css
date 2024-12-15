@@ -146,7 +146,7 @@ footer{
 @media only screen and (max-width: 650px) {
   #container{display:block;}
   #container > *{margin-bottom:1rem;}
-  #aside-1,#aside-2{width:auto;}
+  #aside-1{width:auto;margin-bottom:10px}
 
   #aside-1 #aside-1-img{width:100px;}
 }
