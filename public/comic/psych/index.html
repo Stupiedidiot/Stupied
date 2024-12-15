@@ -113,7 +113,18 @@ aside > img.outline{
 #comicList a:hover div{
     background-color: var(--red);
     color: black;
-
+}
+@media only screen and (max-width: 600px) {
+    aside{
+        display: none;
+    }
+    body{
+        background-image: none;
+        background-color: var(--dark-brown);
+    }
+    main{
+        width:100%!important;
+    }
 }
 </style>    
 </head>
