@@ -193,9 +193,6 @@ body#comicViewer footer a:not(:last-of-type)::after{
     content:" | ";
     color:white;
 }
-body#comicViewer #comments{
-    background-color: white;
-}
 body#comicViewer #info-content > h3{
     background-color:var(--blue);
     padding:5px;
@@ -255,6 +252,10 @@ footer, body#gallery footer{
         border:3px solid black;
         border-radius:5px;
     }
+
+    body#comicViewer #comments{
+        background-color: white;
+    }
 }
 
 /** Muse Adriade **/
@@ -305,4 +306,17 @@ body.eighty-four main{
 /** Misfits **/
 body.misfits{
     --blue:#63bbb5;
+}
+
+/** Psych **/
+body.psych .default{
+    background-image: url(./psych/img/bg.png);
+    background-size: cover;
+}
+
+
+body.psych{
+    --dark-brown:#1b1a18;
+    --bg-color:var(--dark-brown)!important;
+    --blue:#b5473d;
 }

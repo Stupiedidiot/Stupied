@@ -55,7 +55,7 @@ masterlist = [
         "parts":[
             //{"file":"tetris","title":"Tetris"},
             {"file":"grass","title":"Touch Grass"},
-            {"file":"icecream","title":"Ice Cream"},
+            //{"file":"icecream","title":"Ice Cream"},
             {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
             {"file":"hell","title":"I like You"}
         ]
@@ -144,7 +144,7 @@ for(i=0; i<main.length; i++){
 
 if(e=document.getElementById("info-content")){document.getElementById("info").append(e)}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/favicon.ico"></link>'
 
 maxParts=0
 searchComicIndex()
