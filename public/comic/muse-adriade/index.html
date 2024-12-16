@@ -69,7 +69,9 @@
             <div id="recentList"></div>
             
             <div style="float:right;margin-top:10px;"><a href="https://museariadne.neocities.org/" target="_blank"><img style="width:100px;"src="./img/button.png"></a></div>
-            <footer style="margin-top:1rem; margin-bottom:0;"></footer>
+            <div style="margin-top:1rem; margin-bottom:0;text-align: center;">
+                <a href="./../../index.html">head back »</a>
+            </div>
         </div>
 
         <div id="image">
@@ -83,8 +85,8 @@
     </div>
     <script src="./../main.js"></script>
     <script>
-        // recentList=getPart(currentIndex,3)
-        recentList=getPart(currentIndex,1)
+        recentList=getPart(currentIndex,3)
+        recentList+=getPart(currentIndex,1)
         recentList+=getPart(currentIndex,2)
         document.getElementById("recentList").innerHTML=recentList
     </script>
