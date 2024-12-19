@@ -26,53 +26,55 @@ const posts=[
 	{
 		file:"0000-00-00-Themes.html",
 		img:"img/themes.png",
-		desc:"[Under Construction] Preset designs"
+		desc:"Preset designs"
 	}
 ]
 
 //-----------------------------
 
-// [3] SETTINGS
+// [3] SETTINGS - The page's format!
 
 const url = window.location.pathname;relativePath = "./";
 if(url.includes("post")){relativePath="./../";}
 // add "relativePath" to any anchor tags or file paths
 
-const header=''
+const header=`
+`
 
-const navigation ='\
-<div>\
-    <img src="' + relativePath + 'img/pfp.png">\
-	<nav>\
-		<a href="' + relativePath + 'index.html">Home</a>\
-		<a href="' + relativePath + 'about.html">About</a>\
-		<a href="' + relativePath + 'post/2024-11-17-Set-Up.html">Set Up</a>\
-		<a href="' + relativePath + 'demo/index.html">Live Demo</a>\
-		<a href="' + relativePath + 'post/0000-00-00-Themes.html"">Themes</a>\
-		<a href="' + relativePath + 'archive.html"">Archive</a>\
-	</nav>\
-</div>\
-'
+const navigation =`
+<div>
+    <a href="#"><img src="` + relativePath + `img/pfp.png"></a>
+    <h3>`+ blogname +`!!!</h3>
+	<nav>
+		<a href="` + relativePath + `index.html">Home</a>
+		<a href="` + relativePath + `about.html">About</a>
+		<a href="` + relativePath + `post/2024-11-17-Set-Up.html">Set Up</a>
+		<a href="` + relativePath + `demo/index.html">Live Demo</a>
+		<a href="` + relativePath + `post/0000-00-00-Themes.html"">Themes</a>
+		<a href="` + relativePath + `archive.html"">Archive</a>
+	</nav>
+</div>
+`
 
-const footer ='\
-<p>\
-'+blogname+' was created by <a href="'+userlink+'">'+username+'</a>\
-</p>\
-'
+const footer =`
+<p>
+	Tabvoid was created by <a href="` + userlink + `">` + username + `</a>!!!
+</p>
+`
 
-const template ='\
-<div id="container">\
-	<header>'+ header +'</header>\
-	<div id="nav">'+ navigation +'</div>\
-	<main></main>\
-	<footer>'+ footer +'</footer>\
-</div>\
-\
-'
+const template =`
+<div id="container">
+	<header>`+ header +`</header>
+	<div id="nav">` + navigation + `</div>
+	<main></main>
+	<footer>` + footer + `</footer>
+</div>
+`
 
 //-----------------------------
 
-// [4] DA CODE - beep boop
+// [4] DA CODE - You don't have to touch anything here (unless you really wanna)
+
 
 document.querySelector("body").innerHTML+= template;
 
@@ -80,10 +82,6 @@ main=document.querySelectorAll(".main-content");
 for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
-
-if(e=document.querySelector("header")){e.innerHTML=(header);}
-if(e=document.querySelector("#nav")){e.innerHTML=(navigation);}
-if(e=document.querySelector("footer")){e.innerHTML=(footer);}
 
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'style/favicon.ico"></link>'
 
@@ -95,6 +93,7 @@ if(currentIndex>-1){
 	currentTitle = "<h1>" + currentTitle + "</h1>"
 	
 	currentDate =  getDate(currentIndex,posts)
+	currentDate = convDate(currentDate) // converts to word
 	currentDate =  "<h4>" + currentDate + "</h4>"
 
 	currentNav = genNav(posts)
@@ -216,6 +215,7 @@ function convDate(i){
 			break;
 		}
 	date = month + " " + day + ", " + year;
+	date = date.replaceAll("00,","")
 	return date;
 }
 
@@ -234,19 +234,17 @@ function getImg(i,e){
 }
 
 function genNav(e){
-	if ( e.length < 2) {
-		result = "<a href='" + relativePath + "archive.html'>« Archive  »</a>";
-	} else if ( currentIndex === 0 ) {
-		prevI= e[currentIndex+1].file;
-		result = "<a href='" + relativePath + "archive.html'>Archive</a> | <a href='./" + prevI + "'>Prev »</a>";
-	} else if ( currentIndex === e.length - 1 ) {
+	result=""
+	if(e[currentIndex-1]){
 		nextI= e[currentIndex-1].file;
-		result = "<a href='./" + nextI + "'>« Next</a> | <a href='" + relativePath + "archive.html'>Archive</a>";
-		
-	} else if ( 0 < currentIndex && currentIndex < e.length - 1 ) {
+		result+="<a href='./" + nextI + "'>« Next</a> | " 
+	}
+
+	result+='<a href="'+relativePath+'archive.html">Archive'
+
+	if(e[currentIndex+1]){
 		prevI= e[currentIndex+1].file;
-		nextI= e[currentIndex-1].file;
-		result = "<a href='./" + nextI + "'>« Next</a> | <a href='" + relativePath + "archive.html'>Archive</a> | <a href='./" + prevI + "'>Prev »</a>";
+		result+=" | <a href='./" + prevI + "'>Prev »</a>"
 	}
 	return result
 }

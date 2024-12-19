@@ -1,0 +1,77 @@
+@import url(./../template.css);
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root {
+    --body-font:'Courier New', Courier, monospace;
+    --display-font:"Zen Dots";
+    --accent-color:#66ef04;
+    --accent-color-rgb:102, 239, 4; /* Add the rbg variation of the color. Do not add the rgb() function */
+    
+    /* Declare variables you can use later :D */
+}
+
+body{
+    font-family:var(--body-font);
+    background-color: black;
+}
+
+header{
+    background-color: var(--accent-color);
+    border-top:var(--border);
+}
+header img{margin-top:3px;}
+
+
+#container{
+    background-color:rgba(0, 0, 0,0.9);
+    margin: 1rem auto;
+    overflow: hidden;
+
+    border: 3px solid var(--accent-color);
+    border-top: 0;
+    border-bottom: 0;
+    border-top-right-radius:20px;
+    border-bottom-left-radius:20px;
+}
+
+@media only screen and (max-width: 800px) {
+    #container{
+        border:0;
+        border-radius: 0;
+        margin: auto;
+    }
+    header img{margin-top:0;}
+}
+
+#nav{
+    background-color:rgba(var(--accent-color-rgb), 0.2);
+    color: var(--accent-color);
+}
+
+#nav img{
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+nav a:hover{
+    color:white;
+    font-weight: bold;
+}
+
+.main-content{
+    color:var(--accent-color);
+    text-shadow:0 0 10px var(--accent-color);
+}
+
+footer{
+    background-color:var(--accent-color);
+}
+
+::selection{color:black;}
+
+.card > a{
+    background-color:rgb(0, 0, 0);
+}
+
+.card a:hover {
+    background-color:var(--accent-color);
+}

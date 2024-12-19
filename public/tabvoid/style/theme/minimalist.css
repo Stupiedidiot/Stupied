@@ -1,0 +1,35 @@
+@import url(./../template.css);
+
+:root {
+    --body-font:Arial, Helvetica, sans-serif;
+    --display-font:Arial, Helvetica, sans-serif;
+    --accent-color:#9c9c9c;
+    /* Declare variables you can use later :D */
+}
+
+body{   
+    font-family:var(--body-font);
+    color:black;
+}
+
+#container{
+    border: 3px solid black;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #container{border:0;}
+}
+
+@media only screen and (max-width: 550px) {
+    #nav{
+        background-color:black;
+        color: white;
+    }
+}
+
+footer{
+    background-color:black;
+    color: white;
+}

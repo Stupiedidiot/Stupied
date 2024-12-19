@@ -1,0 +1,8 @@
+@import url(./../template.css);
+
+:root {
+    --body-font:Arial, Helvetica, sans-serif;
+    --display-font:'Courier New', Courier, monospace;
+    --accent-color:#1ba4a2;
+    /* Declare variables you can use later :D */
+}

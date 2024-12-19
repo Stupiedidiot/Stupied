@@ -1,13 +1,15 @@
+@import url(./../template.css);
+
 :root {
-    --body-font:'Courier New', Courier, monospace;
+    --body-font: Arial, Helvetica, sans-serif;
     --display-font:'Courier New', Courier, monospace;
     --accent-color:#dca10a;
     /* Declare variables you can use later :D */
 }
 
 body{
-    background-image:url(./bg.png);
-    background-size:100%;
+    background-image:url(./default-bg.png);
+    background-size:cover;
     background-attachment:fixed;
     background-color:var(--accent-color);
     font-family:var(--body-font);
@@ -15,10 +17,15 @@ body{
 
 #container{
     background-color:white;
+    box-shadow:0 0 10px 0 black;
 }
 
 #nav{
     background-color:lightgray;
+}
+
+#nav img{
+    border: 3px solid lightgrey;
 }
 
 nav a:hover{
