@@ -2,6 +2,8 @@
 
 :root{
     --blue:#5177a9;
+    --bg-color:black;
+    --txt-color:white;
 }
 
 .padding{padding:1rem!important;}
@@ -58,8 +60,6 @@
 .comicInfo header img{width:100%;display:block;}
 
 body#comicViewer{
-    --bg-color:black;
-    --txt-color:white;
     background-color:var(--bg-color);
 }
 
@@ -191,7 +191,7 @@ body#comicViewer #bottom{
 }
 body#comicViewer footer a:not(:last-of-type)::after{
     content:" | ";
-    color:white;
+    color:var(--txt-color);
 }
 body#comicViewer #info-content > h3{
     background-color:var(--blue);
@@ -203,8 +203,8 @@ body#comicViewer #info{
     background-color:white;
     border:3px solid black;
 }
-footer, body#gallery footer{
-    color:white;
+footer{
+    color:var(--txt-color);
     text-align:center;
     margin:1rem auto;
 }
@@ -249,7 +249,6 @@ footer, body#gallery footer{
     #nextprev{margin-top:5px}
     body#comicViewer #comments{
         padding:1rem;
-        border:3px solid black;
         border-radius:5px;
     }
 
@@ -260,15 +259,17 @@ footer, body#gallery footer{
 
 /** Muse Adriade **/
 body.muse, body.hat{
+    --yellow:#efe4b0;
     --light-pink:#edb18b;
     --pink:#ed4d46;
-    --blue:#ed4d46;
-    --yellow:#efe4b0;
+    --blue:var(--pink);
+    --brown:#52330c;
+    --green:#95a63a;
 }
 
 body.muse ::selection {
-    color: #52330c;
-    background: #95a63a;
+    color: var(--brown);
+    background: var(--green);
 }
 
 body.muse .note{
@@ -279,11 +280,11 @@ body.muse .note{
 
 /** Eighty Four **/
 body.eighty-four #info-content > h3{
-    background-color:var(--yellow)!important;
+    background-color:var(--yellow);
 }
 
 body.eighty-four header a{
-    color:var(--yellow)!important;
+    color:var(--yellow);
 }
 
 body.eighty-four .default{
@@ -292,9 +293,9 @@ body.eighty-four .default{
     background-size: 650px;
 }
 
-body.eighty-four, body.eighty-four #bottom, body.eighty-four #top{
-    --bg-color:white!important;
-    --txt-color:black!important;
+body.eighty-four{
+    --bg-color:white;
+    --txt-color:black;
 }
 
 body.eighty-four main{
@@ -317,6 +318,6 @@ body.psych .default{
 
 body.psych{
     --dark-brown:#1b1a18;
-    --bg-color:var(--dark-brown)!important;
     --blue:#b5473d;
+    --bg-color:var(--dark-brown);
 }

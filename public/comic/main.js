@@ -10,7 +10,7 @@ masterlist = [
             //{"file":"2024-04-08","title":"I Hate You"},
             //{"file":"2024-05-13","title":"Total Domination"},
             {"file":"2024-05-20","title":"The Odd Siblings","img":"odd-siblings.png"},
-            //{"file":"2024-08-26","title":"Laundry Day"},
+            {"file":"2024-08-26","title":"Laundry Day"},
             {"file":"2024-10-07","title":"Seclusion"}
         ],
     },
@@ -27,16 +27,23 @@ masterlist = [
         ]
     },
     {
-        "folder":"puyo",
-        "title":"Maguro's Thing",
-        "desc":"Idk some dumb Puyo comic I made,,"
+        "folder":"psych",
+        "title":"Psych!",
+        "desc":"Being a psychic sucks actually.",
+        "parts":[
+            //{"file":"tetris","title":"Tetris"},
+            {"file":"grass","title":"Touch Grass"},
+            //{"file":"icecream","title":"Ice Cream"},
+            {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
+            {"file":"hell","title":"I like You"}
+        ]
     },
     {
         "folder":"84",
         "title":"84",
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
         "parts":[
-            {"file":"uniform","title":"Uniform"},
+            //{"file":"uniform","title":"Uniform"},
             {"file":"notes","title":"Note Taking"}
             //{"file":"haircut","title":"Haircut"},
             /*
@@ -49,16 +56,9 @@ masterlist = [
         ]
     },
     {
-        "folder":"psych",
-        "title":"Psych!",
-        "desc":"Being a psychic sucks actually.",
-        "parts":[
-            //{"file":"tetris","title":"Tetris"},
-            {"file":"grass","title":"Touch Grass"},
-            //{"file":"icecream","title":"Ice Cream"},
-            {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
-            {"file":"hell","title":"I like You"}
-        ]
+        "folder":"puyo",
+        "title":"Maguro's Thing",
+        "desc":"Idk some dumb Puyo comic I made,,"
     },
     {
         "folder":"adrift",
