@@ -10,7 +10,7 @@
 //-----------------------------
 
 // [1] USER INFO
-const blogname = "The Abyss"
+const blogname = "Da Blog!!"
 const username = "Stupied"
 const userlink = "https://stupied.neocities.org/about"
 
@@ -31,42 +31,38 @@ const posts=[
 // [3] SETTINGS - The page's format!
 
 const url = window.location.pathname;relativePath = "./";
-//if(url.includes("post")){relativePath="./../";}
 // add "relativePath" to any anchor tags or file paths
 
-const header='\
-'
+const header=`
+`
 
-const navigation ='\
-<div>\
-    <a href="#"><img src="' + relativePath + '../art/img/gif/2024-psyche-gaming.gif"></a>\
-    <h3>'+ blogname +'</h3>\
-	<nav>\
-		<a href="' + relativePath + 'index.html">Home</a>\
-		<a href="' + relativePath + '../about.html">About</a>\
-		<a href="' + relativePath + 'archive.html">Archive</a>\
-		<a href="https://status.cafe/users/stupied">Microblog</a>\
-		<a href="' + relativePath + '../index.html">Head Back</a>\
-	</nav>\
-</div>\
-'
+const navigation =`
+<div>
+    <a href="` + relativePath + `../about.html"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
+	<h3>`+ blogname +`</h3>
+	<nav>
+		<a href="` + relativePath + `index.html">Home</a>
+		<a href="` + relativePath + `archive.html">Archive</a>
+		<a href="` + relativePath + `../index.html"">Head Back</a>
+	</nav>
+</div>
+`
 
-const footer ='\
-<p>\
-'+blogname+' is written by <a href="'+userlink+'">'+username+'</a>. \
-Created with <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>\
-</p>\
-'
+const footer =`
+<p>
+` + blogname + ` is written by <a href="` + userlink + `">` + username + `</a>.
+	Created with <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>\
+</p>
+`
 
-const template ='\
-<div id="container">\
-	<header>'+ header +'</header>\
-	<div id="nav">'+ navigation +'</div>\
-	<main></main>\
-	<footer>'+ footer +'</footer>\
-</div>\
-\
-'
+const template =`
+<div id="container">
+	<header>`+ header +`</header>
+	<div id="nav">` + navigation + `</div>
+	<main></main>
+	<footer>` + footer + `</footer>
+</div>
+`
 
 //-----------------------------
 
@@ -80,15 +76,7 @@ for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../favicon.ico"></link>'
-
-if(e=document.querySelector("span#pageDesc")){
-	pageDesc = `<meta name="description" content="`+e.innerHTML+`">`
-} else {
-	pageDesc = `<meta name="description" content="The blog of Stupied :D">`
-}
-
-document.querySelector("head").innerHTML+=pageDesc
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
 
 currentIndex = getIndex(posts)
 if(currentIndex>-1){
@@ -119,16 +107,16 @@ if(currentIndex>-1){
 		itemDesc=getDesc(i,posts)
 		itemImg=getImg(i,posts)
 
-		item='\
-		<a href="' + itemLink + '">\
-		<div class="blog-item">\
-			<div class="item-title">' + itemTitle + '</div>\
-			<div class="item-date">' + itemDate + '</div>\
-			<div class="item-desc">' + itemDesc + '</div>\
-			<div class="item-img"><img src="' + itemImg +'"></div>\
-		</div>\
-		</a>\
-		'	
+		item=`
+		<a href="` + itemLink + `">
+		<div class="blog-item">
+			<div class="item-title">` + itemTitle + `</div>
+			<div class="item-date">` + itemDate + `</div>
+			<div class="item-desc">` + itemDesc + `</div>
+			<div class="item-img"><img src="` + itemImg + `"></div>
+		</div>
+		</a>
+		`
 		postArchive+=item
 		if(i<3){postRecent+=item}
 	}
@@ -239,19 +227,17 @@ function getImg(i,e){
 }
 
 function genNav(e){
-	if ( e.length < 2) {
-		result = "<a href='" + relativePath + "archive.html'>« Archive  »</a>";
-	} else if ( currentIndex === 0 ) {
-		prevI= e[currentIndex+1].file;
-		result = "<a href='" + relativePath + "archive.html'>Archive</a> | <a href='./" + prevI + "'>Prev »</a>";
-	} else if ( currentIndex === e.length - 1 ) {
+	result=""
+	if(e[currentIndex-1]){
 		nextI= e[currentIndex-1].file;
-		result = "<a href='./" + nextI + "'>« Next</a> | <a href='" + relativePath + "archive.html'>Archive</a>";
-		
-	} else if ( 0 < currentIndex && currentIndex < e.length - 1 ) {
+		result+="<a href='./" + nextI + "'>« Next</a> | " 
+	}
+
+	result+='<a href="'+relativePath+'archive.html">Archive'
+
+	if(e[currentIndex+1]){
 		prevI= e[currentIndex+1].file;
-		nextI= e[currentIndex-1].file;
-		result = "<a href='./" + nextI + "'>« Next</a> | <a href='" + relativePath + "archive.html'>Archive</a> | <a href='./" + prevI + "'>Prev »</a>";
+		result+=" | <a href='./" + prevI + "'>Prev »</a>"
 	}
 	return result
 }

@@ -5,15 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet href=./style/main.css>
     <title></title>
+    <style>
+        #hell-yeah{
+            display: flex;
+            gap:10px;
+            margin-bottom: 2rem;
+        }
+
+        #blog{
+            background:var(--blue);
+            position: relative;
+            overflow:hidden;
+            border: 3px solid black;
+            max-width:200px;
+            user-select: none;
+        }
+
+        #blog #blogDesign{
+            min-height:100px;
+            height:100%;
+        }
+
+        #blog #blogDesign img{
+            margin-top:10px;
+            width:100%;
+            z-index:1;
+        }
+
+        #blog h1{
+            position:absolute;
+            bottom:10px;
+            right:10px;
+            color:white;
+            z-index:2;
+        }
+        #micro{
+            background-color:white;
+            border-radius:0 0 50% 50%;
+            border-top:0;
+            transform:scaleX(200%);
+            border:3px solid black;
+            border-top:0;
+        }
+
+        #statuscafe {
+            padding:2rem 1rem;
+            transform:scaleX(50%);
+        }
+        #statuscafe-username{
+            font-family:grandstander;
+            font-weight: bold;
+        }
+        #statuscafe-username a{
+            display:none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #hell-yeah{
+                display: block;
+            }
+            #blog{
+                margin: auto;
+                margin-bottom: 2rem;
+                max-width: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="main-content">
-        <h1>The Abyss</h1>
-        <p>I scream at nothing.</p>
+    <div class="main-content" id="hell-yeah">
+        <div id="blog">
+            <div id="micro" title="status.cafe updates!">
+                <a href="https://status.cafe/users/stupied">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=stupied" defer></script>
+                </a>
+            </div>
+            <a href="#" title="screaming into the abyss">
+                <div id="blogDesign">
+                    <img src="./../meta/bruh.png">
+                </div>
+            </a>
+        </div>
 
-        <h3>Recent Blog Posts</h3>
-        <div id="blog-recent" class="card"></div>
+        <div style="flex:1;">
+            <h1>Da Blog!!</h1>
+            <p>
+                I'm usually a very reserved person but, during the times I feel like yapping and sharing stuff, I'll be using this blog! :3
+            </p>
+
+            <h3>Recent Blog Posts</h3>
+            <div id="blog-recent" class="compact"></div>
+        </div>
     </div>
 
 <script src="./main.js"></script>
