@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../meta/main.css">
+    <title></title>
+    <style>
+        #item{
+            max-width:700px;
+            margin: auto;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        #item-thumb img{
+            max-width:100%;
+            display: block;
+        }
+
+        #nextprev{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding:1rem 0;
+        }
+        table{
+            width:100%;
+            background-color: lightgrey;
+        }
+
+        #item-desc{
+            margin: 1rem 0;
+        }
+        td:nth-child(1){
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <div id="item-thumb"></div>
+        <div id="nextprev"></div>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td id="item-name"></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td id="item-company"></td>
+            </tr>
+            <tr>
+                <td>Pieces</td>
+                <td id="item-pieces"></td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td id="item-dimensions"></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td id="item-date"></td>
+            </tr>
+        </table>
+        <div id="item-image"></div>
+        <div id="item-desc"></div>
+    </div>
+    
+<script src="./main.js"></script>
+<script>
+    const urlQuery = new URLSearchParams(window.location.search)
+    currentImage = urlQuery.get('item')
+
+    fetch("./main.json")
+        .then((response) => response.json())
+        .then((jigsaws) => {
+            if(currentImage===null){
+                window.location.href = "./view.html?item="+jigsaws[0].img;
+            }
+
+            const urlQuery = new URLSearchParams(window.location.search)
+            currentIndex = getIndex(jigsaws, currentImage)
+
+            imageLink='./img/'+currentImage
+            image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
+            document.getElementById("item-thumb").innerHTML = image
+
+            document.getElementById("item-name").innerHTML = jigsaws[currentIndex].name
+            document.title = jigsaws[currentIndex].name + " // stupied"
+
+
+            document.getElementById("item-company").innerHTML = jigsaws[currentIndex].company
+            document.getElementById("item-pieces").innerHTML = jigsaws[currentIndex].pieces
+            document.getElementById("item-dimensions").innerHTML = jigsaws[currentIndex].dimensions
+            document.getElementById("item-date").innerHTML = jigsaws[currentIndex].date
+
+            document.getElementById("item-desc").innerHTML = jigsaws[currentIndex].desc
+
+            nextprev=genNav(jigsaws)
+            document.getElementById("nextprev").innerHTML=nextprev
+    })
+
+    function genNav(e){
+    result=""
+    if(e[currentIndex+1]){
+      prevI= "./view.html?item=" + e[currentIndex+1].img;
+      result+="<a href='./" + prevI + "'>« Prev</a> | "
+    }
+
+    result+="<a href='index.html'>Home</a>"
+
+    if(e[currentIndex-1]){
+      nextI= "./view.html?item=" + e[currentIndex-1].img;
+      result+=" | <a href='./" + nextI + "'>Next »</a>"
+    }
+    return result
+  }
+
+  function getIndex(json,current){
+      for(i=0;i<json.length;i++){
+        console.log(current)
+        console.log(json[i].img)
+
+            if(json[i].img===current){
+              index=i
+              return index
+            }
+        }
+        return -1
+    }
+</script>
+</body>
+</html>
