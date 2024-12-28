@@ -12,8 +12,14 @@ body > #aside-2-content {
   display: none;
 }
 
+::selection {
+  color: white;
+  background: var(--blue);
+}
+
 .justified-gallery{
   --space:0;
+  user-select: none;
 }
 
 .justified-gallery img{
@@ -33,12 +39,10 @@ body > #aside-2-content {
   position: fixed;
   transition: 0.5s;
 }
-#lightbox div{
+#lightbox #lightbox-img{
   position: absolute;
   top:50%;left:50%;
   transform:translateX(-50%) translateY(-50%);
-  color: white;
-  text-align: center;
   width:90%;
   max-height:95vh;
 }
@@ -54,6 +58,15 @@ body > #aside-2-content {
   top:1rem;
   right:1rem;
   z-index: 1;
+}
+
+#lightbox #lightbox-nav{
+  width:100%; text-align: center;
+  position: absolute;
+  color: white;
+  bottom:1rem;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 #container header{grid-area:header;}
@@ -83,6 +96,8 @@ body > #aside-2-content {
     box-shadow: 3px 3px var(--dark-brown);
     background-color:var(--wheat);
 }
+
+#aside-1{user-select: none;}
 
 #container .main-content{
     margin-bottom:1rem;
@@ -146,7 +161,7 @@ footer{
 @media only screen and (max-width: 650px) {
   #container{display:block;}
   #container > *{margin-bottom:1rem;}
-  #aside-1{width:auto;margin-bottom:10px}
+  #aside-1{width:auto;margin-bottom:30px;position:relative;}
 
   #aside-1 #aside-1-img{width:100px;}
 }
