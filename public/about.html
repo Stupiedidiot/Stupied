@@ -91,7 +91,7 @@ body{
         </div>
 
         <div style="text-align:center; font-family: grandstander; color: var(--blue);margin: 2rem 0;">
-            <a href="./index.html">Head Back</a>
+            <a id="headBack" href="./index.html">Head Back</a>
         </div>
 
         <!--
@@ -114,5 +114,13 @@ body{
     </div>
 
 <script src="./meta/main.js"></script>
+<script>
+    previous=document.URL
+
+    if(previous.includes("#from-")){
+        previous=previous.split('#from-')[1]
+        document.getElementById("headBack").href="./"+previous+"/index.html"
+    }
+</script>
 </body>
 </html>

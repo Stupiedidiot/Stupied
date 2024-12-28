@@ -2,7 +2,7 @@ function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appe
 
 //template stuff
 const navigation =
-`<a href="./../about.html">
+`<a href="./../about.html#from-art">
   <img id="aside-1-img" src="./../meta/pfp-transparent.png">
 </a>
 <nav>
@@ -19,8 +19,11 @@ const footer =
 const lightbox =`
 <div id="lightbox">
   <button onclick="closeLightBox()">X</button>
-  <div>
+  <div id="lightbox-img">
     <img src="#">
+  </div>
+
+  <div id="lightbox-nav">
     <a id="lightbox-prev">« Prev</a> |
     <a href="#" id="lightbox-details">View Details</a> |
     <a id="lightbox-next">Next »</a>

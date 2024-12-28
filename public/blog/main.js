@@ -38,7 +38,7 @@ const header=`
 
 const navigation =`
 <div>
-    <a href="` + relativePath + `../about.html"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
+    <a href="` + relativePath + `../about.html#from-blog"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
 	<h3>`+ blogname +`</h3>
 	<nav>
 		<a href="` + relativePath + `index.html">Home</a>

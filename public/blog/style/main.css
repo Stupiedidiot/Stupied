@@ -38,9 +38,9 @@ footer{
 }
 
 @media only screen and (max-width: 550px) {
-    header {
-        background-color: lightgray;
-        padding-top: 1rem;
+    header{
+        padding-top: 5rem;
+        background-image: url(./../../art/img/bg.png);
     }
 
     main{
