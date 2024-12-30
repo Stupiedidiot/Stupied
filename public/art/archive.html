@@ -5,24 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./main.css">
   <title>archive</title>
+<style>
+  #hell-yeah{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    padding:10px;
+  }
+
+  #hell-yeah a{
+    flex: 20%;
+  }
+
+  #hell-yeah a:hover div{
+    transform: scale(115%) rotate(3deg);
+  }
+
+  #hell-yeah div{
+    overflow: hidden;
+    min-width:150px;
+    height:100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius:10px;
+    transition: 0.2s;
+  }
+
+  #hell-yeah img{
+    display:block;
+    aspect-ratio: 1/1;
+    width:100%;
+    object-fit: cover;
+
+  }
+
+  #hell-yeah span{
+    display: inline-block;
+    padding:0.5rem;
+    color: var(--brown);
+  }
+
+  @media only screen and (max-width: 650px) {
+    #hell-yeah a{
+      min-width:120px;
+    }
+  }
+</style>
 </head>
 <body>
 
 <div class="main-content">
-  <h1>Archive</h1>
-  <div style="padding:1rem;">
-    <ul>
-      <li><a href="./2024.html">2024</a></li>
-      <li><a href="./video.html">videos</a></li>
-      <li><a href="./artfight.html">artfight</a></li>
-      <li><a href="./fanart.html">fanart</a></li>
-      <li><a href="./2023.html">2023</a></li>
-      <li><a href="./2022.html">2022</a></li>
-      <li><a href="./2021.html">2021</a></li>
-    </ul>
-  </div>
+<h1>Art Archive</h1>
+<div id="hell-yeah"></div>
+</div>
+
+<div id="aside-1-content">
+  <p>This page has every single art piece uploaded here, so it will take some time to load,,</p>
+  <p>Will add a sorting thing here eventually</p>
 </div>
 
 <script src="./main.js"></script>
+<script>
+   fetch("./main.json")
+        .then((response) => response.json())
+        .then((art) => {
+          result=""
+          for(i=0; i<art.length ;i++){
+            itemFolder=" "
+            itemYear=art[i].img
+
+            if(itemYear.includes("/")){
+              itemSplit=itemYear.split("/")
+              itemFolder+=itemSplit[0]
+              itemYear=itemSplit[1]
+            }
+            itemYear=itemYear.slice(0,4)
+
+            if(art[i].title!==undefined){
+              title=art[i].title
+            } else {
+              e = art[i].img
+              title = e
+              if(e.includes("/")){title = e.slice(e.indexOf("/"),e.length)}
+              title = title.slice(5,title.length-4)
+              title = title.replaceAll("-"," ")
+            }
+            
+            
+            result+=`
+            <a onclick="openImg(`+i+`)" class="` + itemYear + itemFolder + `">
+            <div>
+                <img src="./img/` + art[i].img.toLowerCase() + `">
+                <span>` + title + `</span>
+            </div>
+            </a>`
+              
+          }
+          document.getElementById("hell-yeah").innerHTML=result
+
+          images=document.querySelectorAll("#hell-yeah img")
+    })
+</script>
 </body>
 </html>

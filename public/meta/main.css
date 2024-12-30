@@ -94,8 +94,8 @@ height: 100%;
     height: 100%;
 }
 
-.float-right{float:right;}
-.float-left{float:left;}
+.float-right{float:right;margin-left:0.5rem;}
+.float-left{float:left;margin-right:0.5rem;}
 
 @media only screen and (max-width: 450px) {
 .float-right,.float-left{float:none;margin:0 auto;}

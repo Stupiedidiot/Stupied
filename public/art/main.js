@@ -2,11 +2,11 @@ function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appe
 
 //template stuff
 const navigation =
-`<a href="./../about.html#from-art">
+`<a href="./index.html">
   <img id="aside-1-img" src="./../meta/pfp-transparent.png">
 </a>
 <nav>
-  <a href="./index.html">home</a>
+  <a href="./../about.html#from-art">about</a>
   <a href="./archive.html">archive</a>
   <a href="./commission.html">commissions</a>
 </nav>`

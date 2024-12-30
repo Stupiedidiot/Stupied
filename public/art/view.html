@@ -78,6 +78,10 @@
             if(art[currentIndex].desc!==undefined){
               document.getElementById("desc").innerHTML = art[currentIndex].desc
             }
+          } else {
+            document.getElementById("title").innerHTML = "What in the What"
+            document.title = "Error // stupied"  
+            document.getElementById("desc").innerHTML = "This image is either unlisted or does not exist at all :/"
           }
           nextprev=genNav(art)
           document.getElementById("nextprev").innerHTML=nextprev
