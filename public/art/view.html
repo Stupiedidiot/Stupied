@@ -56,24 +56,15 @@
             window.location.href = "./view.html?item="+currentImage;
           }
 
-          imageLink='./img/'+currentImage.toLowerCase()
+          imageLink='./img/'+currentImage
           image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
           document.getElementById("image").innerHTML = image
 
           currentIndex=getIndex(art,currentImage)
           if (currentIndex>-1){
-            if(art[currentIndex].title!==undefined){
-              document.getElementById("title").innerHTML = art[currentIndex].title
-              document.title = art[currentIndex].title +" // stupied"
-            } else {
-              e = art[currentIndex].img
-              fauxTitle = e
-              if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/"),e.length)}
-              fauxTitle = fauxTitle.slice(5,fauxTitle.length-4)
-              fauxTitle = fauxTitle.replaceAll("-"," ")
-              document.getElementById("title").innerHTML=fauxTitle
-              document.title = fauxTitle + " // stupied"
-            }
+            title=getTitle(art,currentIndex)
+            document.getElementById("title").innerHTML = title
+            document.title = title +" // stupied"
 
             if(art[currentIndex].desc!==undefined){
               document.getElementById("desc").innerHTML = art[currentIndex].desc
@@ -86,16 +77,6 @@
           nextprev=genNav(art)
           document.getElementById("nextprev").innerHTML=nextprev
     })
-    
-    function getIndex(json,current){
-      for(i=0;i<json.length;i++){
-            if(json[i].img.toLowerCase()===current.toLowerCase()){
-              index=i
-              return index
-            }
-        }
-        return -1
-    }
 
     function genNav(e){
     result=""
@@ -111,6 +92,20 @@
       result+=" | <a href='./" + nextI + "'>Next »</a>"
     }
     return result
+  }
+
+  function getTitle(art,x){
+    if(art[x].title!==undefined){
+      title=art[x].title
+      return title
+    } else {
+      e = art[x].img
+      fauxTitle = e
+      if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/"),e.length)}
+      fauxTitle = fauxTitle.slice(5,fauxTitle.length-4)
+      fauxTitle = fauxTitle.replaceAll("-"," ")
+      return fauxTitle
+    }
   }
 </script>
 </body>

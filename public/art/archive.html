@@ -14,18 +14,13 @@
     padding:10px;
   }
 
+  #hell-yeah a:nth-child(odd):hover{transform: scale(115%) rotate(3deg);}
+  #hell-yeah a:nth-child(even):hover{transform: scale(115%) rotate(-3deg);}
+
   #hell-yeah a{
     flex: 20%;
-  }
-
-  #hell-yeah a:hover div{
-    transform: scale(115%) rotate(3deg);
-  }
-
-  #hell-yeah div{
     overflow: hidden;
     min-width:150px;
-    height:100%;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     background-color: white;
     border-radius:10px;
@@ -51,61 +46,86 @@
       min-width:120px;
     }
   }
+
+  #archive-buttons{
+    padding:1rem;
+    text-align: right;
+  }
 </style>
 </head>
 <body>
 
 <div class="main-content">
-<h1>Art Archive</h1>
+<h1>Art Archive <span id="meow"></span></h1>
 <div id="hell-yeah"></div>
+<div id="archive-buttons">
+  <button onclick="addItems(32)">Load More</button>
+  <button onclick="addItems(totalItem)">See EVERYTHING!!</button>
+</div>
 </div>
 
 <div id="aside-1-content">
-  <p>This page has every single art piece uploaded here, so it will take some time to load,,</p>
-  <p>Will add a sorting thing here eventually</p>
+  <p>This page has every single art piece uploaded here,, Will add a sorting thing here eventually.</p>
 </div>
 
 <script src="./main.js"></script>
 <script>
-   fetch("./main.json")
+  counter=32
+  loadItems(0,counter)
+
+  function addItems(add){
+    prevCounter=counter
+    counter+=add
+    if(counter>totalItem){
+      counter=totalItem;
+      document.getElementById("archive-buttons").style.display="none"
+    }
+    loadItems(prevCounter,counter)
+  }
+
+
+    function loadItems(start,counter){
+      fetch("./main.json")
         .then((response) => response.json())
         .then((art) => {
-          result=""
-          for(i=0; i<art.length ;i++){
-            itemFolder=" "
-            itemYear=art[i].img
+            totalItem=art.length  
+            document.getElementById("meow").innerHTML="(" + counter + "/" + totalItem + ")"
+            result=""
 
-            if(itemYear.includes("/")){
-              itemSplit=itemYear.split("/")
-              itemFolder+=itemSplit[0]
-              itemYear=itemSplit[1]
-            }
-            itemYear=itemYear.slice(0,4)
+            for(i=start; i<counter;i++){
+                  itemFolder=" "
+                  itemYear=art[i].img
 
-            if(art[i].title!==undefined){
-              title=art[i].title
-            } else {
-              e = art[i].img
-              title = e
-              if(e.includes("/")){title = e.slice(e.indexOf("/"),e.length)}
-              title = title.slice(5,title.length-4)
-              title = title.replaceAll("-"," ")
-            }
-            
-            
-            result+=`
-            <a onclick="openImg(`+i+`)" class="` + itemYear + itemFolder + `">
-            <div>
-                <img src="./img/` + art[i].img.toLowerCase() + `">
-                <span>` + title + `</span>
-            </div>
-            </a>`
-              
-          }
-          document.getElementById("hell-yeah").innerHTML=result
+                  if(itemYear.includes("/")){
+                    itemSplit=itemYear.split("/")
+                    itemFolder+=itemSplit[0]
+                    itemYear=itemSplit[1]
+                  }
+                  itemYear=itemYear.slice(0,4)
 
-          images=document.querySelectorAll("#hell-yeah img")
-    })
+                  if(art[i].title!==undefined){
+                    title=art[i].title
+                  } else {
+                    e = art[i].img
+                    title = e
+                    if(e.includes("/")){title = e.slice(e.indexOf("/"),e.length)}
+                    title = title.slice(5,title.length-4)
+                    title = title.replaceAll("-"," ")
+                  }
+                  
+                  
+                  result+=`
+                  <a href="./viewer.html?item=` + art[i].img + `" class="` + itemYear + itemFolder + `">
+                  <div>
+                      <img src="./img/` + art[i].img + `">
+                      <span>` + title + `</span>
+                  </div>
+                  </a>`
+                }
+                document.getElementById("hell-yeah").innerHTML+=result
+        })
+    }
+
 </script>
 </body>
 </html>

@@ -40,9 +40,12 @@
     if(url.includes("art/viewer")){
         window.location.pathname=window.location.pathname.replaceAll("viewer","view")
     }
+    link= relativePath+"index.html"
+    if(url.includes("art")){link=relativePath+"art/index.html"}
+    if(url.includes("blog")){link=relativePath+"blog/index.html"}
     
     document.getElementById("image").src = relativePath+"meta/dawg-napping.png"
-    document.getElementById("image-container").href = relativePath+"index.html"
+    document.getElementById("image-container").href = link
     document.getElementById("script").src = relativePath+"meta/main.js"
     document.getElementById("styles").href = relativePath+"meta/main.css"
 </script>

@@ -23,6 +23,8 @@ const lightbox =`
     <img src="#">
   </div>
 
+  <div id="test" style="z-index:100;color:white;"></div>
+
   <div id="lightbox-nav">
     <a id="lightbox-prev">« Prev</a> |
     <a href="#" id="lightbox-details">View Details</a> |
@@ -58,14 +60,32 @@ document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" 
 
 //adding links to iamges
 images=document.querySelectorAll(".justified-gallery img")
-for(i=0;i<images.length;i++){
-  linkHTML=document.createElement("a")
-  linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
-  linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))  
-  linkHTML.setAttribute("onclick",'openImg('+i+')')
-  
-  wrap(images[i],linkHTML)
+fetch("./main.json")
+.then((response) => response.json())
+.then((art) => {
+  for(i=0;i<images.length;i++){
+    linkHTML=document.createElement("a")
+    linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
+    linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))  
+    linkHTML.setAttribute("onclick",'openImg('+i+')')
+
+    trueIndex=getIndex(art,images[i].src.split("img/")[1])
+    images[i].style.setProperty("--trueIndex",trueIndex)
+
+    wrap(images[i],linkHTML)
+  }
+})
+
+function getIndex(json,current){
+  for(x=0;x<json.length;x++){
+        if(json[x].img===current){
+          index=x
+          return index
+        }
+    }
+    return -1
 }
+
 
 function openImg(i){  
   document.querySelector("#lightbox img").src=images[i].src
@@ -82,6 +102,13 @@ function openImg(i){
   link="./view.html?item="+images[i].src.slice(link,link.length)
   link=link.replaceAll("img/","")
   document.getElementById("lightbox-details").href=link  
+
+  fetch("./main.json")
+    .then((response) => response.json())
+    .then((art) => {
+      trueIndex=images[i].style.getPropertyValue("--trueIndex")
+      document.getElementById("test").innerHTML=art[trueIndex].img
+  })
 }
 
 function closeLightBox(){

@@ -1,7 +1,7 @@
 [
-    {"img":"2024-Dear-Diary.png"},
-    {"img": "2024-Da-Fits.png"},
-    {"img":"2024-Cartman.png"},
+    {"img":"2024-dear-diary.png"},
+    {"img": "2024-da-fits.png"},
+    {"img":"2024-cartman.png"},
     {
         "img": "2024-hoodie.png",
         "title":"Mary stole Psych's hoodie!!"
@@ -27,7 +27,7 @@
         "title":"we are not getting icecream!"
     },
     {
-        "img": "2024-Postmaster-Pearl.png"
+        "img": "2024-postmaster-pearl.png"
     },
     {
         "img": "2024-camp.png",
@@ -54,10 +54,10 @@
         "title":"you know i don't do that anymore"
     },
     {
-        "img": "2024-Self-Absorbed.png"
+        "img": "2024-self-absorbed.png"
     },
     {
-        "img": "2024-Raffina-sobbin.png"
+        "img": "2024-raffina-sobbin.png"
     },
     {
         "img": "2024-raffidelle.png",
@@ -65,24 +65,24 @@
         "desc":"They're so in love and stuff."
     },
     {
-        "img": "2024-Puyo-Fever-Doodles.png"
+        "img": "2024-puyo-fever-doodles.png"
     },
     {
-        "img": "2024-Psyche-Lea.png"
+        "img": "2024-psyche-lea.png"
     },
     {
-        "img": "2024-Overdue.png"
+        "img": "2024-overdue.png"
     },
     {
         "img": "2024-ocean-prince.png",
         "title":"will you accept his offer?"
     },
     {
-        "img": "2024-Minecraft-Skin.png",
+        "img": "2024-minecraft-skin.png",
         "desc":"Drew my minecraft skin!!"
     },
     {
-        "img": "2024-Looming.png"
+        "img": "2024-looming.png"
     },
     {
         "img": "2024-lidelle.png",
@@ -93,10 +93,10 @@
         "title":"Leslie Febee!!!"
     },
     {
-        "img": "2024-Jam.png"
+        "img": "2024-jam.png"
     },
     {
-        "img": "2024-Introspection.png",
+        "img": "2024-introspection.png",
         "desc":"I think I spend too much time thinking about the times I was thinking about thinking too much."
     },
     {
@@ -112,7 +112,7 @@
         "title":"Sketchbook Doodles"
     },
     {
-        "img": "2024-Burger.png"
+        "img": "2024-burger.png"
     },
     {
         "img": "2024-beetke.png",
@@ -151,17 +151,17 @@
         "title":"Turbo hogging up the bed >:("
     },
     {
-        "img": "2023-Trying-My-Heart-Out.png"
+        "img": "2023-trying-my-heart-out.png"
     },
     {
-        "img": "2023-Sweet-Summer-Snail.png",
+        "img": "2023-sweet-summer-snail.png",
         "desc":"oh turbo.. when will you learn"
     },
     {
-        "img": "2023-Sunset.png"
+        "img": "2023-sunset.png"
     },
     {
-        "img": "2023-Stardew-Valley-oc.png"
+        "img": "2023-stardew-valley-oc.png"
     },
     {
         "img": "2023-sob.png"
@@ -171,14 +171,14 @@
         "title":"Snail on Plant! (Real)"
     },
     {
-        "img": "2023-Sea-Slug.png"
+        "img": "2023-sea-slug.png"
     },
     {
         "img": "2023-scott-is-coming-home.png",
         "title":"Scott Pilgrim is Coming Home"
     },
     {
-        "img": "2023-Scar-and-Etho.png",
+        "img": "2023-scar-and-etho.png",
         "desc":"This was for a Last Life Animation I never finished"
     },
     {
@@ -186,61 +186,61 @@
         "title":"ROOOAAAAaaaR!!"
     },
     {
-        "img": "2023-Red.png"
+        "img": "2023-red.png"
     },
     {
-        "img": "2023-Red-Panda.png"
+        "img": "2023-red-panda.png"
     },
     {
-        "img": "2023-Psyche.png"
+        "img": "2023-psyche.png"
     },
     {
         "img": "2023-playground.png",
         "title":"i mean cuz everyone else does it?"
     },
     {
-        "img": "2023-Pinwin.png"
+        "img": "2023-pinwin.png"
     },
     {
         "img": "2023-pennys-mom.png",
         "title":"Penny's Mom"
     },
     {
-        "img": "2023-Penny.png"
+        "img": "2023-penny.png"
     },
     {
-        "img": "2023-Parking-Lot.png"
+        "img": "2023-parking-lot.png"
     },
     {
-        "img": "2023-Mountains.png"
+        "img": "2023-mountains.png"
     },
     {
         "img": "2023-loser.png"
     },
     {
-        "img": "2023-Lisa-Miller.png"
+        "img": "2023-lisa-miller.png"
     },
     {
-        "img": "2023-Lies-Well-Said.png"
+        "img": "2023-lies-well-said.png"
     },
     {
-        "img": "2023-Learning-is-Fun.png"
+        "img": "2023-learning-is-fun.png"
     },
     {
-        "img": "2023-Kim-Pines-doodle.png"
+        "img": "2023-kim-pines-doodle.png"
     },
     {
-        "img": "2023-Kim-and-Knives.png"
+        "img": "2023-kim-and-knives.png"
     },
     {
-        "img": "2023-Kermit.png"
+        "img": "2023-kermit.png"
     },
     {
         "img": "2023-its-not-that-deep.png",
         "title":"it's not that deep"
     },
     {
-        "img": "2023-Haley.png"
+        "img": "2023-haley.png"
     },
     {
         "img": "2023-forest.png",
@@ -254,7 +254,9 @@
         "img": "2023-field.png"
     },
     {
-        "img": "2023-FAST-Crew.png"
+        "img": "2023-fast-crew.png",
+        "title":"FAST Crew!!",
+        "desc":"To everyone who keeps singing me this song with the letter S dropped, please know that your days are numbered"
     },
     {
         "img": "2023-dark-prince.png",
@@ -264,16 +266,16 @@
         "img": "2023-clipper.png"
     },
     {
-        "img": "2023-Chronic.png"
+        "img": "2023-chronic.png"
     },
     {
-        "img": "2023-Caroline.png"
+        "img": "2023-caroline.png"
     },
     {
         "img": "2023-candy-snail.png"
     },
     {
-        "img": "2023-Annette.png"
+        "img": "2023-annette.png"
     },
     {
         "img": "2022-you-do-this-to-yourself.png"
@@ -285,10 +287,10 @@
         "img": "2022-was-it-worth-it.png"
     },
     {
-        "img": "2022-Tilly.png"
+        "img": "2022-tilly.png"
     },
     {
-        "img": "2022-Tilly-Death-Do-Us-Part.png"
+        "img": "2022-tilly-death-do-us-part.png"
     },
     {
         "img": "2022-thou-shall-not-party.png"
@@ -320,7 +322,7 @@
         "title":"Seconds ins't ours anymore (1/2)"
     },
     {
-        "img": "2022-Screaming.png"
+        "img": "2022-screaming.png"
     },
     {
         "img": "2022-scrapbook.png",
@@ -338,30 +340,30 @@
         "img": "2022-rawr.png"
     },
     {
-        "img": "2022-Pigtails.png"
+        "img": "2022-pigtails.png"
     },
     {
-        "img": "2022-Photocopy.png"
+        "img": "2022-photocopy.png"
     },
     {
         "img": "2022-persona.png",
         "title":"Meet the Artist"
     },
     {
-        "img": "2022-No-Difference.png"
+        "img": "2022-no-difference.png"
     },
     {
-        "img": "2022-Mirror.png"
+        "img": "2022-mirror.png"
     },
     {
-        "img": "2022-Meeting.png"
+        "img": "2022-meeting.png"
     },
     {
         "img": "2022-lilys.png",
         "title":"Lily(s)"
     },
     {
-        "img": "2022-Lil-Guys.png"
+        "img": "2022-lil-guys.png"
     },
     {
         "img": "2022-library.png",
@@ -377,31 +379,31 @@
         "title":"Kim at Beach :]"
     },
     {
-        "img": "2022-Keralis.png"
+        "img": "2022-keralis.png"
     },
     {
-        "img": "2022-Jigglypuff.png"
+        "img": "2022-jigglypuff.png"
     },
     {
-        "img": "2022-Jedog.png"
+        "img": "2022-jedog.png"
     },
     {
         "img": "2022-icecream.png"
     },
     {
-        "img": "2022-Greg-doodle.png"
+        "img": "2022-greg-doodle.png"
     },
     {
-        "img": "2022-Got-a-Minute.png"
+        "img": "2022-got-a-minute.png"
     },
     {
-        "img": "2022-Gato.png"
+        "img": "2022-gato.png"
     },
     {
-        "img": "2022-Gasper.png"
+        "img": "2022-gasper.png"
     },
     {
-        "img": "2022-First-Stroke.png"
+        "img": "2022-first-stroke.png"
     },
     {
         "img": "2022-finest-hour.png",
@@ -423,22 +425,22 @@
         "title":"The Dui Twins!"
     },
     {
-        "img": "2022-Doodles.png"
+        "img": "2022-doodles.png"
     },
     {
-        "img": "2022-Dog.png"
+        "img": "2022-dog.png"
     },
     {
-        "img": "2022-Curry.png"
+        "img": "2022-curry.png"
     },
     {
-        "img": "2022-Cookie-Dough.png"
+        "img": "2022-cookie-dough.png"
     },
     {
-        "img": "2022-Canton.png"
+        "img": "2022-canton.png"
     },
     {
-        "img": "2022-Bothersome.png"
+        "img": "2022-bothersome.png"
     },
     {
         "img": "2022-boodle.png",
@@ -460,43 +462,43 @@
         "img": "2022-bdubs.png"
     },
     {
-        "img": "2022-Ashley-and-Leslie.png"
+        "img": "2022-ashley-and-leslie.png"
     },
     {
-        "img": "2021-You-are-an-Idiot.png"
+        "img": "2021-you-are-an-idiot.png"
     },
     {
-        "img": "2021-Webby.png"
+        "img": "2021-webby.png"
     },
     {
-        "img": "2021-Too-Late.png"
+        "img": "2021-too-late.png"
     },
     {
-        "img": "2021-Thimber.png"
+        "img": "2021-thimber.png"
     },
     {
-        "img": "2021-Thimber-Doodle.png"
+        "img": "2021-thimber-doodle.png"
     },
     {
         "img": "2021-thimber-confused.png",
         "title":"Thimber Doodle"
     },
     {
-        "img": "2021-Take-a-Chance.png"
+        "img": "2021-take-a-chance.png"
     },
     {
         "img": "2021-stroll.png",
         "title":"Madlad actually went outside!"
     },
     {
-        "img": "2021-Storefront.png"
+        "img": "2021-storefront.png"
     },
     {
-        "img": "2021-Stalker.png",
+        "img": "2021-stalker.png",
         "desc":"Loser Behavior honestly"
     },
     {
-        "img": "2021-Stairs.png"
+        "img": "2021-stairs.png"
     },
     {
         "img": "2021-some-lady.png"
@@ -505,25 +507,25 @@
         "img": "2021-some-duck.png"
     },
     {
-        "img": "2021-Skeleton.png"
+        "img": "2021-skeleton.png"
     },
     {
-        "img": "2021-Reporter.png"
+        "img": "2021-reporter.png"
     },
     {
-        "img": "2021-Psyche-and-Lily.png"
+        "img": "2021-psyche-and-lily.png"
     },
     {
-        "img": "2021-Pickachu.png"
+        "img": "2021-pickachu.png"
     },
     {
-        "img": "2021-Pearl.png"
+        "img": "2021-pearl.png"
     },
     {
-        "img": "2021-Park-Bench.png"
+        "img": "2021-park-bench.png"
     },
     {
-        "img": "2021-Octocat.png"
+        "img": "2021-octocat.png"
     },
     {
         "img": "2021-neet-behavior.png",
@@ -531,24 +533,24 @@
         "desc":"Yes I know it's hard to conceive!"
     },
     {
-        "img": "2021-Lookie-Here.png"
+        "img": "2021-lookie-here.png"
     },
     {
-        "img": "2021-Library.png"
+        "img": "2021-library.png"
     },
     {
         "img": "2021-kitchen.png",
         "title":"Sorry it's bit of a Mess Here"
     },
     {
-        "img": "2021-Jedog.png"
+        "img": "2021-jedog.png"
     },
     {
         "img": "2021-hp-oc-redraw.png",
         "title":"Old Harry Potter Oc"
     },
     {
-        "img": "2021-Headin-Home.png"
+        "img": "2021-headin-home.png"
     },
     {
         "img": "2021-hahah.png"
@@ -564,7 +566,7 @@
         "img": "2021-froggo-cape.png"
     },
     {
-        "img": "2021-Forest.png"
+        "img": "2021-forest.png"
     },
     {
         "img": "2021-floatin.png"
@@ -573,243 +575,244 @@
         "img": "2021-duckself.png"
     },
     {
-        "img": "2021-Dream.png"
+        "img": "2021-dream.png"
     },
     {
-        "img": "2021-Dog.png"
+        "img": "2021-dog.png"
     },
     {
-        "img": "2021-Desk.png"
+        "img": "2021-desk.png"
     },
     {
-        "img": "2021-DayDreaming.png"
+        "img": "2021-dayDreaming.png"
     },
     {
-        "img": "2021-Cool.png"
+        "img": "2021-cool.png"
     },
     {
         "img": "2021-closet.png",
         "title":":("
     },
     {
-        "img": "2021-Chruch.png"
+        "img": "2021-chruch.png"
     },
     {
-        "img": "2021-Charizard-doodle.png"
+        "img": "2021-charizard-doodle.png"
     },
     {
-        "img": "2021-Calisto.png"
+        "img": "2021-calisto.png"
     },
     {
-        "img": "2021-Burn.png"
+        "img": "2021-burn.png"
     },
     {
         "img": "2021-bible.png",
         "title":"have you considered letting god into your life?"
     },
-    {"img": "2021-Animu-Beetke.png"},
-    {"img": "2021-Beetke.png"},
-    {"img": "2021-Bear.png"},
-    {"img":"2020-Alcohol-markers.png"},
-    {"img":"2020-Arle-with-a-gun.png"},
+    {"img": "2021-animu-beetke.png"},
+    {"img": "2021-beetke.png"},
+    {"img": "2021-bear.png"},
+    {"img":"2020-alcohol-markers.png"},
+    {"img":"2020-arle-with-a-gun.png"},
     {
-        "img":"2020-Bela-Talbot.png",
+        "img":"2020-bela-talbot.png",
         "desc":"This was drawn with neon colored pens which my scanner did not take kindly to. This drawing is supposed to be mostly green and yellow xD"
     },
-    {"img":"2020-Birthday.png"},
-    {"img":"2020-Breaking-and-entering.png"},
-    {"img":"2020-Bugs.png"},
-    {"img":"2020-Coffee-shop.png"},
-    {"img":"2020-Crime-scenes.png"},
-    {"img":"2020-Dawgs.png"},
-    {"img":"2020-Doodles.png"},
-    {"img":"2020-Evan.png"},
-    {"img":"2020-Fnaf.png"},
-    {"img":"2020-Gato.png"},
-    {"img":"2020-How-to-not.png"},
-    {"img":"2020-Ink.png"},
-    {"img":"2020-Inktober-1.png"},
-    {"img":"2020-Inktober-2.png"},
-    {"img":"2020-Kara-fox-spread.png"},
-    {"img":"2020-Komiks.png"},
-    {"img":"2020-Lily-spread.png"},
-    {"img":"2020-Oc-redraws.png"},
-    {"img":"2020-Outnumbered.png"},
-    {"img":"2020-Persona.png"},
-    {"img":"2020-Pink-jacket.png"},
-    {"img":"2020-Psych-cast-doodles.png"},
-    {"img":"2020-Psyche-lea.png"},
-    {"img":"2020-Pumpkins.png"},
-    {"img":"2020-Puyo-doodles.png"},
-    {"img":"2020-Rain.png"},
-    {"img":"2020-Real-deal.png"},
-    {"img":"2020-Risukuma.png"},
-    {"img":"2020-Simps.png"},
-    {"img":"2020-Singing-in-the-rain.png"},
-    {"img":"2020-Skye-siblings.png"},
-    {"img":"2020-Sorry.png"},
-    {"img":"2020-Special-effects.png"},
-    {"img":"2020-Stupied.png"},
-    {"img":"2020-Sunshine.png"},
-    {"img":"2020-Supernatural.png"},
-    {"img":"2020-Teddy-bear.png"},
-    {"img":"2020-The-future.png"},
-    {"img":"2020-Town-centre.png"},
-    {"img":"2020-Train-station.png"},
-    {"img":"2020-Trio.png"},
-    {"img":"2020-Umbrella.png"},
-    {"img":"2020-Wolf.png"},
-    {"img":"2019-Anastasia-Stauber.png"},
-    {"img":"2019-Another-House.png"},
-    {"img":"2019-Back-to-School.png"},
-    {"img":"2019-Bunny.png"},
-    {"img":"2019-Calisto-Yew.png"},
-    {"img":"2019-Calling-card.png"},
-    {"img":"2019-Club-room.png"},
-    {"img":"2019-Cookin.png"},
-    {"img":"2019-Cornered.png"},
-    {"img":"2019-Creek.png"},
-    {"img":"2019-Dawg.png"},
-    {"img":"2019-Demon-lady.png"},
-    {"img":"2019-Earth.png"},
-    {"img":"2019-Edgeworth.png"},
-    {"img":"2019-Emily.png"},
-    {"img":"2019-Evidence.png"},
-    {"img":"2019-Eyes.png"},
-    {"img":"2019-Final-Page.png"},
-    {"img":"2019-Full-Moon.png"},
-    {"img":"2019-Funky-hats.png"},
-    {"img":"2019-Gato.png"},
-    {"img":"2019-Gayming.png"},
-    {"img":"2019-Greetings.png"},
-    {"img":"2019-Hairstyles.png"},
-    {"img":"2019-Hand-Challange.png"},
-    {"img":"2019-Hello.png"},
-    {"img":"2019-Horizon.png"},
-    {"img":"2019-House.png"},
-    {"img":"2019-Kara-fox.png"},
-    {"img":"2019-Kyle.png"},
-    {"img":"2019-Lesbien-Wohoo.png"},
-    {"img":"2019-Lily-Skye.png"},
-    {"img":"2019-Loser.png"},
-    {"img":"2019-Maria-Yolanda.png"},
-    {"img":"2019-Mia-Fey.png"},
-    {"img":"2019-Monica.png"},
-    {"img":"2019-On-the-porch.png"},
-    {"img":"2019-Onward.png"},
-    {"img":"2019-Paranoia.png"},
-    {"img":"2019-Persona.png"},
-    {"img":"2019-Pickachu.png"},
-    {"img":"2019-Pollution.png"},
-    {"img":"2019-Redraws.png"},
-    {"img":"2019-Sarah.png"},
-    {"img":"2019-Socials.png"},
-    {"img":"2019-Some-Gal.png"},
-    {"img":"2019-Soul.png"},
-    {"img":"2019-Spell.png"},
-    {"img":"2019-Staring-Blankly.png"},
-    {"img":"2019-Stauber-twins.png"},
-    {"img":"2019-Subjects-redraw.png"},
-    {"img":"2019-Subjects.png"},
-    {"img":"2019-Wohoo.png"},
+    {"img":"2020-birthday.png"},
+    {"img":"2020-breaking-and-entering.png"},
+    {"img":"2020-bugs.png"},
+    {"img":"2020-coffee-shop.png"},
+    {"img":"2020-crime-scenes.png"},
     {
-        "img": "gif/2024-Yasmayne.gif"
+        "img":"2020-dawgs.png",
+        "desc":"I can't really remember what's with the sus looking demon lady on the side. I think maybe it was for a drawing request??<br><br> This is a reminder to never give children unregulated internet access."
+    },
+    {"img":"2020-doodles.png"},
+    {"img":"2020-evan.png"},
+    {"img":"2020-fnaf.png"},
+    {"img":"2020-gato.png"},
+    {"img":"2020-how-to-not.png"},
+    {"img":"2020-ink.png"},
+    {"img":"2020-inktober-1.png"},
+    {"img":"2020-inktober-2.png"},
+    {"img":"2020-kara-fox-spread.png"},
+    {"img":"2020-komiks.png"},
+    {"img":"2020-lily-spread.png"},
+    {"img":"2020-oc-redraws.png"},
+    {"img":"2020-outnumbered.png"},
+    {"img":"2020-persona.png"},
+    {"img":"2020-pink-jacket.png"},
+    {"img":"2020-psych-cast-doodles.png"},
+    {"img":"2020-psyche-lea.png"},
+    {"img":"2020-pumpkins.png"},
+    {"img":"2020-puyo-doodles.png"},
+    {"img":"2020-rain.png"},
+    {"img":"2020-real-deal.png"},
+    {"img":"2020-risukuma.png"},
+    {"img":"2020-simps.png"},
+    {"img":"2020-singing-in-the-rain.png"},
+    {"img":"2020-skye-siblings.png"},
+    {"img":"2020-sorry.png"},
+    {"img":"2020-special-effects.png"},
+    {"img":"2020-stupied.png"},
+    {"img":"2020-sunshine.png"},
+    {"img":"2020-supernatural.png"},
+    {"img":"2020-teddy-bear.png"},
+    {"img":"2020-the-future.png"},
+    {"img":"2020-town-centre.png"},
+    {"img":"2020-train-station.png"},
+    {"img":"2020-trio.png"},
+    {"img":"2020-umbrella.png"},
+    {"img":"2020-wolf.png"},
+    {"img":"2019-anastasia-stauber.png"},
+    {"img":"2019-another-house.png"},
+    {"img":"2019-back-to-school.png"},
+    {"img":"2019-bunny.png"},
+    {"img":"2019-calisto-yew.png"},
+    {"img":"2019-calling-card.png"},
+    {"img":"2019-club-room.png"},
+    {"img":"2019-cookin.png"},
+    {"img":"2019-cornered.png"},
+    {"img":"2019-creek.png"},
+    {"img":"2019-dawg.png"},
+    {"img":"2019-demon-lady.png"},
+    {"img":"2019-earth.png"},
+    {"img":"2019-edgeworth.png"},
+    {"img":"2019-emily.png"},
+    {"img":"2019-evidence.png"},
+    {"img":"2019-eyes.png"},
+    {"img":"2019-final-page.png"},
+    {"img":"2019-full-moon.png"},
+    {"img":"2019-funky-hats.png"},
+    {"img":"2019-gato.png"},
+    {"img":"2019-gayming.png"},
+    {"img":"2019-greetings.png"},
+    {"img":"2019-hairstyles.png"},
+    {"img":"2019-hand-challange.png"},
+    {"img":"2019-hello.png"},
+    {"img":"2019-horizon.png"},
+    {"img":"2019-house.png"},
+    {"img":"2019-kara-fox.png"},
+    {"img":"2019-kyle.png"},
+    {"img":"2019-lesbien-wohoo.png"},
+    {"img":"2019-lily-skye.png"},
+    {"img":"2019-loser.png"},
+    {"img":"2019-maria-yolanda.png"},
+    {"img":"2019-mia-fey.png"},
+    {"img":"2019-monica.png"},
+    {"img":"2019-on-the-porch.png"},
+    {"img":"2019-onward.png"},
+    {"img":"2019-paranoia.png"},
+    {"img":"2019-persona.png"},
+    {"img":"2019-pickachu.png"},
+    {"img":"2019-pollution.png"},
+    {"img":"2019-redraws.png"},
+    {"img":"2019-sarah.png"},
+    {"img":"2019-socials.png"},
+    {"img":"2019-some-gal.png"},
+    {"img":"2019-soul.png"},
+    {"img":"2019-spell.png"},
+    {"img":"2019-staring-blankly.png"},
+    {"img":"2019-stauber-twins.png"},
+    {"img":"2019-subjects-redraw.png"},
+    {"img":"2019-subjects.png"},
+    {"img":"2019-wohoo.png"},
+    {"img": "gif/2024-yasmayne.gif"},
+    {
+        "img": "gif/2024-psyche-gaming.gif"
     },
     {
-        "img": "gif/2024-Psyche-Gaming.gif"
+        "img": "gif/2021-psyche-walking.gif"
     },
     {
-        "img": "gif/2021-Psyche-Walking.gif"
+        "img": "gif/2021-duck.gif"
     },
     {
-        "img": "gif/2021-Duck.gif"
+        "img": "gif/2021-fang.gif"
     },
     {
-        "img": "gif/2021-Fang.gif"
+        "img": "gif/2021-greg.gif"
     },
     {
-        "img": "gif/2021-Greg.gif"
+        "img": "artfight/2024-wowza.png"
     },
     {
-        "img": "artfight/2024-Wowza.png"
+        "img": "artfight/2024-void.png"
     },
     {
-        "img": "artfight/2024-Void.png"
+        "img": "artfight/2024-twins.png"
     },
     {
-        "img": "artfight/2024-Twins.png"
+        "img": "artfight/2024-stephanie.png"
     },
     {
-        "img": "artfight/2024-Stephanie.png"
-    },
-    {
-        "img": "artfight/2024-Solace.gif"
+        "img": "artfight/2024-solace.gif"
     },
     {
         "img": "artfight/2024-snails.png",
         "title":"Snails Mass Attack"
     },
     {
-        "img": "artfight/2024-Sam.png"
+        "img": "artfight/2024-sam.png"
     },
     {
-        "img": "artfight/2024-June.png"
+        "img": "artfight/2024-june.png"
     },
     {
         "img": "artfight/2024-guacamole_dawg.png",
         "title":"Guacamole Dawg"
     },
     {
-        "img": "artfight/2024-Ellie.gif"
+        "img": "artfight/2024-ellie.gif"
     },
     {
         "img": "artfight/2024-djpenguin.png"
     },
     {
-        "img": "artfight/2024-Caprica.gif"
+        "img": "artfight/2024-caprica.gif"
     },
     {
-        "img": "artfight/2024-BeanBag.png"
+        "img": "artfight/2024-beanbag.png"
     },
     {
-        "img": "artfight/2024-Astra.png"
+        "img": "artfight/2024-astra.png"
     },
     {
-        "img": "artfight/2024-Amina.gif"
+        "img": "artfight/2024-amina.gif"
     },
     {
-        "img": "artfight/2023-Purin.png"
+        "img": "artfight/2023-purin.png"
     },
     {
-        "img": "artfight/2023-Mya.png"
+        "img": "artfight/2023-mya.png"
     },
     {
         "img": "artfight/2023-mass.png",
         "title":"Mass Feral Attack"
     },
     {
-        "img": "artfight/2023-Marina.png"
+        "img": "artfight/2023-marina.png"
     },
     {
-        "img": "artfight/2023-David.png"
+        "img": "artfight/2023-david.png"
     },
     {
-        "img": "artfight/2023-Cherry.png"
+        "img": "artfight/2023-cherry.png"
     },
     {
-        "img": "artfight/2023-Charlotte.png"
+        "img": "artfight/2023-charlotte.png"
     },
     {
-        "img": "artfight/2023-Cecil.png"
+        "img": "artfight/2023-cecil.png"
     },
     {
-        "img": "artfight/2023-Banan.png"
+        "img": "artfight/2023-banan.png"
     },
     {
-        "img": "artfight/2023-Acorn.png"
+        "img": "artfight/2023-acorn.png"
     },
     {
-        "img": "artfight/2023-Abigail.png"
+        "img": "artfight/2023-abigail.png"
     },
     {
         "img": "fanart/2024-webcatz.png",
