@@ -6,9 +6,10 @@ const navigation =
   <img id="aside-1-img" src="./../meta/pfp-transparent.png">
 </a>
 <nav>
-  <a href="./../about.html#from-art">about</a>
+  <a href="./../about.html#from-art">about me</a>
   <a href="./archive.html">archive</a>
-  <a href="./commission.html">commissions</a>
+  <a href="./commission.html">comms</a>
+  <a href="./../index.html">head back</a>
 </nav>`
 
 const footer =
@@ -42,7 +43,6 @@ const template =lightbox + `
     </div>
   </div>
   <main></main>
-  <footer>`+footer+`</footer>
 </div>`
 
 document.getElementsByTagName("body")[0].innerHTML+=template
