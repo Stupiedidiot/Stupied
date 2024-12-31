@@ -83,7 +83,12 @@ masterlist = [
         "folder":"misc",
         "title":"Miscellaneous Comics",
         "desc":"Dumping random comics n stuff that aren't for anything specific",
-                "parts":[
+        "parts":[
+            {"file":"2019-yes","title":"Yes"},
+            {"file":"2019-bye","title":"Bye"},
+            {"file":"2019-one-stroke","title":"One Stroke"},
+            {"file":"2019-pokemon","title":"Pokemon Logic"},
+            {"file":"2020-comic-idea","title":"A Cool Comic Idea"},
             {"file":"2022-04-08","title":"Birthday"},
             {"file":"2023-08-31","title":"Excuse"},
             {"file":"2023-09-05","title":"Never Satisfied"},
