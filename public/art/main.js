@@ -19,18 +19,27 @@ const footer =
 
 const lightbox =`
 <div id="lightbox">
-  <button onclick="closeLightBox()">X</button>
-  <div id="lightbox-img">
-    <img src="#">
-  </div>
-
-  <div id="test" style="z-index:100;color:white;"></div>
-
-  <div id="lightbox-nav">
-    <a id="lightbox-prev">« Prev</a> |
-    <a href="#" id="lightbox-details">View Details</a> |
-    <a id="lightbox-next">Next »</a>
-  </div>
+    <div id="lightbox-container">
+        <div id="lightbox-img">
+            <img src="">
+        </div>
+        <div id="lightbox-side">
+            <div id="lightbox-header">
+                <button onclick="closeLightBox()">X</button>
+                <h2></h2>
+            </div>
+            <div id="lightbox-info"></div>
+            <div id="lightbox-navigation">
+              <div id="lightbox-comments">
+                <a  href="#">View Comments</a>
+              </div>
+              <div id="lightbox-buttons">
+                  <button id="lightbox-prev">«</button>
+                  <button id="lightbox-next">»</button>
+              </div>
+            </div>
+        </div>
+    </div>
 </div>
 `
 
@@ -86,8 +95,22 @@ function getIndex(json,current){
     return -1
 }
 
+function getTitle(art,x){
+  if(art[x].title!==undefined){
+    title=art[x].title
+    return title
+  } else {
+    e = art[x].img
+    fauxTitle = e
+    if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/"),e.length)}
+    fauxTitle = fauxTitle.slice(5,fauxTitle.length-4)
+    fauxTitle = fauxTitle.replaceAll("-"," ")
+    return fauxTitle
+  }
+}
 
 function openImg(i){  
+  document.getElementsByTagName("body")[0].classList.add("lightbox-activated")
   document.querySelector("#lightbox img").src=images[i].src
 
   document.getElementById("lightbox").style.height="100vh"
@@ -101,18 +124,23 @@ function openImg(i){
   link=link.lastIndexOf('/', link.lastIndexOf('/')-1)+1
   link="./view.html?item="+images[i].src.slice(link,link.length)
   link=link.replaceAll("img/","")
-  document.getElementById("lightbox-details").href=link  
+  document.querySelector("#lightbox-comments a").href=link  
 
   fetch("./main.json")
     .then((response) => response.json())
     .then((art) => {
       trueIndex=images[i].style.getPropertyValue("--trueIndex")
-      document.getElementById("test").innerHTML=art[trueIndex].img
+      document.querySelector("#lightbox-header h2").innerHTML=getTitle(art, trueIndex)
+
+      if(art[trueIndex].desc!==undefined){
+        document.getElementById("lightbox-info").innerHTML=art[trueIndex].desc
+      } else { document.getElementById("lightbox-info").innerHTML=""}
   })
 }
 
 function closeLightBox(){
-  document.getElementById("lightbox").style.height=0
+  document.getElementById("lightbox").style.height=0;
+  document.querySelector("body").classList.remove("lightbox-activated");
 }
 
 //comments

@@ -13,8 +13,8 @@ body > #aside-2-content {
 }
 
 ::selection {
-  color: white;
-  background: var(--blue);
+  color: var(--dark-brown);
+  background: rgb(255, 202, 27);
 }
 
 .justified-gallery{
@@ -32,41 +32,74 @@ body > #aside-2-content {
 
 #lightbox{
   user-select: none;
-  z-index: 100;
-  overflow: hidden;
   background-color:rgba(0, 0, 0, 0.9);
-  width:100%;height:0;
-  position: fixed;
-  transition: 0.5s;
-}
-#lightbox #lightbox-img{
-  position: absolute;
-  top:50%;left:50%;
-  transform:translateX(-50%) translateY(-50%);
-  width:90%;
-  max-height:95vh;
+  height:0; overflow:hidden;
 }
 
-#lightbox img{
-  object-fit: contain;
-  width:100%;
-  height:90vh;
+#lightbox-container{
+    max-width:1000px;
+    height:100%;
+    display:flex;
+    margin:auto;
+    box-shadow: 0 0 30px black;
 }
 
-#lightbox button{
-  position: absolute;
-  top:1rem;
-  right:1rem;
-  z-index: 1;
+#lightbox-img{
+    background-color:black;
+    height:100%;
 }
 
-#lightbox #lightbox-nav{
-  width:100%; text-align: center;
-  position: absolute;
-  color: white;
-  bottom:1rem;
-  left:50%;
-  transform: translateX(-50%);
+#lightbox-img img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    display: block;
+}
+
+#lightbox-side{
+    flex:1;
+    overflow-y:auto;
+    min-width:250px;
+    background-color:white;
+    position: relative;
+}
+
+#lightbox-header{
+    top:0; position:sticky;
+    padding:0.5rem;
+    background-color:var(--dark-brown);
+    color:white;
+}
+#lightbox-header button{max-height:1.5rem;float:right;}
+
+#lightbox-info:not(:empty){
+  padding:1rem;
+}
+
+#lightbox-navigation{display: flex;padding:1rem;}
+
+#lightbox-comments{
+  flex:1;
+  position: relative;
+}
+
+#lightbox-comments a{
+  display: block;
+  position: relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+#lightbox-buttons{text-align:right;}
+#lightbox-buttons button{padding:1rem;}
+
+@media only screen and (max-width: 650px) {
+  .lightbox-activated #lightbox{height:auto;min-height:100vh;overflow: auto;}
+    #lightbox-container{display:block;}
+    #lightbox-img{height:auto;}
+}
+
+.lightbox-activated > *:not(#lightbox){
+    display:none;
 }
 
 #container header{grid-area:header;}
@@ -87,7 +120,7 @@ body > #aside-2-content {
     width:95%;
     max-width:1000px;
     margin:auto;
-    padding-top: 1rem;
+    padding-top:0.5rem;
 }
 
 #container .main-content, #container #aside-1{

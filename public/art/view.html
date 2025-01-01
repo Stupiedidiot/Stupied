@@ -80,32 +80,19 @@
 
     function genNav(e){
     result=""
-    if(e[currentIndex+1]){
-      prevI= "./view.html?item=" + e[currentIndex+1].img;
-      result+="<a href='./" + prevI + "'>« Prev</a> | "
+    if(e[currentIndex-1]){
+      nextI= "./view.html?item=" + e[currentIndex-1].img;
+      result+="<a href='./" + nextI + "'>« Next</a> | "
     }
 
     result+="<a href='index.html'>Home</a>"
 
-    if(e[currentIndex-1]){
-      nextI= "./view.html?item=" + e[currentIndex-1].img;
-      result+=" | <a href='./" + nextI + "'>Next »</a>"
+    if(e[currentIndex+1]){
+      prevI= "./view.html?item=" + e[currentIndex+1].img;
+      result+=" | <a href='./" + prevI + "'>Prev  »</a>"
     }
-    return result
-  }
 
-  function getTitle(art,x){
-    if(art[x].title!==undefined){
-      title=art[x].title
-      return title
-    } else {
-      e = art[x].img
-      fauxTitle = e
-      if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/"),e.length)}
-      fauxTitle = fauxTitle.slice(5,fauxTitle.length-4)
-      fauxTitle = fauxTitle.replaceAll("-"," ")
-      return fauxTitle
-    }
+    return result
   }
 </script>
 </body>

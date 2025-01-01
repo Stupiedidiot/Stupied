@@ -12,7 +12,7 @@
 // [1] USER INFO
 const blogname = "Da Blog!!"
 const username = "Stupied"
-const userlink = "https://stupied.neocities.org/about"
+const userlink = "https://stupied.neocities.org/about#from-blog"
 
 //-----------------------------
 
