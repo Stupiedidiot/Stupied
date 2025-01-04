@@ -1,7 +1,18 @@
 [
+    {
+        "img":"2025-amp-n-angie.png",
+        "desc":"i love insaniquarium so much"
+    },
+    {
+        "img":"2025-new-kid.png",
+        "desc":"Recent finished playing through the stick of truth!"
+    },
     {"img":"2024-dear-diary.png"},
-    {"img": "2024-da-fits.png"},
     {"img":"2024-cartman.png"},
+    {
+        "img": "2024-da-fits.png",
+        "desc":"drew this some time ago but only scanned it now with one of the broken printers my dad brought home!"
+    },
     {
         "img": "2024-hoodie.png",
         "title":"Mary stole Psych's hoodie!!"
@@ -368,7 +379,7 @@
     {
         "img": "2022-library.png",
         "title":"Library Redraw",
-        "desc":"<a href='./view.html?item=2021-library.png'>the original</a>"
+        "desc":"<p><a href='./view.html?item=2021-library.png'>the original</a></p>"
     },
     {
         "img": "2022-knives.png",
@@ -639,7 +650,10 @@
     {"img":"2020-komiks.png"},
     {"img":"2020-lily-spread.png"},
     {"img":"2020-oc-redraws.png"},
-    {"img":"2020-outnumbered.png"},
+    {
+        "img":"2020-outnumbered.png",
+        "desc":"a small comic thing i made of my friend's ocs"
+    },
     {"img":"2020-persona.png"},
     {"img":"2020-pink-jacket.png"},
     {"img":"2020-psych-cast-doodles.png"},
@@ -666,11 +680,17 @@
     {"img":"2020-wolf.png"},
     {"img":"2019-anastasia-stauber.png"},
     {"img":"2019-another-house.png"},
-    {"img":"2019-back-to-school.png"},
+    {
+        "img":"2019-back-to-school.png",
+        "desc":"cover for an old comic i made. i miss them honestly,,,"
+    },
     {"img":"2019-bunny.png"},
     {"img":"2019-calisto-yew.png"},
     {"img":"2019-calling-card.png"},
-    {"img":"2019-club-room.png"},
+    {
+        "img":"2019-club-room.png",
+        "desc":"vintage psych! art real!!! it's kinda funny to see how much the story has changed"
+    },
     {"img":"2019-cookin.png"},
     {"img":"2019-cornered.png"},
     {"img":"2019-creek.png"},
