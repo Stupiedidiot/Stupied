@@ -46,7 +46,8 @@ ul li:nth-child(2n){
 .outline{
     --color:white;
     --width:2px;
-    filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))}
+    filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))
+}
 
 .justified-gallery {
     --space: 5px;
@@ -94,8 +95,8 @@ height: 100%;
     height: 100%;
 }
 
-.float-right{float:right;margin-left:0.5rem;}
-.float-left{float:left;margin-right:0.5rem;}
+.float-right{float:right;margin-left:0.5rem;margin-bottom:0.5rem;display:block;}
+.float-left{float:left;margin-right:0.5rem;margin-bottom:0.5rem;display:block;}
 
 @media only screen and (max-width: 450px) {
 .float-right,.float-left{float:none;margin:0 auto;}

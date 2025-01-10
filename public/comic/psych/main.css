@@ -121,7 +121,12 @@ aside > img.outline{
     --width:5px!important;
 }
 
-@media only screen and (max-width: 600px) {
+::selection{
+    background-color: var(--yellow);
+    color: var(--dark-brown);
+}
+
+@media only screen and (max-width: 800px) {
     #container{
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -136,6 +141,7 @@ aside > img.outline{
         background-image: none;
         background-color: var(--dark-brown);
     }
+    main > div{margin: auto;}
     aside{
         margin-left:0;
         padding-bottom:2rem;

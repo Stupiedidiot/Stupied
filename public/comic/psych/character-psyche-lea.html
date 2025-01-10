@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Psych! | stupied</title>
+
+<style>
+    h1{
+        text-decoration: underline dotted var(--brown);
+    }
+    h1,h2{color:var(--yellow);}
+    hr.clear{
+        margin-bottom: 1rem;
+    }
+    #doll{
+        width:120px;
+    }
+    #relationships, #personality{
+        display: flex;
+        flex-wrap: wrap;
+        gap:0.5rem;
+    }
+    #relationships > a{
+        display:block;
+        border:3px solid var(--brown);
+        flex:47%;
+    }
+    #relationships > a > div:nth-child(1){
+        position: relative;
+    }
+
+    #relationships h3{
+        background-color: var(--brown);
+        padding:1rem;
+    }
+
+    #relationships img{
+        height:4.5rem;
+        position: absolute;
+        top:50%;right:0;
+        transform: translateY(-50%);
+        --color:var(--brown);
+        --width:2px;
+        filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))
+    }
+
+    #relationships > a > div:nth-child(2){
+        padding:1rem;
+    }
+
+    #personality{
+        margin: auto;
+        margin-top:2rem;
+        gap:1.5rem;
+    }
+
+    #personality > div{
+        margin-top: 1rem;
+    }
+
+    #personality div:nth-child(1) h3{
+        color: var(--light-blue);
+    }
+    
+    #personality div:nth-child(2) h3{
+        color: var(--red);
+    }
+    #personality ul{
+        padding-left: 1rem;
+    }
+</style> 
+</head>
+<body>
+    <div class="main-content">
+        <img src="./img/doll-psy.png" id="doll" class="float-left">
+        <h1>Psyche Lea</h1>
+        <div style="margin-bottom: 1rem;">
+            <span style="color:var(--red);">15 years old</span><span style="color:var(--brown);"> // Grade 10</span>
+        </div>
+
+        <p>Psychic kid who just wants to play her silly lil video games in peace.</p>
+        <p>If you notice her spacing out, which is very often, she's either mentally playing a game of tetris or solving a random math problem. It's just way of ignoring ghost who approach her for favors.</p>
+
+        <hr class="clear">
+
+        <h2>Relationships</h2>
+        <div id="relationships">
+            <a href="#">
+                <div>
+                    <h3>Evan Odd</h3>
+                    <img src="./img/snail.png" alt="">
+                </div>
+                <div>
+                    <p>Always messing around and getting in trouble with him</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div>
+                    <h3>Jay Swift</h3>
+                    <img src="./img/snail.png" alt="">
+                </div>
+                <div>
+                    <p>Thinks he's fun to hang out with when he's not being preachy and annoying</p>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div>
+                    <h3>Mary Day</h3>
+                    <img src="./img/snail.png" alt="">
+                </div>
+                <div>
+                    <p>Her girl na friend.</p>
+                </div>
+            </a>
+        </div>
+
+        <div id="personality">
+            <div>
+                <h3>Likes</h3>
+                <ul>
+                    <li>Tetris and retro games</li>
+                    <li>Tinkering around with old tech</li>
+                    <li>Scrolling through wikis</li>
+                    <li>Mary <3</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Dislikes</h3>
+                <ul>
+                    <li>???</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="./../main.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>

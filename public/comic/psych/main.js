@@ -3,9 +3,9 @@ const templateMain =`
         <main></main>
         <aside>
             <div id="aside-main">
-                <span class="title outline"><a href="#">PSYCH!</a></span>
+                <span class="title outline"><a href="./index.html">PSYCH!</a></span>
                 <nav>
-                    <a href="#">/ARCHIVE/</a>
+                    <a href="./index.html">/ARCHIVE/</a>
                     <a href="./character.html">/CHARCTERS/</a>
                     <a href="./../../index.html">✮</a>
                 </nav>
