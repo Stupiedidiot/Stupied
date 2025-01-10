@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Archive // stupied</title>
+<style>
+    #container{
+        max-width:700px;
+        margin:2rem auto;
+        width:95%;
+    }
+    #top{
+        margin:auto;
+        margin-bottom: 1rem;
+        display: flex;
+        gap:1rem;
+        width:max-content;
+    }
+    #bottom{
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    #updateStatus{
+        position: relative;
+        padding-left:1rem;
+        border-left:3px solid black;
+    }
+
+    #updateStatus div{
+        position: relative;top:50%;transform: translateY(-50%);
+    }
+
+    #updateStatus p{font-weight:bold; font-family:grandstander;margin-bottom:0;}
+
+    @media only screen and (max-width: 650px) {
+        #date{display: block;}
+    }
+
+    @media only screen and (max-width: 450px) {
+        #top{display: block;}
+        #updateStatus div{all:revert;}
+    }
+</style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="top">
+            <div>
+                <h1>This website is <span title="created on April 6, 2023" id="date"></span></h1>
+            </div>
+            <div id="updateStatus">
+                <div>
+                    <p>Last updated on</p>
+                    <span id="lastupdate"></span>
+                </div>
+            </div>
+        </div>
+        <div id="archive" class="justified-gallery">
+            <img src="./img/2023-06.png" style="--width: 1086; --height: 825;">
+            <img src="./img/2024-01.png" style="--width: 1086; --height: 1405;">
+            <img src="./img/2024-06.png" style="--width: 1086; --height: 892;">
+            <img src="./img/2024-11.png" style="--width: 1086; --height: 734;">
+        </div>
+        <div id="bottom">
+        <a href="./../index.html">Head Back »</a>
+        </div>
+    </div>
+
+<script>
+    // get website's age
+    dateCurrent = new Date();
+    dateCurrent = dateCurrent.getFullYear();
+
+    dateCreated = new Date("2023-04-06");
+    dateCreated = dateCreated.getFullYear();
+
+    pageAge = dateCurrent - dateCreated;
+    document.getElementById("date").innerHTML = pageAge + " years old!!";
+
+    // get website's last update date
+    // stole the code from here: https://dannarchy.com/tut/tut_002
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+
+        var date_str = site_data.info.last_updated;
+        var date_obj = new Date(date_str);
+        document.getElementById("lastupdate").innerHTML = date_obj.toDateString();
+        }
+    };
+    xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=stupied", true);
+    xhttp.send();
+
+</script>
+</body>
+</html>
