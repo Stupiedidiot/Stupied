@@ -152,6 +152,6 @@ body.default::before{
 }
 
 header.stupied{text-align:center;margin-top:1rem;}
-header.stupied img{max-width:250px;width:90%;}
+header.stupied img{max-width:250px;width:90%;height:auto;}
 
 body.default footer{color:white;}

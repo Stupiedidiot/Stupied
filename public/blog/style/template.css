@@ -199,7 +199,7 @@ footer a{color:inherit;}
 .card .item-img img{
     margin:0.5rem 0;
 }
-
+/**
 .card a:hover {
     background-color:var(--accent-color);
 }
@@ -207,7 +207,7 @@ footer a{color:inherit;}
 .card a:hover .item-title{
     color:black;
 }
-
+**/
 .cinematic .blog-item{
     display: grid;
     grid-template-areas:

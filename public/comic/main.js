@@ -15,18 +15,6 @@ masterlist = [
         ],
     },
     {
-        "folder":"misfits",
-        "title":"The Misfits",
-        "desc":"OC comics loosely based on the Pokemon Dungeon Games",
-        "parts":[
-            {"file":"independent","title":"Independent","img":"independent.png"},
-            {"file":"yapping","title":"Yapping"},
-            {"file":"saved","title":"Saved"},
-            {"file":"letters","title":"Letters"},
-            //{"file":"siblings","title":"Siblings"}
-        ]
-    },
-    {
         "folder":"psych",
         "title":"Psych!",
         "desc":"Being a psychic sucks actually.",
@@ -36,6 +24,18 @@ masterlist = [
             //{"file":"icecream","title":"Ice Cream"},
             {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
             {"file":"hell","title":"I like You"}
+        ]
+    },
+    {
+        "folder":"misfits",
+        "title":"The Misfits",
+        "desc":"OC comics loosely based on the Pokemon Dungeon Games",
+        "parts":[
+            {"file":"independent","title":"Independent","img":"independent.png"},
+            {"file":"yapping","title":"Yapping"},
+            {"file":"saved","title":"Saved"},
+            {"file":"letters","title":"Letters"},
+            //{"file":"siblings","title":"Siblings"}
         ]
     },
     {
@@ -142,7 +142,7 @@ if(document.querySelector("body").id==="comicViewer"){
     document.querySelector("body").innerHTML+=template
 }
 
-main=document.querySelectorAll(".main-content");
+main=document.querySelectorAll("#comicViewer .main-content");
 for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
@@ -175,7 +175,6 @@ if ( currentIndex > -1) {
         
         if (document.title==="") {document.title = masterlist[currentIndex].parts[currentPartIndex].title + " | " + masterlist[currentIndex].title;}
     } else {
-        console.log("woof")
         writePartsArchive("comicList", currentIndex, 0, maxParts)
 
         result = document.createElement("header")

@@ -258,7 +258,7 @@ footer{
 }
 
 /** Muse Adriade **/
-body.muse, body.hat{
+body.muse, body.hat, body.penny{
     --yellow:#efe4b0;
     --light-pink:#edb18b;
     --pink:#ed4d46;
@@ -294,6 +294,7 @@ body.eighty-four .default{
 }
 
 body.eighty-four{
+    --blue:#3b8586;
     --bg-color:white;
     --txt-color:black;
 }
@@ -313,6 +314,7 @@ body.misfits{
 body.psych .default{
     background-image: url(./psych/img/bg.png);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
