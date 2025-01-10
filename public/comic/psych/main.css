@@ -10,13 +10,16 @@
     --yellow:#d6a95c;
     --dark-green:#3a443d;
     --wheat:#e7dbd8;
+
+    --background-image:url(./img/bg.png);
 }
 
 body{
     min-height: 100vh;
-    background:url(./img/bg.png);
+    background:var(--background-image);
     background-size: cover;
     background-attachment: fixed;
+    z-index:-1;
 }
 
 body:before{
@@ -27,42 +30,61 @@ body:before{
     width:100%;
     background: linear-gradient(87deg, var(--bg) 50%, #0000 50%);
     position: fixed;
-    z-index: 1;
+    z-index: 2;
+    pointer-events: none;
 }
 
 #container{
     display: flex;
-    width:95%;
     max-width:1800px;
     margin: auto;
     position: relative;
 }
 
-#container > *{
-    width: 50%;
-}
+#container > *{width: 50%;}
 
 main{
-    z-index: 2;
+    z-index: 3;
     color: white;
     left:-1rem;
 }
 
 main > div{
-    padding:2rem 1rem;
     max-width:500px;
     margin:auto 1rem auto auto;
 }
 
-aside{
-    z-index: -1;
-    padding: 1rem;
+.main-content{
+    padding:2rem 1rem;
 }
 
-aside > div{
-    z-index: 2;
+aside{
+    z-index: 1;
+    padding: 1rem;
+    position: relative;
+    user-select: none;
+}
+
+aside #aside-main{
+    z-index:1;
     top:1rem;
     position: sticky;
+    margin-left: 1rem;
+}
+
+aside nav{
+    color:white;
+    text-shadow: 0 0 5px black;
+    font-weight:bolder;
+}
+
+aside nav a{
+    display: inline-block;
+    margin:0 5px;
+}
+
+aside nav a:hover{
+    text-shadow:0 0 20px white;
 }
 
 aside span.title{
@@ -86,6 +108,7 @@ aside img{
     top:-150px;
     left: 40%;
     animation: rotate 100s steps(800) infinite;
+    -webkit-user-drag: none;
 }
 
 @keyframes rotate {
@@ -99,14 +122,27 @@ aside > img.outline{
 }
 
 @media only screen and (max-width: 600px) {
-    aside{
-        display: none;
+    #container{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #container > *{width: auto;}
+
+    body::before{
+        all:revert;
+        width:0;
     }
     body{
         background-image: none;
         background-color: var(--dark-brown);
     }
-    main{
-        width:100%!important;
+    aside{
+        margin-left:0;
+        padding-bottom:2rem;
+        background-image: var(--background-image);
+        overflow: hidden;
+    }
+    aside img{
+        position: absolute;
     }
 }
