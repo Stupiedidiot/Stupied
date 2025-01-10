@@ -3,7 +3,7 @@ function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appe
 //template stuff
 const navigation =
 `<a href="./index.html">
-  <img id="aside-1-img" src="./../meta/pfp-transparent.png">
+  <img id="aside-1-img" alt="" src="./../meta/pfp-transparent.png">
 </a>
 <nav>
   <a href="./../about.html#from-art">about me</a>
@@ -67,7 +67,7 @@ if(document.title===""){document.title="gallery // stupied"}else{document.title+
 
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../meta/favicon.ico"></link>'
 
-//adding links to iamges
+//adding links to images
 images=document.querySelectorAll(".justified-gallery img")
 fetch("./main.json")
 .then((response) => response.json())
@@ -75,7 +75,7 @@ fetch("./main.json")
   for(i=0;i<images.length;i++){
     linkHTML=document.createElement("a")
     linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
-    linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))  
+    linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
     linkHTML.setAttribute("onclick",'openImg('+i+')')
 
     trueIndex=getIndex(art,images[i].src.split("img/")[1])
@@ -142,6 +142,9 @@ function closeLightBox(){
   document.getElementById("lightbox").style.height=0;
   document.querySelector("body").classList.remove("lightbox-activated");
 }
+
+// tags
+document.querySelector("head").innerHTML+=`<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
 
 //comments
 if (e=document.getElementById("comments")){e.innerHTML='<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;}</style>'}
