@@ -47,6 +47,7 @@ main{
     z-index: 3;
     color: white;
     left:-1rem;
+    min-height: 100vh;
 }
 
 main > div{
@@ -67,7 +68,8 @@ aside{
 
 aside #aside-main{
     z-index:1;
-    top:1rem;
+    top:50%;
+    transform: translateY(-50%);
     position: sticky;
     margin-left: 1rem;
 }
@@ -102,18 +104,18 @@ aside span.title{
 }
 
 aside img{
-    width: 500px;
+    width: 32vw;
     display: block;
     position: fixed;
-    top:-150px;
+    top:50%;
     left: 40%;
     animation: rotate 100s steps(800) infinite;
     -webkit-user-drag: none;
 }
 
 @keyframes rotate {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
+    0% { transform: translateY(-50%) rotate(0); }
+    100% { transform: translateY(-50%) rotate(360deg); }
 }
 
 aside > img.outline{
@@ -124,6 +126,64 @@ aside > img.outline{
 ::selection{
     background-color: var(--yellow);
     color: var(--dark-brown);
+}
+
+.character{
+    h1{text-decoration: underline dotted var(--brown);}
+    h1,h2{color:var(--yellow);}
+    hr.clear{margin-bottom: 1rem;}
+}
+
+#doll{height:20rem;display: inline-block;-webkit-user-drag:none;}
+
+#tag{
+    margin-bottom:1rem;
+    span:nth-of-type(1){color:var(--red);font-family:grandstander;font-weight: bolder;}
+    span:nth-of-type(2){color:var(--brown);}
+}
+
+#relationships{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+    > a{
+        display:block; flex:40%;
+        border:3px solid var(--brown);
+        min-width:170px;
+    }
+    > a > div:nth-child(1){position: relative;}
+    
+    > a:hover{
+        border:3px solid var(--wheat);
+        h3{background-color:var(--wheat);color: var(--dark-brown);}
+        img{--color:var(--wheat);}
+    }
+
+    h3{background-color: var(--brown);padding:1rem;}
+
+    img{
+        height:4.5rem;
+        position: absolute;
+        top:50%;right:0;
+        transform: translateY(-50%);
+        --color:var(--brown);
+        --width:2px;
+        filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))
+    }
+
+    > a > div:nth-child(2){padding:1rem;}
+}
+
+#personality{
+    margin-top:2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+
+    > div{margin-top: 1rem;}
+    div:nth-child(1) h3{color: var(--light-blue);}
+    div:nth-child(2) h3{color: var(--red);}
+    ul{padding-left: 1rem;}
 }
 
 @media only screen and (max-width: 800px) {
@@ -148,7 +208,15 @@ aside > img.outline{
         background-image: var(--background-image);
         overflow: hidden;
     }
+    aside #aside-main{
+        top:unset;
+        transform:none;
+    }
     aside img{
         position: absolute;
+        width:50vw;
+        min-width:200px;
+        left:unset;
+        right:-20vw;
     }
 }
