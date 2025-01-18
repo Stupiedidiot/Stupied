@@ -43,6 +43,15 @@
   <div id="desc"></div>
 </div>
 
+<script>
+  url = window.location.href
+      if(url.includes(".html")){
+      hcb_user = {
+        PAGE:url.replaceAll(".html", "")
+      }
+    }
+</script>
+
 <script src="./main.js"></script>
 <script>
     const urlQuery = new URLSearchParams(window.location.search)
