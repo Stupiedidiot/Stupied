@@ -19,6 +19,8 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 // [2] POST LIST 
 
 const posts=[
+	{"file":"2025-01-00-Movie-Reviews.html"},
+	{"file":"2025-01-26-Crochet.html"},
 	{"file":"2024-06-15-Banana-Overlord.html"},
     {"file":"2023-08-29-Pakka-Pets.html"},
     {"file":"2023-08-28-Hotdog.html"},
