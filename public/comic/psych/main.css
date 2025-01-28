@@ -176,6 +176,7 @@ aside > img.outline{
 
 #personality{
     margin-top:2rem;
+    margin-bottom:2rem;
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
