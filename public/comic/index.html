@@ -5,157 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
     <title>Comics | Stupied</title>
-    <style>
-        #main_comics{grid-area:main;}
-        #side_comics{grid-area:side;}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
-        #comics {
-        width:95%;
-        margin:1rem auto;
-        z-index:1;
-        gap:10px;
-        max-width:600px;
-        }
+body{
+    user-select: none;
+}
 
-        #misfits {grid-area:one}
-        #penny {grid-area:two}
-        #adrift {grid-area:three}
-        #eightyFour {grid-area:four}
-        #psych {grid-area:five}
-        #puyo {grid-area:six}
-        #howToNot {grid-area:seven}
-
-        nav#catalog {
-            display: grid;
-            grid-template-areas:
-            'one two two'
-            'one three three'
-            'four four four'
-            'five six seven';
-            gap:5px;
-            width:95%;
-            max-width:500px;
-            grid-template-columns:1fr 1fr 1fr;
-            margin:auto auto;
-        }
-
-        nav#catalog > div {
-            min-height:100px;
-            position:relative;
-            overflow:hidden;
-            border:4px solid black;
-            background-color:white;
-        }
-
-        nav#catalog > div img{
-            position: absolute;
-        }
-
-        @media only screen and (min-width: 600px) {
-            #comicList ul{
-                columns: 2;
-            }
-        }
-
-
-        @media only screen and (max-width: 700px) {
-            #comics{
-                display:block;
-            }
-            #side_comics{
-                margin-top:5px;
-            }
-        }
-
-        body{
-            user-select: none;
-        }
-
-        #comicContainer{
-          width:95%;
-          margin: auto;
-          max-width:900px;
-        }
-
-        .item-container{
-            display:flex;
-            background-color:white;
-            max-width: 700px;
-            margin: auto;
-            border: 3px solid black;
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-        }
+#comicContainer .item-container{
+    .psych{
+        overflow: hidden;
+        color:white;
+        background-color: #1b1a18;
+        font-family: "M PLus 1 Code";
+        h1{font-family:"Barriecito";color:#d6a95c;}
         .item-thumb{
-            flex:1;
-        }
-        .item-thumb img{
-            width: 100%;height:100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .item-side {
             flex:2;
-            padding:1rem;
-            position:relative;
+            margin-left:-10%;
+            transform:skew(10deg);
+            overflow: hidden;
+            img{transform: skew(-10deg) scale(120%);}
         }
-
-        .item-side > div {
+        .item-desc{margin-left:0.5rem;}
+        .item-link{margin-left:1rem;}
+    }
+    .muse-adriade{
+        --yellow:#efe4b0;
+        --light-pink:#edb18b;
+        --pink:#ed4d46;
+        background-color: var(--yellow);
+        background-size: 20px 20px;
+        background-image: 
+        repeating-linear-gradient(0deg, var(--light-pink), var(--light-pink) 2px, var(--yellow) 2px, var(--yellow))
+        ;
+        .item-thumb{
+            flex:0;
             position: relative;
-            top:50%;
-            transform: translateY(-50%);
+            img{
+                position: absolute;
+                width:5rem;
+                height: unset;
+                z-index:1;
+                transform: scale(130%) rotate(-15deg) translateX(-10%);
+                filter: drop-shadow(1px 0 0 var(--yellow)) drop-shadow(-1px 0 0 var(--yellow)) drop-shadow(0 1px 0 var(--yellow)) drop-shadow(0 -1px 0 var(--yellow));
+            }
         }
+        .item-side > div{
+            padding:0.5rem;
+        }
+        h1{
+            color:white;
+            background-color:var(--pink);
+            padding:8px;
+            margin-bottom:0.5rem;
+            padding-left:5rem;
+        }
+        .item-desc{margin-left:5rem;margin-right:0.5rem;}
+        .item-link{margin-left:5.5rem;color:var(--pink);}
+    }
+}
 
-        .item-link{
-            margin-top:1rem;
-        }
+#comicContainer{
+    width:95%;max-width:900px;
+    margin: auto;
+    .item-container > div{
+        display:flex;
+        background-color:white;
+        max-width: 700px;
+        margin: auto;
+        border: 3px solid black;
+        margin-bottom: 0.5rem;
+    }
+    .item-thumb{flex:1;}
+    .item-thumb img{
+        width: 100%;height:100%;
+        object-fit: cover;
+        display: block;
+    }
 
-        @media only screen and (max-width: 600px) {
-            #comicArchive-dup{
-            display: none;
-        }
-        }
+    .item-side {flex:2;position:relative;}
 
-        @media only screen and (min-width: 601px) {
-        #comicContainer{
-            display: flex;
-            gap:0.5rem;
-        }
-        #comicArchive > :nth-of-type(even){display:none;background-color: pink;}
-        #comicArchive-dup > :nth-of-type(odd){display:none;}
-        }
-    </style>
+    .item-side > div {
+        padding:1rem;
+        position: relative;
+        top:50%;transform: translateY(-50%);
+    }
+    .item-link{margin-top:1rem;}
+}
+
+@media only screen and (max-width: 600px) {
+    #comicArchive-dup{display: none;}
+}
+
+@media only screen and (min-width: 601px) {
+    #comicContainer{
+        display: flex;
+        gap:0.5rem;
+    }
+    #comicArchive > :nth-of-type(even){display:none;}
+    #comicArchive-dup > :nth-of-type(odd){display:none;}
+}
+</style>
+
 </head>
 <body id="meow" class="default">
     <header class="stupied">
         <img src="./../meta/stupied-1.png">
     </header>
-<!--
-        <nav id="catalog">
-        <div id="misfits">insert cool thumbnails</div>
-        <div id="penny">wohoooo so cool</div>
-        <div id="adrift">im such an amazing web developer</div>
-        <div id="eightyFour"></div>
-        <div id="psych"></div>
-        <div id="puyo"></div>
-        <div id="howTo"></div>
-    </nav>
-    
-    <div id="comics">
-        <div id="main_comics">
-            <div class="cont-half">
-                <div class="bg-yellow">
-                    <h1>Comics Archive</h1>
-                </div>
-                <div class="bg-white">
-                    <div id="comicList"></div>
-                </div>
-                <div class="bg-yellow txt-right txt-darker-yellow no-padding">my update schedule is frantic and fucked</div>
-            </div>
-         </div>
-    </div>
--->
 
     <div id="comicContainer">
         <div id="comicArchive"></div>
@@ -175,23 +133,24 @@
         itemDesc = masterlist[i].desc
         itemLink = '<a href="./' + masterlist[i].folder + '/index.html">Click to Read »</a>'
 
-        item ='\
-        <div class="item-container">\
-        <div class="item-thumb">' + itemThumb + '</div>\
-        <div class="item-side">\
-            <div>\
-            <div class="item-title">' + itemTitle + '</div>\
-            <div class="item-desc">' + itemDesc + '</div>\
-            <div class="item-link">' + itemLink + '</div>\
-            </div>\
-        </div>\
-        </div>\
-        '
+        item =`
+        <div class="item-container">
+            <div class="` + masterlist[i].folder + `">
+                <div class="item-thumb">` + itemThumb + `</div>
+                <div class="item-side">
+                    <div>
+                    <div class="item-title">` + itemTitle + `</div>
+                    <div class="item-desc">` + itemDesc + `</div>
+                    <div class="item-link">` + itemLink + `</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
         result += item
     }
     document.getElementById("comicArchive").innerHTML = result
     document.getElementById("comicArchive-dup").innerHTML = result
-    console.log("WOOF")
 
     </script>
 </body>

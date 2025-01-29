@@ -1,7 +1,7 @@
 masterlist = [
     {
         "folder":"muse-adriade",
-        "title":"Muse Ariadne",
+        "title":"muse ariadne",
         "desc":"Stuff for a writing club thingy wohooo!!",
         "parts":[
             {"file":"2024-02-05","title":"Writing is Hard"},

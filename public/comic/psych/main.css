@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 @import url(./../main.css);
 
 :root{
@@ -15,6 +17,7 @@
 }
 
 body{
+    font-family: "M PLus 1 Code";
     min-height: 100vh;
     background:var(--background-image);
     background-size: cover;
@@ -33,6 +36,8 @@ body:before{
     z-index: 2;
     pointer-events: none;
 }
+
+h1, h2, h3, h4, h5, h6{font-family:"Barriecito";}
 
 #container{
     display: flex;
