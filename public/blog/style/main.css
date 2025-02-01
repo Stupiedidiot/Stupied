@@ -19,6 +19,8 @@ body{
     box-shadow:0 0 10px 0 black;
 }
 
+.justified-gallery{margin-bottom: var(--space);}
+
 #nav{
     background-color:lightgray;
 }
