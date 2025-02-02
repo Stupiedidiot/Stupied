@@ -23,29 +23,26 @@ body{
     background-color: var(--blue);
     border-radius: 10px;
     padding: 2rem 1rem 4rem 1rem;
+    position: relative;
 }
 
 #doll{
     position: relative;
     max-width:250px;
     margin: 0 0 0 auto;
-}
 
-#doll img{
-    position: absolute;
-    width: 130%;
-    top:0;left:0;
-    transform:translateX(-3rem) translateY(-4.5rem) rotate(3deg);
+    img{
+        position: absolute;
+        width: 130%;
+        top:0;left:0;
+        transform:translateX(-3rem) translateY(-4.5rem) rotate(3deg);
+    }
 }
 
 #list{
     padding:1.5rem;
-}
-
-#list h1{color: var(--blue);}
-
-#list ul{
-    padding-left:1rem;
+    h1{color: var(--blue);}
+    ul{padding-left:1rem;}
 }
 
 #extra{
@@ -64,14 +61,28 @@ body{
     }
 }
 
+small{
+    color: var(--blue);
+    display: block;
+    margin-right:1rem; 
+    margin-bottom:2px;
+    a:hover{color:black;}
+}
+
 </style>
 
 </head>
 <body>
     <div id="container">
-        <div id="about">
-            <h2>Henlo I'm Stupied!</h2>
-            <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+        <small>
+            <a href="./art/commission.html">Commissions</a> •
+            <a href="./links.html">Links »</a>
+        </small>
+        <div id="about" style="display: flex;gap: 10px;">
+            <div>
+                <h2>Henlo I'm Stupied!!?</h2>
+                <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+            </div>
         </div>
         <div id="doll">
             <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/dawg-napping.png"></a>
@@ -100,14 +111,6 @@ body{
                 <img src="./meta/img/stamp-lesbian.png">
                 <img src="./meta/img/stamp-south-park.png">
             </div>
-        </div>
-
-        <div id="socials">
-            <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account"><img src="./meta/img/icon-instagram.png"></a>
-            <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here"><img src="./meta/img/icon-webtoon.png"></a>
-            <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos"><img src="./meta/img/icon-youtube.png"></a>
-            <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated"><img src="./meta/img/icon-artfight.png"></a>
-            <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D"><img src="./meta/img/icon-tetrio.png"></a>
         </div>
         -->
 
