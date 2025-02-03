@@ -34,7 +34,9 @@ const posts=[
 
 // [3] SETTINGS - The page's format!
 
-const url = window.location.pathname;relativePath = "./";
+const url = window.location.pathname;
+if(url.includes("/blog")){relativePath = "./";}
+else{relativePath="./blog/"}
 // add "relativePath" to any anchor tags or file paths
 
 const header=`

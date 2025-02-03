@@ -27,9 +27,9 @@ masterlist = [
         ]
     },
     {
-        "folder":"misfits",
-        "title":"The Misfits",
-        "desc":"OC comics loosely based on the Pokemon Dungeon Games",
+        "folder":"pmd",
+        "title":"Working Title",
+        "desc":"OC comics loosely based on the Pokemon Dungeon Games - Still deciding a title",
         "parts":[
             {"file":"independent","title":"Independent","img":"independent.png"},
             {"file":"yapping","title":"Yapping"},

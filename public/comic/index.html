@@ -128,14 +128,16 @@ body{
     <script>
     result=""
     for(i=0;i<masterlist.length;i++){
-        itemThumb = '<img  src="./' + masterlist[i].folder + '/img/main.png">'
-        itemTitle = '<h1>' + masterlist[i].title + '</h1>'
-        itemDesc = masterlist[i].desc
-        itemLink = '<a href="./' + masterlist[i].folder + '/index.html">Click to Read »</a>'
+        item=masterlist[i]
 
-        item =`
+        itemThumb = '<img  src="./' + item.folder + '/img/main.png">'
+        itemTitle = '<h1>' + item.title + '</h1>'
+        itemDesc = item.desc
+        itemLink = '<a href="./' + item.folder + '/index.html">Click to Read »</a>'
+
+        itemResult =`
         <div class="item-container">
-            <div class="` + masterlist[i].folder + `">
+            <div class="` + item.folder + `">
                 <div class="item-thumb">` + itemThumb + `</div>
                 <div class="item-side">
                     <div>
@@ -147,7 +149,7 @@ body{
             </div>
         </div>
         `
-        result += item
+        result += itemResult
     }
     document.getElementById("comicArchive").innerHTML = result
     document.getElementById("comicArchive-dup").innerHTML = result
