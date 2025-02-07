@@ -23,8 +23,15 @@
     h1{
         position:absolute;left:0.5rem;
         font-size:3rem;bottom:-1rem;
-    }
+    }    
 }
+
+    #list{columns:2;}
+    @media only screen and (max-width: 300px) {#list{columns:1;}}
+
+    #resources li > a:after {
+        content:" -";
+    }
 </style>
 </head>
 <body>
@@ -34,9 +41,9 @@
     </div>
 
     <div class="main-content">
-        <p>I have truthfully grown tired of mainstream social media and try my best to minimize usage of it. These are the relatively active ones:</p>
+        <p>I have truthfully grown tired of mainstream social media and try my best to minimize usage of it. These are the "main" ones:</p>
 
-        <ul style="columns:2;">
+        <ul id="list">
             <li><a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account">Instagram</a></li>
             <li><a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here">Webtoon</a></li>
             <li><a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos">Youtube</a></li>
@@ -47,11 +54,18 @@
         <hr style="margin:1rem 0;">
 
         <h1>Webrings and Clubs</h1>
-        <div id="puyo-webchain"><script type="text/javascript" src="https://scythe.nekoweb.org/puyo-webchain/webchain-variables.js"></script><script type="text/javascript" src="https://scythe.nekoweb.org/puyo-webchain/puyo-p1.js"></script></div>
+        <link rel="stylesheet" href="https://scythe.nekoweb.org/puyo-webchain/webchain-widget.css" />
+<div id="puyo-webchain"><script type="text/javascript" src="https://scythe.nekoweb.org/puyo-webchain/webchain-variables.js"></script><script type="text/javascript" src="https://scythe.nekoweb.org/puyo-webchain/puyo-p1.js"></script></div>
 
         <hr style="margin:1rem 0;">
 
         <h1>Other Websites!</h1>
+        <p>Will add a list of other websites I enjoy :3</p>
+
+        <h1>Resources</h1>
+        <p>Stuff I used to make this website!!</p>
+        <ul id="resources">
+        </ul>
     </div>
 
 <script src="./blog/main.js"></script>

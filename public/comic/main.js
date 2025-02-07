@@ -123,20 +123,20 @@ const footer = '\
 <a href="'+relativePath+'chat.html">Chatbox</a>\
 '
 
-const template ='\
-<div id="container">\
-    <div id="top"></div>\
-    <main class="default"></main>\
-    <div id="bottom">\
-        <aside>\
-            <nav id="next"></nav>\
-            <div id="info"></div>\
-        </aside>\
-        <div id="comments"></div>\
-    </div>\
-    <footer>' + footer + '</footer>\
-</div>\
-'
+const template =`
+<div id="container">
+    <div id="top"></div>
+    <main class="default"></main>
+    <div id="bottom">
+        <aside>
+            <nav id="next"></nav>
+            <div id="info"></div>
+        </aside>
+        <div id="comments"></div>
+    </div>
+    <footer>` + footer + `</footer>
+</div>
+`
 
 if(document.querySelector("body").id==="comicViewer"){
     document.querySelector("body").innerHTML+=template

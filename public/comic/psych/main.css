@@ -147,10 +147,15 @@ aside > img.outline{
     span:nth-of-type(2){color:var(--brown);}
 }
 
+@keyframes jump {
+    50% {transform:translateY(-65%);}
+    100% {transform:translateY(-50%);}
+}
+
 #relationships{
     display: flex;
     flex-wrap: wrap;
-    gap:0.5rem;
+    gap:0.7rem;
     > a{
         display:block; flex:40%;
         border:3px solid var(--brown);
@@ -161,7 +166,7 @@ aside > img.outline{
     > a:hover{
         border:3px solid var(--wheat);
         h3{background-color:var(--wheat);color: var(--dark-brown);}
-        img{--color:var(--wheat);}
+        img{--color:var(--wheat);animation:jump 0.5s;animation-iteration-count:infinite; }
     }
 
     h3{background-color: var(--brown);padding:1rem;}
