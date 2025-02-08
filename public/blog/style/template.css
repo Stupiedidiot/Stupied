@@ -42,13 +42,6 @@ p:last-child,ol:last-child,ul:last-child{
     height: 100%!important;
 }
 
-.float-left{float:left;margin:0 0.5rem 0.5rem 0;max-width:280px;}
-.float-right{float:right;margin:0 0 0.5rem 0.5rem;max-width:280px;}
-
-@media only screen and (max-width: 650px) {
-    .float-left,.float-right{float:none;margin:auto;max-width:none;}
-}
-
 ::selection{
     background-color:var(--accent-color);
     color:white;

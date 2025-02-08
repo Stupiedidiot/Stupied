@@ -6,20 +6,60 @@
     <link rel=stylesheet href=./style/main.css>
     <title>Archive</title>
 <style>
-    .card a{
-        transition: 0.2s;
+    .window{
+        columns:2;
+        a{
+            display: block;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+
+            &:nth-of-type(1n):hover{transform: rotate(-3deg) scale(115%);z-index:2;}
+            &:nth-of-type(2n):hover{transform: rotate(3deg) scale(115%);z-index:2;}
+            &:hover > div{box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);}
+
+            &:nth-of-type(3n-2){--main-color:var(--blue);}
+            &:nth-of-type(3n-1){--main-color:var(--yellow);}
+            &:nth-of-type(3n){--main-color:var(--brown);}
+        }
+
+        .blog-item{
+            border: 3px solid black;
+            background-color: var(--wheat);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            display:grid;
+            grid-template-areas:
+            'title'
+            'img'
+            'date'
+            'desc';
+        }
+
+        .item-title{
+            background-color:var(--main-color);
+            padding:0.5rem;
+            border-radius: 6px 6px 0 0;
+            z-index:1;
+        }
+
+        .item-date{
+            padding:0.5rem;
+            color:var(--main-color);
+            font-weight: bolder;
+        }
+
+        a:has(img:not([src="./"])) .item-date{
+            position: absolute;
+            color:white;
+            left:0.5rem;
+            bottom:0.5rem;
+        }
     }
-    .card img{
-        aspect-ratio: 1/1;
-        object-fit: cover;
-    }
-    .card a:hover{
-        z-index: 1;
-        transform: scale(110%) rotate(3deg);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    }
-    .card a:nth-of-type(odd):hover{
-        transform: scale(110%) rotate(-3deg);
+
+    @media only screen and (max-width: 550px) {
+        .window{columns: 1;}
     }
 </style>
 </head>
@@ -27,7 +67,7 @@
 
     <div class="main-content">
         <h1>Post Archive</h1>
-        <div id="blog-archive" class="card"></div>
+        <div id="blog-archive" class="window"></div>
     </div>
 
 <script src="./main.js"></script>
