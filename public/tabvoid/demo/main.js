@@ -101,34 +101,37 @@ for(i=0; i<main.length; i++){
 
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'style/favicon.ico"></link>'
 
-currentIndex = getIndex(posts)
-if(currentIndex>-1){
-	currentTitle = getTitle(currentIndex,posts)
-	if(document.title===""){document.title=currentTitle;}
-	
-	currentTitle = "<h1>" + currentTitle + "</h1>"
-	
-	currentDate =  getDate(currentIndex,posts)
-	currentDate = convDate(currentDate) // converts to word
-	currentDate =  "<h4>" + currentDate + "</h4>"
+current = {
+	file:getFile(),
+	index:getIndex(self.file)
+}
 
-	currentNav = genNav(posts)
+if( current.index > -1){
+	current.title = getTitle(current.index)
+	current.date =  getDate(current.file)
+	current.date = convDate(current.date) // converts to word
 
-	if(e=document.querySelector("#blog-title")){e.innerHTML=(currentTitle);}
-	if(e=document.querySelector("#blog-date")){e.innerHTML=(currentDate);}
-	if(e=document.querySelector("#nextprev")){e.innerHTML=(currentNav);}
+	if(document.title===""){document.title=current.title;}
+	
+	titleHTML = "<h1>" + current.title + "</h1>"
+	dateHTML =  "<h4>" + current.date + "</h4>"
+	navHTML = genNav(posts)
+
+	if(e=document.querySelector("#blog-title")){e.innerHTML=(titleHTML);}
+	if(e=document.querySelector("#blog-date")){e.innerHTML=(dateHTML);}
+	if(e=document.querySelector("#nextprev")){e.innerHTML=(navHTML);}
 } else {
-	if(e=document.querySelector("#blog-title")){e.innerHTML="[Unlisted Post]";}
+	if(e=document.querySelector("#blog-title")){e.innerHTML="<h1>[Unlisted Post]</h1>";}
 
 	postRecent=""
 	postArchive=""
 	for (i=0; i < posts.length; i++){
-		itemLink=relativePath + "post/" + posts[i].file
+		itemLink = relativePath + "post/" + posts[i].file
 
-		itemTitle=getTitle(i,posts)
-		itemDate=getDate(i,posts)
-		itemDesc=getDesc(i,posts)
-		itemImg=getImg(i,posts)
+		itemTitle=getTitle(i)
+		itemDate=getDate(posts[i].file)
+		itemDesc=getDesc(i)
+		itemImg=getImg(i)
 
 		item='\
 		<a href="' + itemLink + '">\
@@ -147,35 +150,35 @@ if(currentIndex>-1){
 	if(e=document.querySelector("#blog-recent")){e.innerHTML=postRecent;}
 }
 
-if(document.title===""){
-	document.title=blogname;
-}else{
-	document.title+= " | " + blogname;
-}
+if( document.title==="" ){ document.title=blogname;
+}else{ document.title+= " | " + blogname; }
 
 //-----------------------------
 
 // [5] FUNCTION - what the funk!
 
-function getIndex(e){
-	currentFile = url.substring(url.lastIndexOf('/'));
-	currentFile = currentFile.replaceAll("/","");
-	if ( ! currentFile.endsWith(".html") ) {
-		currentFile += ".html";
+function getFile(){
+	file = url.substring(url.lastIndexOf('/'));
+	file = file.replaceAll("/","");
+	if ( ! file.endsWith(".html") ) {
+		file += ".html";
 	}
+	return file
+}
 
-	for (i = 0; i < e.length; i++) {
-		if ( e[i].file === currentFile ) {
+function getIndex(e){
+	for (i = 0; i < posts.length; i++) {
+		if ( posts[i].file === e ) {
 			return i
 		}
 	}
 	return -1
 }
-function getTitle(i, e){
-    if ( e[i].hasOwnProperty("alt") ){
-        title = e[i].alt;
+function getTitle(i){
+    if ( posts[i].hasOwnProperty("alt") ){
+        title = posts[i].alt;
     } else {
-        title = e[i].file;
+        title = posts[i].file;
         title = title.slice(11, title.lenght);
         title = title.replaceAll("-"," ");
         title = title.replaceAll(".html","");
@@ -183,8 +186,8 @@ function getTitle(i, e){
 return title;
 }
 
-function getDate(i, e){
-date = e[i].file.slice(0,10);
+function getDate(e){
+date = e.slice(0,10);
 return date
 }
 
@@ -235,31 +238,31 @@ function convDate(i){
 	return date;
 }
 
-function getDesc(i,e){
-	if (e[i].hasOwnProperty("desc")){
-		return e[i].desc;
+function getDesc(i){
+	if ( posts[i].hasOwnProperty("desc") ){
+		return posts[i].desc;
 	}
 	return ''
 }
 
-function getImg(i,e){
-	if (e[i].hasOwnProperty("img")){
-		return relativePath + e[i].img;
+function getImg(i){
+	if ( posts[i].hasOwnProperty("img") ){
+		return relativePath + posts[i].img;
 	}
 	return relativePath + ''
 }
 
-function genNav(e){
+function genNav(){
 	result=""
-	if(e[currentIndex-1]){
-		nextI= e[currentIndex-1].file;
+	if( e = posts[current.index-1] ){
+		nextI= e.file;
 		result+="<a href='./" + nextI + "'>« Next</a> | " 
 	}
 
 	result+='<a href="'+relativePath+'archive.html">Archive'
 
-	if(e[currentIndex+1]){
-		prevI= e[currentIndex+1].file;
+	if(e = posts[current.index+1]){
+		prevI= e.file;
 		result+=" | <a href='./" + prevI + "'>Prev »</a>"
 	}
 	return result

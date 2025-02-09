@@ -17,12 +17,11 @@
         </div>
 
         <div style="margin-top:1rem;text-align:right;">
-            <select id="listClass">
+            <select id="listClass" onchange="test();">
                 <option value="card">Card</option>
                 <option value="cinematic">Cinematic</option>
                 <option value="compact">Compact</option>
             </select>
-            <button id="listClassChange">Change List Type</button>
         </div>         
     </div>
 
@@ -32,16 +31,11 @@
         "card",
         "cinematic",
         "compact"
-    ]
-    const btn = document.getElementById("listClassChange");
-    const sb = document.getElementById("listClass");
-    btn.onclick = (event) => {
-        event.preventDefault();
-        test(options[sb.selectedIndex]);
-    };
-    
-    function test(selectedClass,e=document.getElementById("blog-archive")){
-        e.classList=selectedClass
+    ]    
+    function test(){
+        e=document.getElementById("blog-archive")
+        selected = document.getElementById("listClass").value
+        e.classList=selected
     }
 </script>
 </body>
