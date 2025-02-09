@@ -744,102 +744,66 @@
     {"img":"2019-subjects-redraw.png"},
     {"img":"2019-subjects.png"},
     {"img":"2019-wohoo.png"},
+    {
+        "img": "gif/2025-chespin.gif",
+        "desc":"quick gif I made of a friend's pmd oc! :D"
+    },
     {"img": "gif/2024-yasmayne.gif"},
-    {
-        "img": "gif/2024-psyche-gaming.gif"
-    },
-    {
-        "img": "gif/2021-psyche-walking.gif"
-    },
-    {
-        "img": "gif/2021-duck.gif"
-    },
-    {
-        "img": "gif/2021-fang.gif"
-    },
-    {
-        "img": "gif/2021-greg.gif"
-    },
-    {
-        "img": "artfight/2024-wowza.png"
-    },
-    {
-        "img": "artfight/2024-void.png"
-    },
-    {
-        "img": "artfight/2024-twins.png"
-    },
-    {
-        "img": "artfight/2024-stephanie.png"
-    },
-    {
-        "img": "artfight/2024-solace.gif"
-    },
+    {"img": "gif/2024-psyche-gaming.gif"},
+    {"img": "gif/2021-psyche-walking.gif"},
+    {"img": "gif/2021-duck.gif"},
+    {"img": "gif/2021-fang.gif"},
+    {"img": "gif/2021-greg.gif"},
+    {"img": "artfight/2024-wowza.png"},
+    {"img": "artfight/2024-void.png"},
+    {"img": "artfight/2024-twins.png"},
+    {"img": "artfight/2024-stephanie.png"},
+    {"img": "artfight/2024-solace.gif"},
     {
         "img": "artfight/2024-snails.png",
         "title":"Snails Mass Attack"
     },
-    {
-        "img": "artfight/2024-sam.png"
+    {"img": "artfight/2024-sam.png"
     },
-    {
-        "img": "artfight/2024-june.png"
+    {"img": "artfight/2024-june.png"
     },
-    {
-        "img": "artfight/2024-guacamole_dawg.png",
+    {"img": "artfight/2024-guacamole_dawg.png",
         "title":"Guacamole Dawg"
     },
-    {
-        "img": "artfight/2024-ellie.gif"
+    {"img": "artfight/2024-ellie.gif"
     },
-    {
-        "img": "artfight/2024-djpenguin.png"
+    {"img": "artfight/2024-djpenguin.png"
     },
-    {
-        "img": "artfight/2024-caprica.gif"
+    {"img": "artfight/2024-caprica.gif"
     },
-    {
-        "img": "artfight/2024-beanbag.png"
+    {"img": "artfight/2024-beanbag.png"
     },
-    {
-        "img": "artfight/2024-astra.png"
+    {"img": "artfight/2024-astra.png"
     },
-    {
-        "img": "artfight/2024-amina.gif"
+    {"img": "artfight/2024-amina.gif"
     },
-    {
-        "img": "artfight/2023-purin.png"
+    {"img": "artfight/2023-purin.png"
     },
-    {
-        "img": "artfight/2023-mya.png"
+    {"img": "artfight/2023-mya.png"
     },
-    {
-        "img": "artfight/2023-mass.png",
+    {"img": "artfight/2023-mass.png",
         "title":"Mass Feral Attack"
     },
-    {
-        "img": "artfight/2023-marina.png"
+    {"img": "artfight/2023-marina.png"
     },
-    {
-        "img": "artfight/2023-david.png"
+    {"img": "artfight/2023-david.png"
     },
-    {
-        "img": "artfight/2023-cherry.png"
+    {"img": "artfight/2023-cherry.png"
     },
-    {
-        "img": "artfight/2023-charlotte.png"
+    {"img": "artfight/2023-charlotte.png"
     },
-    {
-        "img": "artfight/2023-cecil.png"
+    {"img": "artfight/2023-cecil.png"
     },
-    {
-        "img": "artfight/2023-banan.png"
+    {"img": "artfight/2023-banan.png"
     },
-    {
-        "img": "artfight/2023-acorn.png"
+    {"img": "artfight/2023-acorn.png"
     },
-    {
-        "img": "artfight/2023-abigail.png"
+    {"img": "artfight/2023-abigail.png"
     },
     {
         "img": "fanart/2024-webcatz.png",
