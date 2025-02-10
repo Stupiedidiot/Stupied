@@ -81,7 +81,7 @@ masterlist = [
     },
     {
         "folder":"misc",
-        "title":"Miscellaneous Comics",
+        "title":"Miscellaneous Stuff",
         "desc":"Dumping random comics n stuff that aren't for anything specific",
         "parts":[
             {"file":"2019-yes","title":"Yes"},
