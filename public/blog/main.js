@@ -19,7 +19,6 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 // [2] POST LIST 
 
 const posts=[
-	//{"file":"2025-03-20-Anbernic-RG35XXSP.html","alt":"Anbernic RG35XX-SP: First Impression"},
 	//{"file":"2025-02-00-Coloring-Tutorial.html"},
 	{"file":"2025-02-01-Hourly-Comic.html"},
 	{

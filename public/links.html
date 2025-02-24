@@ -26,9 +26,6 @@
     }    
 }
 
-    #list{columns:2;}
-    @media only screen and (max-width: 300px) {#list{columns:1;}}
-
     #resources li > a:after {
         content:" -";
     }
@@ -43,7 +40,7 @@
     <div class="main-content">
         <p>I have truthfully grown tired of mainstream social media and try my best to minimize usage of it. These are the "main" ones:</p>
 
-        <ul id="list">
+        <ul class="db-list">
             <li><a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account">Instagram</a></li>
             <li><a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here">Webtoon</a></li>
             <li><a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos">Youtube</a></li>
@@ -69,5 +66,8 @@
     </div>
 
 <script src="./blog/main.js"></script>
+<script>
+    document.title = document.title.replaceAll(" | Da Blog!!","")
+</script>
 </body>
 </html>
