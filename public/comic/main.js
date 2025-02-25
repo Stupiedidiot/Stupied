@@ -17,14 +17,7 @@ masterlist = [
     {
         "folder":"psych",
         "title":"Psych!",
-        "desc":"Being a psychic sucks actually.",
-        "parts":[
-            //{"file":"tetris","title":"Tetris"},
-            {"file":"grass","title":"Touch Grass"},
-            //{"file":"icecream","title":"Ice Cream"},
-            {"file":"man-down","title":"But, Psyyy--","img":"man-down.png"},
-            {"file":"hell","title":"I like You"}
-        ]
+        "desc":"Being a psychic sucks actually."
     },
     {
         "folder":"pmd",

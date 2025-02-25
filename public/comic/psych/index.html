@@ -4,35 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <title>Psych! | stupied</title>
+    <title></title>
 <style>
-#comicList{
-    background-color: var(--brown);
-    color: white;
-    margin-bottom: 1rem;
-}
+    .archive{
+        background-color: var(--brown);
+        color: white;
+        margin-bottom:2rem;
+        font-family: var(--display-font);
+    }
+    
+    .archive a:hover div{
+        background-color: var(--red);
+        color: black;
+    }
+h4{color:var(--red);}
 
-#comicList a:hover div{
-    background-color: var(--red);
-    color: black;
+h4 > span{
+    font-family: var(--body-font);
+    font-weight: lighter;
+    color: var(--brown);
 }
-</style>    
+</style>
 </head>
 <body>
+
     <div class="main-content">
         <h1 style="color: var(--yellow);">Overview</h1>
         <p>A comic following the trio living in a dysfunctional city in a nowhere country where nothing ever goes wrong!</p>
-        <div id="comicList"></div>
+
+        <h4>Side <span>» Doodles and Nonsense</span></h4>
+        <div class="archive" id="sideList"></div>
+
+        <h4>Main <span>» The real deal!!</span></h4>
+        <div class="archive" id="mainList"></div>
 
         <div style="text-align: right;">
             <p>Will add character introductions soon hehe >:3</p>
             <p style="color: var(--brown);">The comics here is just some random stuff I haven't finished. Will make the actual comic eventually</p>
-        <div style="margin-top: 2rem;">
-            <a href="./../../index.html">Head Back »</a>
+            <div style="margin-top: 2rem;">
+                <a href="./../../index.html">Head Back »</a>
+            </div>
         </div>
     </div>
 
-<script src="./../main.js"></script>
 <script src="./main.js"></script>
+<script>
+    writeVolume("mainList",findVolume("m"))
+    writeVolume("sideList",findVolume("s"))
+</script>
 </body>
 </html>
