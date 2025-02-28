@@ -52,13 +52,8 @@ footer{
     }
 }
 
-#nextprev{
-    margin-top:1rem;
-}
-
-#comments{
-    margin-top:4rem;
-}
+#nextprev{margin-top:1rem;}
+#comments{margin-top:4rem;}
 
 .micro{
     article{
@@ -93,4 +88,10 @@ footer{
         color: grey;
         text-align:right;
     }
+}
+
+img.center{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
 }
