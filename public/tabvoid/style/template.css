@@ -132,7 +132,7 @@ p:last-child,ol:last-child,ul:last-child{
             position: absolute;
         }
         nav a{
-            display:inline-block;
+            display:inline-block!important;
         }
         nav a:first-child{margin-left:4rem;}
         main {
