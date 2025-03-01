@@ -6,16 +6,18 @@
     --blue:#5177a9;
     --yellow: #deab31;
     --wheat:#e9eae2;
+    --display-font:grandstander;
+    --body-font:Arial, Helvetica, sans-serif;
 }
 
 body{
     padding:0;margin:0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:var(--body-font);
 }
 
 h1,h2,h3,h4,h5,h6{
     margin:0;
-    font-family:grandstander
+    font-family:var(--display-font);
 }
 
 ol,ul{margin-top:0;}
@@ -143,16 +145,14 @@ body{
         background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
         background-repeat: repeat;
         background-size: 100px 100px;
-        background-position: top left;
         position: absolute;
-        top:10vh;
-        right:50%;
+        top:10vh;right:50%;
         transform: translateX(50%) skewY(-2deg);
     }
     &.default footer{color:white;}
 }
 
-header{
-    &.stupied{text-align:center;margin-top:1rem;}
-    &.stupied img{max-width:250px;width:90%;height:auto;}
+header.stupied{
+    text-align:center;margin-top:1rem;
+    img{max-width:250px;width:90%;height:auto;}
 }

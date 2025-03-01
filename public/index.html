@@ -281,10 +281,10 @@ body::before{
 .meow span{display: inline-block;}
 
 .meow span:nth-of-type(n){
-    animation:jump 1s;animation-iteration-count:infinite; 
+    animation:jump 1s infinite; 
 }
 .meow span:nth-of-type(2n){
-    animation:fall 1s;animation-iteration-count:infinite;
+    animation:fall 1s infinite;
 }
 
 footer a:not(:last-of-type)::after{
@@ -295,6 +295,12 @@ footer{
   margin-bottom:1rem;
 }
 
+body::before{animation:sliding 100s infinite}
+
+@keyframes sliding {
+    0% { background-position:0% 100%; }
+    100% { background-position:100% 0%; }
+}  
 </style>
 </head>
 <body class="default">
@@ -364,7 +370,9 @@ footer{
             <a href="https://literalwiki.neocities.org/">LiteralWiki</a> |
             <a href="./tabvoid/index.html">Tabvoid</a> |
             <a href="./chez/raffidelle/index.html">Raffidelle</a> |
+            <!--
             <a href="./chez/kyman/index.html">Kyman</a> |
+            -->
             <a href="./chat.html">Chatbox</a> |
             <a href="./meta/status.html">Status</a>
         </div>
