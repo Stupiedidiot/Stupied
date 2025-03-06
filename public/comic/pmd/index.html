@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../main.css"> 
-    <title>The Misfits | Stupied</title>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Working Title | Stupied</title>
     <style>
         .info img{max-width:200px;padding-right:10px;float:left;box-sizing: border-box;}
         @media only screen and (max-width: 400px) {
@@ -18,13 +19,18 @@
     </style>
 </head>
 <body class="bg-misfits">
-    <div style="width:95%;max-width:800px;margin:1rem auto;">
+    <div class="main-content">
         <div class="cont-half">
-            <div class="bg-teal"><h1>The Misfits</h1></div>
+            <div class="bg-teal"><h1>Working Title</h1></div>
             <div class="bg-white">
+                
                 <p>A comic loosely based on the Pokemon Dungeon Series. This rescue team is composed of Cheeze, Maudie, and Yasmayne. They go off doing silly adventures and helping other pokemon.</p>
-                    <hr>
-                    <div id="comicList"></div>
+                <hr>
+                <div id="sideList"></div>
+
+                <hr>
+                <div id="mainList"></div>
+
             </div>
             <div class="bg-teal txt-right" style="padding:1rem">
                 <a href="./../../index.html">Home &nbsp;</a>
@@ -83,8 +89,11 @@
             <p>Can you tell that geography isn't my strong suit?? Planning to based most of the places on locations in the games!! As for the lore, let's just say there was bit of a fascism woopsie :3</p>
         </div>
     </div>
-    <footer class="txt-center"></footer>
-</body>
-<script src="./../main.js"></script>
+
+<script src="./main.js"></script>
+<script>
+    writeVolume("sideList",findVolume("s"))
+    writeVolume("mainList",findVolume("m"))
+</script>
 </body>
 </html>

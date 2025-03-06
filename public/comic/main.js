@@ -22,14 +22,7 @@ masterlist = [
     {
         "folder":"pmd",
         "title":"Working Title",
-        "desc":"OC comics loosely based on the Pokemon Dungeon Games - Still deciding a title",
-        "parts":[
-            {"file":"independent","title":"Independent","img":"independent.png"},
-            {"file":"yapping","title":"Yapping"},
-            {"file":"saved","title":"Saved"},
-            {"file":"letters","title":"Letters"},
-            //{"file":"siblings","title":"Siblings"}
-        ]
+        "desc":"OC comics loosely based on the Pokemon Dungeon Games - Still deciding a title"
     },
     {
         "folder":"84",
