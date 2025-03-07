@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="./main.css">
     <title></title>
 <style>
-    #container{
-        width:95%;
+    .container{
         max-width:550px;
         margin: 3rem auto;
         > div{
@@ -20,13 +20,13 @@
 </style>
 </head>
 <body class="default">
-    <div id="container">
+    <div class="main-content container">
         <div>
             <div style="background-color:var(--blue);padding:1rem;">
                 <h1>Miscellaneous Stuff</h1>
                 <p>A collection of random comics and short stories.</p>
             </div>
-            <div id="comicList" class="db-list"></div>
+            <div id="archive" class="db-list"></div>
         </div>
 
         <div style="padding:1rem;">
@@ -48,6 +48,9 @@
         <a href="./../../index.html" style="display:block;color:white;margin:1rem; transform: translateY(1rem);">Head Back »</a>
     </div>
 
-<script src="./../main.js"></script>
+<script src="./main.js"></script>
+<script>
+    writeVolume("archive",findVolume("m"))
+</script>
 </body>
 </html>
