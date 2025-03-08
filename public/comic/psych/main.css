@@ -38,6 +38,8 @@ p > a {
     text-decoration:underline;
 }
 
+img {width:100%;display:block;}
+
 hr.clear{
     margin:0;border:0;
     clear:both;

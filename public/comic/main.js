@@ -1,304 +1,318 @@
 masterlist = [
     {
-        "folder":"muse-adriade",
+        "volume":"muse-adriade",
         "title":"muse ariadne",
         "desc":"Stuff for a writing club thingy wohooo!!",
-        "parts":[
-            {"file":"2024-02-05","title":"Writing is Hard"},
-            //{"file":"2024-02-12","title":"Foreign Film"},
-            {"file":"2024-02-26","title":"Blue Bird","img":"blue-bird.png"},
-            //{"file":"2024-04-08","title":"I Hate You"},
-            //{"file":"2024-05-13","title":"Total Domination"},
-            {"file":"2024-05-20","title":"The Odd Siblings","img":"odd-siblings.png"},
-            {"file":"2024-08-26","title":"Laundry Day"},
-            {"file":"2024-10-07","title":"Seclusion"}
+        "issues":[
+            {"file":"2024-02-05.html","alt":"Writing is Hard"},
+            //{"file":"2024-02-12.html","alt":"Foreign Film"},
+            {"file":"2024-02-26.html","alt":"Blue Bird","img":"blue-bird.png"},
+            //{"file":"2024-04-08.html","alt":"I Hate You"},
+            //{"file":"2024-05-13.html","alt":"Total Domination"},
+            {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
+            {"file":"2024-08-26.html","alt":"Laundry Day"},
+            {"file":"2024-10-07.html","alt":"Seclusion"}
         ],
     },
     {
-        "folder":"psych",
+        "volume":"psych",
         "title":"Psych!",
         "desc":"Being a psychic sucks actually."
     },
     {
-        "folder":"pmd",
+        "volume":"pmd",
         "title":"Working Title",
         "desc":"OC comics loosely based on the Pokemon Dungeon Games - Still deciding a title"
     },
     {
-        "folder":"84",
+        "volume":"84",
         "title":"84",
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
-        "parts":[
-            //{"file":"uniform","title":"Uniform"},
-            {"file":"notes","title":"Note Taking"}
-            //{"file":"haircut","title":"Haircut"},
+        "issues":[
+            //{"file":"uniform.html","alt":"Uniform"},
+            {"file":"notes.html","alt":"Note Taking"}
+            //{"file":"haircut.html","alt":"Haircut"},
             /*
-            {"file":"cover","title":"Cover Art"},
-            {"file":"sorry","title":"Sorry"},
-            {"file":"breakfast","title":"Breakfast"},
-            {"file":"break","title":"Take a Break"},
-            {"file":"news","title":"Exciting News"}
+            {"file":"cover.html","alt":"Cover Art"},
+            {"file":"sorry.html","alt":"Sorry"},
+            {"file":"breakfast.html","alt":"Breakfast"},
+            {"file":"break.html","alt":"Take a Break"},
+            {"file":"news.html","alt":"Exciting News"}
             */
         ]
     },
     {
-        "folder":"puyo",
+        "volume":"puyo",
         "title":"Maguro's Thing",
-        "desc":"Idk some dumb Puyo comic I made,,"
+        "desc":"Idk some dumb Puyo comic I made,,",
+        "issues":[]
     },
     {
-        "folder":"adrift",
+        "volume":"adrift",
         "title":"Adrift",
-        "desc":"It's clearance signing and Adrina has an essay to finish."
+        "desc":"It's clearance signing and Adrina has an essay to finish.",
+        "issues":[]
     },
     {
-        "folder":"hat",
+        "volume":"hat",
         "title":"LiteralHat",
         "desc":"Random LiteralHat related Comics",
-        "parts":[
-            {"file":"index","title":"Clipper"},
-            {"file":"lost","title":"Lost","img":"0A01-00.png"}
+        "issues":[
+            {"file":"index.html","alt":"Clipper"},
+            {"file":"lost.html","alt":"Lost","img":"0A01-00.png"}
         ]
     },
     {
-        "folder":"penny",
+        "volume":"penny",
         "title":"Penny's Perfect Present",
-        "desc":"She wants to get her mom a gift for an upcoming event."
+        "desc":"She wants to get her mom a gift for an upcoming event.",
+        "issues":[]
     },
     {
-        "folder":"misc",
+        "volume":"misc",
         "title":"Miscellaneous Stuff",
         "desc":"Dumping random comics n stuff that aren't for anything specific"
     },
     {
-        "folder":"howto",
+        "volume":"howto",
         "title":"How To Not",
         "desc":"A guide on how to do stuff by telling you how not to",
-        "parts":[
-            {"file":"0A00","title":"Make a Webcomic"},
-            {"file":"0A01","title":"Befriend the Internet"},
-            {"file":"0A02","title":"Be Original"},
-            {"file":"0A03","title":"Procastinate"},
-            {"file":"0A04","title":"Do Projects"},
-            {"file":"0A05","title":"Feel Motivated"},
-            {"file":"0A06","title":"Walk Your Pet Fish"},
-            {"file":"0A07","title":"Study"}
+        "issues":[
+            {"file":"0A00.html","alt":"Make a Webcomic"},
+            {"file":"0A01.html","alt":"Befriend the Internet"},
+            {"file":"0A02.html","alt":"Be Original"},
+            {"file":"0A03.html","alt":"Procastinate"},
+            {"file":"0A04.html","alt":"Do Projects"},
+            {"file":"0A05.html","alt":"Feel Motivated"},
+            {"file":"0A06.html","alt":"Walk Your Pet Fish"},
+            {"file":"0A07.html","alt":"Study"}
         ]
     }
 ]
 
+// PAGE TEMPLATE
 const url = window.location.pathname;
-relativePath = "./";
-urlPath = url.split('/');
-if(urlPath.length > 2){for(i=0;i<urlPath.length-2;i++){relativePath+="../"}}
+const urlSplit = url.split("/")
+relativePath = getRelativePath() 
 
-const footer = '\
-<a href="#">Sitemap</a>\
-<a href="'+relativePath+'comic/index.html">Home</a>\
-<a href="'+relativePath+'chat.html">Chatbox</a>\
-'
-
-const template =`
+const templateViewer =`
 <div id="container">
-    <div id="top"></div>
+    <div id="top">
+        <header></header>
+        <div id="nextprev"></div>
+        <div id="extra">
+            <a href="` + relativePath + `../../index.html">✮</a>
+        </div>
+    </div>
+
     <main class="default"></main>
+
     <div id="bottom">
         <aside>
             <nav id="next"></nav>
             <div id="info"></div>
         </aside>
-        <div id="comments"></div>
+        <div>
+            <div id="comments"></div>
+        </div>
     </div>
-    <footer>` + footer + `</footer>
 </div>
 `
 
-if(document.querySelector("body").id==="comicViewer"){
-    document.querySelector("body").innerHTML+=template
+e = document.querySelector("body")
+if(e.id==="comicViewer"){
+    e.innerHTML+=templateViewer
 }
 
-main=document.querySelectorAll("#comicViewer .main-content");
+main=document.querySelectorAll(".main-content");
 for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
 
-if(e=document.getElementById("info-content")){document.getElementById("info").append(e)}
+if(e = document.getElementById("info-content")){
+    document.getElementById("info").append(e) 
+}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'meta/favicon.ico"></link>'
+// PAGE INFO
+current = {
+    folder: urlSplit[urlSplit.length-2],
+    file: urlSplit[urlSplit.length-1]
+}
 
-maxParts=0
-searchComicIndex()
-if ( currentIndex > -1) {
-    // Check if viewing a comic
-    if(currentPartIndex > -1){
-        result = document.createElement("header")
+if ( ! current.file.endsWith(".html") ) {current.file += ".html";}
 
-        comicTitle = document.createElement("a")
-        comicTitle.innerHTML = masterlist[currentIndex].title
-        comicTitle.href = "./index.html"
+current.obj = findVolume(current.folder)
+if( current.obj !== undefined ){
+    current.index = findIndex(current.obj, current.file)
+}
 
-        partTitle = document.createElement("span")
-        partTitle.innerHTML = masterlist[currentIndex].parts[currentPartIndex].title
+if ( current.index > -1 ) {
+    current.issue = getTitle(current.obj.issues[current.index])
 
-        result.append(comicTitle)
-        result.append(partTitle)
+    resultHeader = genHeader(current.index, current.obj)
+    document.querySelector("header").innerHTML = resultHeader
+    
+    resultNav = genNav(current.index, current.obj)
+    document.getElementById("nextprev").innerHTML = resultNav
 
-        if(e=document.getElementById("top")){e.append(result)}
-        
-        writeComicNextprev(masterlist[currentIndex].parts)
-        writeComicNext(masterlist[currentIndex].parts)
-        
-        if (document.title==="") {document.title = masterlist[currentIndex].parts[currentPartIndex].title + " | " + masterlist[currentIndex].title;}
-    } else {
-        writePartsArchive("comicList", currentIndex, 0, maxParts)
+    resultNext = genNext(current.index, current.obj)
+    document.getElementById("next").innerHTML = resultNext
 
-        result = document.createElement("header")
-
-        comicTitle = document.createElement("a")
-        comicTitle.innerHTML = "Stupied"
-        comicTitle.href = "./../index.html"
-
-        partTitle = document.createElement("span")
-        partTitle.innerHTML = masterlist[currentIndex].title
-
-        result.append(comicTitle)
-        result.append(partTitle)
-
-        if(e=document.getElementById("top")){e.append(result)}
-
-        if (document.title==="") {document.title = masterlist[currentIndex].title + " | " + "Stupied"}
-    }
-    if(e=document.getElementById("top")){e.innerHTML+='<nav id="extra"><a href="'+relativePath+'index.html">✮</a></nav>'}
+    document.title = current.issue
 } else {
-    writeComicArchive()
-    if(e=document.getElementById("comicList")){e.append(list)}
+
+    resultHeader = `
+    <a href="` + relativePath + `../index.html">Stupied</a>
+    <span>` + current.title + `</span>
+    `
+    document.querySelector("header").innerHTML = resultHeader
 }
 
-function searchComicIndex(){
-    currentIndex = -1;
-    currentPartIndex = -1;
-    
-    // Setup stuff
-    fileList = url.split("/");
-    if(fileList[fileList.length-1]===""){fileList[fileList.length-1]="index"}
-    currentFolder=fileList[fileList.length-1]
-    currentFolder = currentFolder.replaceAll(".html","")
-    currentFile=currentFolder
-    
-    // Check if inside folder
-    if(fileList.length>3){
-        currentFolder=fileList[fileList.length-2]
+// FUNCTIONS - What the func!
+function getRelativePath(){
+    return "./"
+}
+
+function findVolume (folder) {
+    for(i = 0;i < masterlist.length; i++){
+        if(masterlist[i].volume === folder){
+            current.title = masterlist[i].title
+            return masterlist[i]
+		}        
     }
-    
-    // Find Index
-    for (i = 0; i < masterlist.length; i++) {
-        if ( masterlist[i].folder===currentFolder) {
-            currentIndex = i;
+    return
+}
+
+function findIndex(volume,file){
+    for( i = 0;i < volume.issues.length; i++ ){
+        if( volume.issues[i].file === file ){
+            return i
         }
     }
+	return -1
+}
+
+function genHeader() {
+    result=`
+    <a href="` + relativePath + `index.html">` + current.title + `</a>
+    <span>` + current.issue + `</span>
+    `
+    return result
+}
+
+function genNav(index,obj){
+	result = `
+    <a href="./#PREV">«</a>
+    <select id="top-list" onchange="changeIssue()">#LIST</select>
+    <a href="./#NEXT">»</a>
+	`
     
-    // Find Index of Part
-    if(fileList.length > 3 && masterlist[currentIndex].parts!== undefined){
-        maxParts= masterlist[currentIndex].parts.length
-        for (i = 0; i < maxParts; i++) {
-            if ( masterlist[currentIndex].parts[i].file===currentFile) {
-                currentPartIndex = i;
-            }
-        }
+    if( obj.issues[index-1] ){
+        prev=index-1
+        result = result.replaceAll("#PREV", obj.issues[prev].file)
     }
+
+    if( obj.issues[index+1] ){
+        next=index+1
+        result = result.replaceAll("#NEXT", obj.issues[next].file)
+    }
+
+    list = ""
+    for(i=0; i < obj.issues.length ;i++){
+        title = getTitle(obj.issues[i])
+        list += "<option value='" + i + "'>#" + i.toString().padStart(2, "0") + " - " + title + "</option>"
+    }
+    list = list.replaceAll("value='" + current.index + "'", "selected")
+
+	result = result.replaceAll("#LIST",list)
+    return result
 }
 
-function writeComicArchive(){
-    list=document.createElement("ul")
-    for(i=0;i<masterlist.length;i++){
-        // Checks if there's an index
-        link="./view.html?item="+masterlist[i].folder
-
-        listItem = document.createElement("li")
-        itemLink = document.createElement("a")
-        itemLink.innerHTML = "<span>"+masterlist[i].title+"</span>"
-        itemLink.href = link
-
-        listItem.append(itemLink)
-        list.append(listItem)
+function genNext(index,obj){
+    if( obj.issues[index+1] ){
+        title = getTitle(obj.issues[index+1])
+        thumb = getThumbnail(obj.issues[index+1])
+        txt = "<h4>Next Part</h4><span>" + title + "</span></div>"
+        
+        link = 'href="' + obj.issues[index+1].file + '"'
+    } else {
+        thumb = "#"
+        txt = "<h4>You're All Caught Up!</h4><span>There's nothing else to show!</span></div>"
+        link=""
     }
+
+    result = `
+    <a ` + link + `>
+    <div>
+        <div class="comicListThumbnail"><img src="` + thumb + `"></div>
+        <div id="next-title"><div id="next-title-content">` + txt + `</div>
+    </div>
+    </a>
+    `
+    return result
 }
 
-// Change how the archive looks cuz it's ugly >:(
-function writePartsArchive(id,folder,first,last){
+function getTitle(e){
+    if ( e.hasOwnProperty("alt") ){
+        title = e.alt;
+    } else {
+        title = e.file;
+        title = title.replaceAll("-"," ");
+        title = title.replaceAll(".html","");
+    }
+return title;
+}
+
+function getThumbnail(e){
+    if ( e.hasOwnProperty("thumb") ){
+        result = relativePath + e.thumb;
+    } else {
+        result = "#"
+    }
+return result;
+}
+
+function writeVolume(id,volume,first,last){
+    if(first===undefined){first=0}
+    if(last===undefined){last=volume.issues.length}
+
     var result="";
-    for(i=first;i<last;i++){
-        result += getPart(folder,i)
+    for(i= first ;i < last ;i++){
+        result += writeIssue(volume,i)
     }
-    if(e=document.getElementById(id)){e.innerHTML += result}
+    if(e=document.getElementById(id)){e.innerHTML += result;}
 }
 
-function getPart(folder,x){
-        comicLink=masterlist[folder].parts[x].file+".html"
-        comicTitle=masterlist[folder].parts[x].title
-        result='<a href="'+comicLink+'"><div class="comicListItem">'+
-        '<div class="comicListTitle"><h4>'+comicTitle+'</h4></div>'+
-        '<div class="comicListIndex"><span>#'+x+'</span></div>'+
-        '</div></a>'
-        return result
+function writeIssue(volume,ii){
+    folder=volume.volume
+    volume=volume.issues
+
+    comicLink = volume[ii].file
+    comicTitle = getTitle(volume[ii])
+    comicThumb = getThumbnail(volume[ii])
+    result=`<a href="` + comicLink + `"><div class="comicListItem">
+    <div class="comicListThumb"><img src="` + comicThumb + `"></div>
+    <div class="comicListTitle"><span>` + comicTitle + `</span></div>
+    <div class="comicListIndex"><span>#` + ii + `</span></div>
+    </div></a>`
+    return result
 }
 
-function writeComicNextprev(){
-    result = document.createElement("div")
-    result.id = "nextprev"
-
-    span = document.createElement("span")
-    span.innerHTML = "#"+currentPartIndex
-
-    if ( masterlist[currentIndex].parts.length < 2 ) {
-        result.append(span)
-	} else if ( currentPartIndex === 0 ) {
-        nextI = document.createElement("a")
-        nextI.innerHTML = "<button title='next part'>►</button>"
-        nextI.href = masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
-
-        result.append(span)
-        result.append(nextI)
-	} else if ( currentPartIndex === masterlist[currentIndex].parts.length-1 ) {
-        prevI = document.createElement("a")
-        prevI.innerHTML = "<button title='previous part'>◄</button>"
-        prevI.href = masterlist[currentIndex].parts[currentPartIndex-1].file+".html"
-
-        result.append(prevI)
-        result.append(span)
-	} else if ( 0 < currentPartIndex && currentPartIndex < masterlist[currentIndex].parts.length - 1 ) {
-        nextI = document.createElement("a")
-        nextI.innerHTML = "<button title='next part'>►</button>"
-        nextI.href = masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
-
-        prevI = document.createElement("a")
-        prevI.innerHTML = "<button title='previous part'>◄</button>"
-        prevI.href = masterlist[currentIndex].parts[currentPartIndex-1].file+".html"
-
-        result.append(prevI)
-        result.append(span)
-        result.append(nextI)
-
-	}
-    document.getElementById("top").append(result)
+function changeIssue(){
+    e = document.getElementById("top-list").value;
+    window.location.href = current.obj.issues[e].file
 }
 
-function writeComicNext(){
-    if ( masterlist[currentIndex].parts.length < 2 || currentPartIndex === masterlist[currentIndex].parts.length-1 ) {
-        result = "<div>You're all caught up :3</div>"
-	} else {
-        var comicThumb="";
-        if(masterlist[currentIndex].parts[currentPartIndex+1].img!==undefined){
-            comicThumb="./img/"+masterlist[currentIndex].parts[currentPartIndex+1].img
-            comicThumb='<div class="comicListThumbnail"><img src="'+comicThumb+'"></div>'
-        }
-        nextI= masterlist[currentIndex].parts[currentPartIndex+1].file+".html"
-        comicTitle=masterlist[currentIndex].parts[currentPartIndex+1].title
 
-        result='<a href="'+nextI+'"><div>'+comicThumb+'<div id="next-title"><div id="next-title-content"><h4>Next Part</h4><span>'+comicTitle+'</span></div></div></div></a>'
-	}
-    document.getElementById("next").innerHTML=result
+// BEEP BOOP
+if( document.title==="" ){ 
+    document.title = current.title
+} else {
+    document.title += " | " + current.title
 }
+
+document.querySelector("head").innerHTML += `<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
+document.querySelector("head").innerHTML += '<link rel="icon" type="image/x-icon" href="'+relativePath+'../../meta/favicon.ico"></link>'
 
 // COMMENTS
 if (e=document.getElementById("comments")){

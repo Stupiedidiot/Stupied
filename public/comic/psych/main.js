@@ -6,6 +6,7 @@ folders = [
 
 masterlist = [
     {
+        // main
         "volume":"m",
         "issues":[
             {"file":"test.html","alt":"Cover Page"},

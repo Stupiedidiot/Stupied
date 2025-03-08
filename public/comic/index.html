@@ -120,8 +120,8 @@ body{
         <div id="comicArchive-dup"></div>
     </div>
 
-    <footer class="txt-left txt-white" style="max-width:900px;width:95%;">
-        <a href="./../index.html">Head Home »</a>
+    <footer style="text-align: center;margin:1rem auto;">
+        <a href="./../index.html">« Head Back »</a>
     </footer>
 
     <script src="./main.js"></script>
@@ -130,14 +130,14 @@ body{
     for(i=0;i<masterlist.length;i++){
         item=masterlist[i]
 
-        itemThumb = '<img  src="./' + item.folder + '/img/main.png">'
+        itemThumb = '<img  src="./' + item.volume + '/img/main.png">'
         itemTitle = '<h1>' + item.title + '</h1>'
         itemDesc = item.desc
-        itemLink = '<a href="./' + item.folder + '/index.html">Click to Read »</a>'
+        itemLink = '<a href="./' + item.volume + '/index.html">Click to Read »</a>'
 
         itemResult =`
         <div class="item-container">
-            <div class="` + item.folder + `">
+            <div class="` + item.volume + `">
                 <div class="item-thumb">` + itemThumb + `</div>
                 <div class="item-side">
                     <div>

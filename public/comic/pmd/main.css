@@ -3,7 +3,7 @@
 :root{
     --display-font:grandstander;
     --body-font:Arial, Helvetica, sans-serif;
-    --accent-color:#5177a9;
+    --accent-color:#3cb6b9;
 }
 
 body{
@@ -24,7 +24,7 @@ p > a {
     text-decoration:underline;
 }
 
-img {width:100%;}
+img {width:100%;display:block;}
 
 hr.clear{
     margin:0;border:0;

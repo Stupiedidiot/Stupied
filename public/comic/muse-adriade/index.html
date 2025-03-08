@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../main.css">
-    <title></title>
+    <title>muse ariadne</title>
     
     <style>
         body{
@@ -37,7 +37,7 @@
         #image img{
             user-select:none;
             position:absolute;
-            height:150%;
+            width:auto;height:150%;
             max-height:600px; top:0;left:0;
             transform:translateX(-20%) translateY(-20%) rotate(10deg);
             filter:drop-shadow(2px 0 0 var(--yellow))drop-shadow(-2px 0 0 var(--yellow))drop-shadow(0 2px 0 var(--yellow))drop-shadow(0 -2px 0 var(--yellow));
@@ -85,10 +85,12 @@
     </div>
     <script src="./../main.js"></script>
     <script>
-        recentList=getPart(currentIndex,3)
-        recentList+=getPart(currentIndex,1)
-        recentList+=getPart(currentIndex,2)
-        document.getElementById("recentList").innerHTML=recentList
+        writeVolume("comicList",findVolume(current.folder))
+
+        result = writeIssue(current.obj,3)
+        result += writeIssue(current.obj,1)
+        result += writeIssue(current.obj,2)
+        document.getElementById("recentList").innerHTML = result
     </script>
 </body>
 </html>
