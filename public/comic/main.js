@@ -159,6 +159,11 @@ if ( current.index > -1 ) {
     document.getElementById("next").innerHTML = resultNext
 
     document.title = current.issue
+    if( document.title==="" ){ 
+        document.title = current.title
+    } else {
+        document.title += " | " + current.title
+    }
 } else {
 
     resultHeader = `
@@ -301,14 +306,6 @@ function writeIssue(volume,ii){
 function changeIssue(){
     e = document.getElementById("top-list").value;
     window.location.href = current.obj.issues[e].file
-}
-
-
-// BEEP BOOP
-if( document.title==="" ){ 
-    document.title = current.title
-} else {
-    document.title += " | " + current.title
 }
 
 document.querySelector("head").innerHTML += `<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
