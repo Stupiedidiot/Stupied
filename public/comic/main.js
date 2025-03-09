@@ -11,6 +11,7 @@ masterlist = [
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
+            //{"file":"2024-10-28.html","alt":"50th Anniversary"},
             {"file":"2024-10-07.html","alt":"Seclusion"}
         ],
     },
@@ -29,8 +30,8 @@ masterlist = [
         "title":"84",
         "desc":"Ashley Dobrik attempts to commit suicide but is prevented by getting stuck in a time loop.",
         "issues":[
-            //{"file":"uniform.html","alt":"Uniform"},
-            {"file":"notes.html","alt":"Note Taking"}
+            {"file":"notes.html","alt":"Note Taking"},
+            {"file":"uniform.html","alt":"Uniform"}
             //{"file":"haircut.html","alt":"Haircut"},
             /*
             {"file":"cover.html","alt":"Cover Art"},
@@ -165,12 +166,15 @@ if ( current.index > -1 ) {
         document.title += " | " + current.title
     }
 } else {
-
     resultHeader = `
     <a href="` + relativePath + `../index.html">Stupied</a>
     <span>` + current.title + `</span>
     `
-    document.querySelector("header").innerHTML = resultHeader
+    if( e = document.querySelector("header") ) { e.innerHTML = resultHeader }
+    if( document.title==="" ){ 
+        document.title = current.title + " | Stupied"
+    }
+
 }
 
 // FUNCTIONS - What the func!

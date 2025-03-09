@@ -323,7 +323,7 @@ body.eighty-four .default{
 }
 
 body.eighty-four{
-    --accent-color:#3b8586;
+    --accent-color:#2dbfc2;
     --bg-color:white;
     --txt-color:black;
 }
@@ -335,5 +335,5 @@ body.eighty-four main{
 }
 
 body.adrift{
-    --accent-color:#36808f;
+    --accent-color:#3a9eb2;
 }
