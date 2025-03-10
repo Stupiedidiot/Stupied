@@ -140,6 +140,7 @@ current = {
     file: urlSplit[urlSplit.length-1]
 }
 
+if ( current.file === "" ) {current.file = "index";}
 if ( ! current.file.endsWith(".html") ) {current.file += ".html";}
 
 current.obj = findVolume(current.folder)
