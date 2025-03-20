@@ -19,12 +19,15 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 // [2] POST LIST 
 
 const posts=[
-	//{"file":"2025-02-00-Coloring-Tutorial.html"},
-	{"file":"2025-02-28-Anbernic-RG35XXSP.html","img":"img/anbernic-folders.gif"},
-	{"file":"2025-02-01-Hourly-Comic.html"},
+	// SPOILERS - Stuff I might write about???  
+	// {"file":"2025-00-00-Coloring-Tutorial.html"},
+	// {"file":"2025-00-00-Ctrl-Alt-Delete,html"},
 	{
-		"file":"2025-01-00-Movie-Reviews.html"
+		"file":"2025-02-28-Anbernic-RG35XXSP.html",
+		"img":"img/anbernic-folders.gif"
 	},
+	{"file":"2025-02-01-Hourly-Comic.html"},
+	{"file":"2025-01-00-Movie-Reviews.html"},
 	{
 		"file":"2025-01-26-Crochet.html",
 		"alt":"Unfinished Crochet Projects",
@@ -92,7 +95,7 @@ for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../meta/favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="'+relativePath+'../favicon.ico"></link>'
 
 current = {
 	file:getFile(),
@@ -262,6 +265,13 @@ function genNav(){
 }
 
 // COMMENTS
+hcb_user = {
+    comments_header : 'Comments',
+    name_label : 'Name / Website',
+    submit : 'Comment!!',
+    mod_label:'(real!)'
+};
+
 if (e=document.getElementById("comments")){
 	e.innerHTML='<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;} .comment img[src*="https://www.htmlcommentbox.com/storage/"] {max-width:100%;border-radius:8px;}</style>';
 	loadcomments()

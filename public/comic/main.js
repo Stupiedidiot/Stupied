@@ -11,7 +11,7 @@ masterlist = [
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
-            //{"file":"2024-10-28.html","alt":"50th Anniversary"},
+            {"file":"2024-10-28.html","alt":"50th Anniversary"},
             {"file":"2024-10-07.html","alt":"Seclusion"}
         ],
     },
@@ -314,9 +314,16 @@ function changeIssue(){
 }
 
 document.querySelector("head").innerHTML += `<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
-document.querySelector("head").innerHTML += '<link rel="icon" type="image/x-icon" href="'+relativePath+'../../meta/favicon.ico"></link>'
+document.querySelector("head").innerHTML += '<link rel="icon" type="image/x-icon" href="'+relativePath+'../../favicon.ico"></link>'
 
 // COMMENTS
+hcb_user = {
+    comments_header : 'Comments',
+    name_label : 'Name / Website',
+    submit : 'Comment!!',
+    mod_label:'(real!)'
+};
+
 if (e=document.getElementById("comments")){
 	e.innerHTML='<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;} .comment img[src*="https://www.htmlcommentbox.com/storage/"] {max-width:100%;}</style>';
 	loadcomments()

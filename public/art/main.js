@@ -65,7 +65,7 @@ if(e=document.getElementById("aside-1-content")){document.querySelector("#contai
 
 if(document.title===""){document.title="gallery // stupied"}else{document.title+= " - gallery // stupied";}
 
-document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../meta/favicon.ico"></link>'
+document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>'
 
 //adding links to images
 images=document.querySelectorAll(".justified-gallery img")
@@ -147,6 +147,13 @@ function closeLightBox(){
 document.querySelector("head").innerHTML+=`<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
 
 // COMMENTS
+hcb_user = {
+  comments_header : 'Comments',
+  name_label : 'Name / Website',
+  submit : 'Comment!!',
+  mod_label:'(real!)'
+};
+
 if (e=document.getElementById("comments")){
 	e.innerHTML='<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Beep Boop</a>, hold please!</div><link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><style>#HCB_comment_box img{width:auto;display:inline-block;}.home-desc{display:none;}#HCB_comment_box h3:first-child{margin:0;} .comment img[src*="https://www.htmlcommentbox.com/storage/"] {max-width:100%;}</style>';
 	loadcomments()
