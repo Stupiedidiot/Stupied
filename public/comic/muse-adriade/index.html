@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div style="width:90%;max-width:450px;margin:auto;padding:1rem 0;">
+    <div style="width:90%;max-width:450px;margin:auto;padding:1rem 0;margin-bottom: 8vw;">
         <h2 style="color:var(--pink);">Archive</h2>
         <div id="comicList"></div>
     </div>
@@ -87,9 +87,9 @@
     <script>
         writeVolume("comicList",findVolume(current.folder))
 
-        result = writeIssue(current.obj,3)
-        result += writeIssue(current.obj,1)
-        result += writeIssue(current.obj,2)
+        result = writeIssue(current.obj,1)
+        result += writeIssue(current.obj,5)
+        result += writeIssue(current.obj,4)
         document.getElementById("recentList").innerHTML = result
     </script>
 </body>
