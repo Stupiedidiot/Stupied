@@ -11,8 +11,9 @@ masterlist = [
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
-            {"file":"2024-10-28.html","alt":"50th Anniversary"},
-            {"file":"2024-10-07.html","alt":"Seclusion"}
+            //{"file":"2024-10-28.html","alt":"50th Anniversary"},
+            {"file":"2024-10-07.html","alt":"Seclusion"},
+            //{"file":"2024-12-16.html","alt":"Trying My Heart Out"}
         ],
     },
     {
@@ -161,6 +162,18 @@ if ( current.index > -1 ) {
     document.getElementById("next").innerHTML = resultNext
 
     document.title = current.issue
+    document.onkeydown = function(event) {
+    if( document.activeElement === document.querySelector("body") ){
+        switch (event.keyCode) {
+            case 37:
+                if(current.prev===true){document.getElementById("prev-button").click()}
+            break;
+            case 39:
+                if(current.next===true){document.getElementById("next-button").click()}
+            break;
+            }
+    }
+    };
     if( document.title==="" ){ 
         document.title = current.title
     } else {
@@ -212,19 +225,21 @@ function genHeader() {
 
 function genNav(index,obj){
 	result = `
-    <a href="./#PREV">«</a>
+    <a href="./#PREV" id="prev-button">«</a>
     <select id="top-list" onchange="changeIssue()">#LIST</select>
-    <a href="./#NEXT">»</a>
+    <a href="./#NEXT" id="next-button">»</a>
 	`
     
     if( obj.issues[index-1] ){
         prev=index-1
         result = result.replaceAll("#PREV", obj.issues[prev].file)
+        current.prev=true
     }
 
     if( obj.issues[index+1] ){
         next=index+1
         result = result.replaceAll("#NEXT", obj.issues[next].file)
+        current.next=true
     }
 
     list = ""

@@ -114,6 +114,18 @@ if ( current.index > -1 ) {
     document.getElementById("next").innerHTML = resultNext
 
     document.title = current.issue
+    document.onkeydown = function(event) {
+        if( document.activeElement === document.querySelector("body") ){
+            switch (event.keyCode) {
+                case 37:
+                 if(current.prev===true){document.getElementById("prev-button").click()}
+                break;
+                case 39:
+                 if(current.next===true){document.getElementById("next-button").click()}
+                break;
+             }
+        }
+    };
 }
 
 // FUNCTIONS - What the func!
@@ -155,19 +167,21 @@ function genHeader() {
 
 function genNav(index,obj){
 	result = `
-    <a href="./#PREV">«</a>
+    <a href="./#PREV" id="prev-button">«</a>
     <select id="top-list" onchange="changeIssue()">#LIST</select>
-    <a href="./#NEXT">»</a>
+    <a href="./#NEXT" id="next-button">»</a>
 	`
     
     if( obj.issues[index-1] ){
         prev=index-1
         result = result.replaceAll("#PREV", obj.issues[prev].file)
+        current.prev=true
     }
 
     if( obj.issues[index+1] ){
         next=index+1
         result = result.replaceAll("#NEXT", obj.issues[next].file)
+        current.next=true
     }
 
     list = ""
