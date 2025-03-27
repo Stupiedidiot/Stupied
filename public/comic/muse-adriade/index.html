@@ -64,7 +64,7 @@
             <h2>muse ariadne</h2>
         </div>
         <div id="list">
-            <p style="margin-top:5px;">My entries for a writing club that posts new prompts weekly!! Trying to get better with writing :'D</p>
+            <p style="margin-top:5px;">My entries for a writing club that posts new prompts weekly!! I'm trying to be looser with my writing. I want to keep on practicing till it becomes secondhand nature,,</p>
             <h3>Most Recent:</h3>
             <div id="recentList"></div>
             
@@ -87,9 +87,21 @@
     <script>
         writeVolume("comicList",findVolume(current.folder))
 
-        result = writeIssue(current.obj,1)
-        result += writeIssue(current.obj,5)
-        result += writeIssue(current.obj,4)
+        recentList = [
+            //"2024-12-16.html",
+            //"2024-02-12.html",
+            "2024-10-28.html",
+            "2024-08-26.html",
+            "2024-02-26.html"
+        ]
+
+        result = " "
+
+        for(x=0 ; x < recentList.length ; x++){
+            index = findIndex(current.obj,recentList[x])
+            result += writeIssue(current.obj, index)
+        }
+
         document.getElementById("recentList").innerHTML = result
     </script>
 </body>
