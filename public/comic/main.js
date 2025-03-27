@@ -11,7 +11,7 @@ masterlist = [
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
-            //{"file":"2024-10-28.html","alt":"50th Anniversary"},
+            {"file":"2024-10-28.html","alt":"50th Anniversary"},
             {"file":"2024-10-07.html","alt":"Seclusion"},
             //{"file":"2024-12-16.html","alt":"Trying My Heart Out"}
         ],
