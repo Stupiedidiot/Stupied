@@ -1,842 +1,330 @@
-[   
-    {"img":"2025-crush.png"},
-    {
-        "img":"2025-no-standby.png",
-        "desc":"been a while since i've done an elaborate drawing for my ocs,, idk how 2022 me was able to make these every other week lol"
-    },
-    {
-        "img":"2025-amp-n-angie.png",
-        "desc":"i love insaniquarium so much"
-    },
-    {
-        "img":"2025-new-kid.png",
-        "desc":"Recent finished playing through the stick of truth!"
-    },
-    {
-        "img":"2025-pins.png",
-        "desc":"bought a pin maker n made these to sale :D"
-    },
-    {"img":"2024-dear-diary.png"},
-    {"img":"2024-cartman.png"},
-    {
-        "img": "2024-da-fits.png",
-        "desc":"drew this some time ago but only scanned it now with one of the broken printers my dad brought home!"
-    },
-    {
-        "img": "2024-hoodie.png",
-        "title":"Mary stole Psych's hoodie!!"
-    },
-    {
-        "img": "2024-swoosh.png",
-        "title":"Swooosh!!!"
-    },
-    {
-        "img": "2024-the-boys.png",
-        "title":"The Boys!"
-    },
-    {
-        "img": "2024-katies.png",
-        "title":"Katie(s)"
-    },
-    {
-        "img": "2024-art-is-dead.png",
-        "title":"Art is Dead"
-    },
-    {
-        "img": "2024-icecream.png",
-        "title":"we are not getting icecream!"
-    },
-    {
-        "img": "2024-postmaster-pearl.png"
-    },
-    {
-        "img": "2024-camp.png",
-        "title":"Camp"
-    },
-    {
-        "img": "2024-solution.png",
-        "title":"The Solution"
-    },
-    {
-        "img": "2024-would-it.png",
-        "title":"would it make a difference?"
-    },
-    {
-        "img": "2024-where-have-you-been.png",
-        "title":"where have you been?"
-    },
-    {
-        "img": "2024-snails.png",
-        "title":"Undeserving"
-    },
-    {
-        "img": "2024-smoking.png",
-        "title":"you know i don't do that anymore"
-    },
-    {
-        "img": "2024-self-absorbed.png"
-    },
-    {
-        "img": "2024-raffina-sobbin.png"
-    },
-    {
-        "img": "2024-raffidelle.png",
-        "title":"Them!! Yeah!!",
-        "desc":"They're so in love and stuff."
-    },
-    {
-        "img": "2024-puyo-fever-doodles.png"
-    },
-    {
-        "img": "2024-psyche-lea.png"
-    },
-    {
-        "img": "2024-overdue.png"
-    },
-    {
-        "img": "2024-ocean-prince.png",
-        "title":"will you accept his offer?"
-    },
-    {
-        "img": "2024-minecraft-skin.png",
-        "desc":"Drew my minecraft skin!!"
-    },
-    {
-        "img": "2024-looming.png"
-    },
-    {
-        "img": "2024-lidelle.png",
-        "title":"Lidelle Color Test"
-    },
-    {
-        "img": "2024-leslie.png",
-        "title":"Leslie Febee!!!"
-    },
-    {
-        "img": "2024-jam.png"
-    },
-    {
-        "img": "2024-introspection.png",
-        "desc":"I think I spend too much time thinking about the times I was thinking about thinking too much."
-    },
-    {
-        "img": "2024-heart.png",
-        "title":"would you stop doing that?"
-    },
-    {
-        "img": "2024-evan.png",
-        "title":"Evan Odd"
-    },
-    {
-        "img": "2024-doodles.png",
-        "title":"Sketchbook Doodles"
-    },
-    {
-        "img": "2024-burger.png"
-    },
-    {
-        "img": "2024-beetke.png",
-        "title":"Beetke's Windmill"
-    },
-    {
-        "img": "2024-badminton.png",
-        "title":"Badminton"
-    },
-    {
-        "img": "2023-worry-dawg.png",
-        "desc":"my fursona in the style of Worry Cat"
-    },
-    {
-        "img": "2023-worry-cat.png",
-        "title":"Worry Cat doodles"
-    },
-    {
-        "img": "2023-wedding.png",
-        "title":"Stardew Valley Wedding!!!"
-    },
-    {
-        "img": "2023-waiting.png",
-        "title":"Waiting"
-    },
-    {
-        "img": "2023-vicious-cycle.png",
-        "title":"Vicious Cycle"
-    },
-    {
-        "img": "2023-two-braincells.png",
-        "title":"The Perfect Disguise"
-    },
-    {
-        "img": "2023-turbo.png",
-        "title":"Turbo hogging up the bed >:("
-    },
-    {
-        "img": "2023-trying-my-heart-out.png"
-    },
-    {
-        "img": "2023-sweet-summer-snail.png",
-        "desc":"oh turbo.. when will you learn"
-    },
-    {
-        "img": "2023-sunset.png"
-    },
-    {
-        "img": "2023-stardew-valley-oc.png"
-    },
-    {
-        "img": "2023-sob.png"
-    },
-    {
-        "img": "2023-snail-on-plant.png",
-        "title":"Snail on Plant! (Real)"
-    },
-    {
-        "img": "2023-sea-slug.png"
-    },
-    {
-        "img": "2023-scott-is-coming-home.png",
-        "title":"Scott Pilgrim is Coming Home"
-    },
-    {
-        "img": "2023-scar-and-etho.png",
-        "desc":"This was for a Last Life Animation I never finished"
-    },
-    {
-        "img": "2023-roar.png",
-        "title":"ROOOAAAAaaaR!!"
-    },
-    {
-        "img": "2023-red.png"
-    },
-    {
-        "img": "2023-red-panda.png"
-    },
-    {
-        "img": "2023-psyche.png"
-    },
-    {
-        "img": "2023-playground.png",
-        "title":"i mean cuz everyone else does it?"
-    },
-    {
-        "img": "2023-pinwin.png"
-    },
-    {
-        "img": "2023-pennys-mom.png",
-        "title":"Penny's Mom"
-    },
-    {
-        "img": "2023-penny.png"
-    },
-    {
-        "img": "2023-parking-lot.png"
-    },
-    {
-        "img": "2023-mountains.png"
-    },
-    {
-        "img": "2023-loser.png"
-    },
-    {
-        "img": "2023-lisa-miller.png"
-    },
-    {
-        "img": "2023-lies-well-said.png"
-    },
-    {
-        "img": "2023-learning-is-fun.png"
-    },
-    {
-        "img": "2023-kim-pines-doodle.png"
-    },
-    {
-        "img": "2023-kim-and-knives.png"
-    },
-    {
-        "img": "2023-kermit.png"
-    },
-    {
-        "img": "2023-its-not-that-deep.png",
-        "title":"it's not that deep"
-    },
-    {
-        "img": "2023-haley.png"
-    },
-    {
-        "img": "2023-forest.png",
-        "title":"i sure hope there aren't any werewolves around"
-    },
-    {
-        "img": "2023-focus.png",
-        "title":"Pay Attention!"
-    },
-    {
-        "img": "2023-field.png"
-    },
-    {
-        "img": "2023-fast-crew.png",
-        "title":"FAST Crew!!",
-        "desc":"To everyone who keeps singing me this song with the letter S dropped, please know that your days are numbered"
-    },
-    {
-        "img": "2023-dark-prince.png",
-        "title":"The Dark Prince"
-    },
-    {
-        "img": "2023-clipper.png"
-    },
-    {
-        "img": "2023-chronic.png"
-    },
-    {
-        "img": "2023-caroline.png"
-    },
-    {
-        "img": "2023-candy-snail.png"
-    },
-    {
-        "img": "2023-annette.png"
-    },
-    {
-        "img": "2022-you-do-this-to-yourself.png"
-    },
-    {
-        "img": "2022-woman.png"
-    },
-    {
-        "img": "2022-was-it-worth-it.png"
-    },
-    {
-        "img": "2022-tilly.png"
-    },
-    {
-        "img": "2022-tilly-death-do-us-part.png"
-    },
-    {
-        "img": "2022-thou-shall-not-party.png"
-    },
-    {
-        "img": "2022-the-end.png"
-    },
-    {
-        "img": "2022-takoyaki.png"
-    },
-    {
-        "img": "2022-sweet-n-sour.png"
-    },
-    {
-        "img": "2022-storm.png"
-    },
-    {
-        "img": "2022-some-lady.png"
-    },
-    {
-        "img": "2022-some-guy.png"
-    },
-    {
-        "img": "2022-seconds-1.png",
-        "title":"Seconds ins't ours anymore (2/2)"
-    },
-    {
-        "img": "2022-seconds-0.png",
-        "title":"Seconds ins't ours anymore (1/2)"
-    },
-    {
-        "img": "2022-screaming.png"
-    },
-    {
-        "img": "2022-scrapbook.png",
-        "title":"Scrapbooking"
-    },
-    {
-        "img": "2022-scott.png",
-        "title":"Scott in Highschool"
-    },
-    {
-        "img": "2022-recess.png",
-        "title":"The Recess Before Reporting"
-    },
-    {
-        "img": "2022-rawr.png"
-    },
-    {
-        "img": "2022-pigtails.png"
-    },
-    {
-        "img": "2022-photocopy.png"
-    },
-    {
-        "img": "2022-persona.png",
-        "title":"Meet the Artist"
-    },
-    {
-        "img": "2022-no-difference.png"
-    },
-    {
-        "img": "2022-mirror.png"
-    },
-    {
-        "img": "2022-meeting.png"
-    },
-    {
-        "img": "2022-lilys.png",
-        "title":"Lily(s)"
-    },
-    {
-        "img": "2022-lil-guys.png"
-    },
-    {
-        "img": "2022-library.png",
-        "title":"Library Redraw",
-        "desc":"<p><a href='./view.html?item=2021-library.png'>the original</a></p>"
-    },
-    {
-        "img": "2022-knives.png",
-        "title":"Knives Chau!"
-    },
-    {
-        "img": "2022-kim.png",
-        "title":"Kim at Beach :]"
-    },
-    {
-        "img": "2022-keralis.png"
-    },
-    {
-        "img": "2022-jigglypuff.png"
-    },
-    {
-        "img": "2022-jedog.png"
-    },
-    {
-        "img": "2022-icecream.png"
-    },
-    {
-        "img": "2022-greg-doodle.png"
-    },
-    {
-        "img": "2022-got-a-minute.png"
-    },
-    {
-        "img": "2022-gato.png"
-    },
-    {
-        "img": "2022-gasper.png"
-    },
-    {
-        "img": "2022-first-stroke.png"
-    },
-    {
-        "img": "2022-finest-hour.png",
-        "title":"Scott Pilgrim's Finest Hour"
-    },
-    {
-        "img": "2022-fighting-buddy.png",
-        "title":"Pearl and Xornoth"
-    },
-    {
-        "img": "2022-eighty-four.png",
-        "title":"84"
-    },
-    {
-        "img": "2022-dumbass.png"
-    },
-    {
-        "img": "2022-dui.png",
-        "title":"The Dui Twins!"
-    },
-    {
-        "img": "2022-doodles.png"
-    },
-    {
-        "img": "2022-dog.png"
-    },
-    {
-        "img": "2022-curry.png"
-    },
-    {
-        "img": "2022-cookie-dough.png"
-    },
-    {
-        "img": "2022-canton.png"
-    },
-    {
-        "img": "2022-bothersome.png"
-    },
-    {
-        "img": "2022-boodle.png",
-        "title":"Watermelon Boodle"
-    },
-    {
-        "img": "2022-beach-2.png",
-        "title":"At the Beach (3/3)"
-    },
-    {
-        "img": "2022-beach-1.png",
-        "title":"At the Beach (2/3)"
-    },
-    {
-        "img": "2022-beach-0.png",
-        "title":"At the Beach (1/3)"
-    },
-    {
-        "img": "2022-bdubs.png"
-    },
-    {
-        "img": "2022-ashley-and-leslie.png"
-    },
-    {
-        "img": "2021-you-are-an-idiot.png"
-    },
-    {
-        "img": "2021-webby.png"
-    },
-    {
-        "img": "2021-too-late.png"
-    },
-    {
-        "img": "2021-thimber.png"
-    },
-    {
-        "img": "2021-thimber-doodle.png"
-    },
-    {
-        "img": "2021-thimber-confused.png",
-        "title":"Thimber Doodle"
-    },
-    {
-        "img": "2021-take-a-chance.png"
-    },
-    {
-        "img": "2021-stroll.png",
-        "title":"Madlad actually went outside!"
-    },
-    {
-        "img": "2021-storefront.png"
-    },
-    {
-        "img": "2021-stalker.png",
-        "desc":"Loser Behavior honestly"
-    },
-    {
-        "img": "2021-stairs.png"
-    },
-    {
-        "img": "2021-some-lady.png"
-    },
-    {
-        "img": "2021-some-duck.png"
-    },
-    {
-        "img": "2021-skeleton.png"
-    },
-    {
-        "img": "2021-reporter.png"
-    },
-    {
-        "img": "2021-psyche-and-lily.png"
-    },
-    {
-        "img": "2021-pickachu.png"
-    },
-    {
-        "img": "2021-pearl.png"
-    },
-    {
-        "img": "2021-park-bench.png"
-    },
-    {
-        "img": "2021-octocat.png"
-    },
-    {
-        "img": "2021-neet-behavior.png",
-        "title":"There's a Life Outside Your Apartment!",
-        "desc":"Yes I know it's hard to conceive!"
-    },
-    {
-        "img": "2021-lookie-here.png"
-    },
-    {
-        "img": "2021-library.png"
-    },
-    {
-        "img": "2021-kitchen.png",
-        "title":"Sorry it's bit of a Mess Here"
-    },
-    {
-        "img": "2021-jedog.png"
-    },
-    {
-        "img": "2021-hp-oc-redraw.png",
-        "title":"Old Harry Potter Oc"
-    },
-    {
-        "img": "2021-headin-home.png"
-    },
-    {
-        "img": "2021-hahah.png"
-    },
-    {
-        "img": "2021-gay.png",
-        "title":"Fanart for Greg"
-    },
-    {
-        "img": "2021-gamin.png"
-    },
-    {
-        "img": "2021-froggo-cape.png"
-    },
-    {
-        "img": "2021-forest.png"
-    },
-    {
-        "img": "2021-floatin.png"
-    },
-    {
-        "img": "2021-duckself.png"
-    },
-    {
-        "img": "2021-dream.png"
-    },
-    {
-        "img": "2021-dog.png"
-    },
-    {
-        "img": "2021-desk.png"
-    },
-    {
-        "img": "2021-dayDreaming.png"
-    },
-    {
-        "img": "2021-cool.png"
-    },
-    {
-        "img": "2021-closet.png",
-        "title":":("
-    },
-    {
-        "img": "2021-chruch.png"
-    },
-    {
-        "img": "2021-charizard-doodle.png"
-    },
-    {
-        "img": "2021-calisto.png"
-    },
-    {
-        "img": "2021-burn.png"
-    },
-    {
-        "img": "2021-bible.png",
-        "title":"have you considered letting god into your life?"
-    },
-    {"img": "2021-animu-beetke.png"},
-    {"img": "2021-beetke.png"},
-    {"img": "2021-bear.png"},
-    {"img":"2020-alcohol-markers.png"},
-    {"img":"2020-arle-with-a-gun.png"},
-    {
-        "img":"2020-bela-talbot.png",
-        "desc":"This was drawn with neon colored pens which my scanner did not take kindly to. This drawing is supposed to be mostly green and yellow xD"
-    },
-    {"img":"2020-birthday.png"},
-    {"img":"2020-breaking-and-entering.png"},
-    {"img":"2020-bugs.png"},
-    {"img":"2020-coffee-shop.png"},
-    {"img":"2020-crime-scenes.png"},
-    {
-        "img":"2020-dawgs.png",
-        "desc":"I can't really remember what's with the sus looking demon lady on the side. I think maybe it was for a drawing request??<br><br> This is a reminder to never give children unregulated internet access."
-    },
-    {"img":"2020-doodles.png"},
-    {"img":"2020-evan.png"},
-    {"img":"2020-fnaf.png"},
-    {"img":"2020-gato.png"},
-    {"img":"2020-how-to-not.png"},
-    {"img":"2020-ink.png"},
-    {"img":"2020-inktober-1.png"},
-    {"img":"2020-inktober-2.png"},
-    {"img":"2020-kara-fox-spread.png"},
-    {"img":"2020-komiks.png"},
-    {"img":"2020-lily-spread.png"},
-    {"img":"2020-oc-redraws.png"},
-    {
-        "img":"2020-outnumbered.png",
-        "desc":"a small comic thing i made of my friend's ocs"
-    },
-    {"img":"2020-persona.png"},
-    {"img":"2020-pink-jacket.png"},
-    {"img":"2020-psych-cast-doodles.png"},
-    {"img":"2020-psyche-lea.png"},
-    {"img":"2020-pumpkins.png"},
-    {"img":"2020-puyo-doodles.png"},
-    {"img":"2020-rain.png"},
-    {"img":"2020-real-deal.png"},
-    {"img":"2020-risukuma.png"},
-    {"img":"2020-simps.png"},
-    {"img":"2020-singing-in-the-rain.png"},
-    {"img":"2020-skye-siblings.png"},
-    {"img":"2020-sorry.png"},
-    {"img":"2020-special-effects.png"},
-    {"img":"2020-stupied.png"},
-    {"img":"2020-sunshine.png"},
-    {"img":"2020-supernatural.png"},
-    {"img":"2020-teddy-bear.png"},
-    {"img":"2020-the-future.png"},
-    {"img":"2020-town-centre.png"},
-    {"img":"2020-train-station.png"},
-    {"img":"2020-trio.png"},
-    {"img":"2020-umbrella.png"},
-    {"img":"2020-wolf.png"},
-    {"img":"2019-anastasia-stauber.png"},
-    {"img":"2019-another-house.png"},
-    {
-        "img":"2019-back-to-school.png",
-        "desc":"cover for an old comic i made. i miss them honestly,,,"
-    },
-    {"img":"2019-bunny.png"},
-    {"img":"2019-calisto-yew.png"},
-    {"img":"2019-calling-card.png"},
-    {
-        "img":"2019-club-room.png",
-        "desc":"vintage psych! art real!!! it's kinda funny to see how much the story has changed"
-    },
-    {"img":"2019-cookin.png"},
-    {"img":"2019-cornered.png"},
-    {"img":"2019-creek.png"},
-    {"img":"2019-dawg.png"},
-    {"img":"2019-demon-lady.png"},
-    {"img":"2019-earth.png"},
-    {"img":"2019-edgeworth.png"},
-    {"img":"2019-emily.png"},
-    {"img":"2019-evidence.png"},
-    {"img":"2019-eyes.png"},
-    {"img":"2019-final-page.png"},
-    {"img":"2019-full-moon.png"},
-    {"img":"2019-funky-hats.png"},
-    {"img":"2019-gato.png"},
-    {"img":"2019-gayming.png"},
-    {"img":"2019-greetings.png"},
-    {"img":"2019-hairstyles.png"},
-    {"img":"2019-hand-challange.png"},
-    {"img":"2019-hello.png"},
-    {"img":"2019-horizon.png"},
-    {"img":"2019-house.png"},
-    {"img":"2019-kara-fox.png"},
-    {"img":"2019-kyle.png"},
-    {"img":"2019-lesbien-wohoo.png"},
-    {"img":"2019-lily-skye.png"},
-    {"img":"2019-loser.png"},
-    {"img":"2019-maria-yolanda.png"},
-    {"img":"2019-mia-fey.png"},
-    {"img":"2019-monica.png"},
-    {"img":"2019-on-the-porch.png"},
-    {"img":"2019-onward.png"},
-    {"img":"2019-paranoia.png"},
-    {"img":"2019-persona.png"},
-    {"img":"2019-pickachu.png"},
-    {"img":"2019-pollution.png"},
-    {"img":"2019-redraws.png"},
-    {"img":"2019-sarah.png"},
-    {"img":"2019-socials.png"},
-    {"img":"2019-some-gal.png"},
-    {"img":"2019-soul.png"},
-    {"img":"2019-spell.png"},
-    {"img":"2019-staring-blankly.png"},
-    {"img":"2019-stauber-twins.png"},
-    {"img":"2019-subjects-redraw.png"},
-    {"img":"2019-subjects.png"},
-    {"img":"2019-wohoo.png"},
-    {
-        "img": "gif/2025-chespin.gif",
-        "desc":"quick gif I made of a friend's pmd oc! :D"
-    },
-    {"img": "gif/2024-yasmayne.gif"},
-    {"img": "gif/2024-psyche-gaming.gif"},
-    {"img": "gif/2021-psyche-walking.gif"},
-    {"img": "gif/2021-duck.gif"},
-    {"img": "gif/2021-fang.gif"},
-    {"img": "gif/2021-greg.gif"},
-    {"img": "artfight/2024-wowza.png"},
-    {"img": "artfight/2024-void.png"},
-    {"img": "artfight/2024-twins.png"},
-    {"img": "artfight/2024-stephanie.png"},
-    {"img": "artfight/2024-solace.gif"},
-    {
-        "img": "artfight/2024-snails.png",
-        "title":"Snails Mass Attack"
-    },
-    {"img": "artfight/2024-sam.png"
-    },
-    {"img": "artfight/2024-june.png"
-    },
-    {"img": "artfight/2024-guacamole_dawg.png",
-        "title":"Guacamole Dawg"
-    },
-    {"img": "artfight/2024-ellie.gif"
-    },
-    {"img": "artfight/2024-djpenguin.png"
-    },
-    {"img": "artfight/2024-caprica.gif"
-    },
-    {"img": "artfight/2024-beanbag.png"
-    },
-    {"img": "artfight/2024-astra.png"
-    },
-    {"img": "artfight/2024-amina.gif"
-    },
-    {"img": "artfight/2023-purin.png"
-    },
-    {"img": "artfight/2023-mya.png"
-    },
-    {"img": "artfight/2023-mass.png",
-        "title":"Mass Feral Attack"
-    },
-    {"img": "artfight/2023-marina.png"
-    },
-    {"img": "artfight/2023-david.png"
-    },
-    {"img": "artfight/2023-cherry.png"
-    },
-    {"img": "artfight/2023-charlotte.png"
-    },
-    {"img": "artfight/2023-cecil.png"
-    },
-    {"img": "artfight/2023-banan.png"
-    },
-    {"img": "artfight/2023-acorn.png"
-    },
-    {"img": "artfight/2023-abigail.png"
-    },
-    {
-        "img": "fanart/2024-webcatz.png",
-        "title":"From Webcatz"
-    },
-    {
-        "img": "fanart/2024-mustyyew.png",
-        "title":"From MustyYew"
-    },
-    {
-        "img": "fanart/2024-mush_the_possum.png",
-        "title":"From Mush the Possum"
-    },
-    {
-        "img": "fanart/2024-luadisgarden.png",
-        "title":"From Laudisgarden"
-    },
-    {
-        "img": "fanart/2023-greg.png",
-        "title":"From Greg"
-    },
-    {
-        "img": "fanart/2023-cookiebee.png",
-        "title":"From Cookiebee"
-    },
-    {
-        "img": "fanart/2021-greg.png",
-        "title":"From Greg"
-    },
-    {
-        "img": "fanart/2021-dwinkster.png",
-        "title":"From Dwinkster"
-    }
+[
+    {"img":"2025-Crush.png"},
+    {"img":"2025-No-Standby.png","desc":"been a while since i've done an elaborate drawing for my ocs,, idk how 2022 me was able to make these every other week lol"},
+    {"img":"2025-Amp-N-Angie.png","desc":"i love insaniquarium so much"},
+    {"img":"2025-New-Kid.png","desc":"Recent finished playing through the stick of truth!"},
+    {"img":"2025-Pins.png","desc":"bought a pin maker n made these to sale :D"},
+    {"img":"2024-Dear-Diary.png"},
+    {"img":"2024-Cartman.png"},
+    {"img":"2024-Da-Fits.png","desc":"drew this some time ago but only scanned it now with one of the broken printers my dad brought home!"},
+    {"img":"2024-Hoodie.png","title":"Mary stole Psych's hoodie!!"},
+    {"img":"2024-Swoosh.png","title":"Swooosh!!!"},
+    {"img":"2024-The-Boys.png","title":"The Boys!"},
+    {"img":"2024-Katies.png","title":"Katie(s)"},
+    {"img":"2024-Art-Is-Dead.png","title":"Art is Dead"},
+    {"img":"2024-Icecream.png","title":"we are not getting icecream!"},
+    {"img":"2024-Postmaster-Pearl.png"},
+    {"img":"2024-Camp.png","title":"Camp"},
+    {"img":"2024-Solution.png","title":"The Solution"},
+    {"img":"2024-Would-It.png","title":"would it make a difference?"},
+    {"img":"2024-Where-Have-You-Been.png","title":"where have you been?"},
+    {"img":"2024-Snails.png","title":"Undeserving"},
+    {"img":"2024-Smoking.png","title":"you know i don't do that anymore"},
+    {"img":"2024-Self-Absorbed.png"},
+    {"img":"2024-Raffina-Sobbin.png"},
+    {"img":"2024-Raffidelle.png","title":"Them!! Yeah!!","desc":"They're so in love and stuff."},
+    {"img":"2024-Puyo-Fever-Doodles.png"},
+    {"img":"2024-Psyche-Lea.png"},
+    {"img":"2024-Overdue.png"},
+    {"img":"2024-Ocean-Prince.png","title":"will you accept his offer?"},
+    {"img":"2024-Minecraft-Skin.png","desc":"Drew my minecraft skin!!"},
+    {"img":"2024-Looming.png"},
+    {"img":"2024-Lidelle.png","title":"Lidelle Color Test"},
+    {"img":"2024-Leslie.png","title":"Leslie Febee!!!"},
+    {"img":"2024-Jam.png"},
+    {"img":"2024-Introspection.png","desc":"I think I spend too much time thinking about the times I was thinking about thinking too much."},
+    {"img":"2024-Heart.png","title":"would you stop doing that?"},
+    {"img":"2024-Evan.png","title":"Evan Odd"},
+    {"img":"2024-Doodles.png","title":"Sketchbook Doodles"},
+    {"img":"2024-Burger.png"},
+    {"img":"2024-Beetke.png","title":"Beetke's Windmill"},
+    {"img":"2024-Badminton.png","title":"Badminton"},
+    {"img":"2023-Worry-Dawg.png","desc":"my fursona in the style of Worry Cat"},
+    {"img":"2023-Worry-Cat.png","title":"Worry Cat doodles"},
+    {"img":"2023-Wedding.png","title":"Stardew Valley Wedding!!!"},
+    {"img":"2023-Waiting.png","title":"Waiting"},
+    {"img":"2023-Vicious-Cycle.png","title":"Vicious Cycle"},
+    {"img":"2023-Two-Braincells.png","title":"The Perfect Disguise"},
+    {"img":"2023-Turbo.png","title":"Turbo hogging up the bed >:("},
+    {"img":"2023-Trying-My-Heart-Out.png"},
+    {"img":"2023-Sweet-Summer-Snail.png","desc":"oh turbo.. when will you learn"},
+    {"img":"2023-Sunset.png"},
+    {"img":"2023-Stardew-Valley-Oc.png"},
+    {"img":"2023-Sob.png"},
+    {"img":"2023-Snail-on-Plant.png","title":"Snail on Plant! (Real)"},
+    {"img":"2023-Sea-Slug.png"},
+    {"img":"2023-Scott-Is-Coming-Home.png","title":"Scott Pilgrim is Coming Home"},
+    {"img":"2023-Scar-and-Etho.png","desc":"This was for a Last Life Animation I never finished"},
+    {"img":"2023-Roar.png","title":"ROOOAAAAaaaR!!"},
+    {"img":"2023-Red.png"},
+    {"img":"2023-Red-Panda.png"},
+    {"img":"2023-Psyche.png"},
+    {"img":"2023-Playground.png","title":"i mean cuz everyone else does it?"},
+    {"img":"2023-Pinwin.png"},
+    {"img":"2023-Pennys-Mom.png","title":"Penny's Mom"},
+    {"img":"2023-Penny.png"},
+    {"img":"2023-Parking-Lot.png"},
+    {"img":"2023-Mountains.png"},
+    {"img":"2023-Loser.png"},
+    {"img":"2023-Lisa-Miller.png"},
+    {"img":"2023-Lies-Well-Said.png"},
+    {"img":"2023-Learning-Is-Fun.png"},
+    {"img":"2023-Kim-Pines-Doodle.png"},
+    {"img":"2023-Kim-and-Knives.png"},
+    {"img":"2023-Kermit.png"},
+    {"img":"2023-Its-Not-That-Deep.png","title":"it's not that deep"},
+    {"img":"2023-Haley.png"},
+    {"img":"2023-Forest.png","title":"i sure hope there aren't any werewolves around"},
+    {"img":"2023-Focus.png","title":"Pay Attention!"},
+    {"img":"2023-Field.png"},
+    {"img":"2023-Fast-Crew.png","title":"FAST Crew!!","desc":"To everyone who keeps singing me this song with the letter S dropped, please know that your days are numbered"},
+    {"img":"2023-Dark-Prince.png","title":"The Dark Prince"},
+    {"img":"2023-Clipper.png"},
+    {"img":"2023-Chronic.png"},
+    {"img":"2023-Caroline.png"},
+    {"img":"2023-Candy-Snail.png"},
+    {"img":"2023-Annette.png"},
+    {"img":"2022-You-Do-This-to-Yourself.png"},
+    {"img":"2022-Woman.png"},
+    {"img":"2022-Was-It-Worth-It.png"},
+    {"img":"2022-Tilly.png"},
+    {"img":"2022-Tilly-Death-Do-Us-Part.png"},
+    {"img":"2022-Thou-Shall-Not-Party.png"},
+    {"img":"2022-The-End.png"},
+    {"img":"2022-Takoyaki.png"},
+    {"img":"2022-Sweet-N-Sour.png"},
+    {"img":"2022-Storm.png"},
+    {"img":"2022-Some-Lady.png"},
+    {"img":"2022-Some-Guy.png"},
+    {"img":"2022-Seconds-1.png","title":"Seconds ins't ours anymore (2/2)"},
+    {"img":"2022-Seconds-0.png","title":"Seconds ins't ours anymore (1/2)"},
+    {"img":"2022-Screaming.png"},
+    {"img":"2022-Scrapbook.png","title":"Scrapbooking"},
+    {"img":"2022-Scott.png","title":"Scott in Highschool"},
+    {"img":"2022-Recess.png","title":"The Recess Before Reporting"},
+    {"img":"2022-Rawr.png"},
+    {"img":"2022-Pigtails.png"},
+    {"img":"2022-Photocopy.png"},
+    {"img":"2022-Persona.png","title":"Meet the Artist"},
+    {"img":"2022-No-Difference.png"},
+    {"img":"2022-Mirror.png"},
+    {"img":"2022-Meeting.png"},
+    {"img":"2022-Lilys.png","title":"Lily(s)"},
+    {"img":"2022-Lil-Guys.png"},
+    {"img":"2022-Library.png","title":"Library Redraw","desc":"<p><a href='./view.html?item=2021-library.png'>the original</a></p>"},
+    {"img":"2022-Knives.png","title":"Knives Chau!"},
+    {"img":"2022-Kim.png","title":"Kim at Beach :]"},
+    {"img":"2022-Keralis.png"},
+    {"img":"2022-Jigglypuff.png"},
+    {"img":"2022-Jedog.png"},
+    {"img":"2022-Icecream.png"},
+    {"img":"2022-Greg-Doodle.png"},
+    {"img":"2022-Got-a-Minute.png"},
+    {"img":"2022-Gato.png"},
+    {"img":"2022-Gasper.png"},
+    {"img":"2022-First-Stroke.png"},
+    {"img":"2022-Finest-Hour.png","title":"Scott Pilgrim's Finest Hour"},
+    {"img":"2022-Fighting-Buddy.png","title":"Pearl and Xornoth"},
+    {"img":"2022-Eighty-Four.png","title":"84"},
+    {"img":"2022-Dumbass.png"},
+    {"img":"2022-Dui.png","title":"The Dui Twins!"},
+    {"img":"2022-Doodles.png"},
+    {"img":"2022-Dog.png"},
+    {"img":"2022-Curry.png"},
+    {"img":"2022-Cookie-Dough.png"},
+    {"img":"2022-Canton.png"},
+    {"img":"2022-Bothersome.png"},
+    {"img":"2022-Boodle.png","title":"Watermelon Boodle"},
+    {"img":"2022-Beach-2.png","title":"At the Beach (3/3)"},
+    {"img":"2022-Beach-1.png","title":"At the Beach (2/3)"},
+    {"img":"2022-Beach-0.png","title":"At the Beach (1/3)"},
+    {"img":"2022-Bdubs.png"},
+    {"img":"2022-Ashley-and-Leslie.png"},
+    {"img":"2021-You-Are-an-Idiot.png"},
+    {"img":"2021-Webby.png"},
+    {"img":"2021-Too-Late.png"},
+    {"img":"2021-Thimber.png"},
+    {"img":"2021-Thimber-Doodle.png"},
+    {"img":"2021-Thimber-Confused.png","title":"Thimber Doodle"},
+    {"img":"2021-Take-a-Chance.png"},
+    {"img":"2021-Stroll.png","title":"Madlad actually went outside!"},
+    {"img":"2021-Storefront.png"},
+    {"img":"2021-Stalker.png","desc":"Loser Behavior honestly"},
+    {"img":"2021-Stairs.png"},
+    {"img":"2021-Some-Lady.png"},
+    {"img":"2021-Some-Duck.png"},
+    {"img":"2021-Skeleton.png"},
+    {"img":"2021-Reporter.png"},
+    {"img":"2021-Psyche-and-Lily.png"},
+    {"img":"2021-Pickachu.png"},
+    {"img":"2021-Pearl.png"},
+    {"img":"2021-Park-Bench.png"},
+    {"img":"2021-Octocat.png"},
+    {"img":"2021-Neet-Behavior.png","title":"There's a Life Outside Your Apartment!","desc":"Yes I know it's hard to conceive!"},
+    {"img":"2021-Lookie-Here.png"},
+    {"img":"2021-Library.png"},
+    {"img":"2021-Kitchen.png","title":"Sorry it's bit of a Mess Here"},
+    {"img":"2021-Jedog.png"},
+    {"img":"2021-Hp-OC-Redraw.png","title":"Old Harry Potter Oc"},
+    {"img":"2021-Headin-Home.png"},
+    {"img":"2021-Hahah.png"},
+    {"img":"2021-Gay.png","title":"Fanart for Greg"},
+    {"img":"2021-Gamin.png"},
+    {"img":"2021-Froggo-Cape.png"},
+    {"img":"2021-Forest.png"},
+    {"img":"2021-Floatin.png"},
+    {"img":"2021-Duckself.png"},
+    {"img":"2021-Dream.png"},
+    {"img":"2021-Dog.png"},
+    {"img":"2021-Desk.png"},
+    {"img":"2021-Cool.png"},
+    {"img":"2021-Closet.png","title":":("},
+    {"img":"2021-Chruch.png"},
+    {"img":"2021-Charizard-Doodle.png"},
+    {"img":"2021-Calisto.png"},
+    {"img":"2021-Burn.png"},
+    {"img":"2021-Bible.png","title":"have you considered letting god into your life?"},
+    {"img":"2021-Animu-Beetke.png"},
+    {"img":"2021-Beetke.png"},
+    {"img":"2021-Bear.png"},
+    {"img":"2020-Alcohol-Markers.png"},
+    {"img":"2020-Arle-With-a-Gun.png"},
+    {"img":"2020-Bela-Talbot.png","desc":"This was drawn with neon colored pens which my scanner did not take kindly to. This drawing is supposed to be mostly green and yellow xD"},
+    {"img":"2020-Birthday.png"},
+    {"img":"2020-Breaking-and-Entering.png"},
+    {"img":"2020-Bugs.png"},
+    {"img":"2020-Coffee-Shop.png"},
+    {"img":"2020-Crime-Scenes.png"},
+    {"img":"2020-Dawgs.png","desc":"I can't really remember what's with the sus looking demon lady on the side. I think maybe it was for a drawing request??<br><br> This is a reminder to never give children unregulated internet access."},
+    {"img":"2020-Doodles.png"},
+    {"img":"2020-Evan.png"},
+    {"img":"2020-Fnaf.png"},
+    {"img":"2020-Gato.png"},
+    {"img":"2020-How-to-Not.png"},
+    {"img":"2020-Ink.png"},
+    {"img":"2020-Inktober-1.png"},
+    {"img":"2020-Inktober-2.png"},
+    {"img":"2020-Kara-Fox-Spread.png"},
+    {"img":"2020-Komiks.png"},
+    {"img":"2020-Lily-Spread.png"},
+    {"img":"2020-OC-Redraws.png"},
+    {"img":"2020-Outnumbered.png","desc":"a small comic thing i made of my friend's ocs"},
+    {"img":"2020-Persona.png"},
+    {"img":"2020-Pink-Jacket.png"},
+    {"img":"2020-Psych-Cast-Doodles.png"},
+    {"img":"2020-Psyche-Lea.png"},
+    {"img":"2020-Pumpkins.png"},
+    {"img":"2020-Puyo-Doodles.png"},
+    {"img":"2020-Rain.png"},
+    {"img":"2020-Real-Deal.png"},
+    {"img":"2020-Risukuma.png"},
+    {"img":"2020-Simps.png"},
+    {"img":"2020-Singing-in-the-Rain.png"},
+    {"img":"2020-Skye-Siblings.png"},
+    {"img":"2020-Sorry.png"},
+    {"img":"2020-Special-Effects.png"},
+    {"img":"2020-Stupied.png"},
+    {"img":"2020-Sunshine.png"},
+    {"img":"2020-Supernatural.png"},
+    {"img":"2020-Teddy-Bear.png"},
+    {"img":"2020-The-Future.png"},
+    {"img":"2020-Town-Centre.png"},
+    {"img":"2020-Train-Station.png"},
+    {"img":"2020-Trio.png"},
+    {"img":"2020-Umbrella.png"},
+    {"img":"2020-Wolf.png"},
+    {"img":"2019-Anastasia-Stauber.png"},
+    {"img":"2019-Another-House.png"},
+    {"img":"2019-Back-to-School.png","desc":"cover for an old comic i made. i miss them honestly,,,"},
+    {"img":"2019-Bunny.png"},
+    {"img":"2019-Calisto-Yew.png"},
+    {"img":"2019-Calling-Card.png"},
+    {"img":"2019-Club-Room.png","desc":"vintage psych! art real!!! it's kinda funny to see how much the story has changed"},
+    {"img":"2019-Cookin.png"},
+    {"img":"2019-Cornered.png"},
+    {"img":"2019-Creek.png"},
+    {"img":"2019-Dawg.png"},
+    {"img":"2019-Demon-Lady.png"},
+    {"img":"2019-Earth.png"},
+    {"img":"2019-Edgeworth.png"},
+    {"img":"2019-Emily.png"},
+    {"img":"2019-Evidence.png"},
+    {"img":"2019-Eyes.png"},
+    {"img":"2019-Final-Page.png"},
+    {"img":"2019-Full-Moon.png"},
+    {"img":"2019-Funky-Hats.png"},
+    {"img":"2019-Gato.png"},
+    {"img":"2019-Gayming.png"},
+    {"img":"2019-Greetings.png"},
+    {"img":"2019-Hairstyles.png"},
+    {"img":"2019-Hand-Challange.png"},
+    {"img":"2019-Hello.png"},
+    {"img":"2019-Horizon.png"},
+    {"img":"2019-House.png"},
+    {"img":"2019-Kara-Fox.png"},
+    {"img":"2019-Kyle.png"},
+    {"img":"2019-Lesbien-Wohoo.png"},
+    {"img":"2019-Lily-Skye.png"},
+    {"img":"2019-Loser.png"},
+    {"img":"2019-Maria-Yolanda.png"},
+    {"img":"2019-Mia-Fey.png"},
+    {"img":"2019-Monica.png"},
+    {"img":"2019-on-the-Porch.png"},
+    {"img":"2019-Onward.png"},
+    {"img":"2019-Paranoia.png"},
+    {"img":"2019-Persona.png"},
+    {"img":"2019-Pickachu.png"},
+    {"img":"2019-Pollution.png"},
+    {"img":"2019-Redraws.png"},
+    {"img":"2019-Sarah.png"},
+    {"img":"2019-Socials.png"},
+    {"img":"2019-Some-Gal.png"},
+    {"img":"2019-Soul.png"},
+    {"img":"2019-Spell.png"},
+    {"img":"2019-Staring-Blankly.png"},
+    {"img":"2019-Stauber-Twins.png"},
+    {"img":"2019-Subjects-Redraw.png"},
+    {"img":"2019-Subjects.png"},
+    {"img":"2019-Wohoo.png"},
+    {"img":"gif/2025-Chespin.gif","desc":"quick gif I made of a friend's pmd oc! :D"},
+    {"img":"gif/2024-Yasmayne.gif"},
+    {"img":"gif/2024-Psyche-Gaming.gif"},
+    {"img":"gif/2021-Psyche-Walking.gif"},
+    {"img":"gif/2021-Duck.gif"},
+    {"img":"gif/2021-Fang.gif"},
+    {"img":"gif/2021-Greg.gif"},
+    {"img":"artfight/2024-Wowza.png"},
+    {"img":"artfight/2024-Void.png"},
+    {"img":"artfight/2024-Twins.png"},
+    {"img":"artfight/2024-Stephanie.png"},
+    {"img":"artfight/2024-Solace.gif"},
+    {"img":"artfight/2024-Snails.png","title":"Snails Mass Attack"},
+    {"img":"artfight/2024-Sam.png"},
+    {"img":"artfight/2024-June.png"},
+    {"img":"artfight/2024-Guacamole_Dawg.png","title":"Guacamole Dawg"},
+    {"img":"artfight/2024-Ellie.gif"},
+    {"img":"artfight/2024-Djpenguin.png"},
+    {"img":"artfight/2024-Caprica.gif"},
+    {"img":"artfight/2024-Beanbag.png"},
+    {"img":"artfight/2024-Astra.png"},
+    {"img":"artfight/2024-Amina.gif"},
+    {"img":"artfight/2023-Purin.png"},
+    {"img":"artfight/2023-Mya.png"},
+    {"img":"artfight/2023-Mass.png","title":"Mass Feral Attack"},
+    {"img":"artfight/2023-Marina.png"},
+    {"img":"artfight/2023-David.png"},
+    {"img":"artfight/2023-Cherry.png"},
+    {"img":"artfight/2023-Charlotte.png"},
+    {"img":"artfight/2023-Cecil.png"},
+    {"img":"artfight/2023-Banan.png"},
+    {"img":"artfight/2023-Acorn.png"},
+    {"img":"artfight/2023-Abigail.png"},
+    {"img":"fanart/2024-Webcatz.png","title":"From Webcatz"},
+    {"img":"fanart/2024-Mustyyew.png","title":"From MustyYew"},
+    {"img":"fanart/2024-Mush_the_Possum.png","title":"From Mush the Possum"},
+    {"img":"fanart/2024-Luadisgarden.png","title":"From Laudisgarden"},
+    {"img":"fanart/2023-Greg.png","title":"From Greg"},
+    {"img":"fanart/2023-Cookiebee.png","title":"From Cookiebee"},
+    {"img":"fanart/2021-Greg.png","title":"From Greg"},
+    {"img":"fanart/2021-Dwinkster.png","title":"From Dwinkster"}
 ]
