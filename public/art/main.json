@@ -1,23 +1,43 @@
 [
     {"img":"2025-Crush.png"},
-    {"img":"2025-No-Standby.png","desc":"been a while since i've done an elaborate drawing for my ocs,, idk how 2022 me was able to make these every other week lol"},
-    {"img":"2025-Amp-N-Angie.png","desc":"i love insaniquarium so much"},
+    {
+        "img":"2025-No-Standby.png",
+        "desc":"been a while since i've done an elaborate drawing for my ocs,, idk how 2022 me was able to make these every other week lol"},
+    {
+        "img":"2025-Amp-N-Angie.png",
+        "desc":"i love insaniquarium so much"
+    },
     {"img":"2025-New-Kid.png","desc":"Recent finished playing through the stick of truth!"},
     {"img":"2025-Pins.png","desc":"bought a pin maker n made these to sale :D"},
     {"img":"2024-Dear-Diary.png"},
     {"img":"2024-Cartman.png"},
     {"img":"2024-Da-Fits.png","desc":"drew this some time ago but only scanned it now with one of the broken printers my dad brought home!"},
-    {"img":"2024-Hoodie.png","title":"Mary stole Psych's hoodie!!"},
-    {"img":"2024-Swoosh.png","title":"Swooosh!!!"},
-    {"img":"2024-The-Boys.png","title":"The Boys!"},
+    {
+        "img":"2024-Hoodie.png",
+        "title":"Mary stole Psych's hoodie!!"
+    },
+    {
+        "img":"2024-Swoosh.png",
+        "title":"Swooosh!!!"
+    },
+    {"img":"2024-The-Boys.png"},
     {"img":"2024-Katies.png","title":"Katie(s)"},
-    {"img":"2024-Art-Is-Dead.png","title":"Art is Dead"},
-    {"img":"2024-Icecream.png","title":"we are not getting icecream!"},
+    {"img":"2024-Art-Is-Dead.png"},
+    {
+        "img":"2024-Icecream.png",
+        "title":"We Are Not Getting Icecream!"
+    },
     {"img":"2024-Postmaster-Pearl.png"},
-    {"img":"2024-Camp.png","title":"Camp"},
-    {"img":"2024-Solution.png","title":"The Solution"},
-    {"img":"2024-Would-It.png","title":"would it make a difference?"},
-    {"img":"2024-Where-Have-You-Been.png","title":"where have you been?"},
+    {"img":"2024-Camp.png"},
+    {"img":"2024-Solution.png"},
+    {
+        "img":"2024-Would-It.png",
+        "title":"Would it Make a Difference?"
+    },
+    {
+        "img":"2024-Where-Have-You-Been.png",
+        "title":"Where Have You Been?"
+    },
     {"img":"2024-Snails.png","title":"Undeserving"},
     {"img":"2024-Smoking.png","title":"you know i don't do that anymore"},
     {"img":"2024-Self-Absorbed.png"},
@@ -26,13 +46,28 @@
     {"img":"2024-Puyo-Fever-Doodles.png"},
     {"img":"2024-Psyche-Lea.png"},
     {"img":"2024-Overdue.png"},
-    {"img":"2024-Ocean-Prince.png","title":"will you accept his offer?"},
-    {"img":"2024-Minecraft-Skin.png","desc":"Drew my minecraft skin!!"},
+    {
+        "img":"2024-Ocean-Prince.png",
+        "title":"Will You Accept His Offer?"
+    },
+    {
+        "img":"2024-Minecraft-Skin.png",
+        "desc":"Drew My Minecraft Skin!!"
+    },
     {"img":"2024-Looming.png"},
-    {"img":"2024-Lidelle.png","title":"Lidelle Color Test"},
-    {"img":"2024-Leslie.png","title":"Leslie Febee!!!"},
+    {
+        "img":"2024-Lidelle.png",
+        "title":"Lidelle Color Test"
+    },
+    {
+        "img":"2024-Leslie.png",
+        "title":"Leslie Febee!!!"
+    },
     {"img":"2024-Jam.png"},
-    {"img":"2024-Introspection.png","desc":"I think I spend too much time thinking about the times I was thinking about thinking too much."},
+    {
+        "img":"2024-Introspection.png",
+        "desc":"I think I spend too much time thinking about the times I was thinking about thinking too much."
+    },
     {"img":"2024-Heart.png","title":"would you stop doing that?"},
     {"img":"2024-Evan.png","title":"Evan Odd"},
     {"img":"2024-Doodles.png","title":"Sketchbook Doodles"},
