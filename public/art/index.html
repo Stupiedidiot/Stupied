@@ -183,6 +183,7 @@
   </ul>
 </div>
 <script src="./main.js"></script>
+
 <script>
 
   fetch("./main.json")
@@ -192,7 +193,7 @@
           recentLink.href="view.html?"+art[0].img
           
           recent=document.createElement("img")
-          recent.src="./img/" + art[0].img.toLowerCase()
+          recent.src="./img/" + art[0].img
           recentLink.append(recent)
 
           document.getElementById("recent").append(recentLink)
