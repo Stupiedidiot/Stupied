@@ -10,6 +10,7 @@
         body{
             overflow-x: hidden;
             background-color:white;
+            max-width:100vw;
         }
 
         #title{grid-area:title;}
@@ -55,6 +56,7 @@
         #recentList{background-color:white;border:3px solid var(--pink);transform:rotate(-1deg);}
         #recentList .comicListItem:hover{background-color:white;}
         #comicList .comicListItem:hover{background-color:var(--pink);color:white;}
+        .comicListThumb{display: none;}
     </style>
 </head>
 <body class="muse">
@@ -88,11 +90,10 @@
         writeVolume("comicList",findVolume(current.folder))
 
         recentList = [
-            //"2024-12-16.html",
             //"2024-02-12.html",
+            "2024-10-07.html",
             "2024-10-28.html",
-            "2024-08-26.html",
-            "2024-02-26.html"
+            "2024-08-26.html"
         ]
 
         result = " "

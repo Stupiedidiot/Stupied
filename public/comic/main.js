@@ -8,11 +8,12 @@ masterlist = [
             //{"file":"2024-02-12.html","alt":"Foreign Film"},
             {"file":"2024-02-26.html","alt":"Blue Bird","img":"blue-bird.png"},
             //{"file":"2024-04-08.html","alt":"I Hate You"},
+            //{"file":"2024-04-22.html","alt":"Obliviousness"},
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
             {"file":"2024-10-28.html","alt":"50th Anniversary"},
-            {"file":"2024-10-07.html","alt":"Seclusion"},
+            {"file":"2024-10-07.html","alt":"Selective Seclusion"},
             //{"file":"2024-12-16.html","alt":"Trying My Heart Out"}
         ],
     },
@@ -289,8 +290,8 @@ return title;
 }
 
 function getThumbnail(e){
-    if ( e.hasOwnProperty("thumb") ){
-        result = relativePath + e.thumb;
+    if ( e.hasOwnProperty("img") ){
+        result = relativePath + "img/" + e.img;
     } else {
         result = "#"
     }

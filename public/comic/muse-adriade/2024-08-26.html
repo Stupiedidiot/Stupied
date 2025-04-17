@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../main.css">
     <title></title>
+<style>
+    #doll{max-width:200px;}
+    @media only screen and (max-width: 450px) {
+        #doll{max-width:150px;margin-right:1rem;}
+        .main-content{text-align:right;}
+    }
+</style>
 </head>
 <body id="comicViewer" class="muse">
 
     <div class="main-content">
         <div>
-            <img src="./img/my-muse.png" class="float-right" style="max-width:200px;">
+            <img src="./img/my-muse.png" id="doll" class="float-right">
             <h1>Laundry Day</h1>
             <p><i>A sad shriveled up plant, that's what you remind me of.</i> Mopsy hated whenever I crash in her apartment to ditch Saturday classes but in my defense I wasn't <i>in</i> her apartment, not for today at least. We were on the rooftop hanging up her clothes. She had so many similar pairs that it was numbing to see the waves of floral skirts distorting to the wind's whims. "Remind me to get you new clothes".</p>
             
