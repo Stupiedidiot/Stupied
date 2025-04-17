@@ -11,6 +11,7 @@ body{
     background-color:var(--wheat);
     overflow-x:hidden;
     user-select: none;
+    max-width:100vw;
 }
 
 #container{
@@ -31,11 +32,15 @@ body{
     max-width:250px;
     margin: 0 0 0 auto;
 
-    img{
+    a{
         position: absolute;
-        width: 130%;
         top:0;left:0;
         transform:translateX(-3rem) translateY(-4.5rem) rotate(3deg);
+    }
+
+    img{width: 130%;}
+    a:hover img{
+        transform: scale(105%);
     }
 }
 
@@ -69,48 +74,74 @@ small{
     a:hover{color:black;}
 }
 
+
+#links img{
+    filter: invert(100%);
+    width:30px;
+}
+
 </style>
 
 </head>
 <body>
     <div id="container">
-        <small>
-            <a href="./art/commission.html">Commissions</a> •
-            <a href="./links.html">Links »</a>
-        </small>
-        <div id="about" style="display: flex;gap: 10px;">
-            <div>
-                <h2>Henlo I'm Stupied!!?</h2>
-                <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+        <div>
+            <small>
+                <a href="https://ko-fi.com/stupied">Support</a> •
+                <a href="./links.html">Links »</a>
+            </small>
+            <div id="about" style="display: flex;gap: 10px;">
+                <div>
+                    <h2>Henlo I'm Stupied!!?</h2>
+                    <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+                </div>
             </div>
-        </div>
-        <div id="doll">
-            <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/dawg-napping.png"></a>
-        </div>
-
-        <div id="list">
-            <div>
-                <h1>About Me!</h1>
-                <ul>
-                    <li>Kyman Truther</li>
-                    <li>Scrabble Tryhard</li>
-                    <li>7-2 Well Supremacy</li>
-                    <li>Late 2000s games >></li>
-                    <li>Owns a million OCs</li>
-                </ul>
+            <div id="doll">
+                <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/dawg-napping.png"></a>
             </div>
-        </div>
+            <div id="list">
+                <div>
+                    <h1>About Me!</h1>
+                    <ul>
+                        <li>Kyman Truther</li>
+                        <li>7-2 Well Enjoyer</li>
+                        <li>Scrabble Tryhard</li>
+                        <li>Late 2000s games >></li>
+                        <li>Owns a million OCs</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div style="margin-top:1rem;">
-            <h3>Why this Website?</h3>
-            <p>I don't like having my interests be dictated by algorithms. I want to be more deliberate about how I spend my time on the internet and what to leave behind.</p>
-        </div>
+            <div style="margin:1rem auto;">
+                <h3>Why this Website?</h3>
+                <p>I don't like having my interests be dictated by algorithms. I want to be more deliberate about how I spend my time on the internet and what to leave behind.</p>
+            </div>
 
-        <div style="font-family: grandstander; color: var(--blue);margin: 2rem 0;">
-            <a id="headBack" href="./index.html">Head Back »</a>
+            <div id="links">
+                <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account">
+                    <img src="./meta/img/icon-instagram.png" alt="">
+                </a>
+                <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here">
+                    <img src="./meta/img/icon-webtoon.png" alt="">
+                </a>
+                <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos">
+                    <img src="./meta/img/icon-youtube.png" alt="">
+                </a>
+                <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated">
+                    <img src="./meta/img/icon-artfight.png" alt="">
+                </a>
+                <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D">
+                    <img src="./meta/img/icon-tetrio.png" alt="">
+                </a>
+            </div>
+
+            <div style="font-family: grandstander; color: var(--blue);margin: 1rem 0;">
+                <a id="headBack" href="./index.html">Head Back »</a>
+            </div>
         </div>
 
         <!--
+
         <div id="extra">
             <div id="stamp">
                 <img src="./meta/img/stamp-lesbian.png">
