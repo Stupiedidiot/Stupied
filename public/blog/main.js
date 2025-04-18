@@ -21,7 +21,7 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 const posts=[
 	// SPOILERS - Stuff I might write about???  
 	// {"file":"2025-00-00-Coloring-Tutorial.html"},
-	// {"file":"2025-00-00-Ctrl-Alt-Delete,html"},
+	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
 	{
 		"file":"2025-02-28-Anbernic-RG35XXSP.html",
 		"img":"img/anbernic-folders.gif"
