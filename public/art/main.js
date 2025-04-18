@@ -77,6 +77,7 @@ fetch("./main.json")
     linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
     linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
     linkHTML.setAttribute("onclick",'openImg('+i+')')
+    linkHTML.href="#"
 
     trueIndex=getIndex(art,images[i].src.split("img/")[1])
     images[i].style.setProperty("--trueIndex",trueIndex)
@@ -141,6 +142,23 @@ function openImg(i){
 function closeLightBox(){
   document.getElementById("lightbox").style.height=0;
   document.querySelector("body").classList.remove("lightbox-activated");
+}
+
+// navigation
+document.onkeydown = function(event) {
+  if( document.activeElement === document.querySelector("body") ){
+    switch (event.keyCode) {
+        case 37:
+            document.getElementById("lightbox-prev").click()
+        break;
+        case 39:
+            document.getElementById("lightbox-next").click()
+        break;
+        case 27:
+          document.querySelector("#lightbox-header button").click()
+        break;
+        }
+  }
 }
 
 // tags
