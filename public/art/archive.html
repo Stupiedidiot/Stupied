@@ -42,15 +42,17 @@
     color: var(--brown);
   }
 
-  @media only screen and (max-width: 650px) {
-    #hell-yeah a{
-      min-width:120px;
-    }
-  }
 
   #archive-buttons{
     padding:1rem;
     text-align: right;
+  }
+
+
+  @media only screen and (max-width: 650px) {
+    #hell-yeah a{
+      min-width:120px;
+    }
   }
 </style>
 </head>
@@ -71,8 +73,8 @@
 
 <script src="./main.js"></script>
 <script>
-  counter=32
-  loadItems(0,counter)
+counter=64
+loadItems(0,counter)
 
   function addItems(add){
     prevCounter=counter
@@ -84,13 +86,13 @@
     loadItems(prevCounter,counter)
   }
 
-
     function loadItems(start,counter){
       fetch("./main.json")
         .then((response) => response.json())
         .then((art) => {
-            totalItem=art.length  
+            totalItem=art.length
             document.getElementById("meow").innerHTML="(" + counter + "/" + totalItem + ")"
+            if(counter===undefined){counter=totalItem}
             result=""
 
             for(i=start; i<counter;i++){
@@ -114,18 +116,33 @@
                     title = title.replaceAll("-"," ")
                   }
                   
-                  
+                  // add tags and sorting
                   result+=`
                   <a href="./view.html?item=` + art[i].img + `" class="` + itemYear + itemFolder + `">
                   <div>
-                      <img src="./img/` + art[i].img + `">
+                      <img src="#" data-src="./img/` + art[i].img + `">
                       <span>` + title + `</span>
                   </div>
                   </a>`
-                }
-                document.getElementById("hell-yeah").innerHTML+=result
+              }
+
+              document.getElementById("hell-yeah").innerHTML+=result
+
+              loadOnScroll()
+              window.onscroll = loadOnScroll
         })
     }
+    
+function loadOnScroll(){
+  unloadedImgs = document.querySelectorAll("#hell-yeah img[src='#");
+  woof=window.innerHeight 
+  for (i=0; i < unloadedImgs.length ;i++) {
+    if (unloadedImgs[i].offsetTop - woof < window.pageYOffset){
+        unloadedImgs[i].src=unloadedImgs[i].dataset.src
+        console.log("woo")
+    };
+  }
+};
 
 </script>
 </body>
