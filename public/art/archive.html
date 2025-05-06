@@ -128,18 +128,18 @@ loadItems(0,counter)
 
               document.getElementById("hell-yeah").innerHTML+=result
 
+              windowHeight = window.innerHeight
+              unloadedImgs = document.querySelectorAll("#hell-yeah img[src='#']");
+
               loadOnScroll()
               window.onscroll = loadOnScroll
         })
     }
     
-function loadOnScroll(){
-  unloadedImgs = document.querySelectorAll("#hell-yeah img[src='#");
-  woof=window.innerHeight 
+function loadOnScroll(){ 
   for (i=0; i < unloadedImgs.length ;i++) {
-    if (unloadedImgs[i].offsetTop - woof < window.pageYOffset){
+    if (unloadedImgs[i].offsetTop - windowHeight < window.pageYOffset){
         unloadedImgs[i].src=unloadedImgs[i].dataset.src
-        console.log("woo")
     };
   }
 };
