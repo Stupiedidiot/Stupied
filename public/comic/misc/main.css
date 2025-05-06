@@ -47,6 +47,9 @@ ul li:nth-child(2n){list-style-type:"✮ ";}
     color:white;
 }
 
+.hidden{margin-top:1rem!important;}
+.hidden:not(:target){display: none;}
+
 .main#container{
     max-width:700px;
     margin: 3rem auto;
