@@ -3,162 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the dawg behind the art :3">
     <link rel="stylesheet" href="./meta/main.css">
-    <title>Henlo I'm Stupied!!</title>
+    <title>Henlo I'm Stupied</title>
 
 <style>
+:root{
+    --dark-brown:#1d1515;
+    --brown:#615651;
+    --blue:#5177a9;
+    --yellow: #deab31;
+    --wheat:#e9eae2;
+}
+
 body{
-    background-color:var(--wheat);
-    overflow-x:hidden;
     user-select: none;
-    max-width:100vw;
+    min-width:280px;
+    background-color: var(--wheat);
 }
 
-#container{
+#first{
+    width:90%;
+    max-width: 600px;
     margin:1rem auto;
-    max-width:500px;
-    width:95%;
-}
-
-#about{
-    background-color: var(--blue);
-    border-radius: 10px;
-    padding: 2rem 1rem 4rem 1rem;
-    position: relative;
 }
 
 #doll{
-    position: relative;
-    max-width:250px;
-    margin: 0 0 0 auto;
-
-    a{
-        position: absolute;
-        top:0;left:0;
-        transform:translateX(-3rem) translateY(-4.5rem) rotate(3deg);
-    }
-
-    img{width: 130%;}
-    a:hover img{
-        transform: scale(105%);
-    }
+    float: left;
+    width: 50%;
+    margin-bottom: 2rem;
 }
 
-#list{
-    padding:1.5rem;
+#textbox{
+    width: 50%;
+    margin-top:3rem;
+    margin-bottom:1.5rem;
+    transform: scale(115%);
+}
+
+#intro{
+    text-align: right;
+    margin-bottom: 2rem;
+    hyphens: auto;
+}
+
+#list {
+    margin-bottom:2rem;
+    margin-left: calc(50% + 25%/3);
+    white-space: nowrap;
     h1{color: var(--blue);}
-    ul{padding-left:1rem;}
 }
 
-#extra{
-    display: flex;
+#website{
+    margin-bottom: 0.8rem;
 }
-
-@media only screen and (max-width: 490px) {
-    #list{
-        text-align:center;
-    }
-
-    #list>div{
-        display: inline-block;
-        margin-top: 170px;
-        text-align: left;
-    }
-}
-
-small{
-    color: var(--blue);
-    display: block;
-    margin-right:1rem; 
-    margin-bottom:2px;
-    a:hover{color:black;}
-}
-
 
 #links img{
     filter: invert(100%);
     width:30px;
 }
 
-</style>
+#second {
+    background-color: blue;
+    background-image: url(./art/img/bg.png);
+}
 
+#first-divider, #second-divider{
+    margin:0;
+    border:0;
+}
+
+#headBack{
+    font-family: grandstander;
+    margin: 1rem auto;
+}
+
+@media only screen and (max-width: 570px){
+    #second-divider{clear: both;}
+    #website{margin-top: 2rem;}
+}
+
+@media only screen and (max-width: 450px) {
+    #first-divider{clear: both;}
+    #list{
+        margin-left: 0;
+        margin-bottom:0;
+    }
+    #headBack{margin-bottom:3rem;}
+}
+
+.btn-container{
+    right:0.5rem;
+    bottom:0.5rem;
+    position: fixed;
+}
+</style>
 </head>
 <body>
-    <div id="container">
-        <div>
-            <small>
-                <a href="https://ko-fi.com/stupied">Support</a> •
-                <a href="./links.html">Links »</a>
-            </small>
-            <div id="about" style="display: flex;gap: 10px;">
-                <div>
-                    <h2>Henlo I'm Stupied!!?</h2>
-                    <p>Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
-                </div>
-            </div>
-            <div id="doll">
-                <a href="https://neocities.org/site/stupied" target="_blank" title="NEOCITIES Profile &#10;- Hell Yeah!!!"><img src="./meta/dawg-napping.png"></a>
-            </div>
-            <div id="list">
-                <div>
-                    <h1>About Me!</h1>
-                    <ul>
-                        <li>Kyman Truther</li>
-                        <li>7-2 Well Enjoyer</li>
-                        <li>Scrabble Tryhard</li>
-                        <li>Late 2000s games >></li>
-                        <li>Owns a million OCs</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="margin:1rem auto;">
-                <h3>Why this Website?</h3>
-                <p>I don't like having my interests be dictated by algorithms. I want to be more deliberate about how I spend my time on the internet and what to leave behind.</p>
-            </div>
-
-            <div id="links">
-                <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account">
-                    <img src="./meta/img/icon-instagram.png" alt="">
-                </a>
-                <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here">
-                    <img src="./meta/img/icon-webtoon.png" alt="">
-                </a>
-                <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos">
-                    <img src="./meta/img/icon-youtube.png" alt="">
-                </a>
-                <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated">
-                    <img src="./meta/img/icon-artfight.png" alt="">
-                </a>
-                <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D">
-                    <img src="./meta/img/icon-tetrio.png" alt="">
-                </a>
-            </div>
-
-            <div style="font-family: grandstander; color: var(--blue);margin: 1rem 0;">
-                <a id="headBack" href="./index.html">Head Back »</a>
-            </div>
-        </div>
-
-        <!--
-
-        <div id="extra">
-            <div id="stamp">
-                <img src="./meta/img/stamp-lesbian.png">
-                <img src="./meta/img/stamp-south-park.png">
-            </div>
-        </div>
-        -->
-
+    <div id="top-nav">
+        <a href="#"></a>
     </div>
 
-<script src="./meta/main.js"></script>
+    <div id="first">
+        <img id="doll" src="./meta/doll.png" alt="">
+
+        <img id="textbox" src="./meta/henlo.png" alt="">
+        <p id="intro">Just some nerdy wannabe artist constantly pacing around her room, wondering where it all went wrong.</p>
+        
+        <hr id="first-divider">
+
+        <div id="list">
+            <h1>About Me!</h1>
+            <ul>
+                <li>Kyman Truther</li>
+                <li>7-2 Well Enjoyer</li>
+                <li>Scrabble Tryhard</li>
+                <li>Late 2000s games >></li>
+                <li>Owns a million OCs</li>
+            </ul>
+        </div>
+
+        <hr id="second-divider">
+
+        <div id="website">
+            <h3>Why this Website?</h3>
+            <p>I don't like having my interests be dictated by algorithms. I want to be more deliberate about how I spend my time on the internet and what to leave behind.</p>
+        </div>
+
+        <div id="links">
+            <a href="https://www.instagram.com/stupied.idiot/" target="_blank" title="INSTAGRAM &#10;- my 'main' social account">
+                <img src="./meta/img/icon-instagram.png" alt="">
+            </a>
+            <a href="https://www.webtoons.com/en/creator/stupied" target="_blank" title="WEBTOON &#10;- i repost some comics here">
+                <img src="./meta/img/icon-webtoon.png" alt="">
+            </a>
+            <a href="https://www.youtube.com/@stupied_idiot" target="_blank" title="YOUTUBE &#10;- sometimes i make videos">
+                <img src="./meta/img/icon-youtube.png" alt="">
+            </a>
+            <a href="https://artfight.net/~Stupied_idiot" target="_blank" title="ARTFIGHT &#10;- attacks are always appreciated">
+                <img src="./meta/img/icon-artfight.png" alt="">
+            </a>
+            <a href="https://ch.tetr.io/u/stupied" target="_blank" title="TETR.IO &#10;- feel free to 1v1 me :D">
+                <img src="./meta/img/icon-tetrio.png" alt="">
+            </a>
+        </div>
+
+        <div id="headBack">
+            <a href="./index.html">Head Back »</a>
+        </div>
+
+        <hr class="clear">
+    </div>
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000000', 'I3I11C0X4L');kofiwidget2.draw();</script>
 <script>
     previous=document.URL
 
     if(previous.includes("#from-")){
         previous=previous.split('#from-')[1]
-        document.getElementById("headBack").href="./"+previous+"/index.html"
+        document.querySelector("#headBack a").href="./"+previous+"/index.html"
     }
 </script>
 </body>
