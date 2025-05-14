@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="max-width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website for me to scream into the void to">
+    <meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
+    <link rel="stylesheet" href="./meta/main.css">
+    <title>stupied stuff!</title>
+
+<style>
+
+    :root{
+        --yellow: #ffcb67;
+        --orange: #ec7239;
+        --gray: #6c6371;
+        --blue: #142943;
+        --dark-blue:#0d0d1f;
+        --transition-time: 0.3s;
+    }
+
+    body{
+        max-width: 100vw;
+        overflow-x: hidden;
+        background-color: var(--blue);
+        background-image: url(./meta/scribble.png);
+    }
+
+    #container{
+        margin-top: 2rem;
+    }
+
+    #splash header{grid-area:header;}
+    #splash #right{grid-area:right;}
+    #splash #left{grid-area:left;}
+
+    #splash{
+        display: grid;
+        grid-template-areas:
+        'right header'
+        'right left';
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto 1fr;
+
+        user-select: none;
+        margin:auto;
+        background-color: var(--orange);
+        width:95%;
+        max-width: 660px;
+        aspect-ratio: 4/3;
+        background: url(./meta/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
+
+        background-size: 150%;
+        background-position: 100% 20%;
+        position: relative;
+    }
+
+    #splash > * {position: relative;}
+
+    #splash > * > a{
+        z-index: 1;
+        position: absolute;
+
+    }
+
+    #splash img{
+        width:100%;
+    }
+
+    #clouds {
+        position: absolute;
+        bottom:0;
+    }
+
+    #logo {
+        position: relative;
+        transform: scale(120%) translateY(-20%) translateX(-5%);
+        z-index: 1;
+    }
+
+    #about {
+        bottom:-10%;
+        left:-10%;
+        width:100%;
+        transition: var(--transition-time);
+    }
+
+    #about:hover{
+        transform: translateY(-5%) rotate(-3deg);
+    }
+
+    #blog{
+        width: 60%;
+        bottom: -15%;
+        left: 75%;
+        transition: var(--transition-time);
+    }
+
+    #blog:hover{
+        transform: rotate(-5deg) translateY(-15%);
+    }
+
+    #left > a {
+        background-color: var(--blue);
+        padding: 2% 5%;
+        transition: var(--transition-time);
+        box-shadow: 0.5rem 0.3rem var(--dark-blue);
+        border: 0.3rem solid var(--dark-blue);
+        border-right: 0;
+    }
+
+    #left > a > img {
+        width:auto;
+        height: 100%;
+    }
+
+    #library {
+        height:13%;
+        width:90%;
+        top: -5%;
+        right:0;
+    }
+
+    #library:hover{width:100%;}
+
+    #gallery {
+        height: 13%;
+        width:70%;
+        top: calc(20% + 0.6rem);
+        right:0;
+    }
+
+    #gallery:hover{width:80%;}
+
+    #rating {
+        z-index: 1;
+        position: absolute;
+        width: 15%;
+        bottom: 18%;
+        right: 5%;
+    }
+    .tape {
+        position: relative;
+        z-index: 1;
+        --y-offset: -18%;
+        --rotate: -0.08rad;
+        --skew: -0.3rad;
+        transform:translateY(var(--y-offset)) rotate(var(--rotate)) skew(var(--skew)) scale(120%);
+        background-color: var(--dark-blue);
+        background-image: url(./meta/scribble.png);
+        padding: 1rem 0;
+    }
+
+    .tape > div {
+        background-image: url(./meta/tape.png);
+        background-size: auto 200%;
+        height:10vw;
+        max-height:4rem;
+        animation:scroll 60s infinite linear;
+    }
+
+    @keyframes scroll {
+        0%{ background-position: 0; }
+        100%{ background-position: 100%; }
+    }
+
+    main {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        max-width: 800px;
+        margin:2rem auto;
+        color: white;
+        transform: translateY(-1.5rem);
+    }
+
+    aside {
+        flex: 1;
+    }
+
+    #desc {
+        flex: 2;
+        padding: 1rem;
+    }
+
+    .highlight{
+        background-color:var(--orange);padding:0.5rem;margin-bottom:0.5rem;
+    }
+
+    .meow span{display: inline-block;}
+    .meow span:nth-of-type(n){animation:jump 1s infinite; }
+    .meow span:nth-of-type(2n){animation:fall 1s infinite;}
+
+    @keyframes jump {
+        50% {transform:translateY(5%);}
+        100% {transform:translateY(-5%);}
+    }
+
+    @keyframes fall {
+        50% {transform:translateY(-5%);}
+        100% {transform:translateY(5%);}
+    }
+
+    #warning { color: var(--yellow); }
+
+    @media only screen and (max-width: 500px) {
+        main{display: block;}
+    }
+
+    #hidden {display: none;}
+
+    #other {padding-left:0.5rem;}
+    #other li{display: inline-block;}
+    #other a:not(:last-child) li:after {
+        content: "|";
+        margin: auto 0.5rem;
+        color: white;
+    }
+    #other a:hover {color: var(--yellow);} 
+
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="splash">
+            <header>
+                <div id="logo">
+                    <img src="./meta/logo.png" alt="" draggable="false">
+                </div>
+            </header>
+
+            <div id="right">
+                <a id="blog" href="#">
+                    <img src="./meta/blog.png" alt="" draggable="false">
+                </a>
+                <a  id="about" href="#">
+                    <img src="./meta/about.png" alt="" draggable="false">
+                </a>
+            </div>
+
+            <div id="left">
+                <a id="library" href="#">
+                    <img src="./meta/txt-library.png" alt="" draggable="false">
+                </a>
+
+                <a id="gallery" href="#">
+                    <img src="./meta/txt-gallery.png" alt="" draggable="false">
+                </a>
+
+                <div id="rating">
+                    <a href="#warning"><img src="./meta/rating.png" alt="" draggable="false"></a>
+                </div>
+            </div>
+
+            <img id="clouds" src="./meta/clouds.png" alt="" draggable="false">
+        </div>
+
+        <div id="divider">
+            <div class="tape"><div></div></div>
+        </div>
+
+        <main>
+            <aside>
+            </aside>
+            <div id="desc">
+                <h1 class="highlight meow">
+                    <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span><span>!</span>
+                </h1>
+                <p>This website is where I put my comics and random thoughts! I love it to absolute bits and will forever be in a work in progress :]</p>
+
+                <h3 id="warning">Trigger Warning!</h3>
+                <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+
+                <a href="#" style="color: var(--gray);">View More »</a>
+
+                <!--
+                <h3>Other Stuff</h3>
+                <ul id="other">
+                    <a href="https://literalwiki.neocities.org/">
+                        <li>LiteralWiki</li>
+                    </a>
+                    <a href="./tabvoid/index.html">
+                        <li>Tabvoid</li>
+                    </a>
+                    <a href="./chez/raffidelle/index.html">
+                        <li>Raffidelle</li>
+                    </a>
+                    <a href="./chez/kyman/index.html">
+                        <li>Kyman</li>
+                    </a>
+                    <a href="./chat.html">
+                        <li>Chatbox</li>
+                    </a>
+                    <a href="./meta/status.html">
+                        <li>Status</li>
+                    </a>
+                </ul>
+                -->
+            </div>
+        </main>
+
+        <div id="more">
+            hidden content
+        </div>
+    </div>
+    
+</body>
+</html>
