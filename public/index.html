@@ -1,377 +1,375 @@
+<!--------------------------
+─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───
+
+Kindly excuse the spaghetti code!
+Still in the process of ironing out this new index
+
+If you're curious how I achieved certain things,
+you may redirect your questions here:
+https://stupied.neocities.org/chat
+
+I really don't mind people stealing my code
+Just know that you are doing yourself a disservice
+not learning to do it yourself
+
+─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───
+--------------------------->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website for me to scream into the void to">
-  <meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
-  <link rel="stylesheet" href="./meta/main.css">
-  <title>stupied stuff!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="max-width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website for me to scream into the void to">
+    <meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
+    <link rel="stylesheet" href="./meta/main.css">
+    <title>stupied stuff!</title>
 <style>
+    :root{
+        --yellow: #ffcb67;
+        --orange: #ec7239;
+        --gray: #6c6371;
+        --blue: #142943;
+        --dark-blue:#0d0d1f;
+        --darkest-blue:#0c0716;
+        --transition-time: 0.25s;
+        --drop-shadow-width:0.5rem 0.5rem;
+    }
 
-body{user-select: none;}
+    body{
+        max-width: 100vw;
+        overflow-x: hidden;
+        background-color: var(--blue);
+        background-image: url(./meta/scribble.png);
+    }
 
-body::before{
-    max-height: 600px;
-}
+    #container{margin-top: 2rem;}
 
-#about-mobile{
-    min-height:120px;
-    background-color:var(--yellow);
-    position: relative;
-    overflow:hidden;
-}
+    #splash header{grid-area:header;}
+    #splash #right{grid-area:right;}
+    #splash #left{grid-area:left;}
 
-#about-mobile{border:4px solid black; margin-bottom:10px;}
+    #splash{
+        display: grid;
+        grid-template-areas:
+        'right header'
+        'right left';
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto 1fr;
 
-#about-mobile img{
-    position:absolute;
-    top:-10%;
-    right:0;
-    width:50%;
-    transform:translateX(25%) translateY(-15%);
-    filter:saturate(0%);
-}
+        user-select: none;
+        margin:auto;
+        background-color: var(--orange);
+        width:95%;
+        max-width: 680px;
+        aspect-ratio: 4/3;
+        background: url(./meta/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
 
-#about-mobile h1 {
-    position: absolute;
-    top:50%;
-    transform:translateY(-50%);
-}
-
-#blog{
-  background:var(--blue);
-    position: relative;
-    overflow:hidden;
-}
-
-#blog #blogDesign{
-    min-height:100px;
-    height:100%;
-}
-
-#blog #blogDesign img{
-    margin-top:10px;
-    width:100%;
-    height:auto;
-    z-index:1;
-}
-
-#blog h1{
-    position:absolute;
-    bottom:10px;
-    right:10px;
-    color:white;
-    z-index:2;
-}
-
-#micro{
-    background-color:white;
-    border-radius:0 0 50% 50%;
-    border-top:0;
-    transform:scaleX(200%);
-    border:3px solid black;
-    border-top:0;
-}
-
-#statuscafe {
-    padding:2rem 1rem;
-    transform:scaleX(50%);
-}
-#statuscafe-username{
-    font-family:grandstander;
-    font-weight: bold;
-}
-#statuscafe-username a{
-    display:none;
-}
-
-#comic{
-    overflow:hidden;
-    padding:1rem;
-    min-height:190px;
-    background-color:white;
-    position: relative;
-}
-
-#comic div {
-  --color-1:#efe2b3;
-  --color-2:#f0da8e;
-  height:100%;
-  background-color: var(--color-1);
-  opacity: 1;
-  background-image:  linear-gradient(135deg, var(--color-2) 25%, transparent 25%), linear-gradient(225deg, var(--color-2) 25%, transparent 25%), linear-gradient(45deg, var(--color-2) 25%, transparent 25%), linear-gradient(315deg, var(--color-2) 25%, var(--color-1) 25%);
-  background-position:  30px 0, 30px 0, 0 0, 0 0;
-  background-size: 30px 30px;
-  background-repeat: repeat;
-}
-
-#comic h1{
-    color:white;
-    position: absolute;
-    font-size:5rem;
-    bottom:10%;
-    left:0;
-    transform: scaleY(300%) scaleX(150%) translateX(25%);
-}
-
-#comic img {
-    position: absolute;
-    top:-15%;
-    right:-10%;
-    width:60%;
-}
-
-#comic:hover div{
-    background-color:white;
-    background-image: none;
-}
-
-#comic:hover h1{
-    color:black;
-}
-
-#gallery{
-    overflow:hidden;
-    position: relative;
-}
-
-#gallery div{
-    background-color:white;
-    min-height:190px;
-
-    background-image:url(./art/img/2024-Introspection.png);
-    background-position:right center;
-    background-size:140%;
-    background-repeat: no-repeat;
-}
-
-#gallery h1 {
-    z-index:1;
-    position:absolute;
-    bottom:10%;
-    right:5%;
-    color:white;
-    font-size:3rem;
-    letter-spacing:5px;
-}
-
-#gallery:hover div{
-    filter:saturate(20%);
-    transform:scale(110%);
-}
-
-#gallery:hover h1{
-    filter:none;
-}
-
-#chez {
-    margin: 2rem 3rem;
-    color:var(--wheat);
-}
-
-#chez a:hover{
-    color:var(--yellow);
-}
-
-#hell-yeah > div{
-    border:4px black solid;
-}
-
-#blog{grid-area:blog;}
-#comic{grid-area:comics;}
-#gallery{grid-area:gallery;}
-
-#hell-yeah {
-    display: grid;
-    grid-template-areas:
-    'comics blog'
-    'gallery blog';
-    gap:5px;
-    grid-template-columns: 2fr 1fr;
-    user-select:none;
-}
-
-@media only screen and (min-width: 481px) {
-    #about-mobile{display:none;}
-    .doll{
-        width:200px;
+        background-size: 150%;
+        background-position: 100% 20%;
         position: relative;
     }
 
-    .doll img{
+    #splash > * {position: relative;}
+    #splash > * > a{
+        z-index: 1;
+        position: absolute;
+    }
+
+    #splash img{width:100%;}
+
+    #clouds {position: absolute;bottom:0;}
+
+    #logo {
+        position: relative;
+        transform: scale(120%) translateY(-20%) translateX(-5%);
+        z-index: 1;
+    }
+
+    #right{z-index: 2;}
+
+    #about {
+        bottom:-10%;
+        left:-10%;
         width:100%;
-        position:absolute;
-        top:50%;
-        transform: translateX(-10%) translateY(-50%) scaleX(-1);
-        display:block;
+        transition: var(--transition-time);
     }
-}
-
-.doll img:hover{
-    transform:translateX(-10%)  translateY(-50%) scaleX(-1) scale(110%) rotate(5deg);
-}
-
-#desc{
-    width:80%;
-    max-width:650px;
-    margin-right:1rem;
-}
-
-#about{
-    display:flex;margin-bottom:10px;padding:1rem 0 1rem 1rem;border:4px solid black;
-    --color-1:rgba(81, 119, 169, 0.3);
-    --color-2:white;
-    background-color: var(--color-2);
-    background-size: 20px 20px;
-    background-image:  repeating-linear-gradient(0deg, var(--color-1), var(--color-1) 1px, var(--color-2) 1px, var(--color-2));
-}
-
-@media only screen and (max-width: 480px) {
-    #about{display:block;padding:1rem;}
-    #desc{width:auto;}
-    .doll{display:none;}
-
-    #hell-yeah{
-        display:block;
-        > div {margin-bottom:10px;}
+    #about:hover{
+        transform: translateY(-5%) rotate(-3deg);
+        filter: drop-shadow(var(--drop-shadow-width) 0 var(--darkest-blue));
     }
 
-    #comic{display:grid;
-        h1{
-        transform: scaleY(200%) scaleX(100%) translateX(10%);
+    #blog{
+        width: 60%;
+        bottom: -15%;
+        left: 75%;
+        transition: var(--transition-time);
+    }
+    #blog:hover{
+        transform: rotate(-5deg) translateY(-15%);
+        filter: drop-shadow(var(--drop-shadow-width) 0 var(--darkest-blue));
+    }
+
+    #left > a {
+        background-color: var(--blue);
+        padding: 2% 5%;
+        transition: var(--transition-time);
+        box-shadow: var(--drop-shadow-width) var(--dark-blue);
+        border: 0.3rem solid var(--darkest-blue);
+        border-right: 0;
+    }
+
+    #left > a > img {
+        width:auto;
+        height: 100%;
+    }
+
+    #library {
+        height:13%;
+        width:90%;
+        top: -5%;
+        right:0;
+    }
+    #library:hover{width:100%;}
+
+    #gallery {
+        height: 13%;
+        width:70%;
+        top: calc(20% + 0.6rem);
+        right:0;
+    }
+    #gallery:hover{width:80%;}
+
+    #rating {
+        z-index: 1;
+        position: absolute;
+        width: 15%;
+        bottom: 18%;
+        right: 5%;
+        transition: var(--transition-time);
+    }
+    #rating:hover{transform: scale(120%);}
+
+    .tape {
+        position: relative;
+        z-index: 2;
+        --y-offset: -18%;
+        --rotate: -0.08rad;
+        --skew: -0.3rad;
+        transform:translateY(var(--y-offset)) rotate(var(--rotate)) skew(var(--skew)) scale(120%);
+        background-color: var(--dark-blue);
+        background-image: url(./meta/scribble.png);
+        padding: 1rem 0;
+    }
+
+    .tape > div {
+        background-image: url(./meta/tape.png);
+        background-size: auto 200%;
+        height:10vw;
+        max-height:4rem;
+        animation:scroll 60s infinite linear;
+    }
+
+    @keyframes scroll {
+        0%{ background-position: 0; }
+        100%{ background-position: 100%; }
+    }
+
+    main {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        max-width: 700px;
+        margin:2rem auto;
+        color: white;
+        transform: translateY(-1.5rem);
+    }
+
+    aside {
+        width:200px;
+        position: relative;
+        user-select: none;
+    }
+
+    aside img:first-of-type{
+        position: absolute;
+        filter: drop-shadow(var(--drop-shadow-width) 0 var(--darkest-blue));
+        width:160%;
+        top:-13rem;
+        left:-50%;
+    }
+
+    aside img:last-of-type{
+        position: absolute;
+        width:100%;
+        left:-30%;
+        top:5rem;
+    }
+
+    #desc {flex: 1;}
+
+    .highlight{
+        background-color:var(--orange);
+        padding:0.5rem;
+        margin-bottom:0.5rem;
+    }
+
+    .meow span{display: inline-block;}
+    .meow span:nth-of-type(n){animation:jump 1s infinite; }
+    .meow span:nth-of-type(2n){animation:fall 1s infinite;}
+
+    @keyframes jump {
+        50% {transform:translateY(5%);}
+        100% {transform:translateY(-5%);}
+    }
+
+    @keyframes fall {
+        50% {transform:translateY(-5%);}
+        100% {transform:translateY(5%);}
+    }
+
+    #warning:target{
+        border: 3px dotted var(--orange);
+        padding:0.5rem;
+        margin-bottom: 0.5rem;
+
+        a {
+            display: block;
+            background-color: var(--orange);
+            padding: 0.5rem;
+            margin-top: 1rem;
         }
-        img {right:-10%;}
     }
-}
+    #warning h3 { color: var(--yellow);}
+    #warning p {margin-bottom:0;}
+    #warning a{display: none;}
+    #warning a:hover{background-color:var(--yellow);color:var(--darkest-blue);}
 
-#blog img:hover {
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
-}
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}  
+    @media only screen and (max-width: 500px) {
+        :root{
+            --drop-shadow-width:0.3rem 0.3rem;
+        }
+        
+        main{display: block;}
+        aside{display: none;}
+    }
 
-@keyframes jump {
-    50% {transform:translateY(5%);}
-    100% {transform:translateY(-5%);}
-}
+    #more{
+        display: none;
+        max-width:400px;
+    }
+    #more:target{display: block;}
 
-@keyframes fall {
-    50% {transform:translateY(-5%);}
-    100% {transform:translateY(5%);}
-}
+    #other {margin-top: 2rem;max-width:300px;}
+    #other ul{columns: 2; column-gap: 1rem;}
+    #other a:hover {color:var(--yellow);}
+    /**
+    #other li{display: inline-block;}
+    #other a:not(:last-child) li:after {
+        content: "|";
+        margin: auto 0.5rem;
+        color: white;
+    }
+    #other a:hover {color: var(--yellow);}
+    **/
 
-.meow span{display: inline-block;}
+    ::selection{
+        background-color: var(--yellow);
+        color:var(--darkest-blue);
+    }
 
-.meow span:nth-of-type(n){
-    animation:jump 1s infinite; 
-}
-.meow span:nth-of-type(2n){
-    animation:fall 1s infinite;
-}
-
-footer a:not(:last-of-type)::after{content:" | ";}
-footer{
-  text-align:center;
-  margin-bottom:1rem;
-}
-
-body::before{animation:sliding 100s infinite}
-
-@keyframes sliding {
-    0% { background-position:0% 100%; }
-    100% { background-position:100% 0%; }
-}  
 </style>
 </head>
-<body class="default">
-<main style="max-width:800px;margin:1rem auto;">
-    <header class="stupied">
-        <img src="./meta/stupied-1.png" alt="" width="859" height="246">
-    </header>
-
-    <div id="about-mobile">
-        <a href="./about.html" title="About the Webmaster">
-            <h1>About the Webmaster</h1>
-            <img src="./meta/dawg-sitting.png" alt="">
-        </a>
-    </div>
-
-    <div id="about">
-        <div class="doll">
-            <a href="about.html" title="About the Webmaster!"><img src="./meta/dawg-sitting.png" alt="" class="outline"></a>
-        </div>
-        <div id="desc">
-            <h1 class="meow">
-                <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span><span>!</span>
-            </h1>
-            <p>This website is where I put my comics and random thoughts! I love it to absolute bits and will forever be in a work in progress :]</p>
-            <h3 class="txt-yellow">Trigger Warning!</h3>
-            <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
-        </div>
-    </div>
-
-    <div id="hell-yeah">
-        <div id="gallery">
-            <a href="./art/index.html" title="artworks and animation">
-                <h1>GALLERY</h1>
-                <div>
+<body>
+    <div id="container">
+        <div id="splash">
+            <header>
+                <div id="logo">
+                    <img src="./meta/logo.png" alt="" draggable="false">
                 </div>
-            </a>
-        </div>
+            </header>
 
-        <div id="blog">
-            <div id="micro" title="status.cafe updates!">
-                <a href="https://status.cafe/users/stupied">
-                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=stupied" defer></script>
+            <div id="right">
+                <a id="blog" href="./blog/index.html">
+                    <img src="./meta/blog.png" alt="" draggable="false">
+                </a>
+                <a  id="about" href="./about.html">
+                    <img src="./meta/about.png" alt="" draggable="false">
                 </a>
             </div>
-            <a href="./blog/index.html" title="screaming into the abyss">
-                <div id="blogDesign">
-                    <h1>BLOG</h1>
-                    <img src="./meta/bruh.png" alt="" width="464" height="430">
+
+            <div id="left">
+                <a id="library" href="./comic/index.html">
+                    <img src="./meta/txt-library.png" alt="" draggable="false">
+                </a>
+
+                <a id="gallery" href="./art/index.html">
+                    <img src="./meta/txt-gallery.png" alt="" draggable="false">
+                </a>
+
+                <div id="rating">
+                    <a href="#warning"><img src="./meta/rating.png" alt="" draggable="false"></a>
                 </div>
-            </a>
+            </div>
+
+            <img id="clouds" src="./meta/clouds.png" alt="" draggable="false">
         </div>
 
+        <div id="divider">
+            <div class="tape"><div></div></div>
+        </div>
 
-        <div id="comic">
-            <a href="./comic/index.html" title="sequential images to tell dumb stories">
-                <h1>LIBRARY</h1>
-                <div>
-                    <img src="./comic/84/img/doll-ashley.png" alt="">
+        <main>
+            <aside>
+                <img src="./meta/circles.png" alt="" draggable="false">
+                <img src="./meta/stars.png" alt="" draggable="false">
+            </aside>
+            <div id="desc">
+                <h1 class="highlight meow">
+                    <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span>
+                </h1>
+                <p>This website is where I put my comics and random thoughts! I love it to absolute bits and will forever be in a work in progress :]</p>
+
+                <div id="warning">
+                    <h3>Trigger Warning!</h3>
+                    <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+                    <a href="#desc">Okay!</a>
                 </div>
-            </a>
+
+                <a href="#" style="color: var(--gray);">View More »</a>
+
+                <div id="other">
+                <h3>Other Stuff</h3>
+                <ul>
+                    <a href="https://literalwiki.neocities.org/">
+                        <li>LiteralWiki</li>
+                    </a>
+                    <a href="./tabvoid/index.html">
+                        <li>Tabvoid</li>
+                    </a>
+                    <!--
+                    <a href="./chez/raffidelle/index.html">
+                        <li>Raffidelle</li>
+                    </a>
+                    <a href="./chez/kyman/index.html">
+                        <li>Kyman</li>
+                    </a>
+                    -->
+                    <a href="./chat.html">
+                        <li>Chatbox</li>
+                    </a>
+                    <a href="./meta/status.html">
+                        <li>Status</li>
+                    </a>
+                </ul>
+            </div>
+            </div>
+        </main>
+
+        <div id="more">
         </div>
     </div>
-
-    <div id="chez">
-        <div>
-            <h3 style="color: var(--blue);">Other Stuff</h3>
-            <a href="https://literalwiki.neocities.org/">LiteralWiki</a> |
-            <a href="./tabvoid/index.html">Tabvoid</a> |
-            <a href="./chez/raffidelle/index.html">Raffidelle</a> |
-            <!--
-            <a href="./chez/kyman/index.html">Kyman</a> |
-            -->
-            <a href="./chat.html">Chatbox</a> |
-            <a href="./meta/status.html">Status</a>
-        </div>
-    </div>
-</main>
-<script src="./meta/main.js"></script>
+    
 </body>
 </html>
