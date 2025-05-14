@@ -1,0 +1,48 @@
+.marquee {
+  position: relative;
+  max-width: 100%;
+  height: 2rem;
+  overflow-x: hidden;
+  color:white;
+  margin-top:3rem;
+  opacity:0.5;
+  mask-image: linear-gradient(90deg,#00000000 20%, #ffffff 95%, #00000000 100%);
+}
+
+.track {
+    position: absolute;
+    top:50%;
+    white-space: nowrap;
+    animation: marquee 150s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%) translateY(-50%); }
+  100% { transform: translateX(-50%) translateY(-50%); }
+}
+
+<div class="marquee">
+    <div class="track">
+        <!-- ORIGINAL 
+        How did we end up here? You said happenstance |
+        The cruelest lies are often told without a word. The kindest truths are often spoke but never heard. |
+        The creatures outside looked from pig to man, and from man to pig, and from pig to man again; but already it was impossible to say which was which. |
+        A poem is a song that no one cares about |
+        I'm not the boogeyman but I am the <i>boogey man</i> |
+        Fight for the fact that you're worth more than a decimal |
+        WOAH! THAT SNAIL IS FAST!! |
+        Well here we are again. It's always such a pleasure :) |
+        Oooh you've come so far! The dynamic pose with the vibrant colours and lineless touches is much prettier, the clothes flow nicely (that bow detail is lovely) and more carefully constructed hands are very noticeable, a definite improvement from the squiggly on on the right |
+
+        <!-- DUPLICATE 
+        How did we end up here? You said happenstance |
+        The cruelest lies are often told without a word. The kindest truths are often spoke but never heard. |
+        The creatures outside looked from pig to man, and from man to pig, and from pig to man again; but already it was impossible to say which was which. |
+        A poem is a song that no one cares about |
+        I'm not the boogeyman but I am the <i>boogey man</i> |
+        Fight for the fact that you're worth more than a decimal |
+        WOAH! THAT SNAIL IS FAST!! |
+        Well here we are again. It's always such a pleasure :) |
+        Oooh you've come so far! The dynamic pose with the vibrant colours and lineless touches is much prettier, the clothes flow nicely (that bow detail is lovely) and more carefully constructed hands are very noticeable, a definite improvement from the squiggly on on the right |
+    </div>
+</div>
