@@ -21,16 +21,10 @@ not learning to do it yourself
     <meta name="viewport" content="max-width=device-width, initial-scale=1.0">
     <meta name="description" content="Website for me to scream into the void to">
     <meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
-    <link rel="stylesheet" href="./meta/main.css">
+    <link rel="stylesheet" href="./meta/new-main.css">
     <title>stupied stuff!</title>
 <style>
     :root{
-        --yellow: #ffcb67;
-        --orange: #ec7239;
-        --gray: #6c6371;
-        --blue: #142943;
-        --dark-blue:#0d0d1f;
-        --darkest-blue:#0c0716;
         --transition-time: 0.25s;
         --drop-shadow-width:0.5rem 0.5rem;
     }
@@ -75,7 +69,7 @@ not learning to do it yourself
         position: absolute;
     }
 
-    #splash img{width:100%;}
+    #splash img{width:100%;height:auto;}
 
     #clouds {position: absolute;bottom:0;}
 
@@ -144,7 +138,7 @@ not learning to do it yourself
         position: absolute;
         width: 15%;
         bottom: 18%;
-        right: 5%;
+        right: 3%;
         transition: var(--transition-time);
     }
     #rating:hover{transform: scale(120%);}
@@ -279,6 +273,14 @@ not learning to do it yourself
         color:var(--darkest-blue);
     }
 
+    #meow {
+        margin: auto;
+        margin-bottom: 3rem;
+        background-color: blue;
+        border: 3px block var(--orange);
+        width:300px;
+    }
+
 </style>
 </head>
 <body>
@@ -286,34 +288,34 @@ not learning to do it yourself
         <div id="splash">
             <header>
                 <div id="logo">
-                    <img src="./meta/logo.png" alt="" draggable="false">
+                    <img src="./meta/logo.png" alt="" draggable="false" width="903" height="445">
                 </div>
             </header>
 
             <div id="right">
                 <a id="blog" href="./blog/index.html" title="screaming into the abyss">
-                    <img src="./meta/blog.png" alt="" draggable="false">
+                    <img src="./meta/blog.png" alt="" draggable="false" width="373" height="505">
                 </a>
                 <a  id="about" href="./about.html" title="About the Webmaster">
-                    <img src="./meta/about.png" alt="" draggable="false">
+                    <img src="./meta/about.png" alt="" draggable="false"  width="642" height="1142">
                 </a>
             </div>
 
             <div id="left">
                 <a id="library" href="./comic/index.html" title="sequential images to tell dumb stories">
-                    <img src="./meta/txt-library.png" alt="" draggable="false">
+                    <img src="./meta/txt-library.png" alt="" draggable="false"  width="307" height="84">
                 </a>
 
                 <a id="gallery" href="./art/index.html" title="artworks and animation">
-                    <img src="./meta/txt-gallery.png" alt="" draggable="false">
+                    <img src="./meta/txt-gallery.png" alt="" draggable="false"  width="281" height="82">
                 </a>
 
                 <div id="rating">
-                    <a href="#warning"><img src="./meta/rating.png" alt="" draggable="false"></a>
+                    <a href="#warning" title="read why this website has this rating"><img src="./meta/rating.png" alt="" draggable="false" width="93" height="68"></a>
                 </div>
             </div>
 
-            <img id="clouds" src="./meta/clouds.png" alt="" draggable="false">
+            <img id="clouds" src="./meta/clouds.png" alt="" draggable="false" width="1449" height="776">
         </div>
 
         <div id="divider">
@@ -334,7 +336,7 @@ not learning to do it yourself
                 <div id="warning">
                     <h3>Trigger Warning!</h3>
                     <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
-                    <a href="#desc">Okay!</a>
+                    <a href="#desc" title="you agree to view this website's content">Okay!</a>
                 </div>
 
                 <a href="#" style="color: var(--gray);">View More »</a>
@@ -357,6 +359,32 @@ not learning to do it yourself
             </div>
             </div>
         </main>
+
+        <div id="meow">
+            <h3 class="highlight">Webrings!</h3>
+            <div id='aperturewebring'>
+                <script type="text/javascript" src="https://jack-dawlia.neocities.org/page/shrines/portal/aperturewebring/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://jack-dawlia.neocities.org/page/shrines/portal/aperturewebring/onionring-widget-1.js"></script>
+                <noscript>
+                This site is part of the <a href="https://jack-dawlia.neocities.org/page/shrines/portal/aperturewebring">Aperture Webring</a>!
+                </noscript>
+            </div>
+
+            <div id="doodlering">
+                <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-widget.js"></script>
+                <link rel="stylesheet" href="https://evehibi.nekoweb.org/doodlering/onionring.css">
+            </div>
+
+            <a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">&larr;</a> <a href="https://webmasterwebring.netlify.app">Webmaster Webring</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-next">&rarr;</a>
+
+            <div id='ncring'>
+                <script type="text/javascript" src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+                <script type="text/javascript" src="https://neocreatives.neocities.org/onionring-widget.js"></script>
+            </div>
+                      
+            <script src="https://astracelestine.nekoweb.org/webring/tropical-rice-bowl/widgettext.js"></script>
+        </div>
 
         <div id="more">
         </div>
