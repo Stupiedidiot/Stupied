@@ -123,7 +123,7 @@ loadItems(0,counter)
                   result+=`
                   <a href="./view.html?item=` + art[i].img + `" class="` + itemYear + itemFolder + `">
                   <div>
-                      <img src="#" data-src="./img/` + art[i].img + `">
+                      <img src="./img/` + art[i].img + `">
                       <span>` + title + `</span>
                   </div>
                   </a>`
@@ -134,11 +134,14 @@ loadItems(0,counter)
               windowHeight = window.innerHeight
               unloadedImgs = document.querySelectorAll("#hell-yeah img[src='#']");
 
-              loadOnScroll()
-              window.onscroll = loadOnScroll
+              //loadOnScroll()
+              //window.onscroll = loadOnScroll
         })
     }
-    
+
+/**
+Decommissioning the lazy loading cuz it makes it feel sluggish :/
+
 function loadOnScroll(){ 
   for (i=0; i < unloadedImgs.length ;i++) {
     if (unloadedImgs[i].offsetTop - windowHeight < window.pageYOffset){
@@ -147,6 +150,7 @@ function loadOnScroll(){
   }
 };
 
+**/
 </script>
 </body>
 </html>
