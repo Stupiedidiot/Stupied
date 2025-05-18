@@ -22,8 +22,14 @@ body > #aside-2-content {
   user-select: none;
 }
 
+@media only screen and (min-width: 500px) {
+  .justified-gallery{
+     --min-height:250px;
+  } 
+}
+
 .justified-gallery img{
-  transition:0.5s;
+  transition:0.3s;
 }
 
 .justified-gallery a:hover img{
