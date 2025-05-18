@@ -2,18 +2,18 @@ masterlist = [
     {
         "volume":"muse-adriade",
         "title":"muse ariadne",
-        "desc":"Stuff for a writing club thingy wohooo!!",
+        "desc":"My entries for a writing club that posts new prompts weekly!! ",
         "issues":[
             {"file":"2024-02-05.html","alt":"Writing is Hard"},
             //{"file":"2024-02-12.html","alt":"Foreign Film"},
             {"file":"2024-02-26.html","alt":"Blue Bird","img":"blue-bird.png"},
             //{"file":"2024-04-08.html","alt":"I Hate You"},
-            //{"file":"2024-04-22.html","alt":"Obliviousness"},
+            //{"file":"2024-04-22.html","alt":"Electrodynamics"},
             //{"file":"2024-05-13.html","alt":"Total Domination"},
             {"file":"2024-05-20.html","alt":"The Odd Siblings","img":"odd-siblings.png"},
             {"file":"2024-08-26.html","alt":"Laundry Day"},
             {"file":"2024-10-28.html","alt":"50th Anniversary"},
-            {"file":"2024-10-07.html","alt":"Selective Seclusion"},
+            {"file":"2024-10-07.html","alt":"Selective Seclusion","img":"birthday.png"},
             //{"file":"2024-12-16.html","alt":"Trying My Heart Out"}
         ],
     },
@@ -74,7 +74,20 @@ masterlist = [
     {
         "volume":"misc",
         "title":"Miscellaneous Stuff",
-        "desc":"Dumping random comics n stuff that aren't for anything specific"
+        "desc":"Dumping random comics n stuff that aren't for anything specific",
+        "issues":[
+            {"file":"2019-yes.html","alt":"Yes"},
+            {"file":"2019-bye.html","alt":"Bye"},
+            {"file":"2019-one-stroke.html","alt":"One Stroke"},
+            {"file":"2019-pokemon.html","alt":"Pokemon Logic"},
+            {"file":"2020-comic-idea.html","alt":"A Cool Comic Idea"},
+            {"file":"2022-04-08.html","alt":"Birthday"},
+            {"file":"2023-08-31.html","alt":"Excuse"},
+            {"file":"2023-09-05.html","alt":"Never Satisfied"},
+            {"file":"2024-08-21.html","alt":"Tummy Ache"},
+            {"file":"2025-04-19.html","alt":"Easy Way Out"},
+            {"file":"2025-05-02.html","alt":"Deep Frying"}
+        ]
     },
     {
         "volume":"howto",
