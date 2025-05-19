@@ -121,39 +121,16 @@ height: 100%;
 .bg-black{background-color:black!important;}
 
 .default{
-    --dark-brown: #312422;
-    --brown: #3d2d28;
-    background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
-    background-repeat: repeat;
-    background-size: 100px 100px;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--blue);
+    background-image: url(./scribble.png);
 }
+
 .bg-misfits{
     background-color: #3cb6b9;
     background-image: url(./img/tile-clouds.png);
     background-attachment: fixed;
     background-repeat:repeat-x;
     background-position:bottom;
-}
-
-body{
-    &.default{background:black;position: relative;}
-    &.default::before{
-        content:"";
-        z-index:-1;
-        height:80%;
-        width:100%;
-        max-width:1200px;
-        background: conic-gradient(var(--brown) 90deg, var(--dark-brown) 90deg 180deg, var(--brown) 180deg 270deg, var(--dark-brown) 270deg);
-        background-repeat: repeat;
-        background-size: 100px 100px;
-        position: absolute;
-        top:10vh;right:50%;
-        transform: translateX(50%) skewY(-2deg);
-    }
-    &.default footer{color:white;}
-}
-
-header.stupied{
-    text-align:center;margin-top:1rem;
-    img{max-width:250px;width:90%;height:auto;}
 }
