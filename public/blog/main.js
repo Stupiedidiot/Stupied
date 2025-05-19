@@ -22,6 +22,7 @@ const posts=[
 	// SPOILERS - Stuff I might write about???  
 	// {"file":"2025-00-00-Coloring-Tutorial.html"},
 	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
+	{"file":"2025-05-19-Summer-Plans.html"},
 	{
 		"file":"2025-02-28-Anbernic-RG35XXSP.html",
 		"img":"img/anbernic-folders.gif"
@@ -57,12 +58,16 @@ const header=`
 
 const navigation =`
 <div>
-    <a href="` + relativePath + `index.html"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
-	<h3>`+ blogname +`</h3>
+	<a href="` + relativePath + `index.html"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
 	<nav>
-		<a href="` + relativePath + `../about.html#from-blog">About Me</a>
-		<a href="` + relativePath + `archive.html">Archive</a>
-		<a href="` + relativePath + `../index.html"">Head Back</a>
+		<a href="` + relativePath + `index.html">🏠︎</a>
+		<a href="` + relativePath + `../about.html#from-blog">about me</a>
+		<a href="` + relativePath + `archive.html">archive</a>
+		<a href="#" onclick="randomPost()">random</a>
+		<a href="` + relativePath + `../index.html"">✮ head back »</a>
+		<div id="nextprev-dup">
+		
+		</div>
 	</nav>
 </div>
 `
@@ -113,9 +118,12 @@ if( current.index > -1){
 	dateHTML =  "<h4>" + current.date + "</h4>"
 	navHTML = genNav(posts)
 
-	if(e=document.querySelector("#blog-title")){e.innerHTML=(titleHTML);}
-	if(e=document.querySelector("#blog-date")){e.innerHTML=(dateHTML);}
-	if(e=document.querySelector("#nextprev")){e.innerHTML=(navHTML);}
+	if(e=document.querySelector("#blog-title")){e.innerHTML=titleHTML;}
+	if(e=document.querySelector("#blog-date")){e.innerHTML=dateHTML;}
+	if(e=document.querySelector("#nextprev")){
+		e.innerHTML=navHTML;
+		document.getElementById("nextprev-dup").innerHTML=navHTML
+	}
 } else {
 	if(e=document.querySelector("#blog-title")){e.innerHTML="<h1>[Unlisted Post]</h1>";}
 
@@ -252,17 +260,41 @@ function genNav(){
 	result=""
 	if( e = posts[current.index-1] ){
 		nextI= e.file;
-		result+="<a href='./" + nextI + "'>« Next</a> | " 
+		result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | " 
 	}
 
-	result+='<a href="'+relativePath+'archive.html">Archive'
+	result+='<a href="'+relativePath+'archive.html" id="nextprev-archive">Archive'
 
 	if(e = posts[current.index+1]){
 		prevI= e.file;
-		result+=" | <a href='./" + prevI + "'>Prev »</a>"
+		result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev »</a>"
 	}
 	return result
 }
+
+// random art
+function randomPost(){
+	randomNum = Math.floor(Math.random() * posts.length);
+	window.location.href = "./" + posts[randomNum].file
+}
+
+// navigation
+document.onkeydown = function(event) {
+  if( document.activeElement === document.querySelector("body") ){
+    switch (event.keyCode) {
+        case 37:
+			if(e=document.getElementById("nextprev-next")){e.click()}
+        break;
+        case 39:
+			if(e=document.getElementById("nextprev-prev")){e.click()}
+        break;
+        case 27:
+			document.getElementById("nextprev-archive").click()
+        break;
+        }
+  }
+}
+
 
 // COMMENTS
 hcb_user = {

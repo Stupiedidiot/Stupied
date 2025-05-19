@@ -55,13 +55,13 @@ p:last-child,ol:last-child,ul:last-child{
 
 #container{
     margin: auto;
-    max-width:800px;
+    max-width:830px;
     display: grid;
     grid-template-areas:
     'header header'
     'main nav'
     'footer footer';
-    grid-template-columns:2fr 200px;
+    grid-template-columns:2fr 230px;
     grid-template-rows:auto 1fr auto;
     min-height:100vh;
 }
@@ -96,10 +96,6 @@ header img{
     position: relative;
     top:-0.5rem;
 }
-nav a{
-    display:block;
-    padding:8px 16px;
-}
 
 footer{
     user-select:none; padding:1rem;
@@ -114,24 +110,10 @@ footer a{color:inherit;}
 
 #blog-date{color:var(--accent-color);}
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
     #container{
         display:block;
         min-height:auto;
-    }
-    #nav h3{display:none;}
-    #nav img{
-        width:3rem;
-        left:0.3rem;
-        transform: none;
-        position: absolute;
-    }
-    nav a{
-        display:inline-block;
-    }
-    nav a:first-child{margin-left:4rem;}
-    main {
-        min-height:80vh;
     }
 }
 
