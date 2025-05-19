@@ -22,7 +22,10 @@ const posts=[
 	// SPOILERS - Stuff I might write about???  
 	// {"file":"2025-00-00-Coloring-Tutorial.html"},
 	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
-	{"file":"2025-05-19-Summer-Plans.html"},
+	{
+		"file":"2025-05-19-Summer.html",
+		"alt":"Plans 4 Summer!!"
+	},
 	{
 		"file":"2025-02-28-Anbernic-RG35XXSP.html",
 		"img":"img/anbernic-folders.gif"
