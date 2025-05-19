@@ -18,10 +18,11 @@
         }
         #image{
             width:100%;
+            transition: 0.2s;
         }
 
         #image:hover{
-            filter:drop-shadow(2px 0 0 white)drop-shadow(-2px 0 0 white)drop-shadow(0 2px 0 white)drop-shadow(0 -2px 0 white)
+            transform: scale(110%);
         }
     </style>
 </head>
@@ -32,6 +33,7 @@
 
 <script id="script"></script>
 <script>
+    // should probably make this redirect to the map instead
     url = window.location.pathname;
     relativePath = "./";
     urlPath = url.split('/');
@@ -43,11 +45,12 @@
     link= relativePath+"index.html"
     if(url.includes("art")){link=relativePath+"art/index.html"}
     if(url.includes("blog")){link=relativePath+"blog/index.html"}
+    if(url.includes("comic")){link=relativePath+"comic/index.html"}
     
-    document.getElementById("image").src = relativePath+"meta/dawg-napping.png"
+    document.getElementById("image").src = relativePath+"meta/loss.png"
     document.getElementById("image-container").href = link
     document.getElementById("script").src = relativePath+"meta/main.js"
-    document.getElementById("styles").href = relativePath+"meta/main.css"
+    document.getElementById("styles").href = relativePath+"meta/new-main.css"
 </script>
 </body>
 </html>
