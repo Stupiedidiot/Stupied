@@ -61,55 +61,71 @@ Last Posted on 2025/05/18
 
 <script src="./main.js"></script>
 <script>
-    const urlQuery = new URLSearchParams(window.location.search)
-    currentImage = urlQuery.get('item')
+const urlQuery = new URLSearchParams(window.location.search)
+currentImage = urlQuery.get('item')
 
-    fetch("./main.json")
-        .then((response) => response.json())
-        .then((art) => {
-          if(currentImage === null){
-            currentImage = art[0].img
-            window.location.href = "./view.html?item="+currentImage;
-          }
+fetch("./main.json")
+    .then((response) => response.json())
+    .then((art) => {
+      if(currentImage === null){
+        currentImage = art[0].img
+        window.location.href = "./view.html?item="+currentImage;
+      }
 
-          imageLink='./img/'+currentImage
-          image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
-          document.getElementById("image").innerHTML = image
+      imageLink='./img/'+currentImage
+      image='<a href="'+imageLink+'"><img src="'+imageLink+'" title="open image"></a>'
+      document.getElementById("image").innerHTML = image
 
-          currentIndex=getIndex(art,currentImage)
-          if (currentIndex>-1){
-            title=getTitle(art,currentIndex)
-            document.getElementById("title").innerHTML = title
-            document.title = title +" // stupied"
+      currentIndex=getIndex(art,currentImage)
+      if (currentIndex>-1){
+        title=getTitle(art,currentIndex)
+        document.getElementById("title").innerHTML = title
+        document.title = title +" // stupied"
 
-            if(art[currentIndex].desc!==undefined){
-              document.getElementById("desc").innerHTML = art[currentIndex].desc
-            }
-          } else {
-            document.getElementById("title").innerHTML = "What in the What"
-            document.title = "Error // stupied"  
-            document.getElementById("desc").innerHTML = "This image is either unlisted or does not exist at all :/"
-          }
-          nextprev=genNav(art)
-          document.getElementById("nextprev").innerHTML=nextprev
-    })
+        if(art[currentIndex].desc!==undefined){
+          document.getElementById("desc").innerHTML = art[currentIndex].desc
+        }
+      } else {
+        document.getElementById("title").innerHTML = "What in the What"
+        document.title = "Error // stupied"  
+        document.getElementById("desc").innerHTML = "This image is either unlisted or does not exist at all :/"
+      }
+      nextprev=genNav(art)
+      document.getElementById("nextprev").innerHTML=nextprev
+})
 
-    function genNav(e){
-    result=""
-    if(e[currentIndex-1]){
-      nextI= "./view.html?item=" + e[currentIndex-1].img;
-      result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | "
-    }
-
-    result+="<a href='index.html'>Home</a>"
-
-    if(e[currentIndex+1]){
-      prevI= "./view.html?item=" + e[currentIndex+1].img;
-      result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev  »</a>"
-    }
-
-    return result
+function genNav(e){
+  result=""
+  if(e[currentIndex-1]){
+    nextI= "./view.html?item=" + e[currentIndex-1].img;
+    result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | "
   }
+
+  result+="<a href='./index.html' id='nextprev-home'>Home</a>"
+
+  if(e[currentIndex+1]){
+    prevI= "./view.html?item=" + e[currentIndex+1].img;
+    result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev  »</a>"
+  }
+
+  return result
+}
+
+document.onkeydown = function(event) {
+  if( document.activeElement === document.querySelector("body") ){
+    switch (event.keyCode) {
+        case 37:
+            document.getElementById("nextprev-next").click()
+        break;
+        case 39:
+            document.getElementById("nextprev-prev").click()
+        break;
+        case 27:
+          document.getElementById("nextprev-home").click()
+        break;
+        }
+  }
+}
 </script>
 </body>
 </html>
