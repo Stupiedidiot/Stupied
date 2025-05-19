@@ -214,7 +214,7 @@ footer{
     display:grid;
     grid-template-areas:
     'img link'
-    'img extra';
+    'extra extra';
     grid-template-columns:100px 1fr;
     grid-template-rows:auto 1fr;
     min-height:100px;

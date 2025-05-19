@@ -6,10 +6,11 @@ const navigation =
   <img id="aside-1-img" alt="" src="./../meta/pfp-transparent.png">
 </a>
 <nav>
+  <a href="./index.html">🏠︎</a>
   <a href="./../about.html#from-art">about me</a>
   <a href="./archive.html">archive</a>
-  <a href="./commission.html">comms</a>
-  <a href="./../index.html">head back</a>
+  <a onclick="randomArt()">random</a>
+  <a href="./../index.html">✮ head back »</a>
 </nav>`
 
 const footer =
@@ -160,6 +161,17 @@ document.onkeydown = function(event) {
         }
   }
 }
+
+// random art
+function randomArt(){
+    fetch("./main.json")
+    .then((response) => response.json())
+    .then((art) => {
+      randomNum = Math.floor(Math.random() * art.length);
+      window.location.href = "./view.html?item=" + art[randomNum].img
+  })
+}
+
 
 // tags
 document.querySelector("head").innerHTML+=`<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
