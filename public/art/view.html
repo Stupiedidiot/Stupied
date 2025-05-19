@@ -98,14 +98,14 @@ Last Posted on 2025/05/18
     result=""
     if(e[currentIndex-1]){
       nextI= "./view.html?item=" + e[currentIndex-1].img;
-      result+="<a href='./" + nextI + "'>« Next</a> | "
+      result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | "
     }
 
     result+="<a href='index.html'>Home</a>"
 
     if(e[currentIndex+1]){
       prevI= "./view.html?item=" + e[currentIndex+1].img;
-      result+=" | <a href='./" + prevI + "'>Prev  »</a>"
+      result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev  »</a>"
     }
 
     return result

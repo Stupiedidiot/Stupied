@@ -9,7 +9,7 @@ const navigation =
   <a href="./index.html">🏠︎</a>
   <a href="./../about.html#from-art">about me</a>
   <a href="./archive.html">archive</a>
-  <a onclick="randomArt()">random</a>
+  <a href="#" onclick="randomArt()">random</a>
   <a href="./../index.html">✮ head back »</a>
 </nav>`
 
@@ -151,9 +151,11 @@ document.onkeydown = function(event) {
     switch (event.keyCode) {
         case 37:
             document.getElementById("lightbox-prev").click()
+            if(e=document.getElementById("nextprev-next")){e.click()}
         break;
         case 39:
             document.getElementById("lightbox-next").click()
+            if(e=document.getElementById("nextprev-prev")){e.click()}
         break;
         case 27:
           document.querySelector("#lightbox-header button").click()
