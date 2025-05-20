@@ -124,7 +124,7 @@ height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
     background-color: var(--blue);
-    background-image: url(./scribble.png);
+    background-image: url(./img/scribble.png);
 }
 
 .bg-misfits{
