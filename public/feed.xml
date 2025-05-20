@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://stupied.neocities.org/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Stupied RSS Feed!!</title>
+    <link>https://stupied.neocities.org/</link>
+    <description>Monthly overviews of stuff I've added to my website</description>
+    <ttl>60</ttl>
+
+    <item>
+      <title>Overview</title>
+      <pubDate>[UPDATE PUBLISHING DATE - in rfc 2822]</pubDate>
+      <link>[UPDATE URL]</link>
+      <description>[UPDATE DESCRIPTION]</description>
+    </item>
+
+  </channel>
+</rss>
