@@ -5,52 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Looks like you're lost!">
     <link rel="stylesheet" id="styles">
-    <title>What in the World!? | Stupied</title>
-    <style>
-        body{min-height:100vh;}
-        #image-container{
-            position:absolute;
-            top:50%;right:50%;
-            transform: translateX(50%) translateY(-50%);
-            width:90%;
-            max-width:300px;
-            color:white;text-align:center;
-        }
-        #image{
-            width:100%;
-            transition: 0.2s;
-        }
-
-        #image:hover{
-            transform: scale(110%);
-        }
-    </style>
+    <title>redirecting... | stupied</title>
+<style>
+    body{
+        position: relative;
+        height: 100vh;
+    }
+    p{
+        text-align: center;
+        display: block;
+        position: absolute;
+        top:50%; left:50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: white;
+    }
+    span{
+        color: var(--yellow);
+        font-family: var(--display-font);
+        font-size: 1.5rem;
+    }
+</style>
 </head>
 <body class="default">
-    <a id="image-container">
-        <img id="image" title="head home??">
-    </a>
-
-<script id="script"></script>
+    <p><span>Please Hold On!</span><br> Redirecting you to new page</p>
 <script>
     // should probably make this redirect to the map instead
     url = window.location.pathname;
     relativePath = "./";
     urlPath = url.split('/');
     if(urlPath.length > 2){for(i=0;i<urlPath.length;i++){relativePath+="../"}}
-
-    if(url.includes("art/viewer")){
-        window.location.pathname=window.location.pathname.replaceAll("viewer","view")
-    }
-    link= relativePath+"index.html"
-    if(url.includes("art")){link=relativePath+"art/index.html"}
-    if(url.includes("blog")){link=relativePath+"blog/index.html"}
-    if(url.includes("comic")){link=relativePath+"comic/index.html"}
-    
-    document.getElementById("image").src = relativePath+"meta/loss.png"
-    document.getElementById("image-container").href = link
-    document.getElementById("script").src = relativePath+"meta/main.js"
     document.getElementById("styles").href = relativePath+"meta/new-main.css"
+
+    // not gonna bother touching this
+    if(url.includes("art/viewer")){window.location.pathname=window.location.pathname.replaceAll("viewer","view")}
+    
+    redirectLink = relativePath + "map.html#broken-link" 
+    if(url.includes("about")){redirectLink = relativePath + "about/index.html"}
+    
+    window.location.replace(redirectLink)
 </script>
 </body>
 </html>
