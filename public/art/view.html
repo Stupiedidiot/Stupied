@@ -85,6 +85,15 @@ fetch("./main.json")
         if(art[currentIndex].desc!==undefined){
           document.getElementById("desc").innerHTML = art[currentIndex].desc
         }
+        
+        if(art[currentIndex].extra!==undefined){
+          extraHTML = ""
+          for(i = 0; i < art[currentIndex].extra.length; i++){
+            selected = "./img/" + art[currentIndex].extra[i]
+            extraHTML += '<a href="' + selected + '"><img src="'+ selected +'"></a>'
+          }
+          document.getElementById("image").innerHTML += extraHTML
+        }
       } else {
         document.getElementById("title").innerHTML = "What in the What"
         document.title = "Error // stupied"  
