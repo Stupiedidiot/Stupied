@@ -4,15 +4,24 @@
     <atom:link href="https://stupied.neocities.org/feed.xml" rel="self" type="application/rss+xml" />
     <title>Stupied RSS Feed!!</title>
     <link>https://stupied.neocities.org/</link>
-    <description>Monthly overviews of stuff I've added to my website</description>
+    <description>Updates of stuff I've added to my website</description>
     <ttl>60</ttl>
 
     <item>
-      <title>Overview</title>
-      <pubDate>[UPDATE PUBLISHING DATE - in rfc 2822]</pubDate>
-      <link>[UPDATE URL]</link>
-      <description>[UPDATE DESCRIPTION]</description>
+      <title>Welcome!!</title>
+      <pubDate>Fri, 23 May 2025 19:56:00 PST</pubDate>
+      <link>https://stupied.neocities.org/</link>
+      <description>This is the stupied rss feed™!!! Will update here, if I remember haha</description>
     </item>
 
   </channel>
 </rss>
+
+<!-- This is here because I may be stupid
+  <item>
+    <title>[TITle]</title>
+    <pubDate>[UPDATE PUBLISHING DATE - in rfc 2822]</pubDate>
+    <link>[UPDATE URL]</link>
+    <description>[UPDATE DESCRIPTION]</description>
+  </item>
+-->
