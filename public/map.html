@@ -7,12 +7,160 @@
     <meta name="keywords" content="map, stupied map, stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
     <link rel="stylesheet" href="./meta/new-main.css">
     <title>Map | stupied</title>
+<style>
+
+body{
+    color: var(--yellow);
+}
+
+#container {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+main {
+    max-width: 350px;
+}
+
+img {
+    display: block;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+#list > a:before, #list > div > a:before {
+    content: "✮ ";
+}
+
+#list > a {
+    margin-bottom: 0.5rem;
+}
+
+#list a {
+    font-size: 1.5rem;
+    display: block;
+    font-family: var(--display-font);
+}
+
+#list a:after {
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+#list a:hover:after{
+    opacity: 1;
+    transform: none;
+}
+
+
+#list > div {
+    break-inside: avoid;
+}
+
+#list ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#list ul li {
+    color: white;
+    padding-left: 0.5rem;
+    list-style: "↳ "!important;
+}
+
+aside {
+    max-width: 300px;
+}
+
+aside > div {
+    top: 3rem ;
+    position: sticky;
+}
+#broken-link { margin-bottom: 3rem; }
+
+#broken-link p { color:white; }
+
+#broken-link:not(:target) .broken-text { display:none; }
+
+
+</style>
 </head>
 <body class="default">
-    <img src="./meta/img/loss.png" alt=""><br>
-    <!-- Add Map of entire website.
-         Give out possible reasons for broken link
-         #broken-link     
-    -->
+    <div id="container">
+        <main>
+            <img src="./meta/img/loss.png" alt="">
+            <div id="broken-link">
+                <h1>Henlo There!</h1>
+                <p class="broken-text">It appears the link you are attempting to access does not work.</p>
+                <p>This is a general outline of the stuff in my website. If you are feeling lost, kindly consult it!</p>
+            </div>
+
+            <div id="list">
+                <a href="./index.html">Home</a>
+                <a href="./about/index.html">About</a>
+                <a href="#">Map <span style="color: var(--gray);">(You're Here!)</span></a>
+                <div id="gallery">
+                    <a href="./art/index.html">Gallery</a>
+                    <ul>
+                        <li><a href="./art/view.html">Most Recent</a></li>
+                        <li><a href="./art/Archive">Archive</a></li>
+                    </ul>
+                </div>
+            
+                <div id="library">
+                    <a href="./comic/index.html">Library</a>
+                    <ul></ul>
+                </div>
+            
+                <div id="blog">
+                    <a href="./blog/index.html">Blog</a>
+                    <ul>
+                        <li><a href="./blog/archive.html">Archive</a></li>
+                    </ul>
+                </div>
+             
+                <div id="chez">
+                    <a href="./index.html">Chez <span style="color: var(--gray);">(To Do)</span></a>
+                    <ul>
+                        <li><a href="#">South Park Webring</a></li>
+                        <li><a href="#">Raffidelle</a></li>
+                        <li><a href="#">Kyman</a></li>
+                    </ul>
+                </div>
+                <div id="tabvoid">
+                    <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>
+                    <ul>
+                        <li><a href="https://stupied.neocities.org/tabvoid/about">About</a></li>
+                        <li><a href="https://stupied.neocities.org/tabvoid/2024-11-17-Set-Up">Setup</a></li>
+                        <li><a href="https://stupied.neocities.org/tabvoid/0000-00-00-Themes">Themes</a></li>
+                        <li><a href="https://stupied.neocities.org/tabvoid/demo">Live Demo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <aside>
+
+        </aside>
+    </div>
+
+<script src="./comic/main.js"></script>
+<script>
+    console.log(masterlist)
+    
+    libraryHTML = ""
+    for (i = 0; i < masterlist.length; i++){
+        current = masterlist[i]
+        currentTitle = masterlist[i].title
+        currentLink = "./comic/" + masterlist[i].volume + "/index.html"
+        libraryHTML += '<li><a href="' + currentLink + '">' + currentTitle + '</a></li>'
+    }
+    document.querySelector("#library > ul").innerHTML = libraryHTML
+</script>
 </body>
 </html>
