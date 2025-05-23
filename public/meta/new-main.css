@@ -120,6 +120,17 @@ height: 100%;
 .bg-gray{background-color:gray!important;}
 .bg-black{background-color:black!important;}
 
+.highlight{
+    background-color:var(--orange);
+    padding:0.5rem;
+    margin-bottom:0.5rem;
+}
+
+::selection{
+    background-color: var(--yellow);
+    color:var(--darkest-blue);
+}
+
 .default{
     max-width: 100vw;
     overflow-x: hidden;

@@ -29,11 +29,9 @@ not learning to do it yourself
         --drop-shadow-width:0.5rem 0.5rem;
     }
 
-    #container{margin-top: 2rem;}
-
     #splash header{grid-area:header;}
-    #splash #right{grid-area:right;}
-    #splash #left{grid-area:left;}
+    #splash #splash-right{grid-area:right;}
+    #splash #splash-left{grid-area:left;}
 
     #splash{
         display: grid;
@@ -45,11 +43,12 @@ not learning to do it yourself
 
         user-select: none;
         margin:auto;
+        margin-top: 2rem;
         background-color: var(--orange);
-        width:95%;
+        width:90%;
         max-width: 800px;
         aspect-ratio: 4/3;
-        background: url(./meta/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
+        background: url(./meta/img/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
 
         background-size: 150%;
         background-position: 100% 20%;
@@ -72,7 +71,7 @@ not learning to do it yourself
         z-index: 1;
     }
 
-    #right{z-index: 2;}
+    #splash-right{z-index: 2;}
 
     #about {
         bottom:-10%;
@@ -96,7 +95,7 @@ not learning to do it yourself
         filter: drop-shadow(var(--drop-shadow-width) 0 var(--darkest-blue));
     }
 
-    #left > a {
+    #splash-left > a {
         background-color: var(--blue);
         padding: 2% 5%;
         transition: var(--transition-time);
@@ -105,26 +104,26 @@ not learning to do it yourself
         border-right: 0;
     }
 
-    #left > a > img {
+    #splash-left > a > img {
         width:auto;
         height: 100%;
     }
 
-    #library {
+    #gallery {
         height:13%;
         width:90%;
         top: -5%;
         right:0;
     }
-    #library:hover{width:100%;}
+    #gallery:hover{width:100%;}
 
-    #gallery {
+    #library {
         height: 13%;
         width:70%;
         top: calc(20% + 0.6rem);
         right:0;
     }
-    #gallery:hover{width:80%;}
+    #library:hover{width:80%;}
 
     #rating {
         z-index: 1;
@@ -136,44 +135,53 @@ not learning to do it yourself
     }
     #rating:hover{transform: scale(120%);}
 
+    @media only screen and (max-width: 500px) {
+        :root{
+            --drop-shadow-width:0.3rem 0.3rem;
+        }
+    }
+    
     .tape {
         position: relative;
         z-index: 2;
-        --y-offset: -18%;
+        --y-offset: -22%;
         --rotate: -0.08rad;
         --skew: -0.3rad;
         transform:translateY(var(--y-offset)) rotate(var(--rotate)) skew(var(--skew)) scale(120%);
         background-color: var(--dark-blue);
-        background-image: url(./meta/scribble.png);
+        background-image: url(./meta/img/scribble.png);
         padding: 1rem 0;
     }
 
     .tape > div {
-        background-image: url(./meta/tape.png);
+        background-image: url(./meta/img/tape.png);
         background-size: auto 200%;
         height:10vw;
         max-height:4rem;
-        animation:scroll 60s infinite linear;
+        animation:scroll-right 60s infinite linear;
     }
 
-    @keyframes scroll {
+    @keyframes scroll-right {
         0%{ background-position: 0; }
         100%{ background-position: 100%; }
     }
 
-    main {
-        display: flex;
-        position: relative;
-        z-index: 2;
-        width: 90%;
-        max-width: 700px;
-        margin:2rem auto;
-        color: white;
-        transform: translateY(-1.5rem);
+    #container aside { grid-area:aside; }
+    #container main { grid-area:main; }
+    #container #extra { grid-area:extra; }
+    
+    #container{
+        display: grid;
+        max-width:800px;
+        margin: 1rem auto;
+        grid-template: 
+        'aside main'
+        'extra extra';
     }
 
     aside {
         width:200px;
+        z-index: 2;
         position: relative;
         user-select: none;
     }
@@ -193,12 +201,9 @@ not learning to do it yourself
         top:5rem;
     }
 
-    #desc {flex: 1;}
-
-    .highlight{
-        background-color:var(--orange);
-        padding:0.5rem;
-        margin-bottom:0.5rem;
+    main{
+        padding: 1rem;
+        color:white;
     }
 
     .meow span{display: inline-block;}
@@ -232,119 +237,175 @@ not learning to do it yourself
     #warning a{display: none;}
     #warning a:hover{background-color:var(--yellow);color:var(--darkest-blue);}
 
-
-    @media only screen and (max-width: 500px) {
-        :root{
-            --drop-shadow-width:0.3rem 0.3rem;
-        }
-        
-        main{display: block;}
-        aside{display: none;}
-    }
-
-    #more{
-        display: none;
-        max-width:400px;
-    }
-    #more:target{display: block;}
-
     #other {margin-top: 2rem;}
     #other ul{columns: 2; column-gap: 1rem;}
     #other a:hover {color:var(--yellow);}
-    /**
-    #other li{display: inline-block;}
-    #other a:not(:last-child) li:after {
-        content: "|";
-        margin: auto 0.5rem;
-        color: white;
-    }
-    #other a:hover {color: var(--yellow);}
-    **/
 
-    ::selection{
-        background-color: var(--yellow);
-        color:var(--darkest-blue);
+    #extra{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    #side { 
+        max-width:300px; 
+    }
+
+    #map img {
+        display: block;
+        margin: 1rem auto;
+        max-height: 30%;
+    }
+
+    #webrings {
+        overflow-y: auto;
+        border: 3px solid var(--orange);
+        height: 50%;
+        margin-top: 2rem;
+    }
+
+    #webrings p {
+        color: var(--orange);
+    }
+
+    #chatbox { flex: 2; }
+    #chatbox iframe {
+        background: url(./meta/img/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
+        background-size: 120%;
+    }
+
+    @media only screen and (max-width: 700px) {
+        aside{display:none;}
+
+        #extra { display:block; }
+        #side, #chatbox { 
+            max-width: none;
+            width:90%;
+            margin: auto;
+            margin-bottom:1rem;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        #container{
+            display: block;
+        }
+    }
+
+    footer{
+        color: var(--gray);
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    footer a:hover {color:white;}
+
+    footer a:not(:last-child):after {
+        content: "|";
+        margin: auto 1rem ;
+        color:var(--gray);
     }
 
 </style>
 </head>
 <body class="default">
+
+    <div id="splash">
+        <header>
+            <div id="logo">
+                <img src="./meta/img/logo.png" alt="" draggable="false" width="903" height="445">
+            </div>
+        </header>
+
+        <div id="splash-right">
+            <a id="blog" href="./blog/index.html" title="screaming into the abyss">
+                <img src="./meta/img/blog.png" alt="" draggable="false" width="373" height="505">
+            </a>
+            <a  id="about" href="./about.html" title="About the Webmaster">
+                <img src="./meta/img/about.png" alt="" draggable="false"  width="642" height="1142">
+            </a>
+        </div>
+
+        <div id="splash-left">
+            <a id="gallery" href="./art/index.html" title="artworks and animation">
+                <img src="./meta/img/txt-gallery.png" alt="" draggable="false"  width="281" height="82">
+            </a>
+
+            <a id="library" href="./comic/index.html" title="sequential images to tell dumb stories">
+                <img src="./meta/img/txt-library.png" alt="" draggable="false"  width="307" height="84">
+            </a>
+
+            <div id="rating">
+                <a href="#warning" title="read why this website has this rating"><img src="./meta/img/rating.png" alt="" draggable="false" width="93" height="68"></a>
+            </div>
+        </div>
+
+        <img id="clouds" src="./meta/img/clouds.png" alt="" draggable="false" width="1449" height="776">
+    </div>
+
+    <div id="divider">
+        <div class="tape"><div></div></div>
+    </div>
+
     <div id="container">
-        <div id="splash">
-            <header>
-                <div id="logo">
-                    <img src="./meta/logo.png" alt="" draggable="false" width="903" height="445">
-                </div>
-            </header>
-
-            <div id="right">
-                <a id="blog" href="./blog/index.html" title="screaming into the abyss">
-                    <img src="./meta/blog.png" alt="" draggable="false" width="373" height="505">
-                </a>
-                <a  id="about" href="./about.html" title="About the Webmaster">
-                    <img src="./meta/about.png" alt="" draggable="false"  width="642" height="1142">
-                </a>
-            </div>
-
-            <div id="left">
-                <a id="library" href="./comic/index.html" title="sequential images to tell dumb stories">
-                    <img src="./meta/txt-library.png" alt="" draggable="false"  width="307" height="84">
-                </a>
-
-                <a id="gallery" href="./art/index.html" title="artworks and animation">
-                    <img src="./meta/txt-gallery.png" alt="" draggable="false"  width="281" height="82">
-                </a>
-
-                <div id="rating">
-                    <a href="#warning" title="read why this website has this rating"><img src="./meta/rating.png" alt="" draggable="false" width="93" height="68"></a>
-                </div>
-            </div>
-
-            <img id="clouds" src="./meta/clouds.png" alt="" draggable="false" width="1449" height="776">
-        </div>
-
-        <div id="divider">
-            <div class="tape"><div></div></div>
-        </div>
+        <aside>
+            <img src="./meta/img/circles.png" alt="" draggable="false">
+            <img src="./meta/img/stars.png" alt="" draggable="false">
+        </aside>
 
         <main>
-            <aside>
-                <img src="./meta/circles.png" alt="" draggable="false">
-                <img src="./meta/stars.png" alt="" draggable="false">
-            </aside>
-            <div id="desc">
-                <h1 class="highlight meow">
-                    <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span>
-                </h1>
-                <p>This website is where I put my comics and random thoughts! I love it to absolute bits and will forever be in a work in progress :]</p>
+            <h1 class="highlight meow">
+                <span>H</span><span>e</span><span>n</span><span>l</span><span>o</span> <span>T</span><span>h</span><span>e</span><span>r</span><span>e</span><span>!</span><span>!</span>
+            </h1>
+            <p>This website is where I put my comics and random thoughts! I love it to absolute bits and will forever be in a work in progress :]</p>
 
-                <div id="warning">
-                    <h3>Trigger Warning!</h3>
-                    <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
-                    <a href="#desc" title="you agree to view this website's content">Okay!</a>
-                </div>
+            <div id="warning">
+                <h3>Trigger Warning!</h3>
+                <p>There might be bad-words, artworks that features gore and violence, and mildly suggestive content. Consider this your first and only warning.</p>
+                <a href="#desc" title="you agree to view this website's content">Okay!</a>
+            </div>
 
-                <a href="#" style="color: var(--gray);">View More »</a>
-
-                <div id="other">
-                    <h3>Other Stuff</h3>
-                    <ul>
-                        <li>
-                            <a href="https://literalwiki.neocities.org/">LiteralWiki</a>
-                        <li>
-                            <a href="./tabvoid/index.html">Tabvoid</a>
-                        </li>
-                        <li>
-                            <a href="./chat.html">Chatbox</a>
-                        </li>
-                        <li>
-                            <a href="./meta/status.html">Status</a>
-                        </li>
-                    </ul>
-                </div>
+            <div id="other">
+                <h3>Other Stuff</h3>
+                <ul>
+                    <li>
+                        <a href="https://literalwiki.neocities.org/">LiteralWiki</a>
+                    <li>
+                        <a href="./tabvoid/index.html">Tabvoid</a>
+                    </li>
+                    <li>
+                        <a href="./meta/img/status.html">Status</a>
+                    </li>
+                    <img src="./about/" alt="">
+                </ul>
             </div>
         </main>
+
+        <div id="extra">
+            <div id="side">
+                <div id="webrings">
+                    <h2 class="highlight">Webrings!</h2>
+                    <p style="padding: 1rem;">This is where'd I put my webrings.. <br> If I had any!!!</p>
+                </div>
+
+                <p style="color: var(--gray); margin-top: 1rem;">Ermm, I'll add more stuff here eventually. Yes I know it looks ugly as fuck,,</p>
+            </div>
+
+            <div id="chatbox">
+                <h2 class="highlight" style="margin-bottom:0;text-align: center;">ChatBox!</h2>
+                <iframe id="chatbox-iframe" src="https://www3.cbox.ws/box/?boxid=3528392&boxtag=htZkot" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+            </div>
+        </div>
     </div>
-    
+
+    <footer>
+        <a href="./about/index.html">about</a>
+        <a href="./map.html">map</a>
+        <a href="./feed.xml">rss</a>
+    </footer>
+
 </body>
 </html>
