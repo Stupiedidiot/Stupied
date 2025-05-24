@@ -270,6 +270,29 @@ not learning to do it yourself
         color: var(--orange);
     }
 
+    #outlinks {
+        display: block;
+        margin: 1rem;
+        color: var(--orange);
+        font-weight: bolder;
+        font-size: 1.5rem;
+        font-family: var(--display-font);
+    }
+
+    #outlinks:after {
+        opacity: 0;
+        transform: translateX(-100%);
+        display:inline-block;
+        margin-left: 0.5rem;
+        content: " »";
+        transition: 0.1s;
+    }
+
+    #outlinks:hover:after{
+        opacity: 1;
+        transform: none;
+    }
+
     #chatbox { flex: 2; }
     #chatbox iframe {
         background: url(./meta/img/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
@@ -386,12 +409,11 @@ not learning to do it yourself
 
         <div id="extra">
             <div id="side">
+                <a id="outlinks" href="./outlinks/index.html">✮ Outlinks</a>
                 <div id="webrings">
                     <h2 class="highlight">Webrings!</h2>
                     <p style="padding: 1rem;">This is where'd I put my webrings.. <br> If I had any!!!</p>
                 </div>
-
-                <p style="color: var(--gray); margin-top: 1rem;">Ermm, I'll add more stuff here eventually. Yes I know it looks ugly as fuck,,</p>
             </div>
 
             <div id="chatbox">
