@@ -13,6 +13,8 @@
 body {
     min-width: 300px;
     max-width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
     overflow-X: hidden;
     position: relative;
 }
@@ -27,8 +29,9 @@ h2 {
     font-size: 1.5rem;
     padding: 1rem;
     color: white;
-    height:100vh;
     box-sizing: border-box;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 #list a:after {
@@ -156,11 +159,13 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        height: auto;
+        overflow-y: auto;
     }
     #list {
         transform: translateY(-4rem);
         position: relative;
-        height: auto;
+        max-height: unset;
     }
     #icons { display: none; }
 }
