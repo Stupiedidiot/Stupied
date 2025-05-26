@@ -13,8 +13,6 @@
 body {
     min-width: 300px;
     max-width: 100vw;
-    height: 100vh;
-    overflow-Y: hidden;
     overflow-X: hidden;
     position: relative;
 }
@@ -31,7 +29,6 @@ h2 {
     color: white;
     height:100vh;
     box-sizing: border-box;
-    overflow-y: scroll;
 }
 
 #list a:after {
@@ -156,8 +153,6 @@ h2 {
 
 @media only screen and (max-width: 900px) {
     body {
-        height: auto;
-        overflow-y: auto;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -362,7 +357,7 @@ h2 {
         </div>
         <div id="icons">
             <p>
-                <span>Arrow</span> keys to move around<br>
+                <span>WASD</span> keys to move around<br>
                 <span>I and O</span> to zoom in and out<br>
             </p>
         </div>
@@ -385,16 +380,16 @@ speedX = 50
 document.onkeydown = function(event) {
     if( document.activeElement === document.querySelector("body") ){
         switch (event.keyCode) {
-            case 37: // left
+            case 65: // left
                 changeX(speedX)
             break;
-            case 38: // up
+            case 87: // up
                 changeY(speedY)
             break;
-            case 39: // right
+            case 68: // right
                 changeX(-speedX)
             break;
-            case 40: // down
+            case 83: // down
                 changeY(-speedY)
             break;
 
@@ -458,7 +453,6 @@ function copyText(text){
     navigator.clipboard.writeText(text);
     alert("You have copied the following: \n" + text + "\n\n Kindly paste it on your website");
 }
-
 </script>
 </body>
 </html>
