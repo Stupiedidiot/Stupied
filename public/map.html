@@ -153,8 +153,6 @@ aside > div {
 
 <script src="./comic/main.js"></script>
 <script>
-    console.log(masterlist)
-    
     libraryHTML = ""
     for (i = 0; i < masterlist.length; i++){
         current = masterlist[i]
@@ -163,6 +161,9 @@ aside > div {
         libraryHTML += '<li><a href="' + currentLink + '">' + currentTitle + '</a></li>'
     }
     document.querySelector("#library > ul").innerHTML = libraryHTML
+
+    // for troubleshooting lol   
+    console.log("Prev: " + document.referrer)
 </script>
 </body>
 </html>
