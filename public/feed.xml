@@ -8,10 +8,21 @@
     <ttl>60</ttl>
 
     <item>
-      <title>Welcome!!</title>
-      <pubDate>Fri, 23 May 2025 19:56:00 PST</pubDate>
+      <title>Outlinks Page</title>
+      <pubDate>Sat, 24 May 2025 21:00:00 PST</pubDate>
+      <link>https://stupied.neocities.org/outlinks/</link>
+      <description>
+        Created a page dedicated to links to other people I like. Please check them out whenever you have the chance; They're all awesome! This is kind of inspired by Spore where you could click around the solar system to select different plants. As a kid I didn't delete any games because I was scared I would run out of planets.
+      </description>
+    </item>
+
+    <item>
+      <title>Introduction</title>
+      <pubDate>Thu, 08 Apr 2023 12:00:00 PST</pubDate>
       <link>https://stupied.neocities.org/</link>
-      <description>This is the stupied rss feed™!!! Will update here, if I remember haha</description>
+      <description>
+        This feed will serve as an alternative to those who can't follow me on neocities or just prefer using rss. This will be updated for any notable changes in the website. Not that anyone cares, but this post wasn't actually made on the april of 2023. That's this website's birthday!
+      </description>
     </item>
 
   </channel>
