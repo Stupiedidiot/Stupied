@@ -11,29 +11,27 @@
       <title>[Art] Pendant</title>
       <pubDate>Wed, 28 May 2025 21:30:00 PST</pubDate>
       <link>https://stupied.neocities.org/art/view?item=2025-Pedant.png</link>
-      <content type="html">
-        <img src="https://stupied.neocities.org/art/img/2025-Pedant.png" style="max-width:100%;"><br>
-        <a href="https://stupied.neocities.org/art/view?item=2025-Pedant.png">View Page »</a>
-      </content>
+      <description>
+        <img src="https://stupied.neocities.org/art/img/2025-Pedant.png" style="max-width:100%;"/>
+      </description>
     </item>
 
     <item>
       <title>Outlinks Page</title>
       <pubDate>Sat, 24 May 2025 21:00:00 PST</pubDate>
       <link>https://stupied.neocities.org/outlinks/</link>
-      <content type="html">
+      <description>
         <p>Created a page dedicated to links to other people I like. Please check them out whenever you have the chance; They're all awesome! This is kind of inspired by Spore where you could click around the solar system to select different plants. As a kid I didn't delete any games because I was scared I would run out of planets.</p>
-        <a href="https://stupied.neocities.org/outlinks/">View Page »</a>
-      </content>
+      </description>
     </item>
 
     <item>
       <title>Introduction</title>
       <pubDate>Thu, 06 Apr 2023 12:00:00 PST</pubDate>
       <link>https://stupied.neocities.org/</link>
-      <content type="html">
+      <description>
         <p>This feed will serve as an alternative to those who can't follow me on neocities or just prefer using rss. This will be updated for any notable changes in the website. Not that anyone cares, but this post wasn't actually made on the April 6 of 2023. That's this website's birthday!</p>
-      </content>
+      </description>
     </item>
 
   </channel>
@@ -44,6 +42,6 @@
     <title>[TITle]</title>
     <pubDate>[UPDATE PUBLISHING DATE - in rfc 2822]</pubDate>
     <link>[UPDATE URL]</link>
-    <content type="html">[UPDATE DESCRIPTION]</content>
+    <description>[UPDATE DESCRIPTION]</description>
   </item>
 -->
