@@ -24,6 +24,8 @@ not learning to do it yourself
     <link rel="stylesheet" href="./meta/new-main.css">
     <title>stupied stuff!</title>
 <style>
+    @import url(https://fonts.bunny.net/css?family=acme:400);
+
     :root{
         --transition-time: 0.25s;
         --drop-shadow-width:0.5rem 0.5rem;
@@ -266,8 +268,30 @@ not learning to do it yourself
         margin-top: 2rem;
     }
 
-    #webrings p {
-        color: var(--orange);
+    #webrings p { color: var(--orange); }
+    #webrings h2 { margin-bottom:0; }
+
+    #doodlering-container {
+        background-image: url(https://evehibi.nekoweb.org/doodlering/background.png);
+        background-size: 100%;
+        padding: 1rem 0;
+    }
+
+    #doodlering {
+        margin: 0 auto!important;
+    }
+
+    #doodlering .webring-wrapper {
+        background-image: none!important;
+    }
+
+
+    #webmaster {
+        font-family: "Acme";
+        background-color: #2da5d8;
+        color: white;
+        padding:1rem 0.5rem;
+        text-align: center;
     }
 
     #outlinks {
@@ -412,8 +436,14 @@ not learning to do it yourself
                 <a id="outlinks" href="./outlinks/index.html">✮ Outlinks</a>
                 <div id="webrings">
                     <h2 class="highlight">Webrings!</h2>
-                    <div id="doodlering">
-                        <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-variables.js"></script><script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-widget.js"></script><link rel="stylesheet" href="https://evehibi.nekoweb.org/doodlering/onionring.css">
+                    <div id="doodlering-container">
+                        <div id="doodlering">
+                            <script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-variables.js"></script><script type="text/javascript" src="https://evehibi.nekoweb.org/doodlering/onionring-widget.js"></script><link rel="stylesheet" href="https://evehibi.nekoweb.org/doodlering/onionring.css">
+                        </div>
+                    </div>
+                    <div id="webmaster">
+                        <link rel="stylesheet" type="text/css" href="https://file.garden/ZrZSgsrYfQXsO7QH/ww/webmasterwebring.css">
+                        <a href="https://webmasterwebring.netlify.app?stupied-previous">&larr;</a> <a href="https://webmasterwebring.netlify.app">Webmaster Webring</a> <a href="https://webmasterwebring.netlify.app?stupied-random">?</a> <a href="https://webmasterwebring.netlify.app?stupied-next">&rarr;</a>
                     </div>
                 </div>
             </div>
@@ -430,6 +460,5 @@ not learning to do it yourself
         <a href="./map.html">map</a>
         <a href="./feed.xml">rss</a>
     </footer>
-
 </body>
 </html>
