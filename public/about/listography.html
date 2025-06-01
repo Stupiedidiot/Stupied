@@ -51,7 +51,7 @@ body {
     break-inside: avoid;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 500px) {
     #lists{columns:2;}
 }
 
@@ -59,7 +59,10 @@ body {
     #lists{columns:3;}
 }
 
+li { position: relative; }
+
 li a:after {
+    position: absolute;
     opacity: 0;
     transform: translateX(-100%);
     display:inline-block;
@@ -73,6 +76,15 @@ li a:hover:after{
     transform: none;
 }
 
+#music span {
+    color: lightgray;
+}
+
+#meirl img {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+}
 </style>
 </head>
 <body>
@@ -86,77 +98,123 @@ li a:hover:after{
         <div id="lists">
             <div id="general">
                 <h2>General</h2>
-                <p>Lorem ipsum dolor sit amet</p>
+                <p>A vague list of stuff I enjoy</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Snails and Puppies</li>
+                    <li>Block Falling Games</li>
+                    <li>Nonchalant Characters</li>
+                </ul>
+            </div>
+
+                        <div id="music">
+                <h2>Music</h2>
+                <p>I enjoy anything upbeat and fun!</p>
+                <ul>
+                    <li>TERF Bangs <span>- Butch Baby</span></li>
+                    <li>Thumbnail <span>- Louie Zong</span></li>
+                    <li>Graduation <span>- Small Dad</span></li>
+                    <li>Speedin' <span>- from Turbo!!</span></li>
+                    <li>Mike Pig in Heaven</li>
+                    <li>I Can't Handle Change</li>
+                    <li>Best Imitation Of Myself</li>
+                </ul>
+
+                <h3>OPM</h3>
+                <ul>
+                    <li>Binibini sa MRT <span>- The Juans</span></li>
+                    <li>Wishing Wells <span>- Eraserheads</span></li>
+                    <li>Para Sayo <span>- Parokya ni Edgar</span></li>
+                    <li>Lagi Mong Tatandaan</li>
+                </ul>
+
+                <h3>Bands / Artists</h3>
+                <ul>
+                    <li>LiteralHat</li>
+                    <li>Le Tigre</li>
+                    <li>Plumtree</li>
+                    <li>Yucky Duster</li>
+                    <li>Jack Stauber</li>
+                </ul>
+            </div>
+
+            <div id="games">
+                <h2>Vidya Games</h2>
+                <p>I don't consider myself a gamer but there are a few games that takes way too much of my time</p>
+                <ul>
+                    <li>Tetris and Puyo Pop</li>
+                    <li>Stardew Valley</li>
+                    <li>Insaniquarium</li>
                 </ul>
             </div>
 
             <div id="characters">
                 <h2>Characters</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repudiandae consequatur ex eum laboriosam consequuntur.</p>
+                <p>As a chronic daydreamer, these lil guys live rent free in my head. I will literally kill myself if it weren't for them</p>
 
-                <h3>Original</h3>
+                <h3>[OCS] Original</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><a href="./../comic/psych/character/psyche-lea.html">Psyche Lea</a></li>
+                    <li><a href="./../comic/psych/character/evan-odd.html">Evan Odd</a></li>
+                    <li>Mopsy Cortes</li>
+                    <li>Pepper</li>
+                    <li>Manny</li>
+                    <li>Tina Foil</li>
+                    <li>Cheeze</li>
+                    <li>Yasmayne</li>
+                    <li>Maudie</li>
                 </ul>
 
                 <h3>Pokemon</h3>
-                <h3>LiteralHat</h3>
-            </div>
-
-            <div id="games">
-                <h2>Vidya Games</h2>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsam illum inventore! Quisquam accusamus itaque ad, nulla pariatur recusandae voluptates nam suscipit perspiciatis deserunt. Dolorem dolor modi ducimus quos ratione!
-            </div>
-
-            <div id="music">
-                <h2>Music</h2>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Red and Blue</li>
+                    <li>Green!!!</li>
                 </ul>
 
-                <hr>
-
-                <h3>OPM</h3>
+                <h3>South Park</h3>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li>Eric Cartman</li>
+                    <li>Kyle Broflovski</li>
                 </ul>
             </div>
 
             <div id="comics">
                 <h2>Komics n Books</h2>
+                <p>Comics are awesome!!!! </p>
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><a href="https://www.webtoons.com/en/fantasy/hooky/list?title_no=425">Hookey</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Scott_Pilgrim">Scott Pilgrim</a></li>
+                    <li><a href="https://www.webtoons.com/en/canvas/the-little-trashmaid/list?title_no=300138">The Little Trashmaid</a></li>
+                    <li><a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Adventures">Pokemon Adventures</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/The_Bellybuttons">The Bellybuttons</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Dungeon_(comics)">Dungeon</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Lady_Killer_(comic_book)">Lady Killer</a></li>
+                    <li><a href="https://tvtropes.org/pmwiki/pmwiki.php/ComicBook/Beauty">Beauty</a></li>
+                    <li><a href="https://imagecomics.com/comics/series/friday">Friday</a></li>
                 </ul>
             </div>
 
             <div id="movies">
-                <h2>Movies</h2>
-            </div>
-
-            <div id="study">
-                <h2>To Study</h2>
+                <h2>Movies n Films</h2>
+                <p>The very few motion pictures I will force my goldfish ass to sit through</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Turbo_(2013_film)">Turbo (2013)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Turbo_Fast">Turbo Fast</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Hot_Fuzz">Hot Fuzz</a></li>
                 </ul>
             </div>
 
             <div id="meirl">
                 <h2>Meirl</h2>
-                <p>Insert #relatable memes</p>
+                <div class="justified-gallery" style="--min-height:180px;">
+                    <img src="./img/meirl-knowing.jpg" alt="" style="--width: 640; --height: 635;">
+                    <img src="./img/meirl-komputer.jpg" alt="" style="--width: 735; --height: 926;">
+                    <img src="./img/meirl-km-per-s.jpg" alt="" style="--width: 736; --height: 792;">
+                    <img src="./img/meirl-oc-amv.jpg" alt="" style="--width: 474; --height: 592;">
+                    <img src="./img/meirl-brainrot.jpg" alt="" style="--width: 736; --height: 711;">
+                    <img src="./img/meirl-cutoff.jpg" alt="" style="--width: 394; --height: 157;">
+                </div>
             </div>
-            
+
             <div id="buttons">
                 <h2>Stamps n Blinkies</h2>
                 <div class="justified-gallery" style="--min-height:55px;">
@@ -180,6 +238,8 @@ li a:hover:after{
             </div>
 
             <div id="head-back">
+                <h2>Okay that's all!</h2>
+                <p>Will add more and make this page prettier in the future :3</p>
                 <ul>
                     <li><a href="./../index.html">Head Back</a></li>
                 </ul>
