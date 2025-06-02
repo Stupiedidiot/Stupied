@@ -102,7 +102,7 @@ li a:hover:after{
             </div>
 
             <div id="general" style="margin-top: 2rem;">
-                <img src="./../meta/pfp-transparent.png" alt="" class="float-right" style="width: 80px;display: block;transform: scale(130%) translateY(-1rem) translateX(-0.3rem);">
+                <img src="./../meta/pfp-transparent.png" alt="" style="float:right;margin-left:1rem;width:80px;display: block;transform: scale(130%) translateY(-1rem) translateX(-0.3rem);">
                 <h2>About Me</h2>
                 <p>Henlo, I'm Stupied! Here are some more facts about me</p>
                 <ul>
@@ -390,15 +390,11 @@ for (i=1; i < lists.length - 1;i++){
     title = lists[i].querySelector("h2").innerHTML
     result = `
         <li>
-            <a href="#${id}">
-                ${title}
-            </a>
+            <a href="#${id}"> ${title} </a>
         </li>
     `
     
     final += result
-    console.log(id)
-    console.log(title)
 }
 
 document.getElementById("output").innerHTML = final
