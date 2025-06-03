@@ -18,6 +18,8 @@ body {
     min-width: 300px;
 }
 
+img { max-width: 100%; display: block; }
+
 #container {
     max-width: 1000px;
     width: 90%;
@@ -29,7 +31,7 @@ body {
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: var(--blue);
-    border: var(--border);
+    outline: var(--border);
     border-radius: var(--border-radius);
     color: white;
     overflow: hidden;
@@ -44,12 +46,13 @@ body {
 #lists > div {
     flex: auto;
     margin-bottom: 1rem;
-    padding: 1rem;
     background-color: white;
-    border: var(--border);
+    outline: var(--border);
     border-radius: var(--border-radius);
     break-inside: avoid;
 }
+
+#lists > div:has(h2) { padding:1rem; }
 
 @media only screen and (min-width: 500px) {
     #lists{columns:2;}
@@ -350,6 +353,13 @@ li a:hover:after{
                     <li>ᯓ★ ★ ✮ ☆</li>
                     <li>« 🏠︎ »</li>
                 </ul>
+
+                <h3>Websites</h3>
+                <ul>
+                    <li><a href="https://www.coolsymbol.top/cool-borders.html">Borders</a></li>
+                    <li><a href="https://emojicombos.com/divider">Dividers</a></li>
+                    <li><a href="https://www.asciiart.eu/">ASCII Archive</a></li>
+                </ul>
             </div>
 
             <div id="stamps">
@@ -450,13 +460,14 @@ li a:hover:after{
                     <li>Comics from my Childhood</li>
                     <li>The mischaracterization of Sig</li>
                     <li>Analog and D Pad Comic</li>
+                    <li>Coloring Tutorial??</li>
                 </ul>
             </div>
 
             <div id="head-back">
                 <h2>Okay that's all!</h2>
-                <p>Will add more and make this page prettier along the way</p>
                 <ul>
+                    <li><a href="#table">Back to Top</a></li>
                     <li><a href="./../index.html">Head Back</a></li>
                 </ul>
             </div>
@@ -466,7 +477,7 @@ li a:hover:after{
 
 <script>
 
-lists = document.querySelectorAll("#lists > div")
+lists = document.querySelectorAll("#lists > div:has(h2)")
 final = ""
 
 for (i=1; i < lists.length - 1;i++){
