@@ -151,7 +151,6 @@ ul li:nth-child(2n){list-style-type:"✮ ";}
     }
 
     main { 
-        background-color:lightgray;
         padding:0.5rem 0.2rem;
     }
 
@@ -340,4 +339,24 @@ body.eighty-four main{
 
 body.adrift{
     --accent-color:#3a9eb2;
+}
+
+body.askal {
+    --blue: #6faccc;
+    --light-blue: #edeeff;
+
+    --bg-color:white;
+    --txt-color:black;
+    --accent-color: var(--blue);
+}
+
+body#comicViewer.askal main {
+    padding:0;
+    
+    .main-content { border: none; }
+}
+
+body.askal .default{
+    background-color: #edeeff;
+    background-image: none;
 }

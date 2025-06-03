@@ -38,7 +38,7 @@ p:last-child,ol:last-child,ul:last-child{
     margin-bottom:0;
 }
 
-ul{list-style-type:"★ ";}
+ul li{list-style-type:"★ ";}
 ul > *:nth-child(2n){list-style-type:"✮ ";}
 
 .outline{
