@@ -8,6 +8,16 @@
     <ttl>60</ttl>
 
     <item>
+      <title>[askal] patronizing</title>
+      <pubDate>Thu, 5 Jun 2025 20:30:00 PST</pubDate>
+      <link>https://stupied.neocities.org/comic/askal/patronizing.html</link>
+      <description>
+        <img src="https://stupied.neocities.org/comic/askal/img/patronizing-0.png" style="max-width:100%;"/>
+        Made an autobiographical comic thing. Very original i know,,
+      </description>
+    </item>
+
+    <item>
       <title>Listography</title>
       <pubDate>Sun, 1 Jun 2025 20:50:00 PST</pubDate>
       <link>https://stupied.neocities.org/about/listography</link>
@@ -45,12 +55,3 @@
 
   </channel>
 </rss>
-
-<!-- This is here because I may be stupid
-  <item>
-    <title>[TITle]</title>
-    <pubDate>[UPDATE PUBLISHING DATE - in rfc 2822]</pubDate>
-    <link>[UPDATE URL]</link>
-    <description>[UPDATE DESCRIPTION]</description>
-  </item>
--->

@@ -43,7 +43,7 @@ masterlist = [
         "desc":"Autobiographical comics :3",
         "issues":[
             {"file":"intro.html"},
-            //{"file":"patronizing.html"},
+            {"file":"patronizing.html"}
             //{"file":"fit-in.html"}
         ]
     },

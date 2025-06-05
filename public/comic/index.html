@@ -31,6 +31,7 @@ body{
         .item-desc{margin-left:0.5rem;}
         .item-link{margin-left:1rem;}
     }
+
     .muse-adriade {
         --yellow:#efe4b0;
         --light-pink:#edb18b;
@@ -38,33 +39,44 @@ body{
         background-color: var(--yellow);
         background-size: 20px 20px;
         background-image: 
-        repeating-linear-gradient(0deg, var(--light-pink), var(--light-pink) 2px, var(--yellow) 2px, var(--yellow))
-        ;
-        .item-thumb{
-            flex:0;
-            position: relative;
-            img{
-                position: absolute;
-                width:5rem;
-                height: unset;
-                z-index:1;
-                transform: scale(130%) rotate(-15deg) translateX(-10%);
-                filter: drop-shadow(1px 0 0 var(--yellow)) drop-shadow(-1px 0 0 var(--yellow)) drop-shadow(0 1px 0 var(--yellow)) drop-shadow(0 -1px 0 var(--yellow));
-            }
-        }
-        .item-side > div{
-            padding:0.5rem;
-        }
-        h1{
-            color:white;
-            background-color:var(--pink);
-            padding:8px;
-            margin-bottom:0.5rem;
-            padding-left:5rem;
-        }
-        .item-desc{margin-left:5rem;margin-right:0.5rem;}
-        .item-link{margin-left:5.5rem;color:var(--pink);}
+        repeating-linear-gradient(0deg, var(--light-pink), var(--light-pink) 2px, var(--yellow) 2px, var(--yellow));
     }
+
+    .muse-adriade .item-thumb{
+        flex:0;
+        position: relative;
+        img{
+            position: absolute;
+            width:5rem;
+            height: unset;
+            z-index:1;
+            transform: scale(130%) rotate(-15deg) translateX(-10%);
+            filter: drop-shadow(1px 0 0 var(--yellow)) drop-shadow(-1px 0 0 var(--yellow)) drop-shadow(0 1px 0 var(--yellow)) drop-shadow(0 -1px 0 var(--yellow));
+        }
+    }
+    .muse-adriade .item-side > div{
+        padding:0.5rem;
+    }
+    .muse-adriade h1{
+        color:white;
+        background-color:var(--pink);
+        padding:8px;
+        margin-bottom:0.5rem;
+        padding-left:5rem;
+    }
+    .muse-adriade  .item-desc{margin-left:5rem;margin-right:0.5rem;}
+    .muse-adriade  .item-link{margin-left:5.5rem;color:var(--pink);}
+
+    .askal { background-color: #edeeff; }
+    .askal .item-thumb img{
+        width: auto;
+        max-width:150px;
+        transform: scale(110%);
+        --color:#edeeff;
+        --width:2px;
+        filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))
+    }
+    .askal .item-desc { color:#6faccc; }
 }
 
 #comicContainer{
@@ -95,6 +107,22 @@ body{
         top:50%;transform: translateY(-50%);
     }
     .item-link{margin-top:1rem;}
+
+    a:after {
+        opacity: 0;
+        transform: translateX(-100%);
+        position: absolute;
+        display:inline-block;
+        margin-left: 0.5rem;
+        content: " »";
+        transition: 0.1s;
+    }
+
+    a:hover:after{
+        opacity: 1;
+        transform: none;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -132,7 +160,7 @@ body{
         itemThumb = '<img  src="./' + item.volume + '/img/main.png">'
         itemTitle = '<h1>' + item.title + '</h1>'
         itemDesc = item.desc
-        itemLink = '<a href="./' + item.volume + '/index.html">Click to Read »</a>'
+        itemLink = '<a href="./' + item.volume + '/index.html">Click to Read</a>'
 
         itemResult =`
         <div class="item-container">
