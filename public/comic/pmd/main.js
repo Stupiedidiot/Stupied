@@ -41,7 +41,7 @@ const templateViewer =`
         <header></header>
         <div id="nextprev"></div>
         <div id="extra">
-            <a href="` + relativePath + `../../index.html">✮</a>
+            <a href="${relativePath}../../index.html">✮</a>
         </div>
     </div>
 
@@ -56,6 +56,12 @@ const templateViewer =`
             <div id="comments"></div>
         </div>
     </div>
+
+    <footer>
+        <a href="${relativePath}../../about/index.html">about</a>
+        <a href="${relativePath}../../map.html">map</a>
+        <a href="${relativePath}../../feed.xml">rss</a>
+    </footer>
 </div>
 `
 

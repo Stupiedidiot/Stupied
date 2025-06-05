@@ -476,6 +476,21 @@ height: 100%;
         display: inline-block;
     }
 
+    footer{ 
+        color: white;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    footer a:hover {color:var(--accent-color);}
+
+    footer a:not(:last-child):after {
+        content: "|";
+        margin: auto 1rem ;
+        color: white;
+    }
+
     @media only screen and (max-width: 650px) {
         #bottom{display: block;}
 
