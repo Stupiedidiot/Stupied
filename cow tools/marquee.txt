@@ -1,12 +1,9 @@
 .marquee {
+  --font-size: 2rem;
   position: relative;
   max-width: 100%;
-  height: 2rem;
+  height: var(--font-size);
   overflow-x: hidden;
-  color:white;
-  margin-top:3rem;
-  opacity:0.5;
-  mask-image: linear-gradient(90deg,#00000000 20%, #ffffff 95%, #00000000 100%);
 }
 
 .track {
