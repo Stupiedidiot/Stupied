@@ -109,9 +109,9 @@ li a:hover:after{
         </div>
 
         <div id="lists">
-            <div id="table">
+            <div>
                 <h2>Table of Contents</h2>
-                <ul id="output"></ul>
+                <ul id="table"></ul>
             </div>
 
             <div id="general" style="margin-top: 1.5rem;">
@@ -467,7 +467,7 @@ li a:hover:after{
                 </ul>
             </div>
 
-            <div id="head-back">
+            <div>
                 <h2>Okay that's all!</h2>
                 <ul>
                     <li><a href="#table">Back to Top</a></li>
@@ -483,19 +483,19 @@ li a:hover:after{
 lists = document.querySelectorAll("#lists > div:has(h2)")
 final = ""
 
-for (i=1; i < lists.length - 1;i++){
-    id = lists[i].id
-    title = lists[i].querySelector("h2").innerHTML
-    result = `
-        <li>
-            <a href="#${id}"> ${title} </a>
-        </li>
-    `
-    
-    final += result
+for (i=0; i < lists.length;i++){
+    if (id = lists[i].id){
+        title = lists[i].querySelector("h2").innerHTML
+        result = `
+            <li>
+                <a href="#${id}"> ${title} </a>
+            </li>
+        `
+        final += result
+    }
 }
 
-document.getElementById("output").innerHTML = final
+document.getElementById("table").innerHTML = final
 
 </script>
 </body>
