@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../meta/new-main.css">
+    <title>Document</title>
+
+<style>
+@font-face {
+  font-family: southpark;
+  src: url('./sp-font.ttf');
+}
+
+:root {
+    --display-font: southpark;
+    --light-green: rgb(146, 212, 99);
+    --green: rgb(54, 184, 54);
+    --red: rgb(204, 39, 39);
+    --yellow: rgb(242, 226, 164);
+    --brown:rgb(51, 38, 38);
+    --border: 2px solid var(--brown);
+    --radius: 0.6rem;
+}
+
+svg { height: 1rem; aspect-ratio: 1/1; }
+
+.flex { display: flex; }
+
+#container {
+    margin: 1rem auto;
+    max-width: 550px;
+    width: 95%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: white;
+    outline: 3px solid var(--brown);
+}
+
+header {
+    user-select: none;
+    background-color: var(--green);
+    padding: 0.5rem;
+    color: white;
+    position: relative;
+}
+
+header > div {
+    position: absolute;
+    top: 50%;
+    right:1rem;
+    transform: translateY(-50%);
+}
+
+header > div > span {
+    display: inline;
+    background-color: var(--yellow);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+}
+
+#bar {
+    user-select: none;
+    display: flex;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+#reload {
+    font-weight: bolder;
+    background-color: var(--light-green);
+    padding: 0.5rem;
+}
+
+#reload span {
+    display: inline-block;
+    padding: 0.3rem;
+
+}
+
+#search {
+    flex: 1;
+    background-color: var(--red);
+    padding: 0.5rem 1rem;
+}
+
+#search > div {
+    background-color:white;
+    border-radius: var(--radius);
+    padding: 0.3rem;
+}
+
+#tabs {
+    user-select: none;
+    position: relative;
+    z-index: 1;
+    background-color: var(--yellow);
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#tabs a {
+    display: inline-block;
+    background-color: white;
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    min-width: 90px;
+    width: 15%;
+    height: 1.5rem;
+    position: relative;
+    font-family: var(--display-font);
+    transform: translateY(0.5rem);
+}
+
+#tabs a:hover { transform: none; }
+
+#tabs a::after {
+    content: "X";
+    position: absolute;
+    right: 0.5rem;
+    color: lightgray;
+}
+
+article {
+    z-index: 2;
+    padding: 1rem;
+    position: relative;
+    background-color: white;
+}
+
+#about > div:nth-of-type(2) {
+    border: var(--border);
+    max-width: 200px;
+    aspect-ratio: 1/1;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+section {
+    background-color: var(--green);
+    padding: 1rem;
+}
+
+footer {
+    user-select: none;
+    background-color: var(--red);
+}
+
+</style>
+
+</head>
+<body>
+    
+<div id="container">
+    <header>
+        <h1>Kyman!!</h1>
+        <div>
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M.3 89.5C.1 91.6 0 93.8 0 96L0 224 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-192 0-128c0-35.3-28.7-64-64-64L64 32c-2.2 0-4.4 .1-6.5 .3c-9.2 .9-17.8 3.8-25.5 8.2C21.8 46.5 13.4 55.1 7.7 65.5c-3.9 7.3-6.5 15.4-7.4 24zM48 224l416 0 0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192z"/></svg></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></span>
+        </div>
+    </header>
+
+    <div id="bar">
+        <div id="reload">
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160 352 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l111.5 0c0 0 0 0 0 0l.4 0c17.7 0 32-14.3 32-32l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1L16 432c0 17.7 14.3 32 32 32s32-14.3 32-32l0-35.1 17.6 17.5c0 0 0 0 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.8c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352l34.4 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L48.4 288c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg></span>
+        </div>
+        <div id="search">
+            <div>I Believe!</div>
+        </div>
+    </div>
+    
+    <nav id="tabs">
+        <a href="#">about</a>
+        <a href="#">art</a>
+        <a href="#">fanfics</a>
+        <a href="#">clips</a>
+    </nav>
+    <main>
+        <article id="about" class="flex">
+            <div>
+                <h2>About</h2>
+                <h4>Meow Meow</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et saepe minima tempore similique quasi, tempora pariatur soluta asperiores totam vitae repudiandae suscipit voluptatem sapiente accusantium eligendi officiis quos voluptate exercitationem?</p>
+            </div>
+            <div>
+                <img src="./test.jpg" alt="">
+            </div>
+        </article>
+        <section>
+            testing!!
+        </section>
+        <article>
+            <h2>Why Though?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate eveniet, provident saepe explicabo ea eius, deserunt cupiditate aliquam quas consectetur optio corrupti, architecto impedit nemo fugit quia quibusdam voluptas id!</p>
+            
+            <h2>Art</h2>
+            <h2>Fanfics</h2>
+            <h2>Clips</h2>
+        </article>
+    </main>
+    <footer>
+        <a href="https://xiu2.carrd.co/">Inspo</a> | 
+        <a href="./../../index.html">Head Back »</a>
+    </footer>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
