@@ -1,7 +1,12 @@
 [
-    {
-        "img":"2025-Pedant.png"
+    { 
+        "img":"2025-Shiny-Things.png",
+        "desc":"Characters belongs to <a href=\"https://garpejio.neocities.org/\">Garpejio</a>"
     },
+    { 
+        "img":"2025-Pedant.png",
+        "extra":[ "doodle/2025-Bahala.png" ]
+     },
     {
         "img":"2025-Secrets.png",
         "extra":[
