@@ -14,26 +14,22 @@ Last Posted on 2025/06/07
   <meta name="description" content="Art by Stupied :]">
   <title></title>
 <style>
-  footer{
-    color:var(--wheat);
-  }
-  #image img{
-    display: block;
-  }
 
-  #nextprev{
-    color: var(--wheat);
-    background-color:black;
-    text-align:center;
-    padding:1rem 0;
-  }
-  #nextprev a:hover{
-    color:var(--blue);
-  }
+footer{ color:var(--wheat); }
+#image img{ display: block; }
 
-  #aside-1-content a { text-decoration: 0.1rem var(--blue) underline;}
+#title span { color:rgb(185, 185, 185); font-size: 0.9rem; }
 
-  
+#nextprev{
+  color: var(--wheat);
+  background-color:black;
+  text-align:center;
+  padding:1rem 0;
+}
+#nextprev a:hover{ color:var(--blue); }
+
+#aside-1-content a { text-decoration: 0.1rem var(--blue) underline;}
+
 #container .main-content, #container #aside-1{
     border:3px solid black;
 }
@@ -80,8 +76,12 @@ fetch("./main.json")
 
       currentIndex=getIndex(art,currentImage)
       if (currentIndex>-1){
-        title=getTitle(art,currentIndex)
-        document.getElementById("title").innerHTML = title
+        title = getTitle(art,currentIndex)
+        
+        year = getDate(art,currentIndex)
+        year = "<span> (" + year + ")</span>"
+
+        document.getElementById("title").innerHTML = title + year
         document.title = title +" // stupied"
 
         if(art[currentIndex].desc!==undefined){
@@ -104,6 +104,13 @@ fetch("./main.json")
       nextprev=genNav(art)
       document.getElementById("nextprev").innerHTML=nextprev
 })
+
+function getDate(art,x) {
+  selected = art[x].img
+  index = selected.indexOf("2")
+  result = selected.slice(index, index + 4)
+  return result
+}
 
 function genNav(e){
   result=""
