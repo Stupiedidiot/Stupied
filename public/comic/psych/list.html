@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <title></title>
+    <title>List</title>
 <style>
-    h1 { color:var(--yellow); }
-    h2 { color:var(--red); margin-top: 2rem; }
-    h3 > span { color: var(--brown); }
-    ::marker { color:var(--brown);}
+h1 { color:var(--yellow); }
+h2 { color:var(--red); margin-top: 2rem; }
+h3 > span { color: var(--brown); }
+::marker { color:var(--brown);}
+
+li { position: relative; }
+
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
 </style>
 </head>
 <body>
@@ -20,8 +37,13 @@
     </div>
 
     <div id="lists" class="main-content" style="padding-top:0;">
+        <div>
+            <h2 style="margin-top:0;">Table of Contents</h2>
+            <ul id="table"></ul>
+        </div>
+        
         <div id="outline">
-            <h2 style="margin-top:0;">Series Outline</h2>
+            <h2>Series Outline</h2>
             <p></p>
 
             <h3>Volume 1 <span>- Grade 10</span></h3>
@@ -102,8 +124,38 @@
                 <li></li>
             </ul>
         </div>
+
+        <div id="creatures">
+            <h2>Creatures</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
 
 <script src="./main.js"></script>
+<script>
+
+lists = document.querySelectorAll("#lists > div:has(h2)")
+final = ""
+
+for (i=0; i < lists.length;i++){
+    if (id = lists[i].id){
+        title = lists[i].querySelector("h2").innerHTML
+        result = `
+            <li>
+                <a href="#${id}"> ${title} </a>
+            </li>
+        `
+        final += result
+    }
+}
+
+document.getElementById("table").innerHTML = final
+
+</script>
 </body>
 </html>

@@ -276,7 +276,6 @@ function changeIssue(){
     window.location.href = current.obj.issues[e].file
 }
 
-
 // BEEP BOOP
 if( document.title==="" ){ 
     document.title = comicTitle
@@ -286,6 +285,19 @@ if( document.title==="" ){
 
 document.querySelector("head").innerHTML += `<meta name="keywords" content="stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, original characters, ocs, fanart ">`
 document.querySelector("head").innerHTML += '<link rel="icon" type="image/x-icon" href="'+relativePath+'img/favicon.ico"></link>'
+
+// Justified Gallery
+function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appendChild(el);}
+
+images = document.querySelectorAll(".justified-gallery img")
+for(i=0;i<images.length;i++){
+    linkHTML = document.createElement("a")
+    linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
+    linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
+    linkHTML.href = images[i].src
+
+    wrap(images[i],linkHTML)
+}
 
 // COMMENTS
 hcb_user = {

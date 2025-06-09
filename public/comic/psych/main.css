@@ -84,11 +84,19 @@ width:100%;
 flex-grow: calc(var(--width) * (100000 / var(--height)));
 flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
 aspect-ratio: var(--width) / var(--height);
+border:3px solid var(--brown);
 position: relative;
 overflow: hidden;
 margin: 0 !important;
 padding: 0 !important;
+transition: 0.1s;
 }
+
+.justified-gallery > a:hover {
+border:3px solid var(--red);
+}
+
+.justified-gallery > *:has(img[src="#"]){ opacity: 0; }
 
 .justified-gallery > * > img {
 position: absolute;
@@ -300,13 +308,18 @@ height: 100%;
     margin-top:2rem;
     margin-bottom:2rem;
     display: flex;
-    flex-wrap: wrap;
-    gap:1.5rem;
+    gap:2rem;
 
     > div{margin-top: 1rem;}
     div:nth-child(1) h3{color: var(--light-blue);}
     div:nth-child(2) h3{color: var(--red);}
     ul{padding-left: 1rem;}
+}
+
+#gallery { margin-bottom: 2rem ;}
+
+@media only screen and (max-width: 550px) {
+    #personality {flex-wrap: wrap;}
 }
 
 /** COMIC STUFF **/
