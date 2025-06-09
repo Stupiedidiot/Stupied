@@ -69,8 +69,7 @@ if(document.title===""){document.title="gallery // stupied"}else{document.title+
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>'
 
 //adding links to images
-images = document.querySelectorAll(".justified-gallery img:not([src~='doodle/'])")
-console.log(document.querySelectorAll('a[href~="about"]'))
+images = document.querySelectorAll(".justified-gallery img")
 fetch("./main.json")
 .then((response) => response.json())
 .then((art) => {
@@ -90,12 +89,24 @@ fetch("./main.json")
 
 function getIndex(json,current){
   for(x=0;x<json.length;x++){
-        if(json[x].img===current){
-          index=x
-          return index
-        }
+    // checks the usual image
+    if(json[x].img===current){
+      index = x
+      return index
     }
-    return -1
+    
+    // checks the extras
+    if( json[x].extra !== undefined ){
+      for(xx=0; xx<json.length; xx++){
+        if(json[x].extra[xx] === current){
+          index = x
+          return index
+        } 
+      }
+    }
+    
+  }
+  return -1
 }
 
 function getTitle(art,x){
@@ -123,31 +134,18 @@ function openImg(i){
   document.getElementById("lightbox-prev").setAttribute("onclick",'openImg('+prev+')')
   document.getElementById("lightbox-next").setAttribute("onclick",'openImg('+next+')')
 
-  link=images[i].src
-  link=link.lastIndexOf('/', link.lastIndexOf('/')-1)+1
-  link="./view.html?item="+images[i].src.slice(link,link.length)
-  link=link.replaceAll("img/","")
-  document.querySelector("#lightbox-comments a").href=link  
-
   fetch("./main.json")
     .then((response) => response.json())
     .then((art) => {
       trueIndex = images[i].style.getPropertyValue("--trueIndex")
-      if ( trueIndex > -1 ) {
-        // there's probably a better method than this
-        // but i'm too lazy to figure it out rn
-        document.getElementById("lightbox-comments").style.opacity="1"
-        title = getTitle(art, trueIndex)
+      link = "./view.html?item=" + art[trueIndex].img
+      title = getTitle(art, trueIndex)
 
-        if(art[trueIndex].desc!==undefined){
-          desc = art[trueIndex].desc
-        } else { desc = "" }
-      } else {
-        document.getElementById("lightbox-comments").style.opacity="0"
-        title = "Doodle"
-        desc = "This is likely a doodle for another drawing. I will add a system to link back to that image but rn I am way to lazy ahah"
-      }
+      if(art[trueIndex].desc!==undefined){
+        desc = art[trueIndex].desc
+      } else { desc = "" }
 
+    document.querySelector("#lightbox-comments a").href=link  
       document.querySelector("#lightbox-header h2").innerHTML = title 
       document.getElementById("lightbox-info").innerHTML = desc
   })
