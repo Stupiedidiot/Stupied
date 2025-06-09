@@ -69,7 +69,8 @@ if(document.title===""){document.title="gallery // stupied"}else{document.title+
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>'
 
 //adding links to images
-images=document.querySelectorAll(".justified-gallery img")
+images = document.querySelectorAll(".justified-gallery img:not([src~='doodle/'])")
+console.log(document.querySelectorAll('a[href~="about"]'))
 fetch("./main.json")
 .then((response) => response.json())
 .then((art) => {
@@ -80,7 +81,7 @@ fetch("./main.json")
     linkHTML.setAttribute("onclick",'openImg('+i+')')
     linkHTML.href="#"
 
-    trueIndex=getIndex(art,images[i].src.split("img/")[1])
+    trueIndex = getIndex(art,images[i].src.split("img/")[1])
     images[i].style.setProperty("--trueIndex",trueIndex)
 
     wrap(images[i],linkHTML)
@@ -131,12 +132,24 @@ function openImg(i){
   fetch("./main.json")
     .then((response) => response.json())
     .then((art) => {
-      trueIndex=images[i].style.getPropertyValue("--trueIndex")
-      document.querySelector("#lightbox-header h2").innerHTML=getTitle(art, trueIndex)
+      trueIndex = images[i].style.getPropertyValue("--trueIndex")
+      if ( trueIndex > -1 ) {
+        // there's probably a better method than this
+        // but i'm too lazy to figure it out rn
+        document.getElementById("lightbox-comments").style.opacity="1"
+        title = getTitle(art, trueIndex)
 
-      if(art[trueIndex].desc!==undefined){
-        document.getElementById("lightbox-info").innerHTML=art[trueIndex].desc
-      } else { document.getElementById("lightbox-info").innerHTML=""}
+        if(art[trueIndex].desc!==undefined){
+          desc = art[trueIndex].desc
+        } else { desc = "" }
+      } else {
+        document.getElementById("lightbox-comments").style.opacity="0"
+        title = "Doodle"
+        desc = "This is likely a doodle for another drawing. I will add a system to link back to that image but rn I am way to lazy ahah"
+      }
+
+      document.querySelector("#lightbox-header h2").innerHTML = title 
+      document.getElementById("lightbox-info").innerHTML = desc
   })
 }
 
