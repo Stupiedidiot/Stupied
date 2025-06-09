@@ -14,7 +14,7 @@ masterlist = [
             {"file":"2024-08-26.html","alt":"Laundry Day"},
             {"file":"2024-10-28.html","alt":"50th Anniversary"},
             {"file":"2024-10-07.html","alt":"Selective Seclusion","img":"birthday.png"},
-            //{"file":"2024-12-09.html","alt":"Electrodynamics"}
+            {"file":"2024-12-09.html","alt":"Electrodynamics"}
             //{"file":"2024-12-16.html","alt":"She Made You a Pinterest Board"}
         ],
     },

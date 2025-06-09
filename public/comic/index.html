@@ -17,11 +17,12 @@ body{
 
 #comicContainer .item-container{
     .psych{
+        --display-font:"Barriecito";
         overflow: hidden;
         color:white;
         background-color: #1b1a18;
         font-family: "M PLus 1 Code";
-        h1{font-family:"Barriecito";color:#d6a95c;}
+        h1{color:#d6a95c;}
         .item-thumb{
             flex:2;
             margin-left:-10%;
@@ -110,6 +111,8 @@ body{
         top:50%;transform: translateY(-50%);
     }
     .item-link{margin-top:1rem;}
+
+    a {font-weight: bolder;font-family: var(--display-font);}
 
     a:after {
         opacity: 0;
