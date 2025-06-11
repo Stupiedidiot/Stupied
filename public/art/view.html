@@ -1,7 +1,7 @@
 <!--------------------------
 ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───
 
-Last Posted on 2025/06/07
+Last Posted on 2025/06/11
 
 ─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───
 --------------------------->
@@ -67,7 +67,7 @@ fetch("./main.json")
     .then((art) => {
       if(currentImage === null){
         currentImage = art[0].img
-        window.location.href = "./view.html?item="+currentImage;
+        window.location.replace("./view.html?item=" + currentImage);
       }
 
       imageLink='./img/'+currentImage
