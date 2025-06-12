@@ -1,0 +1,30 @@
+var tooltips = document.querySelectorAll('.tooltip span');
+
+window.onmousemove = function (e) {
+    var x = (e.clientX + 20) + 'px',
+        y = (e.clientY + 20) + 'px';
+    for (var i = 0; i < tooltips.length; i++) {
+        tooltips[i].style.top = y;
+        tooltips[i].style.left = x;
+    }
+};
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+}
+.tooltip span {
+    color: #000;
+    display:none;
+    background: #fff;
+    outline: 1px solid #000;
+    padding: 0.3rem;
+    z-index: 100;
+}
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+    z-index: 100;
+}
