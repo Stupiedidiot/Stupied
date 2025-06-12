@@ -8,12 +8,24 @@
     <ttl>60</ttl>
 
     <item>
-      <title>[Muse Ariadne] Electrodynamics</title>
+      <title>Microblog!</title>
+      <pubDate>Thu, 12 Jun 2025 21:15:00 PST</pubDate>
+      <link>https://stupied.neocities.org/blog/index.html</link>
+      <guid>https://stupied.neocities.org/blog/index.html</guid>
+      <description>
+        <img src="https://stupied.neocities.org/meta/rss/2025-06-12.png" style="max-width:100%;"/>
+        <p>Made a microblog through Google Docs. I explain my reasoning there,,</p>
+        <a href="https://docs.google.com/document/d/1L_B1TwBTsIhETWGuwgkrA4_eNyMZEt03DDWNGHrFOWU/edit?usp=sharing">Click to View »</a>
+      </description>
+    </item>
+
+    <item>
+      <title>[Art] Snack Expert</title>
       <pubDate>Wed, 11 Jun 2025 15:25:00 PST</pubDate>
       <link>https://stupied.neocities.org/art/view.html?item=2025-Snack-Expert.png</link>
       <guid>https://stupied.neocities.org/art/view.html?item=2025-Snack-Expert.png</guid>
       <description>
-        <img src="https://stupied.neocities.org/art/img/2025-Snack-Expert.png" style="max-width:200px;"/>
+        <img src="https://stupied.neocities.org/art/img/2025-Snack-Expert.png" style="max-width:100%;"/>
         <a href="https://stupied.neocities.org/art/view.html?item=2025-Snack-Expert.png">Click to View »</a>
       </description>
     </item>
