@@ -347,15 +347,19 @@ not learning to do it yourself
         color: var(--gray);
         text-align: center;
         margin-top: 2rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     footer a:hover {color:white;}
 
-    footer a:not(:last-child):after {
+    footer > a:not(:last-of-type):after {
         content: "|";
-        margin: auto 1rem ;
+        margin: auto 1rem;
         color:var(--gray);
+    }
+
+    #button {
+        margin-top: 1rem;
     }
 
 </style>
@@ -469,6 +473,9 @@ not learning to do it yourself
         <a href="./about/index.html">about</a>
         <a href="./map.html">map</a>
         <a href="./feed.xml">rss</a>
+        <div id="button">
+            <img src="./meta/button.png">
+        </div>
     </footer>
 </body>
 </html>
