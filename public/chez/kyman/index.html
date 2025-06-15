@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../../meta/new-main.css">
-    <title>Document</title>
+    <title>Kyman!!</title>
 
 <style>
 @font-face {
@@ -14,18 +14,48 @@
 
 :root {
     --display-font: southpark;
-    --light-green: rgb(146, 212, 99);
-    --green: rgb(54, 184, 54);
-    --red: rgb(204, 39, 39);
-    --yellow: rgb(242, 226, 164);
-    --brown:rgb(51, 38, 38);
+
+    --brown: #4a3432;
+
+    --lighter-red: #ea937d;
+    --light-red: #d5595c;
+    --red: #c1324c;
+    --dark-red: #873247;
+    --darker-red: #;
+
+    --lighter-green: #d5eabd;
+    --light-green: #a3cf89;
+    --green: #60b739;
+    --dark-green: #4e7c43;
+    
+    --yellow: #f1dca0;
+    --yellow-highlight: #f3e7bd;
+    
     --border: 2px solid var(--brown);
     --radius: 0.6rem;
 }
 
+body {
+    background-image: url(./bg.png);
+    background-size: cover;
+}
+
 svg { height: 1rem; aspect-ratio: 1/1; }
 
-.flex { display: flex; }
+.flex { display: flex; gap:1rem; }
+
+.red-bg, .green-bg {
+    display: inline-block;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.red-bg { background-color: var(--red); }
+.green-bg { background-color: var(--green); }
+
+.red-txt { color: var(--red); }
+.green-txt { color: var(--green); }
 
 #container {
     margin: 1rem auto;
@@ -33,16 +63,24 @@ svg { height: 1rem; aspect-ratio: 1/1; }
     width: 95%;
     border-radius: var(--radius);
     overflow: hidden;
-    background-color: white;
     outline: 3px solid var(--brown);
+    background-color: var(--yellow);
+    background-image: linear-gradient(0deg, var(--yellow) 50%, var(--yellow-highlight) 50%);
+    background-size: 11px 11px;
+    color: var(--brown);
 }
 
 header {
     user-select: none;
-    background-color: var(--green);
     padding: 0.5rem;
     color: white;
     position: relative;
+    background-image: 
+        radial-gradient(color-mix(in hsl, var(--green), #0000)  24%, transparent 24%),
+        radial-gradient(color-mix(in hsl, var(--green), #0000) 24%, transparent 24%);
+    background-position: 0px 0px, 10px 10px;
+    background-size: 20px 20px;
+    background-color: var(--dark-green) ;
 }
 
 header > div {
@@ -54,8 +92,10 @@ header > div {
 
 header > div > span {
     display: inline;
-    background-color: var(--yellow);
+    background-color: var(--yellow-highlight);
+    box-shadow: 0.2rem 0.2rem var(--brown);
     padding: 0.5rem;
+    margin-left: 0.2rem;
     border-radius: var(--radius);
 }
 
@@ -68,20 +108,22 @@ header > div > span {
 
 #reload {
     font-weight: bolder;
-    background-color: var(--light-green);
     padding: 0.5rem;
+    background-color: var(--light-green);
+    background-image: linear-gradient(to right, var(--lighter-green), var(--lighter-green) 8px, var(--light-green) 8px, var(--light-green) );
+    background-size: 16px 100%;
 }
 
 #reload span {
     display: inline-block;
     padding: 0.3rem;
-
 }
 
 #search {
     flex: 1;
-    background-color: var(--red);
     padding: 0.5rem 1rem;
+    border-left: 3px solid var(--brown);
+    background-color: var(--red) ;
 }
 
 #search > div {
@@ -94,7 +136,6 @@ header > div > span {
     user-select: none;
     position: relative;
     z-index: 1;
-    background-color: var(--yellow);
     padding: 0.5rem 0.5rem 0 0.5rem;
     white-space: nowrap;
     overflow-y: hidden;
@@ -103,7 +144,7 @@ header > div > span {
 
 #tabs a {
     display: inline-block;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: var(--radius) var(--radius) 0 0;
     margin-right: 0.5rem;
     padding: 0.5rem;
@@ -113,6 +154,7 @@ header > div > span {
     position: relative;
     font-family: var(--display-font);
     transform: translateY(0.5rem);
+    transition: 0.2s;
 }
 
 #tabs a:hover { transform: none; }
@@ -121,14 +163,14 @@ header > div > span {
     content: "X";
     position: absolute;
     right: 0.5rem;
-    color: lightgray;
+    color: color-mix(in hsl, var(--dark-red) 20%, #0000);
 }
 
 article {
     z-index: 2;
     padding: 1rem;
     position: relative;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #about > div:nth-of-type(2) {
@@ -147,11 +189,18 @@ article {
 section {
     background-color: var(--green);
     padding: 1rem;
+    color: white;
 }
 
 footer {
     user-select: none;
     background-color: var(--red);
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+    .flex { flex-wrap: wrap;}
+    #tabs { display: none; }
 }
 
 </style>
@@ -161,7 +210,7 @@ footer {
     
 <div id="container">
     <header>
-        <h1>Kyman!!</h1>
+        <h1 class="outline" style="--color: var(--brown);">Kyman!!</h1>
         <div>
             <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
             <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></span>
@@ -190,8 +239,8 @@ footer {
     <main>
         <article id="about" class="flex">
             <div>
-                <h2>About</h2>
-                <h4>Meow Meow</h4>
+                <h2 class="green-bg">About</h2>
+                <h5 class="red-txt">No, like seriously</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et saepe minima tempore similique quasi, tempora pariatur soluta asperiores totam vitae repudiandae suscipit voluptatem sapiente accusantium eligendi officiis quos voluptate exercitationem?</p>
             </div>
             <div>
@@ -211,7 +260,7 @@ footer {
         </article>
     </main>
     <footer>
-        <a href="https://xiu2.carrd.co/">Inspo</a> | 
+        <a href="https://xiu2.carrd.co/" target="_blank">inspo 4 page</a> | 
         <a href="./../../index.html">Head Back »</a>
     </footer>
 </div>
