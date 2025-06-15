@@ -14,6 +14,8 @@ body{
     min-width: 300px;
 }
 
+.sign-off {max-width: 200px;}
+
 #container{background-color:white;}
 
 .justified-gallery{margin-bottom: 0.5rem;}
