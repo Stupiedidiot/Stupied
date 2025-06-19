@@ -7,13 +7,26 @@
     <title>Codez!! | stupied</title>
 
 <style>
-body { color: white; }
 
 #container {
     max-width: 380px;
     margin: 2rem auto;
 }
 
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
 </style>
 </head>
 <body class="default">
@@ -22,11 +35,9 @@ body { color: white; }
         <p>I am very fond of DIY-ing stuff in javascript.</p>
 
         <ul style="margin-bottom: 3rem;">
-            <li>Listography</li>
-            <li>Tabvoid - Bloggin</li>
-            <li>Comic Framework</li>
-            <li>Art Gallery</li>
-            <li>RSS Feed Widget</li>
+            <li><a href="#">Listography</a></li>
+            <li><a href="#">Tabvoid - Bloggin</a></li>
+            <li><a href="#">RSS Feed Widget</a></li>
         </ul>
 
         <p>Feel free to use my code - Credit is not needed but greatly appreciated</p>
