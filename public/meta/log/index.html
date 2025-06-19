@@ -3,128 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./../main.css">
-    <title>Archive // stupied</title>
+    <link rel="stylesheet" href="./../new-main.css">
+    <title>Changelog | stupied</title>
 <style>
-    #container{
-        max-width:700px;
-        margin:2rem auto;
-        width:95%;
-    }
-    #top{
-        margin:auto;
-        margin-bottom: 1rem;
-        display: flex;
-        gap:1rem;
-        width:max-content;
-    }
-    #bottom{
-        text-align: center;
-        margin-top: 1rem;
-    }
+body { min-width: 300px;}
+h2 { color: var(--yellow);}
 
-    #updateStatus{
-        position: relative;
-        padding-left:1rem;
-        border-left:3px solid black;
-    }
+#container #home { grid-area: home; }
+#container main { grid-area: main; }
+#container aside { grid-area: aside; }
+#container footer { grid-area: footer; }
 
-    #updateStatus div{
-        position: relative;top:50%;transform: translateY(-50%);
-    }
+#container {
+    display: grid;
+    grid-template:
+    'main home' 
+    'main aside'
+    'footer footer';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto 1fr;
+    max-width: 1800px;
+    margin: auto;
+}
 
-    #updateStatus p{font-weight:bold; font-family:grandstander;margin-bottom:0;}
+#home a {
+    margin-left: auto;
+    display: block;
+    background: url(./../img/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
+    background-size: 130%;
+    background-position: -20% 25%;
+}
 
-    #lastupdate{color:var(--blue);}
+#home a:hover { background: var(--orange); }
 
-    @media only screen and (max-width: 650px) {
-        #date{display: block;}
-    }
+#home img {
+    width: 100%;
+    display: block;
+}
 
-    @media only screen and (max-width: 450px) {
-        #top{display: block;}
-        #updateStatus div{all:revert;}
-    }
+main { 
+    padding: 2rem ;
+    padding-bottom: 0 ;
+}
+
+#top{
+    margin:auto;
+    margin-bottom: 1rem;
+    display: flex;
+    gap:1rem;
+    width:max-content;
+}
+
+#updateStatus {
+    position: relative;
+    padding-left:1rem;
+    border-left:3px solid white;
+}
+
+#updateStatus div {
+    position: relative;top:50%;transform: translateY(-50%);
+}
+
+#updateStatus p {
+    font-weight:bold;
+    font-family:grandstander;
+    margin-bottom:0;
+}
+
+#lastupdate { color:var(--yellow); }
+
+@media only screen and (max-width: 700px) {
+    #container { display: block; }
+    #date{display: block;}
+}
+
+@media only screen and (max-width: 450px) {
+    #top{display: block;}
+    #updateStatus div{all:revert;}
+}
+
+#rss { margin-top: 2rem; }
+
+.feed-item {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.feed-item p:last-of-type { margin-bottom:0; }
+
+.feed-thumb { flex: 40%; }
+
+.feed-thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feed-info {
+    flex: 60%;
+    padding: 0.5rem;
+}
+
+.feed-title { color: var(--yellow); }
+
+.feed-title span { display: none; }
+
+.feed-tag {
+    display: inline-block;
+    background-color: var(--gray);
+    border-radius: 1rem;
+    padding: 0.2rem;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    margin-bottom: 0.3rem;
+}
+
+.feed-date { color: var(--gray); }
+
+.feed-desc img { display: none; }
+
+.feed-desc a:last-child {
+    display: inline-block;
+    font-family: var(--display-font);
+    font-weight: bolder;
+    margin-top: 1rem;
+
+    &:hover { color: var(--orange); }
+}
+
+@media only screen and (min-width: 550px) {
+    #feed{columns:2;}
+}
+
+aside { padding: 1rem; }
+
+#thanks { margin-bottom: 1.5rem; }
+
+footer{
+    color: var(--gray);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer a:hover {color:white;}
+
+footer > a:not(:last-of-type):after {
+    content: "|";
+    margin: auto 1rem;
+    color:var(--gray);
+}
+
+#button { margin-top: 1rem; }
+
 </style>
 </head>
-<body>
+<body class="default">
 
     <div id="container">
-        <div id="top">
-            <div>
-                <h1>This website is <span title="created on April 6, 2023" id="date"></span></h1>
-            </div>
-            <div id="updateStatus">
-                <div>
-                    <p>Last updated</p>
-                    <span id="lastupdate"></span>
+        <div id="home">
+            <a href="./../../index.html">
+                <img src="./img/hole.png" alt="">
+            </a>
+        </div>
+
+        <main>
+            <div id="archive">
+                <div id="top" class="outline" style="--color:var(--dark-blue);">
+                    <div>
+                        <h1>This website is <span title="created on April 6, 2023" id="date"></span></h1>
+                    </div>
+                    <div id="updateStatus">
+                        <div>
+                            <p>Last updated</p>
+                            <span id="lastupdate"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="justified-gallery">
+                    <img src="./img/2023-06.png" style="--width: 1086; --height: 825;">
+                    <img src="./img/2024-01.png" style="--width: 1086; --height: 1405;">
+                    <img src="./img/2024-06.png" style="--width: 1086; --height: 892;">
+                    <img src="./img/2024-11.png" style="--width: 1086; --height: 734;">
+                    <img src="./img/2025-05.png" style="--width: 1097; --height: 874;">
                 </div>
             </div>
-        </div>
-        <div id="archive" class="justified-gallery">
-            <img src="./img/2023-06.png" style="--width: 1086; --height: 825;">
-            <img src="./img/2024-01.png" style="--width: 1086; --height: 1405;">
-            <img src="./img/2024-06.png" style="--width: 1086; --height: 892;">
-            <img src="./img/2024-11.png" style="--width: 1086; --height: 734;">
-            <img src="./img/2025-05.png" style="--width: 1097; --height: 874;">
-        </div>
-        <!--
-        <h1>Roadmap</h1>
-        <p>A list of things I will implement in the near future</p>
+            <div id="rss">
+                <h2>Recent Updates</h2>
+                <p>Updates are from my <a href="./../../feed.xml">RSS feed!</a></p>
+                <div id="feed"></div>
+            </div>
+        </main>
 
-        <ul>
-            <li>Decorate this page</li>
-            <li>Rework index, blog, and gallery design</li>
-            <li>Status Pages for Comics</li>
-            <li>Raffidelle Shrine</li>
-            <li>Kyman Shrine</li>
-        </ul>
-        -->
+        <aside>
+            <div id="thanks">
+                <h2>Website History</h2>
+                <p>Without prior knowledge about the indieweb culture, I impulsive created this website back in 2023. Pretty sure I found neocities by googling "free hosting" and used what little html skills I garnered from junior high. Either way, I haven't been the same since then.</p>
+            </div>
+            
+            <div id="roadmap">
+                <h2>Roadmap</h2>
+                <p>A list of things I will implement in the near future</p>
+    
+                <ul class="checklist">
+                    <li class="x">Decorate this page</li>
+                    <li>Turbo FAST Shrine</li>
+                    <li>Kyman Shrine</li>
+                    <li>Southpark Webring</li>
+                    <li>Raffidelle Shrine</li>
+                    <li>Redesign PMD Comic Pages</li>
+                    <li>Tabvoid Documentation</li>
+                    <li>Add achive for listograph</li>
+                    <li>Separate script for list contents</li>
+                    <li>Sorting for listograph</li>
+                    <li>Modify comic framework</li>
+                    <li>Redesign Gallery</li>
+                    <li>Redesign Blog</li>
+                    <li>Index for Askal</li>
+                    <li>Make Code page functional</li>
+                    <li>Make Chez page functional</li>
+                    <li>Add RSS Feed Widget to index</li>
+                </ul>
+    
+                <p><span style="color:var(--yellow);font-family: var(--display-font);">Last Updated:</span> June 19, 2025</p>
 
-
-        <div id="bottom">
-        <a href="./../index.html">Head Back »</a>
-        </div>
+                <a href="./../../index.html">✮ Head Back »</a>
+            </div>
+        </aside>
+        <footer>
+            <a href="./../../about/index.html">about</a>
+            <a href="./../../map.html">map</a>
+            <a href="./../../feed.xml">rss</a>
+            <div id="button">
+                <a href="https://neocities.org/site/stupied" target="_blank">
+                    <img src="./../button.png">
+                </a>
+            </div>
+        </footer>
     </div>
 
 <script>
-    // get website's age
-    dateCurrent = new Date().getTime()
-    dateCurrent /= 3.154e+10
+// get website's age
+dateCurrent = new Date().getTime()
+dateCurrent /= 3.154e+10
 
-    dateCreated = new Date("2023-04-06").getTime();
-    dateCreated /= 3.154e+10
+dateCreated = new Date("2023-04-06").getTime();
+dateCreated /= 3.154e+10
 
-    pageAge = Math.floor(dateCurrent - dateCreated)
-    document.getElementById("date").innerHTML = pageAge + " years old!!";
+pageAge = Math.floor(dateCurrent - dateCreated)
+document.getElementById("date").innerHTML = pageAge + " years old!!";
 
-    // get website's last update date
-    // stole the code from here: https://dannarchy.com/tut/tut_002
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        var site_data = JSON.parse(this.responseText);
+// get website's last update date
+// stole the code from here: https://dannarchy.com/tut/tut_002
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    var site_data = JSON.parse(this.responseText);
 
-        var date_str = site_data.info.last_updated;
-        var date_obj = new Date(date_str);
-        date_mod=(new Date().getTime()- date_obj.getTime())/1000
+    var date_str = site_data.info.last_updated;
+    var date_obj = new Date(date_str);
+    date_mod=(new Date().getTime()- date_obj.getTime())/1000
 
-        // should probably change this
-        if (date_mod<60){date_mod=Math.floor(date_mod); if(date_mod===1){date_mod+=" second ago"}else{date_mod+=" seconds ago"}}
-        if (date_mod<3600){date_mod=Math.floor(date_mod/60);if(date_mod===1){date_mod+=" minute ago"}else{date_mod+=" minutes ago"}}
-        if (date_mod<86400){date_mod=Math.floor(date_mod/3600);if(date_mod===1){date_mod+=" hour ago"}else{date_mod+=" hours ago"}}
-        if (date_mod<31540000){date_mod=Math.floor(date_mod/86400);if(date_mod===1){date_mod+=" day ago"}else{date_mod+=" days ago"}}
-        if (date_mod>31540000){date_mod=Math.floor(date_mod/3.154e+10);if(date_mod===1){date_mod+=" year ago"}else{date_mod+=" years ago"}}
+    // should probably change this
+    if (date_mod<60){date_mod=Math.floor(date_mod); if(date_mod===1){date_mod+=" second ago"}else{date_mod+=" seconds ago"}}
+    if (date_mod<3600){date_mod=Math.floor(date_mod/60);if(date_mod===1){date_mod+=" minute ago"}else{date_mod+=" minutes ago"}}
+    if (date_mod<86400){date_mod=Math.floor(date_mod/3600);if(date_mod===1){date_mod+=" hour ago"}else{date_mod+=" hours ago"}}
+    if (date_mod<31540000){date_mod=Math.floor(date_mod/86400);if(date_mod===1){date_mod+=" day ago"}else{date_mod+=" days ago"}}
+    if (date_mod>31540000){date_mod=Math.floor(date_mod/3.154e+10);if(date_mod===1){date_mod+=" year ago"}else{date_mod+=" years ago"}}
 
-        e=document.getElementById("lastupdate")
-        e.title = date_obj;
-        e.innerHTML = date_mod;
-        }
-    };
-    xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=stupied", true);
-    xhttp.send();
+    e=document.getElementById("lastupdate")
+    e.title = date_obj;
+    e.innerHTML = date_mod;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=stupied", true);
+xhttp.send();
 
+fetch("./../../feed.xml")
+.then((response) => response.text())
+.then((feed) => {
+    const parser = new DOMParser();
+    feed = parser.parseFromString(feed, "text/xml");
+    final = ""
+
+    feedItems = feed.querySelectorAll("item")
+    for (i=0; i < feedItems.length ;i++){
+        title = getTitle(feedItems[i])
+        date = convDate(feedItems[i])
+        desc = feedItems[i].querySelector("description").innerHTML
+        thumb  = feedItems[i].querySelector("description img").getAttribute("src")
+        
+        result = `
+            <div class="feed-item">
+                <div class="feed-thumb">
+                    <img src="${thumb}">
+                </div>
+                <div class="feed-info">
+                    <h4 class="feed-title">${title}</h4>
+                    <h5 class="feed-date">${date}</h5>
+                    <div class="feed-desc">${desc}</div>    
+                </div>
+            </div>
+        `
+        final += result
+    }
+    document.getElementById("feed").innerHTML = final
+})
+
+function getTitle (e){
+    e = e.querySelector("title").innerHTML
+    result = e.replace("[","<span>#")
+    result = result.replace("]","</span><br>")
+    return result
+}
+
+function convDate(e){
+    e = e.querySelector("pubDate").innerHTML
+    result = e.slice(4, e.length - 13)
+    return result
+}
 </script>
 </body>
 </html>
