@@ -139,6 +139,13 @@ height: 100%;
 .bg-gray{background-color:gray!important;}
 .bg-black{background-color:black!important;}
 
+.checklist > li { list-style-type: "□ "; }
+
+.x { 
+    text-decoration: line-through;
+    list-style-type: "■ "!important;
+}
+
 .default{
     --dark-brown: #312422;
     --brown: #3d2d28;
