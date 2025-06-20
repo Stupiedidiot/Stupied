@@ -140,7 +140,24 @@ main {
 
 aside { padding: 1rem; }
 
-#thanks { margin-bottom: 1.5rem; }
+aside > div { margin-bottom: 1.5rem; }
+
+li { position: relative; }
+
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
 
 footer{
     color: var(--gray);
@@ -227,11 +244,27 @@ footer > a:not(:last-of-type):after {
                     <li>Make Chez page functional</li>
                     <li>Add RSS Feed Widget to index</li>
                 </ul>
-    
                 <p><span style="color:var(--yellow);font-family: var(--display-font);">Last Updated:</span> June 19, 2025</p>
-
-                <a href="./../../index.html">✮ Head Back »</a>
             </div>
+
+            <div id="resources">
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="https://medium.com/@ehtmlu/css-image-grid-gallery-4ec8824560a1">CSS Justified Gallery</a></li>
+                    <li><a href="https://www.magicpattern.design/tools/css-backgrounds">CSS Background Generator</a></li>
+                    <li><a href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp">Responsive Youtube Embeds</a></li>
+                    <li><a href="https://vidstack.io/">VidStack</a></li>
+                    <li><a href="https://ultraabox.github.io/">Ultraabox</a></li>
+                    <li><a href="https://codepen.io/nsxccxjd-the-builder/pen/myJbedw">Custom Tooltips</a></li>
+                    <li><a href="https://jscolor.com/">JS Color Picker</a></li>
+                    <li><a href="https://dannarchy.com/tut/tut_002">Native Neocties Hit Counter</a></li>
+                    <li><a href="https://www.htmlcommentbox.com/">Html Comment Box</a></li>
+                    <li><a href="https://www.cbox.ws/">CBox</a></li>
+                </ul>
+            </div>
+
+            <a href="./../../index.html">✮ Head Back »</a>
+
         </aside>
         <footer>
             <a href="./../../about/index.html">about</a>
