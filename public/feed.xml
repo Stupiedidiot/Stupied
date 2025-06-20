@@ -8,8 +8,23 @@
     <ttl>60</ttl>
 
     <item>
+      <title>More Sketchbook Art</title>
+      <pubDate>Sat, 20 Jun 2025 22:40:00 PST</pubDate>
+      <link>https://stupied.neocities.org/art/</link>
+      <guid>https://stupied.neocities.org/art/</guid>
+      <description>
+        <img src="https://stupied.neocities.org/art/art/img/2024-Sig-Sleeping.png" style="max-width:100%;"/>
+        <p>Scanned and uploaded some pages from my older sketchbooks</p>
+        <ul>
+          <li><a href="https://stupied.neocities.org/art/2023.html#venda">2024 Sketchbook »</a></li>
+          <li><a href="https://stupied.neocities.org/art/2024.html#raffidelle">2025 Sketchbook »</a></li>
+        </ul>
+      </description>
+    </item>
+
+    <item>
       <title>RSS Feed Widget</title>
-      <pubDate>Sun, 19 Jun 2025 22:00:00 PST</pubDate>
+      <pubDate>Thu, 19 Jun 2025 22:00:00 PST</pubDate>
       <link>https://stupied.neocities.org/meta/log/</link>
       <guid>https://stupied.neocities.org/meta/log/</guid>
       <description>

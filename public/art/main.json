@@ -99,6 +99,97 @@
     {"img":"2024-Burger.png"},
     {"img":"2024-Beetke.png","title":"Beetke's Windmill"},
     {"img":"2024-Badminton.png","title":"Badminton"},
+        {"img":"2024-Hell-Yeah.png"},
+    {"img":"2024-Goals.png"},
+    {
+        "img":"2024-Aveline.png",
+        "extra":[
+            "doodle/2024-Hat.png"
+        ]
+    },
+    {"img":"2024-Sig-Sleeping.png"},
+    {
+        "img":"2024-Watermelon.png",
+        "desc":"During a vacation, I joked that if my younger sister was a pony her cutie mark would be a pyramid shaped watermelon.",
+        "extra":[
+            "doodle/2024-Vacation.png"
+        ]
+    },
+    {"img":"doodle/2024-Tspin-Double.png"},
+    {"img":"2024-Kidder.png"},
+    {"img":"2024-Ms-Accord.png"},
+    {
+        "img":"doodle/2024-Colors.png",
+        "desc":"Art by Dwinky, Colors by all three of us"
+    },
+    {
+        "img":"doodle/2024-Brian-Boitano.png",
+        "extra":[
+            "doodle/2024-South-Park.png",
+            "doodle/2024-Slurs.png"
+        ]
+    },
+    {
+        "img":"doodle/2024-Bunni.png",
+        "extra":[
+            "doodle/2024-Orientation.png"
+        ]
+    },
+    {"img":"doodle/2024-Birbs.png"},
+    {"img":"2024-Snow.png"},
+    {"img":"doodle/2024-Bloons.png"},
+    {"img":"doodle/2024-Birb.png"},
+    {"img":"doodle/2024-Classical.png"},
+    {
+        "img":"doodle/2024-Cow-Magician.png",
+        "extra":[
+            "doodle/2024-Requests.png"
+        ]
+    },
+    {
+        "img":"doodle/2024-Crayons.png",
+        "desc":"Dwinky got me some neat crayons"
+    },
+    {
+        "img":"doodle/2024-Gothic-Font.png",
+        "extra":[
+            "doodle/2024-Alphabet.png"
+        ]
+    },
+    {
+        "img":"doodle/2024-English-Class.png",
+        "desc":"I remember it was raining that day and I kept re-challenging a guy who didn't like me to a game of scrabble",
+        "extra":[
+            "doodle/2024-Club-Fair.png"
+        ]
+    },
+    {
+        "img":"doodle/2024-Hookey.png",
+        "extra":[
+            "doodle/2024-Donato.png",
+            "doodle/2024-Carlos.png"
+        ]
+    },
+    {
+        "img":"doodle/2024-How-to-Not.png",
+        "extra":[
+            "doodle/2024-XYZ.png"
+        ]
+    },
+    {"img":"doodle/2024-Kimya.png"},
+    {"img":"doodle/2024-Favorites.png"},
+    {"img":"doodle/2024-Lesbians.png"},
+    {"img":"doodle/2024-Lidelle.png"},
+    {"img":"doodle/2024-Me-In-South-Park.png"},
+    {"img":"doodle/2024-Mindless-Doodles.png"},
+    {"img":"doodle/2024-Objects.png"},
+    {"img":"doodle/2024-Outfits.png"},
+    {"img":"doodle/2024-Paper-Scraps.png"},
+    {"img":"doodle/2024-Too-Loud.png"},
+    {"img":"doodle/2024-Popoi.png"},
+    {"img":"doodle/2024-Silly-Guys.png"},
+    {"img":"doodle/2024-The-Queen.png"},
+    {"img":"doodle/2024-Pickles.png"},
     {"img":"2023-Worry-Dawg.png","desc":"my fursona in the style of Worry Cat"},
     {"img":"2023-Worry-Cat.png","title":"Worry Cat doodles"},
     {"img":"2023-Wedding.png","title":"Stardew Valley Wedding!!!"},
@@ -144,6 +235,29 @@
     {"img":"2023-Caroline.png"},
     {"img":"2023-Candy-Snail.png"},
     {"img":"2023-Annette.png"},
+    {"img":"2023-Swatch.png"},
+    {"img":"doodle/2023-Archie-Comics.png"},
+    {"img":"doodle/2023-Grrl-Scouts.png"},
+    {"img":"doodle/2023-Lines-for-Working-Out.png"},
+    {"img":"doodle/2023-Nature-Tests.png"},
+    {"img":"doodle/2023-Instruments.png"},
+    {
+        "img":"doodle/2023-Kat.png",
+        "extra":[
+            "doodle/2023-Pearl.png",
+            "doodle/2023-Sam-Commits-Crimes.png"
+        ]
+    },
+    {"img":"doodle/2023-Live-Sketching.png"},
+    {"img":"doodle/2023-No-to-Drugs.png"},
+    {"img":"doodle/2023-Redraws.png"},
+    {"img":"doodle/2023-Stop-Sending-Emails.png"},
+    {"img":"doodle/2023-Waiting-for-Mama.png"},
+    {"img":"doodle/2023-Women.png"},
+    {
+        "img":"doodle/2023-Chichi.png",
+        "desc":"I miss her so much"
+    },
     {"img":"2022-You-Do-This-to-Yourself.png"},
     {"img":"2022-Woman.png"},
     {"img":"2022-Was-It-Worth-It.png"},
