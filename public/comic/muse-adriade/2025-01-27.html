@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="./../main.css">
     <title></title>
 <style>
-    .main-content{display: flex;}
     .lies {
         float: right;
         height:100%;
@@ -19,7 +18,7 @@
 </head>
 <body id="comicViewer" class="muse">
 
-    <div class="main-content">
+    <div class="main-content" style="display: flex;">
         <div>
             <img src="./img/apology.png" alt="" class="lies">
             <h1>You Suck Ass at Apologizes</h1>
@@ -28,10 +27,17 @@
         </div>
     </div>
 
+    <div id="note" class="main-content hidden">
+        <img src="./img/note-0.jpg" alt="">
+        <img src="./img/note-1.jpg" alt="">
+    </div>
+
     <div id="info-content">
         <h3>June 15, 2025</h3>
         <div>
             <p><b>Prompt:</b> think about something that's physically overwhelming to you (in a good, bad, or neutral way) and write about it! this could be anything-- rollercoasters, concerts, sex, being sick, taking showers, going to the mall, or just being in a windy place</p>
+
+            <a href="#note" style="color: lightgray;">In case I ever forget</a>
         </div>        
     </div>
 
