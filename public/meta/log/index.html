@@ -124,15 +124,16 @@ main {
 .feed-date { color: var(--gray); }
 
 .feed-desc img { display: none; }
+.feed-desc > p:last-of-type { margin-bottom: 1rem; }
+.feed-desc ul { padding-left: 1.5rem; }
 
 .feed-desc a:last-child {
     display: inline-block;
     font-family: var(--display-font);
     font-weight: bolder;
-    margin-top: 1rem;
-
-    &:hover { color: var(--orange); }
 }
+
+a:hover { color: var(--orange); }
 
 @media only screen and (min-width: 550px) {
     #feed{columns:2;}
@@ -141,23 +142,6 @@ main {
 aside { padding: 1rem; }
 
 aside > div { margin-bottom: 1.5rem; }
-
-li { position: relative; }
-
-li a:after {
-    position: absolute;
-    opacity: 0;
-    transform: translateX(-100%);
-    display:inline-block;
-    margin-left: 0.5rem;
-    content: " »";
-    transition: 0.1s;
-}
-
-li a:hover:after{
-    opacity: 1;
-    transform: none;
-}
 
 footer{
     color: var(--gray);
