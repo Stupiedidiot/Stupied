@@ -51,7 +51,7 @@ const s_filteredWords = [ // Add words to filter by putting them in quotes and s
 ]
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
-const s_widgetTitle = 'Leave a comment!';
+const s_widgetTitle = 'Comments';
 const s_nameFieldLabel = 'Name';
 const s_websiteFieldLabel = 'Website';
 const s_imageFieldLabel = 'Image';
@@ -64,8 +64,8 @@ const s_websiteText = 'Website'; // The links to websites left by users on their
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
-const s_leftButtonText = '<<';
-const s_rightButtonText = '>>';
+const s_leftButtonText = '«';
+const s_rightButtonText = '»';
 
 /*
     DO NOT edit below this point unless you are confident you know what you're doing!
@@ -96,14 +96,14 @@ const v_formHtml = `
         <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*" placeholder="Website (optional)">
     </div>
 
-    <div id="c_websiteWrapper" class="c-inputWrapper">
-        <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
-        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)">
-    </div>
-
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
+    </div>
+
+    <div id="c_websiteWrapper" class="c-inputWrapper">
+        <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
+        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>

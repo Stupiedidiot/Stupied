@@ -55,106 +55,85 @@
 
 /* Main */
 #c_widget {
+    --text-color: black;
+    --bg-color: white;
+    --form-color: gray;
+    --margin-bottom: 0.8rem;
     box-sizing: border-box;
     height: 100%;
-    overflow: auto;
-    padding: 20px;
-    background-image: url('sparkle-bg.gif'); /* F2U background provided by https://sadgrl.online/webmastery/downloads/tiledbgs */
-    background-attachment: fixed;
-    font-family: 'Courier New';
-    font-size: 16px;
-    color: white;
+    overflow: hidden;
+    font-family: var(--body-font);
+    color: var(--text-color);
 }
 
 #c_widget button, #c_widget input[type=submit] {
-    padding: 4px;
-    font-family: 'Courier New';
+    font-family: var(--body-font);
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    background-color: black;
-    color: #B766FF;
-    border: 1px solid white;
+    font-family: var(--display-font);
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0.2rem;
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
-    color: white;
-    border: 1px solid #B766FF;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
-    color: #B766FF;
-    border: 1px solid white;
+    color: var(--accent-color);
 }
 
 /* Input section */
 #c_inputDiv {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: black;
-    border: 2px solid white;
+    margin-bottom: var(--margin-bottom);
+    padding: 0.5rem;
+    background-color: var(--bg-color);
 }
 
 #c_widgetTitle {
-    margin: -10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    text-transform: uppercase;
-    font-style: italic;
+    margin-bottom: 0.5rem;
     font-weight: bold;
-    text-align: right;
-    background-color: #2D0B52;
 }
 
 .c-inputWrapper {
-    display: block;
-    text-align: right;
+    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 .c-input {
     padding: 4px;
-    color: black;
-    border: 1px solid #2D0B52;
+    color:  var(--form-color);
 	outline: none;
 }
-.c-input:focus {border: 1px solid #B766FF;}
 
-.c-textInput {
-    width: calc(100% - 10px);
-    max-width: 900px;
-    resize: none;
-}
+#c_textWrapper { display: block; }
+.c-textInput { width: calc(100% - 1rem); }
 #c_submitButton {
-    display: block; 
     margin-left: auto; 
     margin-right: 0;
 }
-#c_replyingText {
-    color: white;
-    text-align: right;
-}
+#c_replyingText { font-size: 0.8rem; }
 
 /* Comment section */
 .c-comment {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 2px solid white;
-    background-color: #2D0B52; 
+    background-color: var(--bg-color);
+    margin-bottom: var(--margin-bottom);
+    padding: 0.5rem;
 }
 .c-reply {
     display: block;
     width: 90%;
-    margin-bottom: 10px;
+    margin-bottom: var(--margin-bottom);
     margin-left: auto;
-    margin-right: 0;
     padding: 10px;
-    border: 2px solid white;
-    background-color: #2D0B52; 
+    border-left: 3px solid var(--accent-color);
 }
 .c-reply:last-child {margin-bottom: 0;}
 .c-replyContainer {
     margin: -10px;
     margin-top: 10px;
     padding: 10px;
-    background-color: black;
 }
 
 .c-name {
@@ -166,25 +145,21 @@
     font-weight: bold;
 }
 .c-site {
+    font-family: var(--display-font);
     text-transform: uppercase;
     text-decoration: none;
-    color: #B766FF;
+    color: var(--accent-color);
 }
-.c-site:hover {color: white;}
+.c-site:hover {color: var(--bg-color-2);}
 .c-timestamp {
     float: right;
-    opacity: 75%;
+    opacity: 0.5;
 }
 .c-text {
-    margin: 0;
-    margin-left: -10px;
-    margin-right: -10px;
     padding: 10px;
-    font-family: Verdana;
-    font-size: 14px;
+    font-family: var(--body-font);
     text-align: justify;
-    color: white;
-    background-color: black;
+    margin-bottom: 0;
 }
 
 .c-img {
@@ -194,13 +169,10 @@
 
 /* Pagination */
 #c_pagination {text-align: center;}
-.c-replyButton {
-    margin-top: 10px;
-    margin-right: 4px;
-}
+.c-replyButton { margin-top: 10px; }
 .c-expandButton {
     margin-top: 10px;
-    margin-left: 4px;
+    margin-left: 0.5rem;
 }
 .c-paginationButton {
     margin-right: 4px;

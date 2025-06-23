@@ -7,6 +7,7 @@
     --blue: #142943;
     --dark-blue:#0d0d1f;
     --darkest-blue:#0c0716;
+    --accent-color: var(--yellow);
     --display-font:grandstander;
     --body-font:Arial, Helvetica, sans-serif;
 }
