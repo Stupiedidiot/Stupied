@@ -302,6 +302,6 @@ for(i=0;i<images.length;i++){
 // COMMENTS
 if (document.getElementById("c_widget")){
   var script = document.createElement('script');
-  script.src = "./../../meta/comment-widget.js";
+  script.src = "./../../../meta/comment-widget.js";
   document.head.appendChild(script);
 }
