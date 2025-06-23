@@ -23,6 +23,7 @@ const s_websiteId = '694860407';
 const s_textId = '1882493386';
 const s_pageId = '286091365';
 const s_replyId = '992481341';
+const s_imageId = '1874337045'
 const s_sheetId = '1Y6MDSNMULIugS9QtZTeW9247ubIfOC60G_cu2kMg3FY';
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
@@ -33,7 +34,7 @@ const s_dstStart = ['March', 'Sunday', 2, 2]; // Example shown is the second Sun
 const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sunday of November at 2:00 am
 
 // Misc - Other random settings
-const s_commentsPerPage = 5; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
+const s_commentsPerPage = 8; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
 const s_maxLength = 500; // The max character length of a comment
 const s_maxLengthName = 16; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
@@ -53,6 +54,7 @@ const s_filteredWords = [ // Add words to filter by putting them in quotes and s
 const s_widgetTitle = 'Leave a comment!';
 const s_nameFieldLabel = 'Name';
 const s_websiteFieldLabel = 'Website';
+const s_imageFieldLabel = 'Image';
 const s_textFieldLabel = '';
 const s_submitButtonLabel = 'Submit';
 const s_loadingText = 'Loading comments...';
@@ -92,6 +94,11 @@ const v_formHtml = `
     <div id="c_websiteWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_websiteId}">${s_websiteFieldLabel}</label>
         <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*" placeholder="Website (optional)">
+    </div>
+
+    <div id="c_websiteWrapper" class="c-inputWrapper">
+        <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
+        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)">
     </div>
 
     <div id="c_textWrapper" class="c-inputWrapper">
@@ -390,6 +397,14 @@ function createComment(data) {
     text.innerText = filteredText;
     text.className = 'c-text';
     comment.appendChild(text);
+
+    // Image Link
+    if (data.Image) {
+        let img = document.createElement('img')
+        img.src = data.Image
+        img.className = 'c-img'
+        comment.appendChild(img)
+    }
     
     return comment;
 }
