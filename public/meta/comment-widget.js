@@ -53,7 +53,7 @@ const s_filteredWords = [ // Add words to filter by putting them in quotes and s
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
 const s_widgetTitle = 'Leave a comment!';
 const s_nameFieldLabel = 'Name';
-const s_websiteFieldLabel = 'Website (Optional)';
+const s_websiteFieldLabel = 'Website';
 const s_textFieldLabel = '';
 const s_submitButtonLabel = 'Submit';
 const s_loadingText = 'Loading comments...';
@@ -94,17 +94,17 @@ const v_formHtml = `
 
     <div id="c_nameWrapper" class="c-inputWrapper">
         <label class="c-label c-nameLabel" for="entry.${s_nameId}">${s_nameFieldLabel}</label>
-        <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
+        <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required placeholder="Name (required)">
     </div>
 
     <div id="c_websiteWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_websiteId}">${s_websiteFieldLabel}</label>
-        <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
+        <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*" placeholder="Website (optional)">
     </div>
 
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
-        <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
+        <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -136,7 +136,7 @@ if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
 
 // Add invisible page input to document
-let v_pagePath = window.location.pathname + window.location.search;
+let v_pagePath = window.location.pathname.replaceAll(".html","") + window.location.search;
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
 if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
 const c_pageInput = document.createElement('input');
