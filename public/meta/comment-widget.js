@@ -17,7 +17,6 @@
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = './meta/comment-widget.css';
 const s_formId = '1FAIpQLSdIidsX6PWkauFd80rp8jp-v7CG9IdXA2e2vdDMD9Oui3AaAA';
 const s_nameId = '1285632967';
 const s_websiteId = '694860407';
@@ -74,13 +73,6 @@ const s_rightButtonText = '>>';
 
 // Fix the URL parameters setting for Rarebit just in case
 if (s_fixRarebitIndexPage) {s_includeUrlParameters = true}
-
-// Apply CSS
-const c_cssLink = document.createElement('link');
-c_cssLink.type = 'text/css';
-c_cssLink.rel = 'stylesheet';
-c_cssLink.href = s_stylePath;
-document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 
 // HTML Form
 const v_mainHtml = `

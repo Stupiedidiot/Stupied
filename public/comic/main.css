@@ -1,4 +1,5 @@
 @import url("./../meta/main.css");
+@import url("./../meta/comment-widget.css");
 
 :root{
     --display-font:grandstander;

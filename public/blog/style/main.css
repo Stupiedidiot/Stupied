@@ -1,5 +1,7 @@
 @import url(./../../meta/main.css);
+@import url(./../../meta/comment-widget.css);
 @import url(./template.css);
+
 
 :root {
     --body-font:Arial, Helvetica, sans-serif;
