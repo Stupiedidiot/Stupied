@@ -58,7 +58,10 @@
     --text-color: black;
     --bg-color: white;
     --form-color: gray;
+    --form-bg: white;
+    --form-border: lightgray;
     --margin-bottom: 0.8rem;
+    --padding: 0.5rem;
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
@@ -71,8 +74,9 @@
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
+    color: var(--text-color);
     font-family: var(--display-font);
-    background-color: white;
+    background-color: var(--form-bg);
     border: 1px solid gray;
     border-radius: 0.2rem;
 }
@@ -88,7 +92,7 @@
 /* Input section */
 #c_inputDiv {
     margin-bottom: var(--margin-bottom);
-    padding: 0.5rem;
+    padding: var(--padding);
     background-color: var(--bg-color);
 }
 
@@ -101,6 +105,12 @@
     display: inline-block;
     margin-bottom: 0.5rem;
 }
+
+.c-input, .c-textInput {
+     background-color: var(--form-bg);
+     border: 1px solid var(--form-border);
+}
+
 .c-input {
     padding: 4px;
     color:  var(--form-color);
@@ -119,7 +129,7 @@
 .c-comment {
     background-color: var(--bg-color);
     margin-bottom: var(--margin-bottom);
-    padding: 0.5rem;
+    padding: var(--padding);
 }
 .c-reply {
     display: block;
@@ -138,9 +148,7 @@
 
 .c-name {
     display: inline-block;
-    margin: 0;
-    margin-right: 10px;
-    padding: 0;
+    margin-right: 0.2rem;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -153,7 +161,7 @@
 .c-site:hover {color: var(--bg-color-2);}
 .c-timestamp {
     float: right;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 .c-text {
     padding: 10px;

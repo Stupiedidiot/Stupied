@@ -35,8 +35,8 @@ const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sun
 
 // Misc - Other random settings
 const s_commentsPerPage = 8; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
-const s_maxLength = 500; // The max character length of a comment
-const s_maxLengthName = 16; // The max character length of a name
+const s_maxLength = 1000; // The max character length of a comment
+const s_maxLengthName = 20; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = false; // True for a date + time, false for just the date
@@ -57,10 +57,10 @@ const s_websiteFieldLabel = 'Website';
 const s_imageFieldLabel = 'Image';
 const s_textFieldLabel = '';
 const s_submitButtonLabel = 'Submit';
-const s_loadingText = 'Loading comments...';
+const s_loadingText = 'Beep Boop - Loading comments...';
 const s_noCommentsText = 'No comments yet!';
 const s_closedCommentsText = 'Comments are closed temporarily!';
-const s_websiteText = 'Website'; // The links to websites left by users on their comments
+const s_websiteText = '🢅'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
@@ -101,7 +101,7 @@ const v_formHtml = `
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
     </div>
 
-    <div id="c_websiteWrapper" class="c-inputWrapper">
+    <div id="c_imageWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
         <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)">
     </div>
@@ -184,6 +184,7 @@ function getComments() {
         document.getElementById(`entry.${s_nameId}`).value = '';
         document.getElementById(`entry.${s_websiteId}`).value = '';
         document.getElementById(`entry.${s_textId}`).value = '';
+        document.getElementById(`entry.${s_imageId}`).value = '';
     }
 
     // Get the data
