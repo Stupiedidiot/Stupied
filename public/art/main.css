@@ -2,6 +2,7 @@
 @import url(./../meta/comment-widget.css);
 
 body{
+  --accent-color:var(--blue);
     background-color:var(--blue);
     color:var(--dark-brown);
     background-image: url(./img/bg.png);
@@ -9,8 +10,8 @@ body{
 }
 
 ::selection {
-  color: var(--dark-brown);
-  background: rgb(255, 202, 27);
+  color: white;
+  background: var(--accent-color);
 }
 
 .justified-gallery{
