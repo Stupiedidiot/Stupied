@@ -45,7 +45,7 @@ const s_fixRarebitIndexPage = false; // If using Rarebit, change to true to make
 
 // Word filter - Censor profanity, etc
 const s_wordFilterOn = false; // True for on, false for off
-const s_filterReplacement = '****'; // Change what filtered words are censored with (**** is the default)
+const s_filterReplacement = '*:･ﾟ✧*:･ﾟ✧'; // Change what filtered words are censored with (**** is the default)
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
     'heck', 'dang'
 ]

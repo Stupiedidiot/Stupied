@@ -57,7 +57,7 @@
 #c_widget {
     --text-color: black;
     --bg-color: white;
-    --form-color: gray;
+    --form-color: black;
     --form-bg: white;
     --form-border: lightgray;
     --margin-bottom: 0.8rem;
@@ -101,6 +101,8 @@
     font-weight: bold;
 }
 
+.c-label{ font-family: var(--display-font);}
+
 .c-inputWrapper {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -115,10 +117,14 @@
     padding: 4px;
     color:  var(--form-color);
 	outline: none;
+    font-family: var(--body-font);
 }
 
 #c_textWrapper { display: block; }
-.c-textInput { width: calc(100% - 1rem); }
+.c-textInput { 
+    width: calc(100% - 1rem);
+    resize: vertical;
+}
 #c_submitButton {
     margin-left: auto; 
     margin-right: 0;

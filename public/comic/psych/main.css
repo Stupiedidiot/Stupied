@@ -478,7 +478,7 @@ height: 100%;
         margin:1rem auto;
         max-width:800px;padding:1rem;
 
-        > div {flex:2;padding: 1rem;}
+        > div { flex:2; }
         aside {flex: 1;}
     }
 
