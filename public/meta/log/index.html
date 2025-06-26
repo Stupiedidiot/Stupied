@@ -255,7 +255,7 @@ footer > a:not(:last-of-type):after {
 
         </aside>
         <footer>
-            <a href="./../../about/index.html">about</a>
+            <a href="./../../about/index.html" class="tooltip">about</a>
             <a href="./../../map.html">map</a>
             <a href="./../../feed.xml">rss</a>
             <div id="button">
@@ -319,7 +319,8 @@ fetch("./../../feed.xml")
         
         result = `
             <div class="feed-item">
-                <div class="feed-thumb">
+                <div class="feed-thumb tooltip">
+                    <span><img src="${thumb}" style="max-height:65vh"></span>
                     <img src="${thumb}">
                 </div>
                 <div class="feed-info">
@@ -332,6 +333,10 @@ fetch("./../../feed.xml")
         final += result
     }
     document.getElementById("feed").innerHTML = final
+
+    var script = document.createElement('script');
+    script.src = "./../tooltip.js";
+    document.head.appendChild(script);
 })
 
 function getTitle (e){
