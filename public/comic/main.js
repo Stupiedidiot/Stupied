@@ -16,7 +16,7 @@ masterlist = [
             {"file":"2024-10-07.html","alt":"Selective Seclusion","img":"birthday.png"},
             {"file":"2024-12-09.html","alt":"Electrodynamics"},
             //{"file":"2024-12-16.html","alt":"She Made You a Pinterest Board"}
-            {"file":"2025-01-27.html","alt":"You Suck Ass at Apologizes"}
+            {"file":"2025-01-27.html","alt":"You Suck Ass at Apologies"}
         ],
     },
     {
@@ -45,9 +45,10 @@ masterlist = [
         "issues":[
             {"file":"intro.html"},
             {"file":"patronizing.html"},
-            {"file":"fit-in.html"}
-            //{"file":"grad-ball.html"},
-            //{"file":"what-if?.html"},
+            {"file":"fit-in.html"},
+            //{"file":"grad-ball.html"}
+            //{"file":"gone.html"},
+            //{"file":"morality.html"},
             //{"file":"graduation.html"}
         ]
     },
