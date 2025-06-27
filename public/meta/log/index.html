@@ -230,8 +230,8 @@ footer > a:not(:last-of-type):after {
                     <li>Add OC interaction thingy</li>
                     <li class="x">Make a guestbook</li>
                     <li>decorate guestbook</li>
+                    <li>Rename folders for Art</li>
                 </ul>
-                <p><span style="color:var(--yellow);font-family: var(--display-font);">Last Updated:</span> June 19, 2025</p>
             </div>
 
             <div id="resources">
@@ -342,7 +342,7 @@ fetch("./../../feed.xml")
 function getTitle (e){
     e = e.querySelector("title").innerHTML
     result = e.replace("[","<span>#")
-    result = result.replace("]","</span><br>")
+    result = result.replace("]","</span>")
     return result
 }
 
