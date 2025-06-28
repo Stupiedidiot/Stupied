@@ -114,7 +114,7 @@ fetch("./main.json")
           extraHTML = ""
           for(i = 0; i < art[currentIndex].extra.length; i++){
             selected = "./img/" + art[currentIndex].extra[i]
-            extraHTML += '<a href="' + selected + '"><img src="'+ selected +'"></a>'
+            extraHTML += '<a href="' + selected + '"><img src="'+ selected +'" alt=""></a>'
           }
           document.getElementById("image").innerHTML += extraHTML
         }
