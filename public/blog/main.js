@@ -20,12 +20,16 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 
 const posts=[
 	// SPOILERS - Stuff I might write about???  
-	//{"file":"2025-06-30-Coloring-Tutorial.html"},
 	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
 	// { 
 	// 	"file":"2025-06-20-Turbo.html",
 	// 	"alt":"Turbo Appreciation Post"
 	// },
+	{
+		"file":"2025-07-02-Coloring.html",
+		"alt":"Stupied Coloring Guide",
+		"img":"img/demo-1.png"
+	},
 	{
 		"file":"2025-05-19-Summer.html",
 		"alt":"Plans 4 Summer!!"
@@ -72,9 +76,7 @@ const navigation =`
 		<a href="` + relativePath + `archive.html">archive</a>
 		<a href="#" onclick="randomPost()">random</a>
 		<a href="` + relativePath + `../index.html"">✮ head back »</a>
-		<div id="nextprev-dup">
-		
-		</div>
+		<div id="nextprev-dup"></div>
 	</nav>
 </div>
 `
