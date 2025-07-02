@@ -198,6 +198,6 @@ if (document.getElementById("c_widget")){
 urlHref=window.location.href
 if(urlHref.includes("https://stupied.neocities.org/")){
   if(urlHref.includes(".html")){
-    window.location.pathname=window.location.pathname.replaceAll(".html","")
+    window.location.pathname = window.location.pathname.replaceAll(".html","")
   }
 }
