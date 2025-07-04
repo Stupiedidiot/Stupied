@@ -24,7 +24,6 @@ not learning to do it yourself
 <style>
 @import url(https://fonts.bunny.net/css?family=acme:400);
 
-
 :root{
     --transition-time: 0.25s;
     --drop-shadow-width:0.5rem 0.5rem;
@@ -259,9 +258,11 @@ aside img:last-of-type{
 }
 
 #webrings {
+    position: relative;
     overflow-y: auto;
+    overflow-x: hidden;
     border: 3px solid var(--orange);
-    height: 50%;
+    max-height: 350px;
     margin-top: 2rem;
 }
 
@@ -275,13 +276,9 @@ aside img:last-of-type{
     padding: 1rem 0;
 }
 
-#doodlering {
-    margin: 0 auto!important;
-}
+#doodlering { margin: 0 auto!important; }
 
-#doodlering .webring-wrapper {
-    background-image: none!important;
-}
+#doodlering .webring-wrapper { background-image: none!important; }
 
 
 #webmaster {
@@ -291,6 +288,8 @@ aside img:last-of-type{
     padding:1rem 0.5rem;
     text-align: center;
 }
+
+#onlinewire-webring { padding: 1rem; }
 
 #colorsplash {background-color: #5c7dff}
 
@@ -592,6 +591,11 @@ footer > a:not(:last-of-type):after {
                         <noscript>
                         This site is part of the <a href="https://jack-dawlia.neocities.org/page/shrines/portal/aperturewebring">Aperture Webring</a>!
                         </noscript>
+                    </div>
+                    <div id='onlinewire-webring'>
+                        <script type="text/javascript" src="https://milkyway.moe/onlinewire/onionring-variables.js"></script>
+                        <script type="text/javascript" src="https://milkyway.moe/onlinewire/onionring-widget.js"></script>
+                        <link rel="stylesheet" href="https://milkyway.moe/onlinewire/onionring.css">
                     </div>
                     <div id='colorsplash'>
                         <script type="text/javascript" src="https://daedrms.neocities.org/angel/onionring-variables.js"></script>
