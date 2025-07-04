@@ -138,7 +138,7 @@ function openImg(i){
     .then((response) => response.json())
     .then((art) => {
       trueIndex = images[i].style.getPropertyValue("--trueIndex")
-      link = "./view.html?item=" + art[trueIndex].img
+      link = "./~.html?" + art[trueIndex].img
       title = getTitle(art, trueIndex)
 
       if(art[trueIndex].desc!==undefined){
@@ -179,7 +179,7 @@ function randomArt(){
     .then((response) => response.json())
     .then((art) => {
       randomNum = Math.floor(Math.random() * art.length);
-      window.location.href = "./view.html?item=" + art[randomNum].img
+      window.location.href = "./~.html?" + art[randomNum].img
   })
 }
 
