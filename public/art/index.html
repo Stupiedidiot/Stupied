@@ -210,7 +210,7 @@
         .then((response) => response.json())
         .then((art) => {
           recentLink=document.createElement("a")
-          recentLink.href="view.html?"+art[0].img
+          recentLink.href="~?"+art[0].img
           
           recent=document.createElement("img")
           recent.src="./img/" + art[0].img

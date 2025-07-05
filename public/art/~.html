@@ -70,14 +70,13 @@ footer{ color:var(--wheat); }
 <script src="./main.js"></script>
 <script>
 currentImage = window.location.search.replace("?","")
-console.log(currentImage)
 
 fetch("./main.json")
     .then((response) => response.json())
     .then((art) => {
-      if(currentImage === null){
+      if(currentImage === ""){
         currentImage = art[0].img
-        window.location.replace("./~.html?" + currentImage);
+        window.location.replace("./~?" + currentImage);
       }
 
       imageLink='./img/'+currentImage
@@ -125,14 +124,14 @@ function getDate(art,x) {
 function genNav(e){
   result=""
   if(e[currentIndex-1]){
-    nextI= "./~.html?" + e[currentIndex-1].img;
+    nextI= "./~?" + e[currentIndex-1].img;
     result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | "
   }
 
   result+="<a href='./index.html' id='nextprev-home'>Home</a>"
 
   if(e[currentIndex+1]){
-    prevI= "./~.html?" + e[currentIndex+1].img;
+    prevI= "./~?" + e[currentIndex+1].img;
     result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev  »</a>"
   }
 
