@@ -1,12 +1,12 @@
 [
     {
+        "img":"artfight/2025-Yuno-n-Bee.png",
+        "desc":"Attack for <a href='https://artfight.net/attack/9829097.yuno-n-bee'>IzzytheMenace</a>"
+    },
+    {
         "img":"artfight/2025-Trinity.png",
         "desc":"Attack for <a href='https://artfight.net/attack/9543355.trinity'>Dwinky</a>",
         "extra":["artfight/2025-Trinity-Alt.png"]
-    },
-    {
-        "img":"artfight/2025-Yuno-n-Bee.png",
-        "desc":"Attack for <a href='https://artfight.net/attack/9829097.yuno-n-bee'>IzzytheMenace</a>"
     },
     {
         "img":"2025-Pepper.png",
@@ -533,6 +533,12 @@
     {"img":"artfight/2023-Banan.png"},
     {"img":"artfight/2023-Acorn.png"},
     {"img":"artfight/2023-Abigail.png"},
+    {"img":"fanart/2025-Garpejio.png","title":"From Garpejio"},
+    {"img":"fanart/2025-Octaviaxwx.png","title":"From Octaviaxwx"},
+    {"img":"fanart/2025-Akcwardlad.png","title":"From Akcwardlad"},
+    {"img":"fanart/2025-Beetke.png","title":"From Beetke"},
+    {"img":"fanart/2025-Justalennon.png","title":"From Justalennon"},
+    {"img":"fanart/2024-Beetke.png","title":"From Beetke"},
     {"img":"fanart/2024-Webcatz.png","title":"From Webcatz"},
     {"img":"fanart/2024-Mustyyew.png","title":"From MustyYew"},
     {"img":"fanart/2024-Mush_the_Possum.png","title":"From Mush the Possum"},
