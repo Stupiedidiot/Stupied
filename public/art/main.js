@@ -138,14 +138,14 @@ function openImg(i){
     .then((response) => response.json())
     .then((art) => {
       trueIndex = images[i].style.getPropertyValue("--trueIndex")
-      link = "./~?" + art[trueIndex].img
+      lb_link = "./~?" + art[trueIndex].img
       title = getTitle(art, trueIndex)
 
       if(art[trueIndex].desc!==undefined){
         desc = art[trueIndex].desc
       } else { desc = "" }
 
-    document.querySelector("#lightbox-comments a").href=link  
+    document.querySelector("#lightbox-comments a").href = lb_link  
       document.querySelector("#lightbox-header h2").innerHTML = title 
       document.getElementById("lightbox-info").innerHTML = desc
   })
