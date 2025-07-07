@@ -103,10 +103,16 @@ const v_formHtml = `
 
     <div id="c_imageWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
-        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)">
+        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)" onchange="previewImg()">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
+
+    <div id="c_previewWrapper">
+        <img id="c_previewOutput" src="#">
+        <label class="c-label c-previewLabel">Image Preview</label>
+        <p>If the image does not load, please make sure the website you are linking to allows <a href="https://simple.wikipedia.org/wiki/Hotlinking" target="_blank">hotlinking</a>!</p>
+    </div>
 `;
 
 // Insert main HTML to page
@@ -399,7 +405,7 @@ function createComment(data) {
     text.className = 'c-text';
     comment.appendChild(text);
 
-    // Image Link
+    // Image link
     if (data.Image) {
         let img = document.createElement('img')
         img.src = data.Image
@@ -534,6 +540,12 @@ function changePage(dir) {
         a_commentDivs[i].style.display = 'none';
         if (i >= v_commentMin && i < v_commentMax) {a_commentDivs[i].style.display = 'block'}
     }
+}
+
+function previewImg() {
+    imagePreview = document.getElementById(`entry.${s_imageId}`).value
+    if (imagePreview.length === 0) { imagePreview = "#" }
+    document.getElementById("c_previewOutput").src = imagePreview
 }
 
 getComments(); // Run once on page load

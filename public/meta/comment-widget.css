@@ -129,6 +129,23 @@
     margin-left: auto; 
     margin-right: 0;
 }
+
+#c_previewWrapper:has(img[src='#']) { display:none }
+
+#c_previewWrapper {
+    padding: 0.5rem;
+    border: 1px solid var(--form-border);
+    max-width:350px;
+    margin-bottom: 0.5rem;
+}
+
+#c_previewOutput { max-width: 100%; display: block; }
+
+#c_previewWrapper p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
 #c_replyingText { font-size: 0.8rem; }
 
 /* Comment section */
