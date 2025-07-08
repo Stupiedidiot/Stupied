@@ -276,7 +276,7 @@ h2 {
                 <img src="./img/espy-thumb.png" alt="">
                 <h2>Espy</h2>
                 <p>Kinda psychedelic,, Has Interesting blogs and collections</p>
-                <a href="https://espimyte.com" target="_blank"><img src="https://espimyte.com/img/button.gif"/></a>
+                <a href="https://espimyte.com" target="_blank"><img src="https://espy.world/img/button-legacy.gif"/></a>
             </div>
         </div>
         
@@ -315,6 +315,24 @@ h2 {
                 <a href="https://en.wikipedia.org/wiki/The_Lego_Movie" target="_blank">View »</a>
             </div>
         </div>
+
+        <div id="webgarden">
+            <div>
+                <iframe src="https://stupied.neocities.org/webgarden.html" height="250px" width="250px" scrolling="no" loading="lazy" style="border: 0;"></iframe>
+                <h2>Webgarden</h2>
+                <p>A webgarden is basically like a fancier button. You can find more <a href="https://webgardens.neocities.org/" target="_blank">here</a>. It's literally just a clone of my front page because I am lazy haha.</p>
+                <a href="#" onclick="copyText(webgarden)">Copy Code »</a>
+            </div>
+        </div>
+
+        <div id="button">
+            <div>
+                <a href="https://stupied.neocities.org/" target="_blank"><img src="https://stupied.neocities.org/meta/button.png"></a>
+                <h2>Button</h2>
+                <p>If you prefer something more traditional, here's my button! You may hotlink it or host it in your own website.</p>
+                <a href="#" onclick="copyText(button)">Copy Code »</a>
+            </div>
+        </div>
     </div>
 
     <div id="list" class="outline" style="--color:var(--darkest-blue);">
@@ -334,9 +352,8 @@ h2 {
         <div>
             <h2>Link my website!</h2>
             <ul>
-                <li><a href="#" onclick="copyText(webgarden)">Webgarden</a></li>
-                <li><a href="#" onclick="copyText(button)">Button</a></li>
-                <li><a href="#" onclick="copyText(link)">Link</a></li>
+                <li><a href="#webgarden">Webgarden</a></li>
+                <li><a href="#button">Button</a></li>
             </ul>
 
             <a href="./../index.html" style="font-family: var(--display-font);color: var(--gray);">✮ Head Back</a>
@@ -450,8 +467,11 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
+viewer = document.getElementById("view")
 function closeView() {
-    window.location.replace("#")
+    if (viewer.contains(event.target) === false) {
+        window.location.replace("#")
+    }
 }
 
 function copyText(text){
