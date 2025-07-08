@@ -1,4 +1,4 @@
-@import url(./../meta/new-main.css);
+@import url(./../meta/main.css);
 @import url(./../meta/comment-widget.css);
 
 :root {
@@ -8,6 +8,7 @@
 }
 
 body{
+    background-image: url(./../art/img/bg.png);
     background-color:var(--accent-color);
     font-family:var(--body-font);
     min-width: 300px;
