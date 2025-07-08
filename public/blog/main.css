@@ -1,5 +1,5 @@
-@import url(./../../meta/main.css);
-@import url(./../../meta/comment-widget.css);
+@import url(./../meta/new-main.css);
+@import url(./../meta/comment-widget.css);
 
 :root {
     --body-font:Arial, Helvetica, sans-serif;
@@ -8,7 +8,6 @@
 }
 
 body{
-    background-image:url(./../../art/img/bg.png);
     background-color:var(--accent-color);
     font-family:var(--body-font);
     min-width: 300px;
@@ -79,7 +78,7 @@ footer{
         max-height:320px;
     }
 
-    article:nth-of-type(3n-2){--main-color:var(--blue);}
+    article:nth-of-type(3n-2){--main-color:var(--dark-blue);}
     article:nth-of-type(3n-1){--main-color:var(--yellow);}
     article:nth-of-type(3n){--main-color:var(--brown);}
     h3{

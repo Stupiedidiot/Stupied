@@ -4,8 +4,9 @@
     --yellow: #ffcb67;
     --orange: #ec7239;
     --gray: #6c6371;
-    --blue: #142943;
-    --dark-blue:#0d0d1f;
+    --blue: #ff0000;
+    --dark-blue: #142943;
+    --darker-blue:#0d0d1f;
     --darkest-blue:#0c0716;
     --accent-color: var(--yellow);
     --display-font:grandstander;
@@ -165,10 +166,10 @@ height: 100%;
 .txt-right{text-align: right;}
 
 .txt-yellow{color:var(--yellow)!important;}
-.txt-blue{color:var(--blue)!important;}
+.txt-blue{color:var(--dark-blue)!important;}
 
 .bg-yellow{background-color:var(--yellow)!important;}
-.bg-blue{background-color:var(--blue)!important;}
+.bg-blue{background-color:var(--dark-blue)!important;}
 
 .bg-white{background-color:white!important;}
 .bg-light-gray{background-color:lightgray!important;}
@@ -196,7 +197,7 @@ height: 100%;
 .default{
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: var(--blue);
+    background-color: var(--dark-blue);
     background-image: url(./img/scribble.png);
     color: white;
 }
