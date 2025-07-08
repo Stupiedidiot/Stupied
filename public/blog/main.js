@@ -21,10 +21,10 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 const posts=[
 	// SPOILERS - Stuff I might write about???  
 	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
-	// { 
-	// 	"file":"2025-06-20-Turbo.html",
-	// 	"alt":"Turbo Appreciation Post"
-	// },
+	{ 
+		"file":"2025-07-07-Turbo.html",
+		"alt":"Turbo Appreciation Post"
+	},
 	{
 		"file":"2025-07-02-Coloring.html",
 		"alt":"Stupied Coloring Guide",
@@ -308,5 +308,12 @@ document.onkeydown = function(event) {
 if (document.getElementById("c_widget")){
   var script = document.createElement('script');
   script.src = "./../meta/comment-widget.js";
+  document.head.appendChild(script);
+}
+
+// Yt Embeds
+if (document.querySelector(".yt-embed")){
+  var script = document.createElement('script');
+  script.src = "./../meta/yt-embed.js";
   document.head.appendChild(script);
 }
