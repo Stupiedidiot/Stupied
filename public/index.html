@@ -141,6 +141,8 @@ not learning to do it yourself
     }
 }
 
+#divider { margin-bottom: 1rem; }
+
 .tape {
     position: relative;
     z-index: 2;
@@ -175,7 +177,7 @@ not learning to do it yourself
     display: grid;
     width: 100%;
     max-width:800px;
-    margin: 1rem auto;
+    margin: auto;
     grid-template: 
     'aside main'
     'feed feed'
@@ -433,41 +435,37 @@ footer > a:not(:last-of-type):after {
 </head>
 <body class="default">
 
-    <div id="splash">
-        <header>
-            <div id="logo">
-                <img src="./meta/img/logo.png" alt="" draggable="false" width="903" height="445">
+    <div style="overflow: hidden;">
+        <div id="splash">
+            <header>
+                <div id="logo">
+                    <img src="./meta/img/logo.png" alt="" draggable="false" width="903" height="445">
+                </div>
+            </header>
+            <div id="splash-right">
+                <a id="blog" href="./blog/index.html" title="screaming into the abyss">
+                    <img src="./meta/img/blog.png" alt="" draggable="false" width="373" height="505">
+                </a>
+                <a  id="about" href="./about.html" title="About the Webmaster">
+                    <img src="./meta/img/about.png" alt="" draggable="false"  width="642" height="1142">
+                </a>
             </div>
-        </header>
-
-        <div id="splash-right">
-            <a id="blog" href="./blog/index.html" title="screaming into the abyss">
-                <img src="./meta/img/blog.png" alt="" draggable="false" width="373" height="505">
-            </a>
-            <a  id="about" href="./about.html" title="About the Webmaster">
-                <img src="./meta/img/about.png" alt="" draggable="false"  width="642" height="1142">
-            </a>
-        </div>
-
-        <div id="splash-left">
-            <a id="gallery" href="./art/index.html" title="artworks and animation">
-                <img src="./meta/img/txt-gallery.png" alt="" draggable="false"  width="281" height="82">
-            </a>
-
-            <a id="library" href="./comic/index.html" title="sequential images to tell dumb stories">
-                <img src="./meta/img/txt-library.png" alt="" draggable="false"  width="307" height="84">
-            </a>
-
-            <div id="rating">
-                <a href="#warning" title="read why this website has this rating"><img src="./meta/img/rating.png" alt="" draggable="false" width="93" height="68"></a>
+            <div id="splash-left">
+                <a id="gallery" href="./art/index.html" title="artworks and animation">
+                    <img src="./meta/img/txt-gallery.png" alt="" draggable="false"  width="281" height="82">
+                </a>
+                <a id="library" href="./comic/index.html" title="sequential images to tell dumb stories">
+                    <img src="./meta/img/txt-library.png" alt="" draggable="false"  width="307" height="84">
+                </a>
+                <div id="rating">
+                    <a href="#warning" title="read why this website has this rating"><img src="./meta/img/rating.png" alt="" draggable="false" width="93" height="68"></a>
+                </div>
             </div>
+            <img id="clouds" src="./meta/img/clouds.png" alt="" draggable="false" width="1449" height="776">
         </div>
-
-        <img id="clouds" src="./meta/img/clouds.png" alt="" draggable="false" width="1449" height="776">
-    </div>
-
-    <div id="divider">
-        <div class="tape"><div></div></div>
+        <div id="divider">
+            <div class="tape"><div></div></div>
+        </div>
     </div>
 
     <main id="container">
