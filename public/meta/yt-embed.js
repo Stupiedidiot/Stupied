@@ -1,4 +1,4 @@
-embed = document.querySelectorAll(".yt-embed")
+embed = document.querySelectorAll(".yt-embed.custom")
 for (i = 0; i < embed.length ;i++){
     embedButton = document.createElement("button")
     embedButton.setAttribute("onclick", "revealEmbed()")

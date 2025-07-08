@@ -312,7 +312,7 @@ if (document.getElementById("c_widget")){
 }
 
 // Yt Embeds
-if (document.querySelector(".yt-embed")){
+if (document.querySelector(".yt-embed.custom")){
   var script = document.createElement('script');
   script.src = "./../meta/yt-embed.js";
   document.head.appendChild(script);
