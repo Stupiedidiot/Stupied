@@ -211,11 +211,10 @@ h2 {
     object-position: 0;
 }
 
-#view iframe {
-    margin: auto;
-}
+#view iframe { margin: auto; }
 
-#view a { font-weight: bolder; font-family: var(--display-font); }
+#view div > a { font-weight: bolder; font-family: var(--display-font); }
+#view a:hover { color: var(--yellow); }
 
 
 @media only screen and (max-width: 500px) {
@@ -333,6 +332,39 @@ h2 {
                 <a href="#" onclick="copyText(button)">Copy Code »</a>
             </div>
         </div>
+
+        <div id="misc">
+            <div style="text-align: left;">
+                <img src="./../meta/rss/2025-06-19-0.png" alt="" style="object-position: 100%;">
+                <h2>All My External Links</h2>
+                <ul>
+                    <li><a href="https://neocities.org/site/stupied" target="_blank">Neocities Profile</a></li>
+                    <li><a href="https://www.youtube.com/@stupied_idiot" target="_blank">Youtube</a></li>
+                    <li><a href="https://ko-fi.com/stupied" target="_blank">Ko-fi</a></li>
+                </ul>
+
+                <h4>Alternative Socials</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/stupied.idiot/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.webtoons.com/en/creator/stupied" target="_blank">Webtoons</a></li>
+                    <li><a href="https://status.cafe/users/stupied" target="_blank">Status.cafe</a></li>
+                    <li><a href="https://www.deviantart.com/stupiedidiot" target="_blank">Deviantart</a></li>
+                    <li><a href="https://www.reddit.com/user/Stupied_idiot/" target="_blank">Reddit</a></li>
+                </ul>
+
+                <h4>Fight me!! >:D</h4>
+                <ul>
+                    <li><a href="https://artfight.net/~Stupied" target="_blank">Artfight</a></li>
+                    <li><a href="https://ch.tetr.io/u/stupied" target="_blank">Tetr.io</a></li>
+                </ul>
+
+                <h4>Spaghetti</h4>
+                <ul>
+                    <li><a href="https://github.com/Stupiedidiot" target="_blank">Github</a></li>
+                    <li><a href="https://codepen.io/Stupiedidiot" target="_blank">CodePen</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div id="list" class="outline" style="--color:var(--darkest-blue);">
@@ -354,6 +386,7 @@ h2 {
             <ul>
                 <li><a href="#webgarden">Webgarden</a></li>
                 <li><a href="#button">Button</a></li>
+                <li><a href="#misc">Misc</a></li>
             </ul>
 
             <a href="./../index.html" style="font-family: var(--display-font);color: var(--gray);">✮ Head Back</a>
