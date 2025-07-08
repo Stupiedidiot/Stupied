@@ -47,20 +47,6 @@ footer{
     background-color:var(--accent-color);
 }
 
-@media only screen and (max-width: 600px) {
-    #container{margin-top: 5rem;}
-    main{min-height:90vh;}
-    #nav img {
-        float: left;
-        max-width:100px;
-        margin-right: 0.5rem;
-        left: unset;
-        transform: none;
-    }
-    nav{padding: 0.5rem;text-align:left;}
-    #nextprev-dup{display: none;}
-}
-
 #nextprev{margin-top:1rem;}
 #c_widget{margin-top:4rem;}
 
@@ -177,7 +163,18 @@ footer a{color:inherit;}
     #container{
         display:block;
         min-height:auto;
+        margin-top: 5rem;
     }
+    main{min-height:90vh;}
+    #nav img {
+        float: left;
+        max-width:100px;
+        margin-right: 0.5rem;
+        left: unset;
+        transform: none;
+    }
+    nav{padding: 0.5rem;text-align:left;}
+    #nextprev-dup{display: none;}
 }
 
 #nextprev {text-align:center;user-select:none;}
