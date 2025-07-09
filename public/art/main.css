@@ -101,12 +101,15 @@ body{
     bottom: -1.5rem; left:0;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
     width: 95%;
     
     > a {
         white-space: nowrap;
         font-family: var(--display-font);
     }
+
+    > a:hover { font-style: italic; }
 }
 
 #container header{grid-area:header;}

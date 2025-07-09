@@ -123,11 +123,11 @@ lb_img = getComputedStyle(lb_e).getPropertyValue("--default-img")
 lb_time = parseFloat(getComputedStyle(lb_e).getPropertyValue("--time")) * 1500
 
 function closeLightBox() {
-    lb_open = false
     if (lb_c.contains(event.target) === false) {
-        lb_e.style.background = "unset"
-        lb_e.style.height = "0vh"
-        lb_e.querySelector("img").style.maxHeight = "0"
+      lb_open = false
+      lb_e.style.background = "unset"
+      lb_e.style.height = "0vh"
+      lb_e.querySelector("img").style.maxHeight = "0"
     }
 }
 
@@ -167,11 +167,9 @@ document.onkeydown = function(event) {
     switch (event.keyCode) {
         case 37:
           document.getElementById("lightbox-prev").click()
-          lb_open = true
         break;
         case 39:
           document.getElementById("lightbox-next").click()
-          lb_open = true
         break;
         case 27:
           lb_e.click()
