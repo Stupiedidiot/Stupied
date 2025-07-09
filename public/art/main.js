@@ -19,29 +19,19 @@ const footer =
 <a href="./../chat.html">Chatbox</a>'
 
 const lightbox =`
-<div id="lightbox">
-    <div id="lightbox-container">
-        <div id="lightbox-img">
-            <img src="">
-        </div>
-        <div id="lightbox-side">
-            <div id="lightbox-header">
-                <button onclick="closeLightBox()">X</button>
-                <h2></h2>
-            </div>
-            <div id="lightbox-info"></div>
-            <div id="lightbox-navigation">
-              <div id="lightbox-comments">
-                <a  href="#">View Comments</a>
-              </div>
-              <div id="lightbox-buttons">
-                  <button id="lightbox-prev">«</button>
-                  <button id="lightbox-next">»</button>
-              </div>
+    <div id="lightbox" onclick="closeLightBox()">
+        <div id="lightbox-content">
+            <a href="#" id="lightbox-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></a>
+
+            <img src="#" alt="">
+            
+            <a href="#" id="lightbox-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></a>
+
+            <div id="lightbox-info">
+                <a href="#"></a>
             </div>
         </div>
     </div>
-</div>
 `
 
 const template =lightbox + `
@@ -123,11 +113,32 @@ function getTitle(art,x){
   }
 }
 
-function openImg(i){  
-  document.getElementsByTagName("body")[0].classList.add("lightbox-activated")
-  document.querySelector("#lightbox img").src=images[i].src
+lb_e = document.getElementById("lightbox")
+lb_c = document.getElementById("lightbox-content")
+lb_i = document.getElementById("lightbox-info")
 
-  document.getElementById("lightbox").style.height="100vh"
+lb_height = getComputedStyle(lb_e).getPropertyValue("--default-height")
+lb_color = getComputedStyle(lb_e).getPropertyValue("--default-color")
+lb_img = getComputedStyle(lb_e).getPropertyValue("--default-img")
+lb_time = parseFloat(getComputedStyle(lb_e).getPropertyValue("--time")) * 1500
+
+function closeLightBox() {
+    lb_open = false
+    if (lb_c.contains(event.target) === false) {
+        lb_e.style.background = "unset"
+        lb_e.style.height = "0vh"
+        lb_e.querySelector("img").style.maxHeight = "0"
+    }
+}
+
+function openImg(i){
+  lb_open = true
+
+  lb_e.style.background = lb_color
+  lb_e.style.height = lb_height
+  lb_e.querySelector("img").style.maxHeight = lb_img
+
+  lb_e.querySelector("img").src = images[i].src
 
   if(images[i-1]){prev=i-1}else{prev=images.length-1}
   if(images[i+1]){next=i+1}else{next=0}
@@ -141,33 +152,29 @@ function openImg(i){
       lb_link = "./~?" + art[trueIndex].img
       title = getTitle(art, trueIndex)
 
-      if(art[trueIndex].desc!==undefined){
-        desc = art[trueIndex].desc
-      } else { desc = "" }
+      // if(art[trueIndex].desc!==undefined){
+      //   desc = art[trueIndex].desc
+      // } else { desc = "" }
 
-    document.querySelector("#lightbox-comments a").href = lb_link  
-      document.querySelector("#lightbox-header h2").innerHTML = title 
-      document.getElementById("lightbox-info").innerHTML = desc
+      lb_i.querySelector("a").href = lb_link  
+      lb_i.querySelector("a").innerHTML = title 
   })
-}
-
-function closeLightBox(){
-  document.getElementById("lightbox").style.height=0;
-  document.querySelector("body").classList.remove("lightbox-activated");
 }
 
 // navigation
 document.onkeydown = function(event) {
-  if( document.activeElement === document.querySelector("body") ){
+  if( lb_open == true ){
     switch (event.keyCode) {
         case 37:
-            document.getElementById("lightbox-prev").click()
+          document.getElementById("lightbox-prev").click()
+          lb_open = true
         break;
         case 39:
-            document.getElementById("lightbox-next").click()
+          document.getElementById("lightbox-next").click()
+          lb_open = true
         break;
         case 27:
-          document.querySelector("#lightbox-header button").click()
+          lb_e.click()
         break;
         }
   }
