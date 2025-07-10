@@ -64,15 +64,17 @@ fetch("./main.json")
 .then((response) => response.json())
 .then((art) => {
   for(i=0;i<images.length;i++){
-    linkHTML=document.createElement("a")
+    linkHTML = document.createElement("a")
     linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
     linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
     linkHTML.setAttribute("onclick",'openImg('+i+')')
     linkHTML.href="#"
 
     trueIndex = getIndex(art,images[i].src.split("img/")[1])
-    images[i].style.setProperty("--trueIndex",trueIndex)
+    linkHTML.style.setProperty("--link", art[trueIndex].img)
+    linkHTML.style.setProperty("--title", getTitle(art, trueIndex))
 
+    images[i].style.setProperty("--trueIndex",trueIndex)
     wrap(images[i],linkHTML)
   }
 })
@@ -115,13 +117,14 @@ function getTitle(art,x){
 
 lb_open = false
 lb_e = document.getElementById("lightbox")
+lb_e_prop = getComputedStyle(lb_e)
 lb_c = document.getElementById("lightbox-content")
 lb_i = document.getElementById("lightbox-info")
 
-lb_height = getComputedStyle(lb_e).getPropertyValue("--default-height")
-lb_color = getComputedStyle(lb_e).getPropertyValue("--default-color")
-lb_img = getComputedStyle(lb_e).getPropertyValue("--default-img")
-lb_time = parseFloat(getComputedStyle(lb_e).getPropertyValue("--time")) * 1500
+lb_height = lb_e_prop.getPropertyValue("--default-height")
+lb_color = lb_e_prop.getPropertyValue("--default-color")
+lb_img = lb_e_prop.getPropertyValue("--default-img")
+lb_time = parseFloat(lb_e_prop.getPropertyValue("--time")) * 1500
 
 function closeLightBox() {
     if (lb_c.contains(event.target) === false) {
@@ -146,20 +149,11 @@ function openImg(i){
   document.getElementById("lightbox-prev").setAttribute("onclick",'openImg('+prev+')')
   document.getElementById("lightbox-next").setAttribute("onclick",'openImg('+next+')')
 
-  fetch("./main.json")
-    .then((response) => response.json())
-    .then((art) => {
-      trueIndex = images[i].style.getPropertyValue("--trueIndex")
-      lb_link = "./~?" + art[trueIndex].img
-      title = getTitle(art, trueIndex)
-
-      // if(art[trueIndex].desc!==undefined){
-      //   desc = art[trueIndex].desc
-      // } else { desc = "" }
-
-      lb_i.querySelector("a").href = lb_link  
-      lb_i.querySelector("a").innerHTML = title 
-  })
+  lb_item = document.querySelectorAll(".justified-gallery a")[i]
+  lb_item_prop = getComputedStyle(lb_item)
+  
+  lb_i.querySelector("a").innerHTML = lb_item_prop.getPropertyValue("--title")
+  lb_i.querySelector("a").href = " ./~?" + lb_item_prop.getPropertyValue("--link")
 }
 
 // navigation
