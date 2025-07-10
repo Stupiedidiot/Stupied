@@ -142,16 +142,19 @@ function genNav(e){
 document.onkeydown = function(event) {
   if( document.activeElement === document.querySelector("body") ){
     switch (event.keyCode) {
-        case 37:
-            document.getElementById("nextprev-next").click()
-        break;
-        case 39:
-            document.getElementById("nextprev-prev").click()
-        break;
-        case 27:
-          document.getElementById("nextprev-home").click()
-        break;
-        }
+      case 37:
+          document.getElementById("nextprev-next").click()
+      break;
+      case 39:
+          document.getElementById("nextprev-prev").click()
+      break;
+      case 27:
+        document.getElementById("nextprev-home").click()
+      break;
+      case 82:
+        document.getElementById("random-art").click()
+      break;
+    }
   }
 }
 </script>

@@ -9,7 +9,7 @@ const navigation =
   <a href="./index.html">🏠︎</a>
   <a href="./../about.html#from-art">about me</a>
   <a href="./archive.html">archive</a>
-  <a href="#" onclick="randomArt()">random</a>
+  <a href="#" id="random-art" onclick="randomArt()">random</a>
   <a href="./../index.html">✮ head back »</a>
 </nav>`
 
@@ -113,6 +113,7 @@ function getTitle(art,x){
   }
 }
 
+lb_open = false
 lb_e = document.getElementById("lightbox")
 lb_c = document.getElementById("lightbox-content")
 lb_i = document.getElementById("lightbox-info")
@@ -174,7 +175,15 @@ document.onkeydown = function(event) {
         case 27:
           lb_e.click()
         break;
-        }
+        case 13:
+          lb_i.querySelector("a").click()
+        break;
+      }
+  }
+  switch (event.keyCode) {
+    case 82:
+      document.getElementById("random-art").click()
+    break;
   }
 }
 
