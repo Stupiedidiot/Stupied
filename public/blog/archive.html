@@ -5,64 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet href=./main.css>
     <title>Archive</title>
-<style>
-     .window{
-        columns:2;
-        a{
-            display: block;
-            transition: 0.3s;
-            position: relative;
-            overflow: hidden;
-
-            &:hover{transform: translateY(-1rem);z-index:2;}
-
-            &:nth-of-type(3n-2){--main-color:var(--blue);}
-            &:nth-of-type(3n-1){--main-color:var(--yellow);}
-            &:nth-of-type(3n){--main-color:var(--brown);}
-        }
-
-        .blog-item{
-            border: 3px solid black;
-            background-color: var(--wheat);
-            border-radius: 8px;
-            margin-bottom: 10px;
-            break-inside: avoid;
-            display:grid;
-            grid-template-areas:
-            'title'
-            'img'
-            'date'
-            'desc';
-        }
-
-        .item-title{
-            background-color:var(--main-color);
-            padding:0.5rem;
-            border-radius: 6px 6px 0 0;
-            z-index:1;
-        }
-
-        .item-date{
-            padding:0.5rem;
-            color:var(--main-color);
-            font-weight: bolder;
-        }
-
-        a:has(img:not([src="./"])) .item-date{
-            position: absolute;
-            color:white;
-            left:0.5rem;
-            bottom:0.5rem;
-        }
-
-        a:has(.item-desc > div) .item-date{padding-bottom:0;}
-        .item-desc > div{padding:0.5rem;}
-    }
-
-    @media only screen and (max-width: 550px) {
-        .window{columns: 1;}
-    }
-</style>
 </head>
 <body>
 

@@ -65,17 +65,20 @@ else{relativePath="./blog/"}
 // add "relativePath" to any anchor tags or file paths
 
 const header=`
+	<div>
+		<a href="#">🢂</a>
+		Da Blog!!
+	</div>
 `
 
 const navigation =`
 <div>
-	<a href="` + relativePath + `index.html"><img src="` + relativePath + `../meta/pfp-transparent.png"></a>
 	<nav>
 		<a href="` + relativePath + `index.html">🏠︎</a>
 		<a href="` + relativePath + `../about.html#from-blog">about me</a>
 		<a href="` + relativePath + `archive.html">archive</a>
 		<a href="#" onclick="randomPost()">random</a>
-		<a href="` + relativePath + `../index.html"">✮ head back »</a>
+		<a href="` + relativePath + `../index.html">✮ head back »</a>
 		<div id="nextprev-dup"></div>
 	</nav>
 </div>
@@ -94,6 +97,11 @@ const template =`
 	<div id="nav">` + navigation + `</div>
 	<main></main>
 	<footer>` + footer + `</footer>
+	<div id="message">
+		<h2>Henlo!!</h2>
+		<p>Please don't mind the weird styling!! Experimenting w/ stuff rn ^_^</p>
+		<button onclick="cookieTest()">Okay!</button>
+	</div>
 </div>
 `
 
@@ -269,15 +277,15 @@ function genNav(){
 	result=""
 	if( e = posts[current.index-1] ){
 		nextI= e.file;
-		result+="<a href='./" + nextI + "' id='nextprev-next'>« Next</a> | " 
+		result+="<a href='./" + nextI + "' id='nextprev-next'>Next</a>" 
 	}
-
-	result+='<a href="'+relativePath+'archive.html" id="nextprev-archive">Archive'
 
 	if(e = posts[current.index+1]){
 		prevI= e.file;
-		result+=" | <a href='./" + prevI + "' id='nextprev-prev'>Prev »</a>"
+		result+="<a href='./" + prevI + "' id='nextprev-prev'>Prev</a>"
 	}
+
+	result+='<a href="'+relativePath+'archive.html" id="nextprev-archive">Archive'
 	return result
 }
 
