@@ -325,3 +325,31 @@ if (document.querySelector(".yt-embed.custom")){
   script.src = "./../meta/yt-embed.js";
   document.head.appendChild(script);
 }
+
+// Cookie Test
+document.cookie = "expires=Thu, 01 Jan 1970 00:00:00 UTC;"
+
+closeMessage()
+
+function cookieTest(){
+	document.cookie = "viewed=true"
+	closeMessage()
+}
+
+function getCookieValue(name) {
+  cookieString = document.cookie;
+  cookiesArray = cookieString.split(';');
+  for ( i = 0; i < cookiesArray.length ;i++ ){
+	if(cookiesArray[i].includes(name)){
+		equalsIndex = cookiesArray[i].indexOf("=") + 1
+		return cookiesArray[i].slice(equalsIndex)
+	}
+  }
+  return null
+}
+
+function closeMessage(){
+	if (getCookieValue("viewed") == "true") {
+		document.getElementById("message").style.display = "none" 
+	}
+}
