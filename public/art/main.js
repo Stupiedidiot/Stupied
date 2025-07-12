@@ -7,7 +7,7 @@ const navigation =
 </a>
 <nav>
   <a href="./index.html">🏠︎</a>
-  <a href="./../about.html#from-art">about me</a>
+  <a href="./../about/index.html#from-art">about me</a>
   <a href="./archive.html">archive</a>
   <a href="#" id="random-art" onclick="randomArt()">random</a>
   <a href="./../index.html">✮ head back »</a>

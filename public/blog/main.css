@@ -9,13 +9,15 @@
 }
 
 body {
-background-color: #ffffff;
-  background-image: repeating-linear-gradient(45deg, #5177a980, #5177a980 30px, transparent 30px, transparent 60px), repeating-linear-gradient(-45deg, #5177a980, #5177a980 30px, transparent 30px, transparent 60px);
-
-
+    --opaque: color-mix(in hsl, #5177a9, #00000000);
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, var(--opaque) 20px, transparent 20px), linear-gradient(var(--opaque) 20px, transparent 20px);
+    background-position: 10px 10px;
+    background-size: 40px 40px;
     min-width: 280px;
     color: var(--txt-color);
 }
+
 
 .main-content{padding:0 1rem;}
 .main-content:first-child{padding-top:1rem;}
@@ -133,6 +135,8 @@ img.center{
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     border-right: 3px solid var(--txt-color);
+    z-index: 2;
+    position: relative;
 }
 
 header { user-select: none; }
@@ -194,7 +198,6 @@ footer {
 
 @media only screen and (max-width: 600px) {
     header > div { font-size: 1rem; }
-
 }
 /*=== BLOG LIST STYLING ===*/
 /* Use these tags to hide certain elements in the blog list */
