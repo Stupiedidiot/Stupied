@@ -1,5 +1,9 @@
 [
     {
+        "img":"artfight/2025-Lyla.png",
+        "desc":"Attack for <a href='https://artfight.net/attack/11240321.dig-dog'>Ohgeeia</a>"
+    },
+    {
         "img":"artfight/2025-Pizza-Girl.png",
         "desc":"Attack for <a href='https://artfight.net/attack/11122343.pizza-girl'>Daomecau77</a>"
     },
@@ -541,6 +545,7 @@
     {"img":"artfight/2023-Banan.png"},
     {"img":"artfight/2023-Acorn.png"},
     {"img":"artfight/2023-Abigail.png"},
+    {"img":"fanart/2025-Daomecau77.png","title":"From Daomecau77"},
     {"img":"fanart/2025-Garpejio.png","title":"From Garpejio"},
     {"img":"fanart/2025-Octaviaxwx.png","title":"From Octaviaxwx"},
     {"img":"fanart/2025-Akcwardlad.png","title":"From Akcwardlad"},
