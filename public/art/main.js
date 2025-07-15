@@ -152,7 +152,7 @@ function openImg(i){
   lb_item = document.querySelectorAll(".justified-gallery a")[i]
   lb_item_prop = getComputedStyle(lb_item)
   
-  lb_i.querySelector("a").innerHTML = lb_item_prop.getPropertyValue("--title")
+  lb_i.querySelector("a").innerHTML = lb_item_prop.getPropertyValue("--title") + " »"
   lb_i.querySelector("a").href = " ./~?" + lb_item_prop.getPropertyValue("--link")
 }
 
