@@ -43,6 +43,7 @@
     
     redirectLink = relativePath + "map.html#broken-link" 
     if(url.includes("about")){redirectLink = relativePath + "about/index.html"}
+    if(url.includes("tabvoid/")){redirectLink = "https://tabvoid.neocities.org/" + url.replace("/tabvoid/","")}
     
     window.location.replace(redirectLink)
 </script>
