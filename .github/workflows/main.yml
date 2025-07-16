@@ -23,9 +23,16 @@ jobs:
       with:
         node-version: lts/*
     # When the dist_dir is ready, deploy it to neocities
-    - name: Deploy to neocities
+    - name: Deploy to main neocities
       uses: bcomnes/deploy-to-neocities@v2
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true
         dist_dir: public
+
+    - name: Deploy to portfolio neocities
+    uses: bcomnes/deploy-to-neocities@v2
+    with:
+      api_token: ${{ secrets.PORTFOLIO_API_TOKEN }}
+      cleanup: true
+      dist_dir: portfolio
