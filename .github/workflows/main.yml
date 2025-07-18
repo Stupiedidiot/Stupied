@@ -36,3 +36,10 @@ jobs:
         api_token: ${{ secrets.PORTFOLIO_API_TOKEN }}
         cleanup: true
         dist_dir: portfolio
+
+    - name: Deploy to adopts neocities
+      uses: bcomnes/deploy-to-neocities@v2
+      with:
+        api_token: ${{ secrets.ADOPTS_API_TOKEN }}
+        cleanup: true
+        dist_dir: adopts
