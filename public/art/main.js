@@ -64,18 +64,19 @@ fetch("./main.json")
 .then((response) => response.json())
 .then((art) => {
   for(i=0;i<images.length;i++){
-    linkHTML = document.createElement("a")
-    linkHTML.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
-    linkHTML.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
-    linkHTML.setAttribute("onclick",'openImg('+i+')')
-    linkHTML.href="#"
+    item = {}
+    item.result = document.createElement("a")
+    item.result.style.setProperty("--width",images[i].style.getPropertyValue("--width"))
+    item.result.style.setProperty("--height",images[i].style.getPropertyValue("--height"))
+    item.result.setAttribute("onclick",'openImg('+i+')')
+    item.result.href="#"
 
-    trueIndex = getIndex(art,images[i].src.split("img/")[1])
-    linkHTML.style.setProperty("--link", art[trueIndex].img)
-    linkHTML.style.setProperty("--title", getTitle(art, trueIndex))
+    item.index = getIndex(art,images[i].src.split("img/")[1])
+    item.result.style.setProperty("--link", art[item.index].img)
+    item.result.style.setProperty("--title", getTitle(art, item.index))
 
-    images[i].style.setProperty("--trueIndex",trueIndex)
-    wrap(images[i],linkHTML)
+    images[i].style.setProperty("--trueIndex",item.index)
+    wrap(images[i],item.result)
   }
 })
 
