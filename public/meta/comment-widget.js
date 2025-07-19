@@ -41,7 +41,7 @@ const s_maxLengthName = 20; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = false; // True for a date + time, false for just the date
-let s_includeUrlParameters = false; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
+let s_includeUrlParameters = true; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
 const s_fixRarebitIndexPage = false; // If using Rarebit, change to true to make the index page and page 1 of your webcomic have the same comment section
 
 // Word filter - Censor profanity, etc
@@ -145,7 +145,7 @@ if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
 
 // Add invisible page input to document
-let v_pagePath = window.location.pathname.replaceAll(".html","") + window.location.search;
+let v_pagePath = window.location.pathname.replaceAll(".html","");
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
 if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
 const c_pageInput = document.createElement('input');
