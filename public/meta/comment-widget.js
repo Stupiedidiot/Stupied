@@ -21,6 +21,7 @@ const s_formId = '1FAIpQLSdIidsX6PWkauFd80rp8jp-v7CG9IdXA2e2vdDMD9Oui3AaAA';
 const s_nameId = '1285632967';
 const s_websiteId = '694860407';
 const s_textId = '1882493386';
+const s_moderatedId = '2128734258'
 const s_pageId = '286091365';
 const s_replyId = '992481341';
 const s_imageId = '1874337045'
@@ -66,6 +67,7 @@ const s_replyingText = 'Replying to'; // The text that displays while the user i
 const s_expandRepliesText = 'Show Replies';
 const s_leftButtonText = '«';
 const s_rightButtonText = '»';
+const modCheck = "true" // set to false to turn it on haha - remember to change the google forum!!
 
 /*
     DO NOT edit below this point unless you are confident you know what you're doing!
@@ -100,6 +102,8 @@ const v_formHtml = `
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
     </div>
+
+    <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="${modCheck}">
 
     <div id="c_imageWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
@@ -141,7 +145,6 @@ if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
 
 // Add invisible page input to document
-//if (window.location.includes()){}
 let v_pagePath = window.location.pathname.replaceAll(".html","") + window.location.search;
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
 if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
@@ -404,6 +407,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
+    if(data.Moderated == false) {
+        text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
+    }
     comment.appendChild(text);
 
     // Image link
