@@ -67,7 +67,7 @@ const s_replyingText = 'Replying to'; // The text that displays while the user i
 const s_expandRepliesText = 'Show Replies';
 const s_leftButtonText = '«';
 const s_rightButtonText = '»';
-const modCheck = "true" // set to false to turn it on haha - remember to change the google forum!!
+const modCheck = false
 
 /*
     DO NOT edit below this point unless you are confident you know what you're doing!
@@ -103,7 +103,7 @@ const v_formHtml = `
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
     </div>
 
-    <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="${modCheck}">
+    <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
 
     <div id="c_imageWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
@@ -407,7 +407,7 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
-    if(data.Moderated == false) {
+    if(data.Moderated == false && modCheck === true) {
         text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
     }
     comment.appendChild(text);
