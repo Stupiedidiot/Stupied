@@ -106,8 +106,8 @@ const v_formHtml = `
     <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
 
     <div id="c_imageWrapper" class="c-inputWrapper">
-        <label class="c-label c-websiteLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
-        <input class="c-input c-websiteInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)" onchange="previewImg()">
+        <label class="c-label c-imageLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
+        <input class="c-input c-imageInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)" onchange="previewImg()">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
