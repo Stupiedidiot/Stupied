@@ -7,11 +7,13 @@
     <title></title>
 <style>
 
+#c_widgetTitle { display: none; }
 
 @media only screen and (min-width: 500px) {
     #c_container{columns:2;}
 }
 
+#c_container > div.c-unmoderated { display: none!important;}
 #c_container > div {
     break-inside: avoid;
     > img { display: block; }
@@ -21,16 +23,12 @@
     height: 7rem;
     width: auto;
 }
-
-#c_container > div.c-unmoderated {
-    display: none!important;
-}
-
 </style>
 </head>
 <body>
 
     <div class="main-content">
+        <h1>Microblog</h1>
         <div id="c_widget" style="margin-top:0;"></div>
     </div>
 

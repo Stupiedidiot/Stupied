@@ -186,6 +186,7 @@ function getComments() {
     c_submitButton.disabled;
 
     // Reset reply stuff to default
+    document.getElementById("c_inputDiv").style.display = 'none'
     c_replyingText.style.display = 'none';
     c_replyInput.value = '';
 
@@ -505,10 +506,12 @@ function openReply(id) {
         c_replyingText.innerHTML = s_replyingText + ` ${id.split('|--|')[0]}...`;
         c_replyInput.value = id;
         c_replyingText.style.display = 'block';
+        document.getElementById("c_inputDiv").style.display = 'block'
     } else {
         c_replyingText.innerHTML = '';
         c_replyInput.value = '';
         c_replyingText.style.display = 'none';
+        document.getElementById("c_inputDiv").style.display = 'none'
     }
     link.click(); // Jump to the space to type
 }
