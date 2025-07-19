@@ -63,7 +63,7 @@ const s_noCommentsText = 'No comments yet!';
 const s_closedCommentsText = 'Comments are closed temporarily!';
 const s_websiteText = '🢅'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
-const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
+const s_replyingText = 'Replying to post from'; // The text that displays while the user is typing a reply
 const s_expandRepliesText = 'Show Replies';
 const s_leftButtonText = '«';
 const s_rightButtonText = '»';
@@ -503,7 +503,8 @@ const link = document.createElement('a');
 link.href = '#c_inputDiv';
 function openReply(id) {
     if (c_replyingText.style.display == 'none') {
-        c_replyingText.innerHTML = s_replyingText + ` ${id.split('|--|')[0]}...`;
+        replying_date = id.split('|--|')[1]
+        c_replyingText.innerHTML = s_replyingText + ` ${replying_date.split(' ')[0]}...`;
         c_replyInput.value = id;
         c_replyingText.style.display = 'block';
         document.getElementById("c_inputDiv").style.display = 'block'

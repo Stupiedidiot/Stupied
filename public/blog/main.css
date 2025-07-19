@@ -16,6 +16,12 @@ body {
     background-size: 40px 40px;
     min-width: 280px;
     color: var(--txt-color);
+   animation: sliding 180s linear infinite;
+}
+
+@keyframes sliding {
+    0% { background-position: 0 100%; }
+    100% { background-position: 100% 0; }
 }
 
 
