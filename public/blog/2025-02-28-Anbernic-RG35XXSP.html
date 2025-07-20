@@ -7,6 +7,7 @@
     <title></title>
     <style>
         :root{ --accent-color:#e21b06; }
+        body::before{display: none;}
         body{
             image-rendering: pixelated;
             background-image: url(./img/anbernic-bg.png);
@@ -16,11 +17,8 @@
         footer{background-color:black;color: white;}
 
         img[src="./../meta/pfp-transparent.png"]{filter: grayscale(100);}
-
         @media only screen and (max-width: 700px) {
-            .float-right{
-                float:none;margin:auto;margin-bottom: 2rem!important;
-            }
+            .float-right{float:none;margin:auto;margin-bottom: 2rem!important;}
         }
     </style>
 </head>

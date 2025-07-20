@@ -8,6 +8,30 @@
     <ttl>60</ttl>
 
     <item>
+      <title>Add Images to Ayano's Comment Widget</title>
+      <pubDate>Sun, 20 Jul 2025 15:10:00 PST</pubDate>
+      <link>https://stupied.neocities.org/blog/2025-07-20-Comments</link>
+      <guid>https://stupied.neocities.org/blog/2025-07-20-Comments</guid>
+      <description>
+        <img src="https://stupied.neocities.org/blog/img/ayano-mod.jpg" style="max-width:100%;"/>
+        <p>A tutorial detailing how to attatch images to your comments</p>
+        <a href="https://stupied.neocities.org/blog/2025-07-20-Comments">Click to View »</a>
+      </description>
+    </item>
+
+    <item>
+      <title>Created Microblog</title>
+      <pubDate>Sat, 19 Jul 2025 13:30:00 PST</pubDate>
+      <link>https://stupied.neocities.org/blog/micro/?2025</link>
+      <guid>https://stupied.neocities.org/blog/micro/?2025</guid>
+      <description>
+        <img src="https://stupied.neocities.org/blog/micro/img/2025-06-12.jpg" style="max-width:100%;"/>
+        <p>I'm getting a strange sense of deja vu</p>
+        <a href="https://stupied.neocities.org/blog/micro/?2025">Click to View »</a>
+      </description>
+    </item>
+
+    <item>
       <title>Artfight Attack</title>
       <pubDate>Mon, 15 Jul 2025 09:40:00 PST</pubDate>
       <link>https://stupied.neocities.org/art/artfight</link>

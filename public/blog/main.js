@@ -21,9 +21,15 @@ const userlink = "https://stupied.neocities.org/about#from-blog"
 const posts=[
 	// SPOILERS - Stuff I might write about???  
 	// {"file":"2025-00-00-Ctrl-Alt-Delete.html"},
+	/*
 	{ 
-		"file":"2025-07-07-Turbo.html",
-		"alt":"Turbo Appreciation Post"
+	 	"file":"2025-07-19-Turbo.html",
+	 	"alt":"Turbo Appreciation Post"
+	},
+	 */
+	{
+		"file":"2025-07-20-Comments.html",
+		"alt":"Add Images to Ayano's Comment Widget"
 	},
 	{
 		"file":"2025-07-02-Coloring.html",
@@ -60,8 +66,9 @@ const posts=[
 // [3] SETTINGS - The page's format!
 
 const url = window.location.pathname;
-if(url.includes("/blog")){relativePath = "./";}
-else{relativePath="./blog/"}
+if (url.includes("/micro")) {relativePath = "./../";}
+else if (url.includes("/blog")){relativePath = "./";}
+else {relativePath="./blog/"}
 // add "relativePath" to any anchor tags or file paths
 
 const header=`
@@ -75,8 +82,9 @@ const navigation =`
 <div>
 	<nav>
 		<a href="` + relativePath + `index.html">🏠︎</a>
-		<a href="` + relativePath + `../about.html#from-blog">about me</a>
+		<a href="` + relativePath + `../about/index.html#from-blog">about me</a>
 		<a href="` + relativePath + `archive.html">archive</a>
+		<a href="` + relativePath + `micro/index.html">micro</a>
 		<a href="#" onclick="randomPost()">random</a>
 		<a href="` + relativePath + `../index.html">✮ head back »</a>
 		<div id="nextprev-dup"></div>
@@ -87,7 +95,7 @@ const navigation =`
 const footer =`
 <p>
 ` + blogname + ` is written by <a href="` + userlink + `">` + username + `</a>.
-	Created with <a href="https://stupied.neocities.org/tabvoid/">Tabvoid</a>\
+	Created with <a href="https://tabvoid.neocities.org/">Tabvoid</a>\
 </p>
 `
 
@@ -154,16 +162,17 @@ if( current.index > -1){
 		itemDesc=getDesc(i)
 		itemImg=getImg(i)
 
-		item='\
-		<a href="' + itemLink + '">\
-		<div class="blog-item">\
-			<div class="item-title">' + itemTitle + '</div>\
-			<div class="item-date">' + itemDate + '</div>\
-			<div class="item-desc">' + itemDesc + '</div>\
-			<div class="item-img"><img src="' + itemImg +'"></div>\
-		</div>\
-		</a>\
-		'	
+		item=`
+		<a href="${itemLink}">
+			<div class="blog-item">
+				<div class="item-title" title="${itemTitle}">${itemTitle}</div>
+				<div class="item-date">${itemDate}</div>
+				<div class="item-desc">${itemDesc}</div>
+				<div class="item-img"><img src="${itemImg}"></div>
+			</div>
+		</a>
+		`
+
 		postArchive+=item
 		if(i<3){postRecent+=item}
 	}
@@ -313,9 +322,13 @@ document.onkeydown = function(event) {
 }
 
 // COMMENTS
-if (document.getElementById("c_widget")){
+if (e=document.getElementById("c_widget")){
   var script = document.createElement('script');
-  script.src = "./../meta/comment-widget.js";
+  if(url.includes("micro/") ) {
+	script.src = "./micro.js";
+  } else {
+	script.src = "./../meta/comment-widget.js";
+  }
   document.head.appendChild(script);
 }
 
