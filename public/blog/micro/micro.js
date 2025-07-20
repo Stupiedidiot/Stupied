@@ -58,9 +58,9 @@ const s_websiteFieldLabel = 'Website';
 const s_imageFieldLabel = 'Image';
 const s_textFieldLabel = '';
 const s_submitButtonLabel = 'Submit';
-const s_loadingText = 'Beep Boop - Loading comments...';
-const s_noCommentsText = 'No comments yet!';
-const s_closedCommentsText = 'Comments are closed temporarily!';
+const s_loadingText = 'Beep Boop - Loading posts...';
+const s_noCommentsText = 'No Posts Yet!';
+const s_closedCommentsText = 'Replies are closed temporarily!';
 const s_websiteText = '🢅'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to post from'; // The text that displays while the user is typing a reply
@@ -557,8 +557,14 @@ function changePage(dir) {
 }
 
 function previewImg() {
+    previewWrapper = document.getElementById("c_previewWrapper")
     imagePreview = document.getElementById(`entry.${s_imageId}`).value
-    if (imagePreview.length === 0) { imagePreview = "#" }
+    if (imagePreview.length === 0) { 
+        previewWrapper.style.display = "none"
+        imagePreview = "#"
+    } else {
+        previewWrapper.style.display = "block"
+    }
     document.getElementById("c_previewOutput").src = imagePreview
 }
 
