@@ -552,15 +552,14 @@ function changePage(dir) {
 
 function previewImg() {
     previewWrapper = document.getElementById("c_previewWrapper")
-    previewLink = document.getElementById(`entry.${s_imageId}`).value
-    if (previewLink.length === 0) { 
+    imagePreview = document.getElementById(`entry.${s_imageId}`).value
+    if (imagePreview.length === 0) { 
         previewWrapper.style.display = "none"
-        previewLink = "#"
+        imagePreview = "#"
     } else {
         previewWrapper.style.display = "block"
     }
-    document.getElementById("c_previewOutput").src = previewLink
-
+    document.getElementById("c_previewOutput").src = imagePreview
 }
 
 getComments(); // Run once on page load
