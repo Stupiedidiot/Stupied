@@ -8,15 +8,20 @@
     --border: 3px dotted var(--txt-color);
 }
 
-body {
+body, body::before {
     --opaque: color-mix(in hsl, #5177a9, #00000000);
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     background-image: linear-gradient(90deg, var(--opaque) 20px, transparent 20px), linear-gradient(var(--opaque) 20px, transparent 20px);
-    background-position: 10px 10px;
     background-size: 40px 40px;
     min-width: 280px;
     color: var(--txt-color);
-   animation: sliding 180s linear infinite;
+}
+
+body::before{
+    content: ""; display: block;
+    top:0; position: fixed;
+    width: 100vw; height: 100vh;
+    animation: sliding 240s linear infinite;
 }
 
 @keyframes sliding {
@@ -24,6 +29,8 @@ body {
     100% { background-position: 100% 0; }
 }
 
+p > a { color: var(--accent-color); }
+p > a:hover { color: var(--txt-color);  }
 
 .main-content{padding:0 1rem;}
 .main-content:first-child{padding-top:1rem;}
