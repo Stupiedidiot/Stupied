@@ -2,19 +2,25 @@
 @import url(./../meta/comment-widget.css);
 
 :root {
-    --accent-color:#5177a9;
+    --accent-color: #318ea3;
     --bg-color: white;
     --txt-color: black;
-    --border: 3px dotted var(--txt-color);
 }
 
-body, body::before {
+body {
+    background-image: url(./img/bg.png);
+    background-size: cover;
+    background-position: 550px 0;
+    background-attachment: fixed;
+    color: var(--txt-color);
+}
+
+/* body, body::before {
     --opaque: color-mix(in hsl, #5177a9, #00000000);
     background-color: var(--bg-color);
     background-image: linear-gradient(90deg, var(--opaque) 20px, transparent 20px), linear-gradient(var(--opaque) 20px, transparent 20px);
     background-size: 40px 40px;
     min-width: 280px;
-    color: var(--txt-color);
 }
 
 body::before{
@@ -22,7 +28,7 @@ body::before{
     top:0; position: fixed;
     width: 100vw; height: 100vh;
     animation: sliding 240s linear infinite;
-}
+} */
 
 @keyframes sliding {
     0% { background-position: 0 100%; }
@@ -119,7 +125,7 @@ img.center{
     color:white;
 }
 
-#container #message {
+#message {
     background-color: var(--bg-color);
     padding: 1rem;
     border: 3px solid var(--txt-color);
@@ -130,6 +136,7 @@ img.center{
     z-index: 100;
 } 
 
+
 /*=== PAGE LAYOUT STYLING ===*/
 #container header { grid-area: header; }
 #container #nav{ grid-area: nav; }
@@ -137,6 +144,7 @@ img.center{
 #container footer { grid-area: footer; }
 
 #container {
+    border-right: 3px solid black;
     background-color: var(--bg-color);
     display: grid;
     grid-template-areas:
@@ -147,7 +155,6 @@ img.center{
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    border-right: 3px solid var(--txt-color);
     z-index: 2;
     position: relative;
 }
@@ -172,9 +179,10 @@ header a {
     bottom: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--accent-color);
 }
 
-#nav { background-color: var(--txt-color);}
+#nav { background-color: black;}
 
 nav {
     padding: 0.5rem;
@@ -182,7 +190,7 @@ nav {
     user-select: none;
 
     > a{
-        color: var(--bg-color);
+        color: white;
         display: inline-block;
         padding: 5px 8px;
         border-radius: 30px;
@@ -193,13 +201,13 @@ nav {
 }
 
 main {
-    border-left: var(--border);
+    border-left: 3px dotted var(--txt-color);
 }
 
 footer {
-    border-top: var(--border);
-    background-color: var(--txt-color);
-    color: var(--bg-color);
+    border-top: black;
+    background-color: black;
+    color: white;
     user-select: none;
     padding: 1rem;
 }
@@ -241,6 +249,7 @@ footer {
         'desc desc img';
         grid-template-columns:auto 1fr auto;
         grid-template-rows:auto 1fr;
+        transition: 0.1s;
     }
 
     .item-date{ font-weight:bold; }
@@ -251,7 +260,11 @@ footer {
     }
     .item-desc{margin-left:1rem;}
     .item-img{display:none;}
-    a:hover .blog-item{background-color:var(--accent-color);}
+    a:hover .blog-item{
+        color: white;
+        background-color:var(--accent-color);
+        padding:0.5rem;
+    }
 }
 
 .window{
@@ -261,11 +274,10 @@ footer {
         transition: 0.3s;
         position: relative;
         overflow: hidden;
-        --main-color:var(--txt-color);
-        color:var(--bg-color);
 
         &:hover{transform: translateY(-1rem);z-index:2;}
     }
+
 
     .blog-item{
         border: 2px solid var(--txt-color);
@@ -283,10 +295,15 @@ footer {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        background-color:var(--main-color);
+        color: white;
+        background-color: black;
+        border-bottom: 2px solid black;
+        transition: 0.2s;
         padding:0.5rem;
         z-index:1;
     }
+
+    a:hover .item-title { background-color: var(--accent-color); }
 
     .item-date{
         padding:0.5rem;
