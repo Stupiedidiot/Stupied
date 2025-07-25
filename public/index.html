@@ -386,9 +386,13 @@ aside img:last-of-type{
 }
 
 .feed-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
     h4 { display: inline-block; }
     h4::after { content: " » "}
-    a { color: var(--gray) }
+    a { color: var(--gray); }
 }
 
 .feed-more {

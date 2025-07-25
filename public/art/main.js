@@ -72,8 +72,8 @@ fetch("./main.json")
     item.result.href="#"
 
     item.index = getIndex(art,images[i].src.split("img/")[1])
-    item.result.style.setProperty("--link", art[item.index].img)
-    item.result.style.setProperty("--title", getTitle(art, item.index))
+    item.result.dataset.link = art[item.index].img
+    item.result.dataset.title = getTitle(art, item.index)
 
     images[i].style.setProperty("--trueIndex",item.index)
     wrap(images[i],item.result)
@@ -104,12 +104,12 @@ function getIndex(json,current){
 
 function getTitle(art,x){
   if(art[x].title!==undefined){
-    title=art[x].title
+    title = art[x].title
     return title
   } else {
     e = art[x].img
     fauxTitle = e
-    if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/"),e.length)}
+    if(e.includes("/")){fauxTitle = e.slice(e.indexOf("/")+1,e.length)}
     fauxTitle = fauxTitle.slice(5,fauxTitle.length-4)
     fauxTitle = fauxTitle.replaceAll("-"," ")
     return fauxTitle
@@ -151,10 +151,9 @@ function openImg(i){
   document.getElementById("lightbox-next").setAttribute("onclick",'openImg('+next+')')
 
   lb_item = document.querySelectorAll(".justified-gallery a")[i]
-  lb_item_prop = getComputedStyle(lb_item)
   
-  lb_i.querySelector("a").innerHTML = lb_item_prop.getPropertyValue("--title") + " »"
-  lb_i.querySelector("a").href = " ./~?" + lb_item_prop.getPropertyValue("--link")
+  lb_i.querySelector("a").innerHTML = lb_item.dataset.title + " »"
+  lb_i.querySelector("a").href = " ./~?" + lb_item.dataset.link
 }
 
 // navigation
