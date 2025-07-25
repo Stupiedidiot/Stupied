@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Website galley where you'll find all my art related stuff!">
   <link rel="stylesheet" href="./main.css">
-  <title></title>
+  <title>gallery</title>
   <style>
     body{
       overflow-x:hidden;
@@ -114,9 +114,7 @@
 <body>
 
 <div class="main-content">
-
   <h1>Stupied Art!</h1>
-  
   <div id="about">
     <div id="list">
       <p>
@@ -162,7 +160,6 @@
 
 <div class="main-content" id="sketchbooks" >
   <h1>Sketchbooks!!</h1>
-
   <div>
     <a href="./2024.html#raffidelle" style="--width: 500; --height: 767;">
       <img src="./img/cover/2024-Raffidelle.png">
@@ -199,22 +196,21 @@
   </ul>
   <a href="https://ko-fi.com/stupied/commissions" id="commission">Commission me! »</a>
 </div>
+
 <script src="./main.js"></script>
-
 <script>
+fetch("./main.json")
+      .then((response) => response.json())
+      .then((art) => {
+        recentLink=document.createElement("a")
+        recentLink.href="~?"+art[0].img
+        
+        recent=document.createElement("img")
+        recent.src="./img/" + art[0].img
+        recentLink.append(recent)
 
-  fetch("./main.json")
-        .then((response) => response.json())
-        .then((art) => {
-          recentLink=document.createElement("a")
-          recentLink.href="~?"+art[0].img
-          
-          recent=document.createElement("img")
-          recent.src="./img/" + art[0].img
-          recentLink.append(recent)
-
-          document.getElementById("recent").append(recentLink)
-    })
+        document.getElementById("recent").append(recentLink)
+  })
 </script>
 
 </body>

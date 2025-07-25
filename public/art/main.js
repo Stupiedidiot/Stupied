@@ -56,7 +56,7 @@ for(i=0; i<main.length; i++){
 
 if(e=document.getElementById("aside-1-content")){document.querySelector("#container #aside-1").append(e)}
 
-if(document.title===""){document.title="gallery // stupied"}else{document.title+= " - gallery // stupied";}
+if(document.title===""){document.title="gallery | stupied"}else{document.title+= " | stupied";}
 
 document.querySelector("head").innerHTML+='<link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>'
 

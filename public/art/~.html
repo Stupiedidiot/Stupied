@@ -92,7 +92,7 @@ fetch("./main.json")
         year = "<span> (" + year + ")</span>"
 
         document.getElementById("title").innerHTML = title + year
-        document.title = title +" // stupied"
+        document.title = title +" | stupied"
 
         if(art[currentIndex].desc!==undefined){
           document.getElementById("desc").innerHTML = art[currentIndex].desc
@@ -108,7 +108,7 @@ fetch("./main.json")
         }
       } else {
         document.getElementById("title").innerHTML = "What in the What"
-        document.title = "Error // stupied"  
+        document.title = "Error | stupied"  
         document.getElementById("desc").innerHTML = "This image is either unlisted or does not exist at all :/"
       }
       nextprev=genNav(art)
