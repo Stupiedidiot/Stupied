@@ -13,10 +13,11 @@ const navigation =
   <a href="./../index.html">✮ head back »</a>
 </nav>`
 
-const footer =
-'<a href="#">Sitemap</a>\
-<a href="./../index.html">Head Back</a>\
-<a href="./../chat.html">Chatbox</a>'
+const footer =`
+<a href="./../about/index.html">about</a>
+<a href="./../map.html">map</a>
+<a href="./../feed.xml">rss</a>
+`
 
 const lightbox =`
     <div id="lightbox" onclick="closeLightBox()">
@@ -43,6 +44,7 @@ const template =`${lightbox}
     </div>
   </div>
   <main></main>
+  <footer>${footer}</footer>
 </div>`
 
 document.getElementsByTagName("body")[0].innerHTML+=template

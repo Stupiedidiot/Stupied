@@ -130,7 +130,6 @@ body{
     width:95%;
     max-width:1000px;
     margin:auto;
-    padding-top:0.5rem;
 }
 
 #container .main-content, #container #aside-1{
@@ -143,9 +142,8 @@ body{
 
 #aside-1{user-select: none;}
 
-#container .main-content{
-    margin-bottom:1rem;
-}
+#container .main-content{ margin-bottom:1rem; }
+#container .main-content:last-of-type{ margin-bottom:0; }
 
 .main-content h1{
   background-image: linear-gradient(#0000, var(--accent-color));
@@ -196,13 +194,12 @@ nav > a:hover {
   color: black;
 }
 
+
 footer a:not(:last-of-type)::after{
   content:" | ";
+  margin: 0 1rem;
 }
-footer{
-  text-align:center;
-  margin-bottom:1rem;
-}
+footer { text-align:center; }
 
 @media only screen and (max-width: 650px) {
   #container{display:block;}
