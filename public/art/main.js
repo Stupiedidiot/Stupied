@@ -34,12 +34,12 @@ const lightbox =`
     </div>
 `
 
-const template =lightbox + `
+const template =`${lightbox}
 <div id="container">
   <header></header>
   <div id="aside-container">
     <div id="aside-1">
-      `+navigation+`
+      ${navigation}
     </div>
   </div>
   <main></main>

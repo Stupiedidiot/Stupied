@@ -74,7 +74,7 @@
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--form-color);
     font-family: var(--display-font);
     background-color: var(--form-bg);
     border: 1px solid gray;

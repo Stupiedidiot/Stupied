@@ -1,12 +1,14 @@
-@import url(./../meta/main.css);
+@import url(./../meta/new-main.css);
 @import url(./../meta/comment-widget.css);
 
 body{
   --accent-color:var(--blue);
-    background-color:var(--blue);
-    color:var(--dark-brown);
-    background-image: url(./img/bg.png);
-    min-width: 300px;
+    background-color:var(--accent-color);
+    color: white;
+    background-image: url(./img/bg.jpg);
+    background-size: 100% auto;
+    background-position: 0% 5%;
+    background-attachment: fixed;
 }
 
 ::selection {
@@ -16,16 +18,12 @@ body{
 
 .justified-gallery{
   --space:0;
+  background-color: white;
   user-select: none;
 }
 
-.justified-gallery img{
-  transition:0.3s;
-}
-
-.justified-gallery a:hover img{
-  transform:scale(110%);
-}
+.justified-gallery img{ transition:0.3s; }
+.justified-gallery a:hover img{ transform:scale(110%); }
 
 #lightbox {
     --time: 0.4s;
@@ -136,10 +134,11 @@ body{
 }
 
 #container .main-content, #container #aside-1{
-    border:3px solid var(--dark-brown);
+    border:1.5px solid var(--accent-color);
     border-radius: 5px; 
-    box-shadow: 3px 3px var(--dark-brown);
-    background-color: white;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 8px var(--accent-color);
 }
 
 #aside-1{user-select: none;}
@@ -149,17 +148,12 @@ body{
 }
 
 .main-content h1{
-  border-bottom: 3px solid var(--dark-brown);
-  background-color:var(--blue);
+  background-image: linear-gradient(#0000, var(--accent-color));
   color:white;
   padding:1rem;
 }
 
-header img{
-  width:100%;
-}
-
-#aside-1{
+#aside-1 {
     padding:0 1rem;
     width:200px;
     top:1.5rem;
@@ -167,9 +161,7 @@ header img{
     position:sticky;
 }
 
-#aside-1 > div{
-  margin-bottom:1rem;
-}
+#aside-1 > div{ margin-bottom:1rem; }
 
 #aside-1 #aside-1-img{
   width:100%;
@@ -187,12 +179,21 @@ nav{
 }
 
 nav > a{
-  color:var(--wheat);
-  background-color:var(--dark-brown);
+  color: white;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: linear-gradient(#0000, black 3px, #0000);
   display:inline-block;
-  padding:5px 8px;
-  border-radius:30px;
-  margin-bottom:5px;
+  padding: 5px 8px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: 0.2s;
+}
+
+nav > a:hover {
+  background-color: white;
+  background-image: none;
+  color: black;
 }
 
 footer a:not(:last-of-type)::after{
