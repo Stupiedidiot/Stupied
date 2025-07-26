@@ -194,12 +194,11 @@ nav > a:hover {
   color: black;
 }
 
-
+footer { text-align:center; }
 footer a:not(:last-of-type)::after{
   content:" | ";
   margin: 0 1rem;
 }
-footer { text-align:center; }
 
 @media only screen and (max-width: 650px) {
   #container{display:block;}

@@ -212,6 +212,13 @@ footer {
     padding: 1rem;
 }
 
+footer a:hover { color: var(--accent-color); }
+footer > div a:not(:last-of-type)::after{
+  content:" | ";
+  margin: 0 1rem;
+  color: white;
+}
+
 @media only screen and (min-width: 601px) {
     #blog-title {font-size: 1.3rem;}
     #container #message { max-width: 200px;}

@@ -81,30 +81,35 @@ const header=`
 const navigation =`
 <div>
 	<nav>
-		<a href="` + relativePath + `index.html">🏠︎</a>
-		<a href="` + relativePath + `../about/index.html#from-blog">about me</a>
-		<a href="` + relativePath + `archive.html">archive</a>
-		<a href="` + relativePath + `micro/index.html">micro</a>
+		<a href="${relativePath}index.html">🏠︎</a>
+		<a href="${relativePath}../about/index.html#from-blog">about me</a>
+		<a href="${relativePath}archive.html">archive</a>
+		<a href="${relativePath}micro/index.html">micro</a>
 		<a href="#" onclick="randomPost()">random</a>
-		<a href="` + relativePath + `../index.html">✮ head back »</a>
+		<a href="${relativePath}../index.html">✮ head back »</a>
 		<div id="nextprev-dup"></div>
 	</nav>
 </div>
 `
 
 const footer =`
-<p>
-` + blogname + ` is written by <a href="` + userlink + `">` + username + `</a>.
-	Created with <a href="https://tabvoid.neocities.org/">Tabvoid</a>\
+<p style="margin-bottom:0.5rem;">
+	${blogname} is written by <a href="${userlink}">${username}</a>.
+	Created with <a href="https://tabvoid.neocities.org/">Tabvoid</a>
 </p>
+<div>
+<a href="${relativePath}../about/index.html">about</a>
+<a href="${relativePath}../map.html">map</a>
+<a href="${relativePath}../feed.xml">rss</a>
+</div>
 `
 
 const template =`
 <div id="container">
-	<header>`+ header +`</header>
-	<div id="nav">` + navigation + `</div>
+	<header>${header}</header>
+	<div id="nav">${navigation}</div>
 	<main></main>
-	<footer>` + footer + `</footer>
+	<footer>${footer}</footer>
 	<div id="message">
 		<h2>Henlo!!</h2>
 		<p>Please don't mind the weird styling!! Experimenting w/ stuff rn ^_^</p>
