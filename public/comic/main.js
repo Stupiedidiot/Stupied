@@ -26,8 +26,8 @@ masterlist = [
     },
     {
         "volume":"pmd",
-        "title":"Working Title",
-        "desc":"OC comics loosely based on the Pokemon Dungeon Games - Still deciding a title"
+        "title":"PMD: Spirits of the Lake",
+        "desc":"OC comics loosely based on the Pokemon Dungeon Games"
     },
     {
         "volume":"84",
