@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page to share code I've made">
     <link rel="stylesheet" href="./../meta/new-main.css">
     <title>Codez!! | stupied</title>
 
 <style>
-
 #container {
     max-width: 380px;
     margin: 2rem auto;
 }
-
+section { margin-bottom: 1.5rem; }
+a:hover { color: var(--yellow); }
 li a:after {
     position: absolute;
     opacity: 0;
@@ -22,7 +23,6 @@ li a:after {
     content: " »";
     transition: 0.1s;
 }
-
 li a:hover:after{
     opacity: 1;
     transform: none;
@@ -30,23 +30,24 @@ li a:hover:after{
 </style>
 </head>
 <body class="default">
-    <div id="container">
+    <main id="container">
         <h1 style="color: var(--yellow);">Codez!!</h1>
         <p>I am very fond of DIY-ing stuff in javascript.</p>
 
-        <ul style="margin-bottom: 2rem;">
-            <li><a href="https://codepen.io/Stupiedidiot/pen/gbpdEOE">Listography</a></li>
-            <li><a href="https://tabvoid.neocities.org/">Tabvoid - Bloggin</a></li>
-            <li><a href="https://codepen.io/Stupiedidiot/pen/ByoamxX">JS Image Lightbox</a></li>
-            <li><a href="https://codepen.io/Stupiedidiot/pen/Byozeyq">Justified Gallery</a></li>
-            <li><a href="https://codepen.io/Stupiedidiot/pen/LEpRGdN">RSS Feed Widget</a></li>
-        </ul>
+        <section>
+            <ul>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/gbpdEOE">Listography</a></li>
+                <li><a href="https://tabvoid.neocities.org/">Tabvoid - Bloggin</a></li>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/ByoamxX">JS Image Lightbox</a></li>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/Byozeyq">Justified Gallery</a></li>
+            </ul>
+        </section>
 
         <p>
             Feel free to use my code - Credit is not needed. <br>
             <span style="color: var(--gray);">In fact, you should claim you made it!!</span>
         </p>
         <a href="./../index.html">✮ Head Back »</a>
-    </div>
+    </main>
 </body>
 </html>
