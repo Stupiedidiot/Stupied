@@ -2,13 +2,14 @@
 @import url(./../meta/comment-widget.css);
 
 body{
-  --accent-color:var(--blue);
-    background-color:var(--accent-color);
-    color: white;
-    background-image: url(./img/bg.jpg);
-    background-size: 100% auto;
-    background-position: 0% 5%;
-    background-attachment: fixed;
+  --bg-image: url(./img/bg.jpg);
+  --accent-color: var(--blue);
+  background-color:var(--accent-color);
+  color: white;
+  background-image: var(--bg-image);
+  background-size: 100% auto;
+  background-position: 0% 5%;
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -243,3 +244,6 @@ footer a:not(:last-of-type)::after{
 }
 
 #c_widgetTitle { color: var(--accent-color) }
+
+#settings { display:none; }
+#settings:target { display:block; }

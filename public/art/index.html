@@ -200,18 +200,21 @@
 <script src="./main.js"></script>
 <script>
 fetch("./main.json")
-      .then((response) => response.json())
-      .then((art) => {
-        recentLink=document.createElement("a")
-        recentLink.href="~?"+art[0].img
-        
-        recent=document.createElement("img")
-        recent.src="./img/" + art[0].img
-        recentLink.append(recent)
+  .then((response) => response.json())
+  .then((art) => {
+    recentLink=document.createElement("a")
+    recentLink.href="~?"+art[0].img
+    
+    recent=document.createElement("img")
+    recent.src="./img/" + art[0].img
+    recentLink.append(recent)
 
-        document.getElementById("recent").append(recentLink)
-  })
+    document.getElementById("recent").append(recentLink)
+})
+
+function update(picker,target) {
+  console.log(picker.toBackground())
+}
 </script>
-
 </body>
 </html>

@@ -14,6 +14,7 @@ const navigation =
 </nav>`
 
 const footer =`
+<a href="#settings">settings</a>
 <a href="./../about/index.html">about</a>
 <a href="./../map.html">map</a>
 <a href="./../feed.xml">rss</a>
@@ -35,6 +36,24 @@ const lightbox =`
     </div>
 `
 
+const settings = `
+<div id="settings" class="main-content">
+  <h1>Settings</h1>
+  <div style="padding: 1rem;">
+    <label>Set Color</label>
+    <input data-jscolor="{value:'#44a3c6'}" onInput="changeColor(this.jscolor)"></input>
+    <!--
+      <br><br>
+      <label>Set Background</label>
+      <input onInput="changeBg(this)" placeholder="Image Link"></input>
+    -->
+    <br><br>
+    <button onclick="revertDefault()">revert back default</button>
+    <a href="#">Close Settings</a>
+  </div>
+</div>
+`
+
 const template =`${lightbox}
 <div id="container">
   <header></header>
@@ -43,7 +62,9 @@ const template =`${lightbox}
       ${navigation}
     </div>
   </div>
-  <main></main>
+  <main>
+    ${settings}
+  </main>
   <footer>${footer}</footer>
 </div>`
 
@@ -210,4 +231,51 @@ if(urlHref.includes("https://stupied.neocities.org/")){
   if(urlHref.includes(".html")){
     window.location.pathname = window.location.pathname.replaceAll(".html","")
   }
+}
+
+// Add Color Script
+var script = document.createElement('script');
+script.src = "./../meta/jscolor.js";
+document.head.appendChild(script);
+
+// Cookie Test
+document.cookie = "expires=Thu, 08 Apr 2100 00:00:00 UTC;"
+checkCookies()
+
+function getCookieValue(name) {
+  cookieString = document.cookie;
+  cookiesArray = cookieString.split(';');
+  for ( i = 0; i < cookiesArray.length ;i++ ){
+	if(cookiesArray[i].includes(name)){
+		equalsIndex = cookiesArray[i].indexOf("=") + 1
+		return cookiesArray[i].slice(equalsIndex)
+	}
+  }
+  return ""
+}
+
+function changeColor(selected){
+  document.cookie = 'color=' + selected
+  document.querySelector('body').style.setProperty("--accent-color", selected)
+}
+
+function changeBg(selected){
+  document.cookie = 'bg=' + selected.value
+  document.querySelector('body').style.setProperty("--bg-image", `url(${selected})`)
+}
+
+function checkCookies(){
+  current = {
+    color: getCookieValue("color"),
+    bg: getCookieValue("bg")
+  }
+
+  if (current.color !== "") { changeColor(current.color) }
+  //if (current.bg !== "") { changeBg(current.bg) }
+}
+
+function revertDefault(){
+  document.cookie = "color="
+  document.cookie = "bg="
+  location.reload()
 }
