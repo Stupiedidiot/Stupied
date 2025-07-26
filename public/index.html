@@ -185,7 +185,6 @@ not learning to do it yourself
 }
 
 #main { padding: 1rem; }
-
 aside {
     width:200px;
     z-index: 2;
@@ -403,13 +402,13 @@ aside img:last-of-type{
 
 .feed-title > span {display: none;}
 
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 600px) {
     #feed-content { display: flex; }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 650px) {
+    #container{ display: block; }
     aside{display:none;}
-
     #extra { display:block; padding: 0; }
     #side, #chatbox { 
         max-width: none;
@@ -417,10 +416,6 @@ aside img:last-of-type{
         margin: auto;
         margin-bottom:1rem;
     }
-}
-
-@media only screen and (max-width: 500px) {
-    #container{ display: block; }
 }
 
 footer{
