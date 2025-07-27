@@ -7,101 +7,20 @@
     <title>stupied portfolio</title>
 
 <style>
-#container { position: relative; }
 
-img { max-width: 100%; display: block; }
-
-header {
-    background-color: white;
-    box-sizing: border-box;
-    height: 3rem;
-    border-radius: 0 0 20px 20px;
-    position: relative;
-    z-index: 3;
-}
-
-nav {
-    display: flex;
-    align-items: flex-start;
-    font-family: var(--display-font);
-}
-
-nav > h1 { margin: 0.3rem 1rem 0 2rem; }
-
-nav > a {
-    padding: 0.8rem;
-    display: block;
-    transition: padding 0.2s;
-}
-
-header > nav > a:hover { 
-    padding-top: 1.8rem;
-    background-color: var(--red);
-    color: white;
-}
-
-footer > nav > a:hover {
-    background-color: white;
-    color: var(--red);
-}
-
-header > nav > a:last-child { display: none; }
-
-main {
-    margin-top: -0.2rem;
-    height: calc(100vh - 5rem);
-    overflow: auto;
-}
-
-main > article.main-content {
-    background-color: white;
-    margin: auto;
-    max-width: 800px;
-    width: 90%;
+.pfp {
+    background-color:var(--yellow);
+    width:180px;
+    aspect-ratio:5/6;
+    object-fit: cover;
+    object-position: 0 0;
+    border: 2px solid black;
     padding: 0.5rem;
-    border: 3px solid black;
-    border-bottom: none;
-    border-top: none;
+    padding-bottom: 0;
 }
 
-main > section.main-content {
-    border: 3px solid black;
-    border-left: 0;
-    border-right: 0;
-    > img {
-        width: 100%;
-        height: calc(100vh - 5rem);
-        object-fit: cover;
-    }
-}
-
-footer {
-    background-color: var(--red);
-    box-sizing: border-box;
-    height: 2.5rem;
-    border-radius: 20px 20px 0 0;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    > nav { 
-        justify-content: flex-end;
-        margin-right: 2rem;
-    }
-}
-
-#container > img {
-    bottom: -2rem;
-    left: 1rem;
-    position: absolute;
-    height: 4rem;
-    z-index: 4;
-    &:hover {animation:jump 0.5s;animation-iteration-count:infinite;}
-}
-
-@keyframes jump {
-    50% {transform:translateY(-15%);}
-    100% {transform:translateY(0%);}
+#links {
+    top:0;
 }
 
 </style>
@@ -125,46 +44,65 @@ footer {
         <header class="outline" style="--color: black;--width: 4px;">
             <nav>
                 <h1>Stupied</h1>
+                <a href="#!">≡</a>
                 <a href="#">Portfolio</a>
                 <a href="#">Commission</a>
                 <a href="#">Adopt</a>
                 <a href="#">Contact</a>
-                <a href="#!">≡</a>
             </nav>
         </header>
         <main>
             <section class="main-content">
                 <img src="https://stupied.neocities.org/art/img/2024-Dear-Diary.png" alt="" style="object-position: 0 20%;">
             </section>
-            <article class="main-content" style="padding-top: 1rem;">
+
+            <article class="main-content">
+                <img src="https://stupied.neocities.org/about/img/doll.png" alt="" class="float-left pfp">
                 <h1>Henlo I'm Stupied!!</h1>
-                <p>I like to draw silly cartoons and hand-coding websites. This portfolio is still a work in progress! Please visit my <a href="https://stupied.neocities.org/">main website</a> while waiting!!</p>
+                <p>I like to draw silly cartoons and hand-coding websites.</p>
+                
+                <hr class="clear">
+            </article>
 
-                <h2>To Do!!</h2>
-                <ul>
-                    <li>Make nav mobile responsive</li>
-                    <li>Create the Commission page</li>
-                    <li>Create the Adopts page</li>
-                    <li>Create Contacts page</li>
-                    <li>Create TOS Page</li>
-                    <li>Add screencaps of page demos</li>
-                </ul>
-
+            <article class="main-content">
                 <h2>Illustrations</h2>
-                <div class="justified-gallery">
+                <p>Drawings that usually take between 3-5 hours</p>
+                <section class="justified-gallery">
                     <img src="https://stupied.neocities.org/art/img/2024-Introspection.png" style="--width: 922; --height: 1149;">
                     <img src="https://stupied.neocities.org/art/img/2025-Forgotten.png" style="--width: 634; --height: 845;">
-                </div>
+                </section>
 
-                <div class="justified-gallery">
+                <section class="justified-gallery">
                     <img src="https://stupied.neocities.org/art/img/2022-Scott.png" style="--width: 922; --height: 890;">
                     <img src="https://stupied.neocities.org/art/img/2024-Hoodie.png" style="--width: 922; --height: 706;">
-                </div>
+                </section>
             </article>
 
             <article class="main-content">
                 <h2>Webpages</h2>
+                <p>Click on the image's titles to view a live demo!</p>
+                <section class="justified-gallery">
+                    <img src="./img/demo-Splash.jpg" alt="" style="--width: 1920; --height: 1080;" data-link="https://stupiedidiot.github.io/demo/splash/">
+                    <img src="./img/demo-Psych.jpg" alt="" style="--width: 1920; --height: 1080;">
+                    <img src="./img/demo-Outlinks.jpg" alt="" style="--width: 1920; --height: 1080;">
+                </section>
             </article>
+
+            <article class="main-content">
+                <h2>Komics</h2>
+                <p>Sequential images to tell a story</p>
+                <section class="justified-gallery">
+                    <img src="https://stupied.neocities.org/comic/misc/img/2025-easy-way-out.png" alt="" style="--width: 958; --height: 1082;">
+                    <img src="https://stupied.neocities.org/comic/askal/img/fit-in-0.png" alt="" style="--width: 1080; --height: 1350;" data-title="Fit In">
+                </section>
+                <section class="justified-gallery">
+                    <img src="https://stupied.neocities.org/art/img/2025-Psych-Cast.png" alt="" style="--width: 1925; --height: 544;">
+                </section>
+            </article>
+
+            <section class="main-content">
+                <img src="https://stupied.neocities.org/art/img/2022-Icecream.png" alt="">
+            </section>
         </main>
         <footer class="outline" style="--color: black;--width: 4px;">
             <nav>
