@@ -6,9 +6,23 @@ const urlSplit = url.split("/")
 relativePath = getRelativePath() 
 
 //template stuff
-const navigation =``
+const navigation =`
+  <nav>
+      <h1>Stupied</h1>
+      <a href="#" class="open hidden" onclick="mobileNav('open')">≡</a>
+      <a href="#" class="close hidden" onclick="mobileNav('close')">X</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Commission</a>
+      <a href="#">Adopt</a>
+      <a href="#">Contact</a>
+  </nav>
+`
 
-const footer =``
+const footer =`
+  <nav>
+      <a href="">Terms of Service</a>
+  </nav>
+`
 
 const lightbox =`
     <div id="lightbox" onclick="closeLightBox()">
@@ -28,20 +42,25 @@ const lightbox =`
 
 const template =`${lightbox}
 <div id="container">
-  <header>${navigation}</header>
+  <header id="close" class="outline" style="--color: black;--width: 4px;">${navigation}</header>
   <main></main>
-  <footer>${footer}</footer>
+  <footer class="outline" style="--color: black;--width: 4px;">${footer}</footer>
+    <img src="https://psych-comic.neocities.org/img/pix-psy.png" alt="">
 </div>
 `
 
-//document.getElementsByTagName("body")[0].innerHTML+=template
-/*
+document.getElementsByTagName("body")[0].innerHTML+=template
+
 main=document.querySelectorAll(".main-content");
 for(i=0; i<main.length; i++){
     document.querySelector("#container main").append(main[i]);
 }
-*/
+
 document.querySelector("head").innerHTML+=`<link rel="icon" type="image/x-icon" href="${relativePath}favicon.ico"></link>`
+
+function mobileNav (state) {
+  document.getElementsByTagName('header')[0].id = state
+}
 
 //adding links to images
 images = document.querySelectorAll(".justified-gallery img")

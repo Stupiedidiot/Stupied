@@ -7,10 +7,11 @@
     <title>stupied portfolio</title>
 
 <style>
-
 .pfp {
     background-color:var(--yellow);
-    width:180px;
+    width: 50%;
+    max-width:300px;
+    min-width:200px;
     aspect-ratio:5/6;
     object-fit: cover;
     object-position: 0 0;
@@ -22,95 +23,63 @@
 #links {
     top:0;
 }
-
 </style>
 
 </head>
 <body>
-    <div id="lightbox" onclick="closeLightBox()">
-        <div id="lightbox-content">
-            <a href="#" id="lightbox-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></a>
+    <section class="main-content">
+        <img src="https://stupied.neocities.org/art/img/2024-Dear-Diary.png" alt="" style="object-position: 50% 20%;">
+    </section>
 
-            <img src="#" alt="">
-            
-            <a href="#" id="lightbox-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></a>
+    <article class="main-content">
+        <img src="https://stupied.neocities.org/about/img/doll.png" alt="" class="float-left pfp">
+        <h1>Henlo I'm Stupied!!</h1>
+        <p>I like to draw silly cartoons and messing around javascript</p>
 
-            <div id="lightbox-info">
-                <a href="#"></a>
-            </div>
-        </div>
-    </div>
-    <div id="container">
-        <header class="outline" style="--color: black;--width: 4px;">
-            <nav>
-                <h1>Stupied</h1>
-                <a href="#!">≡</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Commission</a>
-                <a href="#">Adopt</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
-        <main>
-            <section class="main-content">
-                <img src="https://stupied.neocities.org/art/img/2024-Dear-Diary.png" alt="" style="object-position: 0 20%;">
-            </section>
+        <p>This website was created to showcase my best work. If you'd prefer a completed and less curated  archive of my work, check out <a href="https://stupied.neocities.org" target="_blank">this website</a>.</p>
+        
+        <hr class="clear">
+    </article>
 
-            <article class="main-content">
-                <img src="https://stupied.neocities.org/about/img/doll.png" alt="" class="float-left pfp">
-                <h1>Henlo I'm Stupied!!</h1>
-                <p>I like to draw silly cartoons and hand-coding websites.</p>
-                
-                <hr class="clear">
-            </article>
+    <article class="main-content">
+        <h2>Illustrations</h2>
+        <p>Drawings that usually take between 3-5 hours</p>
+        <section class="justified-gallery">
+            <img src="https://stupied.neocities.org/art/img/2024-Introspection.png" style="--width: 922; --height: 1149;">
+            <img src="https://stupied.neocities.org/art/img/2025-Forgotten.png" style="--width: 634; --height: 845;">
+        </section>
 
-            <article class="main-content">
-                <h2>Illustrations</h2>
-                <p>Drawings that usually take between 3-5 hours</p>
-                <section class="justified-gallery">
-                    <img src="https://stupied.neocities.org/art/img/2024-Introspection.png" style="--width: 922; --height: 1149;">
-                    <img src="https://stupied.neocities.org/art/img/2025-Forgotten.png" style="--width: 634; --height: 845;">
-                </section>
+        <section class="justified-gallery">
+            <img src="https://stupied.neocities.org/art/img/2022-Scott.png" style="--width: 922; --height: 890;">
+            <img src="https://stupied.neocities.org/art/img/2024-Hoodie.png" style="--width: 922; --height: 706;">
+        </section>
+    </article>
 
-                <section class="justified-gallery">
-                    <img src="https://stupied.neocities.org/art/img/2022-Scott.png" style="--width: 922; --height: 890;">
-                    <img src="https://stupied.neocities.org/art/img/2024-Hoodie.png" style="--width: 922; --height: 706;">
-                </section>
-            </article>
+    <article class="main-content">
+        <h2>Webpages</h2>
+        <p>Click on the image's titles to view a live demo!</p>
+        <section class="justified-gallery">
+            <img src="./img/demo-Splash.jpg" alt="" style="--width: 1920; --height: 1080;" data-link="https://stupiedidiot.github.io/demo/splash/">
+            <img src="./img/demo-Psych.jpg" alt="" style="--width: 1920; --height: 1080;">
+            <img src="./img/demo-Outlinks.jpg" alt="" style="--width: 1920; --height: 1080;">
+        </section>
+    </article>
 
-            <article class="main-content">
-                <h2>Webpages</h2>
-                <p>Click on the image's titles to view a live demo!</p>
-                <section class="justified-gallery">
-                    <img src="./img/demo-Splash.jpg" alt="" style="--width: 1920; --height: 1080;" data-link="https://stupiedidiot.github.io/demo/splash/">
-                    <img src="./img/demo-Psych.jpg" alt="" style="--width: 1920; --height: 1080;">
-                    <img src="./img/demo-Outlinks.jpg" alt="" style="--width: 1920; --height: 1080;">
-                </section>
-            </article>
+    <article class="main-content">
+        <h2>Komics</h2>
+        <p>Sequential images to tell a story</p>
+        <section class="justified-gallery">
+            <img src="https://stupied.neocities.org/comic/misc/img/2025-easy-way-out.png" alt="" style="--width: 958; --height: 1082;">
+            <img src="https://stupied.neocities.org/comic/askal/img/fit-in-0.png" alt="" style="--width: 1080; --height: 1350;" data-title="Fit In">
+        </section>
+        <section class="justified-gallery">
+            <img src="https://stupied.neocities.org/art/img/2025-Psych-Cast.png" alt="" style="--width: 1925; --height: 544;">
+        </section>
+    </article>
 
-            <article class="main-content">
-                <h2>Komics</h2>
-                <p>Sequential images to tell a story</p>
-                <section class="justified-gallery">
-                    <img src="https://stupied.neocities.org/comic/misc/img/2025-easy-way-out.png" alt="" style="--width: 958; --height: 1082;">
-                    <img src="https://stupied.neocities.org/comic/askal/img/fit-in-0.png" alt="" style="--width: 1080; --height: 1350;" data-title="Fit In">
-                </section>
-                <section class="justified-gallery">
-                    <img src="https://stupied.neocities.org/art/img/2025-Psych-Cast.png" alt="" style="--width: 1925; --height: 544;">
-                </section>
-            </article>
-
-            <section class="main-content">
-                <img src="https://stupied.neocities.org/art/img/2022-Icecream.png" alt="">
-            </section>
-        </main>
-        <footer class="outline" style="--color: black;--width: 4px;">
-            <nav>
-                <a href="">Terms of Service</a>
-            </nav>
-        </footer>
-        <img src="https://psych-comic.neocities.org/img/pix-psy.png" alt="">
-    </div>
+    <section class="main-content">
+        <img src="https://stupied.neocities.org/art/img/2022-Icecream.png" alt="">
+    </section>
 
 <script src="./meta/main.js"></script>
 </body>

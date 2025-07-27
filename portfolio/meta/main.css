@@ -34,7 +34,7 @@ h1,h2,h3,h4,h5,h6{
     font-family:var(--display-font);
 }
 
-h1 { color: var(--red);}
+h1 { color: var(--red); }
 
 ol,ul{margin-top:0;}
 a{text-decoration:none;color:inherit;}
@@ -52,7 +52,7 @@ hr.clear{
     clear:both;
 }
 
-p:first-of-type,ol:first-of-type,ul:first-of-type{
+p:last-child,ol:last-child,ul:last-child{
     margin-bottom:0;
 }
 
@@ -94,6 +94,9 @@ position: absolute;
 width: 100%;
 height: 100%;
 }
+
+.justified-gallery img{ transition:0.2s; }
+.justified-gallery a:hover img{ transform:scale(105%); }
 
 .yt-embed {
     --embed-thumb: unset;
@@ -280,16 +283,22 @@ nav {
     display: flex;
     align-items: flex-start;
     font-family: var(--display-font);
+    transition: 0.2
 }
 
-nav > h1 { margin: 0.3rem 1rem 0 2rem; }
+nav > h1 { margin: 0.3rem 1rem 0 1.5rem; }
 nav > a {
     padding: 0.8rem;
     display: block;
     transition: padding 0.2s;
 }
 
-header > nav > a:first-of-type { 
+header > nav > a:not(.hidden):hover { 
+    background-color: var(--red);
+    color: white;
+}
+
+header > nav > a.hidden{ 
     font-weight: bolder;
     font-size: 1.3rem;
     flex: 1;
@@ -368,16 +377,22 @@ footer > nav > a:hover {
 }
 
 @media only screen and (min-width: 601px) {
-    header > nav > a:hover { 
-        padding-top: 1.8rem;
-        background-color: var(--red);
-        color: white;
-    }
-    header > nav > a:first-of-type { display: none; }
+    header > nav > a:hover {  padding-top: 1.8rem; }
+    header > nav > a.hidden{ display: none; }
 
     .main-content h1 {font-size: 3rem;}
 }
 
 @media only screen and (max-width: 600px) {
-    header > nav > a:not(:first-of-type) { display: none; }
+    header > nav > a:not(.open) { display: none; }
+    #open {
+        height: unset;
+        nav {flex-wrap: wrap;}
+        nav > a:not(.hidden) {
+            display: block;
+            flex: 100%;
+        }
+        .open {display: none;}
+        .close {display: block;}
+    }
 }
