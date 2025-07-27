@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./meta/main.css">
+    <title>stupied portfolio</title>
+
+<style>
+#container { position: relative; }
+
+img { max-width: 100%; display: block; }
+
+header {
+    background-color: white;
+    box-sizing: border-box;
+    height: 3rem;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    z-index: 3;
+}
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--display-font);
+}
+
+nav > h1 { margin: 0.3rem 1rem 0 2rem; }
+
+nav > a {
+    padding: 0.8rem;
+    display: block;
+    transition: padding 0.2s;
+}
+
+header > nav > a:hover { 
+    padding-top: 1.8rem;
+    background-color: var(--red);
+    color: white;
+}
+
+footer > nav > a:hover {
+    background-color: white;
+    color: var(--red);
+}
+
+header > nav > a:last-child { display: none; }
+
+main {
+    margin-top: -0.2rem;
+    height: calc(100vh - 5rem);
+    overflow: auto;
+}
+
+main > article.main-content {
+    background-color: white;
+    margin: auto;
+    max-width: 800px;
+    width: 90%;
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+
+main > section.main-content {
+    border: 3px solid black;
+    border-left: 0;
+    border-right: 0;
+    > img {
+        width: 100%;
+        height: calc(100vh - 5rem);
+        object-fit: cover;
+    }
+}
+
+footer {
+    background-color: var(--red);
+    box-sizing: border-box;
+    height: 2.5rem;
+    border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    > nav { 
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+}
+
+#container > img {
+    bottom: -2rem;
+    left: 1rem;
+    position: absolute;
+    height: 4rem;
+    z-index: 4;
+    &:hover {animation:jump 0.5s;animation-iteration-count:infinite;}
+}
+
+@keyframes jump {
+    50% {transform:translateY(-15%);}
+    100% {transform:translateY(0%);}
+}
+
+</style>
+
 </head>
 <body>
-    <p>Henlo there!!! Will be using as a portfolio,, it isn't done yet. Please check out my <a href="https://stupied.neocities.org/">Main Website</a> while waiting</p>
+    <div id="lightbox" onclick="closeLightBox()">
+        <div id="lightbox-content">
+            <a href="#" id="lightbox-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></a>
+
+            <img src="#" alt="">
+            
+            <a href="#" id="lightbox-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000000" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></a>
+
+            <div id="lightbox-info">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <header class="outline" style="--color: black;--width: 4px;">
+            <nav>
+                <h1>Stupied</h1>
+                <a href="#">Portfolio</a>
+                <a href="#">Commission</a>
+                <a href="#">Adopt</a>
+                <a href="#">Contact</a>
+                <a href="#!">≡</a>
+            </nav>
+        </header>
+        <main>
+            <section class="main-content">
+                <img src="https://stupied.neocities.org/art/img/2024-Dear-Diary.png" alt="" style="object-position: 0 20%;">
+            </section>
+            <article class="main-content" style="padding-top: 1rem;">
+                <h1>Henlo I'm Stupied!!</h1>
+                <p>I like to draw silly cartoons and hand-coding websites. This portfolio is still a work in progress! Please visit my <a href="https://stupied.neocities.org/">main website</a> while waiting!!</p>
+
+                <hr class="clear">
+
+                <h2>Illustrations</h2>
+                <div class="justified-gallery">
+                    <img src="https://stupied.neocities.org/art/img/2024-Introspection.png" style="--width: 922; --height: 1149;">
+                    <img src="https://stupied.neocities.org/art/img/2025-Forgotten.png" style="--width: 634; --height: 845;">
+                </div>
+
+                <div class="justified-gallery">
+                    <img src="https://stupied.neocities.org/art/img/2022-Scott.png" style="--width: 922; --height: 890;">
+                    <img src="https://stupied.neocities.org/art/img/2024-Hoodie.png" style="--width: 922; --height: 706;">
+                </div>
+            </article>
+
+            <article class="main-content">
+                <h2>Webpages</h2>
+            </article>
+        </main>
+        <footer class="outline" style="--color: black;--width: 4px;">
+            <nav>
+                <a href="">Terms of Service</a>
+            </nav>
+        </footer>
+        <img src="https://psych-comic.neocities.org/img/pix-psy.png" alt="">
+    </div>
+
+<script src="./meta/main.js"></script>
 </body>
 </html>
