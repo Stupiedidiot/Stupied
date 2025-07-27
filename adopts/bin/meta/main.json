@@ -4,6 +4,7 @@
         "id":"test",
         "name":"Xerius",
         "dime":[1500,1220],
+        "desc":"",
         "img":[],
         "owner": {
             "name":"",
@@ -15,6 +16,7 @@
         "name":"Lily Odd",
         "dime":[615,424],
         "img":[],
+        "desc":"",
         "owner": {
             "name":"",
             "link":""
@@ -24,6 +26,7 @@
         "id":"test3",
         "name":"Mary",
         "dime":[1220,934],
+        "desc":"",
         "img":[],
         "owner": {
             "name":"",

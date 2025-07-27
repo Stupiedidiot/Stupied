@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://stupied.neocities.org/meta/comment-widget.css);
 
 :root{
-    --yellow: lightblue;
+    --red: #c02832;
+    --yellow: #deab31;
+    --blue: #5177a9;
+    --wheat: #e9eae2;
+    --dark-wheat: #d5d6cf;
     --accent-color: var(--yellow);
     --display-font:grandstander;
     --body-font:Arial, Helvetica, sans-serif;
@@ -10,6 +15,10 @@
 body{
     padding:0;margin:0;
     font-family:var(--body-font);
+    background-color: var(--wheat);
+    opacity: 1;
+    background-image:  linear-gradient(var(--dark-wheat) 2.1px, transparent 2.1px), linear-gradient(to right, var(--dark-wheat) 2.1px, var(--wheat) 2.1px);
+    background-size: 42px 42px;
 }
 
 h1,h2,h3,h4,h5,h6{
