@@ -37,9 +37,9 @@ jobs:
         cleanup: true
         dist_dir: portfolio
 
-    - name: Deploy to adopts neocities
+    - name: Deploy to ocs neocities
       uses: bcomnes/deploy-to-neocities@v2
       with:
-        api_token: ${{ secrets.ADOPTS_API_TOKEN }}
+        api_token: ${{ secrets.OCS_API_TOKEN }}
         cleanup: true
-        dist_dir: adopts
+        dist_dir: ocs
