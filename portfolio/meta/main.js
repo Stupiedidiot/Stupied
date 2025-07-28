@@ -8,19 +8,19 @@ relativePath = getRelativePath()
 //template stuff
 const navigation =`
   <nav>
-      <h1>Stupied</h1>
+      <span>Stupied</span>
       <a href="#" class="open hidden" onclick="mobileNav('open')">≡</a>
       <a href="#" class="close hidden" onclick="mobileNav('close')">X</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Commission</a>
-      <a href="#">Adopt</a>
-      <a href="#">Contact</a>
+      <a href="${relativePath}index.html">Portfolio</a>
+      <a href="${relativePath}c/index.html">Commission</a>
+      <a href="${relativePath}a/index.html">Adopt</a>
+      <a href="${relativePath}contact.html">Contact</a>
   </nav>
 `
 
 const footer =`
   <nav>
-      <a href="">Terms of Service</a>
+      <a href="${relativePath}tos.html">Terms of Service</a>
   </nav>
 `
 

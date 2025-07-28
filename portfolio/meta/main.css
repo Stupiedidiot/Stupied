@@ -268,7 +268,13 @@ height: 100%;
 }
 
 img { max-width: 100%; display: block; }
-#container { position: relative; }
+
+#container { 
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 header {
     background-color: white;
@@ -286,7 +292,13 @@ nav {
     transition: 0.2
 }
 
-nav > h1 { margin: 0.3rem 1rem 0 1.5rem; }
+nav > span {
+    margin: 0.3rem 1rem 0 1.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--red);
+}
+
 nav > a {
     padding: 0.8rem;
     display: block;
@@ -310,6 +322,7 @@ main {
     margin-top: -0.2rem;
     height: calc(100vh - 5rem);
     overflow: auto;
+    position: relative;
 }
 
 main > article.main-content {
@@ -325,12 +338,13 @@ main > article.main-content {
 
 main > section.main-content {
     position: relative;
+    height: calc(100vh - 5rem);
     border: 3px solid black;
     border-left: 0;
     border-right: 0;
     > img {
         width: 100%;
-        height: calc(100vh - 5rem);
+        height: 100%;
         object-fit: cover;
         z-index: 1;
     }
@@ -350,6 +364,7 @@ footer {
     bottom: 0;
     right: 0;
     width: 100%;
+    z-index: 3;
     > nav { 
         justify-content: flex-end;
         margin-right: 2rem;
@@ -363,8 +378,8 @@ footer > nav > a:hover {
 }
 
 #container > img {
-    bottom: -2rem;
-    left: 1rem;
+    bottom: 0.2rem;
+    left: 0.8rem;
     position: absolute;
     height: 4rem;
     z-index: 4;
