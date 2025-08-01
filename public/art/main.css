@@ -19,7 +19,6 @@ body{
 
 .justified-gallery{
   --space:0;
-  background-color: white;
   user-select: none;
 }
 
