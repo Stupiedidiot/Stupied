@@ -90,24 +90,24 @@ const v_formHtml = `
 
     <div id="c_nameWrapper" class="c-inputWrapper">
         <label class="c-label c-nameLabel" for="entry.${s_nameId}">${s_nameFieldLabel}</label>
-        <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required placeholder="Name (required)">
+        <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
     </div>
 
     <div id="c_websiteWrapper" class="c-inputWrapper">
         <label class="c-label c-websiteLabel" for="entry.${s_websiteId}">${s_websiteFieldLabel}</label>
-        <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*" placeholder="Website (optional)">
+        <input class="c-input c-websiteInput" name="entry.${s_websiteId}" id="entry.${s_websiteId}" type="url" pattern="https://.*">
     </div>
 
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
-        <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required placeholder="Insert your message here!!! :3">></textarea>
+        <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
     </div>
 
     <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
 
     <div id="c_imageWrapper" class="c-inputWrapper">
         <label class="c-label c-imageLabel" for="entry.${s_imageId}">${s_imageFieldLabel}</label>
-        <input class="c-input c-imageInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" placeholder="Image Link (optional)" onchange="previewImg()">
+        <input class="c-input c-imageInput" name="entry.${s_imageId}" id="entry.${s_imageId}" type="url" pattern="https://.*" onchange="previewImg()">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -145,7 +145,7 @@ if (s_commentsOpen) {c_submitButton = document.getElementById('c_submitButton')}
 else {c_submitButton = document.createElement('button')}
 
 // Add invisible page input to document
-let v_pagePath = window.location.pathname.replaceAll(".html","");
+let v_pagePath = window.location.pathname;
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
 if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
 const c_pageInput = document.createElement('input');
@@ -156,7 +156,7 @@ c_form.appendChild(c_pageInput);
 // Add the "Replying to..." text to document
 let c_replyingText = document.createElement('span');
 c_replyingText.style.display = 'none'; c_replyingText.id = 'c_replyingText';
-c_form.appendChild(c_replyingText);
+document.getElementById("c_textWrapper").appendChild(c_replyingText); // placed under the textbox
 c_replyingText = document.getElementById('c_replyingText');
 
 // Add the invisible reply input to document
@@ -196,6 +196,8 @@ function getComments() {
         document.getElementById(`entry.${s_textId}`).value = '';
         document.getElementById(`entry.${s_imageId}`).value = '';
     }
+
+    previewImg()
 
     // Get the data
     const url = `https://docs.google.com/spreadsheets/d/${s_sheetId}/gviz/tq?`;
@@ -367,6 +369,7 @@ function displayComments(comments) {
 // Create basic HTML comment, reply or not
 function createComment(data) {
     let comment = document.createElement('div');
+    commentModerated = data.Moderated == false && modCheck === true
 
     // Get the right timestamps
     let timestamps = convertTimestamp(data.Timestamp);
@@ -377,6 +380,22 @@ function createComment(data) {
     // Set the ID (uses Name + Full Timestamp format)
     const id = data.Name + '|--|' + data.Timestamp2;
     comment.id = id;
+
+    // Image link
+    if (data.Image) {
+        let img = document.createElement('img')
+        img.className = 'c-img'
+
+        img.src = data.Image
+        img.dataset.src = data.Image
+
+        if(commentModerated===true) {
+            img.src = '#';
+            img.style.display = "none"
+        }
+        img.setAttribute('onclick','expandImg()')
+        comment.appendChild(img)
+    }
 
     // Name of user
     let name = document.createElement('h3');
@@ -397,7 +416,6 @@ function createComment(data) {
         let site = document.createElement('a');
         site.innerText = s_websiteText;
         site.href = data.Website;
-        site.title = data.Website
         site.className = 'c-site';
         comment.appendChild(site);
     }
@@ -408,18 +426,10 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
-    if(data.Moderated == false && modCheck === true) {
-        text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
+    if(commentModerated===true) {
+        text.innerText = 'This entry is awaiting moderation'; // Change this value to whatever you want
     }
     comment.appendChild(text);
-
-    // Image link
-    if (data.Image) {
-        let img = document.createElement('img')
-        img.src = data.Image
-        img.className = 'c-img'
-        comment.appendChild(img)
-    }
     
     return comment;
 }
@@ -560,6 +570,16 @@ function previewImg() {
         previewWrapper.style.display = "block"
     }
     document.getElementById("c_previewOutput").src = imagePreview
+}
+
+function expandImg() {
+    img = event.target
+    window.location.href = img.dataset.src
+}
+
+function switchEntry () {
+    console.log(event.target.value)
+    window.location.href = `./?${event.target.value}`
 }
 
 getComments(); // Run once on page load
