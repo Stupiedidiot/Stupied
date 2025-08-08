@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
-@import url(https://stupied.neocities.org/meta/comment-widget.css);
+@import url('https://stupied.neocities.org/meta/comment-widget.css');
 
 :root{
     --red: #c02832;
@@ -7,7 +7,7 @@
     --blue: #5177a9;
     --wheat: #e9eae2;
     --dark-wheat: #d5d6cf;
-    --accent-color: var(--yellow);
+    --accent-color: var(--red);
     --display-font:grandstander;
     --body-font:Arial, Helvetica, sans-serif;
 }
@@ -18,15 +18,8 @@ body{
     background-color: var(--wheat);
     opacity: 1;
     height: 100vh;
-    background: url(./wave.png), linear-gradient(var(--dark-wheat) 2.1px, transparent 2.1px), linear-gradient(to right, var(--dark-wheat) 2.1px, var(--wheat) 2.1px);
-    background-size: 20vw 20vw, 42px 42px, 42px 42px;
-    background-repeat: repeat-x, repeat, repeat;
-    animation: 180s linear infinite scroll;
-}
-
-@keyframes scroll {
-    0% { background-position: -50% 20vh, 0, 0; }
-    100% { background-position: 150% 20vh, 0, 0;  }
+    background: linear-gradient(var(--dark-wheat) 2.1px, transparent 2.1px), linear-gradient(to right, var(--dark-wheat) 2.1px, var(--wheat) 2.1px);
+    background-size:42px 42px;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -34,16 +27,16 @@ h1,h2,h3,h4,h5,h6{
     font-family:var(--display-font);
 }
 
-h1 { color: var(--red); }
+h1 { color: var(--accent-color); }
 
 ol,ul{margin-top:0;}
 a{text-decoration:none;color:inherit;}
 p{margin-top:0;}
 p > a { 
-    color: var(--red);
+    color: var(--accent-color);
     font-family: var(--display-font);
     font-weight: bolder;
-    &:hover { color: var(--blue);}
+    &:hover { color: black;}
 }
 
 hr.clear{
@@ -58,6 +51,27 @@ p:last-child,ol:last-child,ul:last-child{
 
 ul li {list-style-type:"★ ";}
 ul > *:nth-child(2n){list-style-type:"✮ ";}
+img { max-width: 100%; display: block; }
+
+blockquote {
+    margin: 0 0 1rem 1rem;
+    padding: 1rem;
+    border-left: 4px solid var(--accent-color);
+    font-size: 1.5rem;
+    a > span {
+        display: block;
+        margin-top: 0.4rem;
+        font-size: 1rem;
+        font-weight: bolder;
+        font-family: var(--display-font);
+        color: var(--accent-color);
+    }
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: white;
+}
 
 .outline{
     --color:white;
@@ -176,7 +190,7 @@ height: 100%;
 .float-right,.float-left{float:none;margin:1rem auto;}
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 700px) {
     .db-list{columns:2;}
 }
 
@@ -267,29 +281,24 @@ height: 100%;
     > a:hover { font-style: italic; }
 }
 
-img { max-width: 100%; display: block; }
-
-#container { 
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
+#container { position: relative; }
 
 header {
     background-color: white;
     box-sizing: border-box;
     height: 3rem;
     border-radius: 0 0 20px 20px;
-    position: relative;
+    top:0;
+    position: sticky;
     z-index: 3;
 }
 
 nav {
+    user-select: none;
     display: flex;
     align-items: flex-start;
     font-family: var(--display-font);
-    transition: 0.2
+    transition: 0.2;
 }
 
 nav > span {
@@ -319,10 +328,18 @@ header > nav > a.hidden{
 }
 
 main {
-    margin-top: -0.2rem;
-    height: calc(100vh - 5rem);
-    overflow: auto;
+    margin-top: -0.4rem;
     position: relative;
+    background: url(./wave.png);
+    background-size: 20vw 20vw;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    animation: 180s linear infinite scroll;
+}
+
+@keyframes scroll {
+    0% { background-position: -50% 15vh; }
+    100% { background-position: 150% 15vh;  }
 }
 
 main > article.main-content {
@@ -334,6 +351,8 @@ main > article.main-content {
     border: 3px solid black;
     border-bottom: none;
     border-top: none;
+
+    &:last-child { padding-bottom: 4rem; }
 }
 
 main > section.main-content {
@@ -356,6 +375,7 @@ main > section.main-content {
 }
 
 footer {
+    user-select: none;
     background-color: var(--red);
     box-sizing: border-box;
     height: 2.5rem;
@@ -391,14 +411,14 @@ footer > nav > a:hover {
     100% {transform:translateY(0%);}
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 671px) {
     header > nav > a:hover {  padding-top: 1.8rem; }
     header > nav > a.hidden{ display: none; }
 
     .main-content h1 {font-size: 3rem;}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 671px) {
     header > nav > a:not(.open) { display: none; }
     #open {
         height: unset;
