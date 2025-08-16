@@ -11,4 +11,3 @@ destination: public/blog/
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-minifier
