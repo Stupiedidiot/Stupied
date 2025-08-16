@@ -11,3 +11,7 @@ destination: public/blog/
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  posts:
+    permalink: /:categories/:year-:month-:day-:title:output_ext
