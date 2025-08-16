@@ -2,20 +2,6 @@
 layout: post
 title: Add Images to Ayano's Comment Widget
 ---
-<style>
-main {min-width: 0;}
-.mew h2 {margin-top: 2rem;}
-p > code, li > code {color:var(--accent-color); font-weight: bolder;}
-pre {
-    border: 1px dashed var(--txt-color);
-    code { 
-        display: block;
-        padding: 0 1rem;    
-        overflow: auto;
-    }
-}
-</style>
-
 <div class="mew">
     <img src="{{ 'img/ayano-mod.jpg' | relative_url }}" alt="" style="max-width: 300px;">
     {% include post-title.html %}
@@ -139,3 +125,17 @@ pre {
     <p>If you get around to using to using this, let me know down below. I'd love to check out all of your websites!</p>
     <img src="{{ 'img/sign-off.png' | relative_url }}" alt="" class="sign-off">
 </div>
+
+<style>
+main {min-width: 0;}
+.mew h2 {margin-top: 2rem;}
+p > code, li > code {color:var(--accent-color); font-weight: bolder;}
+pre {
+    border: 1px dashed var(--txt-color);
+    code { 
+        display: block;
+        padding: 0 1rem;    
+        overflow: auto;
+    }
+}
+</style>
