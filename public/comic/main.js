@@ -94,7 +94,8 @@ masterlist = [
             {"file":"2023-09-05.html","alt":"Never Satisfied"},
             {"file":"2024-08-21.html","alt":"Tummy Ache"},
             {"file":"2025-04-19.html","alt":"Easy Way Out"},
-            {"file":"2025-05-02.html","alt":"Deep Frying"}
+            {"file":"2025-05-02.html","alt":"Deep Frying"},
+            {"file":"2025-08-16.html","alt":"Introverted"}
         ]
     },
     {
