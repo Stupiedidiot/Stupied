@@ -164,18 +164,7 @@ height: 100%;
 .txt-left{text-align: left;}
 .txt-center{text-align: center;}
 .txt-right{text-align: right;}
-
-.txt-yellow{color:var(--yellow)!important;}
-.txt-blue{color:var(--dark-blue)!important;}
-
-.bg-yellow{background-color:var(--yellow)!important;}
-.bg-blue{background-color:var(--dark-blue)!important;}
-
-.bg-white{background-color:white!important;}
-.bg-light-gray{background-color:lightgray!important;}
-.bg-gray{background-color:gray!important;}
-.bg-black{background-color:black!important;}
-
+    
 .highlight{
     background-color:var(--orange);
     padding:0.5rem;

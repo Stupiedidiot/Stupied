@@ -493,11 +493,10 @@ footer > a:not(:last-of-type):after {
                 <h3>Other Stuff</h3>
                 <ul>
                     <li><a href="https://literalwiki.neocities.org/">LiteralWiki</a></li>
-                    <li><a href="https://tabvoid.neocities.org/">Tabvoid</a></li>
-                    <li><a href="./chez/index.html">Chez</a></li>
                     <li><a href="./guestbook.html">Guestbook</a></li>
                     <li><a href="./meta/log/index.html">Changelog</a></li>
                     <li><a href="./code/index.html">Codes</a></li>
+                    <li><a href="./chez/index.html">Chez</a></li>
                 </ul>
             </div>
         </section>
@@ -505,7 +504,7 @@ footer > a:not(:last-of-type):after {
         <section id="feed">
             <div id="feed-content"></div>
             <script>
-                fetch("./../../feed.xml")
+                fetch("/feed.xml")
                 .then((response) => response.text())
                 .then((feed) => {
                     const parser = new DOMParser();
