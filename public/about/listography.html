@@ -6,100 +6,6 @@
     <link rel="icon" type="image/x-icon" href="./../favicon.ico"></link>
     <link rel="stylesheet" href="./../meta/main.css">
     <title>Listography | stupied</title>
-
-<style>
-
-:root {
-    --border: 3px solid black;
-    --border-radius: 10px;
-}
-
-body {
-    background-image: url(./../art/img/bg.png);
-    min-width: 300px;
-}
-
-img { max-width: 100%; display: block; }
-
-#container {
-    max-width: 1000px;
-    width: 90%;
-    margin: 1rem auto;
-    flex-wrap: wrap;
-}
-
-#info {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: var(--blue);
-    outline: var(--border);
-    border-radius: var(--border-radius);
-    color: white;
-    overflow: hidden;
-}
-
-#info a:not(:hover){ text-decoration: none; }
-
-#info a {
-    font-weight: bolder;
-}
-
-#lists > div {
-    flex: auto;
-    margin-bottom: 1rem;
-    background-color: white;
-    outline: var(--border);
-    border-radius: var(--border-radius);
-    break-inside: avoid;
-}
-
-#lists > div:has(h2) { padding:1rem; }
-
-@media only screen and (min-width: 500px) {
-    #lists{columns:2;}
-}
-
-@media only screen and (min-width: 850px) {
-    #lists{columns:3;}
-}
-
-li { position: relative; }
-
-li a:after {
-    position: absolute;
-    opacity: 0;
-    transform: translateX(-100%);
-    display:inline-block;
-    margin-left: 0.5rem;
-    content: " »";
-    transition: 0.1s;
-}
-
-li a:hover:after{
-    opacity: 1;
-    transform: none;
-}
-
-#music span {
-    color: lightgray;
-}
-
-#meirl img {
-    width: 100%;
-    display: block;
-    margin-bottom: 0.3rem;
-}
-
-#kins { --min-height:10px; }
-
-#kins img {
-    --width: 200;
-    --height: 200; 
-}
-
-#strings li::marker { color: lightgray; }
-
-</style>
 </head>
 <body>
     <div id="container">
@@ -356,6 +262,8 @@ li a:hover:after{
                 <ul>
                     <li>Paracosm</li>
                     <li>Anhedonia</li>
+                    <li>Astute</li>
+                    <li>Misnomer</li>
                 </ul>
             </div>
 
@@ -516,8 +424,98 @@ li a:hover:after{
 
     </div>
 
-<script>
+<style>
+:root {
+    --border: 3px solid black;
+    --border-radius: 10px;
+}
 
+body {
+    background-image: url(./../art/img/bg.png);
+    min-width: 300px;
+}
+
+img { max-width: 100%; display: block; }
+
+#container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+}
+
+#info {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--blue);
+    outline: var(--border);
+    border-radius: var(--border-radius);
+    color: white;
+    overflow: hidden;
+}
+
+#info a:not(:hover){ text-decoration: none; }
+
+#info a {
+    font-weight: bolder;
+}
+
+#lists > div {
+    flex: auto;
+    margin-bottom: 1rem;
+    background-color: white;
+    outline: var(--border);
+    border-radius: var(--border-radius);
+    break-inside: avoid;
+}
+
+#lists > div:has(h2) { padding:1rem; }
+
+@media only screen and (min-width: 500px) {
+    #lists{columns:2;}
+}
+
+@media only screen and (min-width: 850px) {
+    #lists{columns:3;}
+}
+
+li { position: relative; }
+
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
+
+#music span {
+    color: lightgray;
+}
+
+#meirl img {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+#kins { --min-height:10px; }
+
+#kins img {
+    --width: 200;
+    --height: 200; 
+}
+
+#strings li::marker { color: lightgray; }
+</style>
+<script>
 lists = document.querySelectorAll("#lists > div:has(h2)")
 final = ""
 
@@ -534,7 +532,6 @@ for (i=0; i < lists.length;i++){
 }
 
 document.getElementById("table").innerHTML = final
-
 </script>
 </body>
 </html>
