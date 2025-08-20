@@ -61,9 +61,9 @@ nodate: true
     </div>
     <div id="relativity-intput">
         <h4>Pick Out Colors</h4>
-        <input data-jscolor="{value:'#0344a6'}" onInput="update(this.jscolor,'#color1')"></input>
-        <input data-jscolor="{value:'#FF4F0F'}" onInput="update(this.jscolor,'#color2')"></input>
-        <input data-jscolor="{value:'#8b8680'}" onInput="update(this.jscolor,'.color3')"></input>
+        <input data-jscolor="{value:'#0344a6'}" onInput="updateColor(this.jscolor,'#color1')"></input>
+        <input data-jscolor="{value:'#FF4F0F'}" onInput="updateColor(this.jscolor,'#color2')"></input>
+        <input data-jscolor="{value:'#8b8680'}" onInput="updateColor(this.jscolor,'.color3')"></input>
     </div>
 </div>
 
@@ -87,9 +87,9 @@ nodate: true
     </div>
     <div id="shifts-input">
         <h4>Pick Out Colors</h4>
-        <input data-jscolor="{value:'#faf44e;'}" onInput="update(this.jscolor,'#color-highlight')"></input>
-        <input data-jscolor="{value:'#38a376'}" onInput="update(this.jscolor,'.color4')"></input>
-        <input data-jscolor="{value:'#06134b'}" onInput="update(this.jscolor,'#color-shadow')"></input>
+        <input data-jscolor="{value:'#faf44e;'}" onInput="updateColor(this.jscolor,'#color-highlight')"></input>
+        <input data-jscolor="{value:'#38a376'}" onInput="updateColor(this.jscolor,'.color4')"></input>
+        <input data-jscolor="{value:'#06134b'}" onInput="updateColor(this.jscolor,'#color-shadow')"></input>
     </div>
 </div>
 
@@ -227,11 +227,4 @@ nodate: true
 <script src="/meta/jscolor.js"></script>
 <script>
 jscolor.presets.default = {palette:'#0344a6\n#03A6A1\n#FFE3BB\n#FFA673\n#FF4F0F\n#FFFFFF\n#8b8680\n#000000'};
-
-function update(picker,target) {
-    items = document.querySelectorAll(target)
-    for (i = 0; i < items.length; i++){
-        items[i].style.background = picker.toBackground();
-    }
-}
 </script>
