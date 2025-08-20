@@ -1,19 +1,33 @@
 ---
 layout: default
 ---
-<article class="main-content" itemscope itemtype="http://schema.org/BlogPosting">
-    <div itemprop="articleBody">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="main-content post-header">
+    {%- if page.before -%}
+      {{ page.before | raw }}
+    {%- endif-%}
+    {%- unless page.notitle -%}
+      {% include post-title.html %}
+    {%- endunless-%}
+    {%- unless page.nodate -%}
+      {% include post-date.html %}
+    {%- endunless-%}
+  </header>
+
+  <div class="main-content post-content e-content" itemprop="articleBody">
     {{ content }}
-    </div>
+  </div>
 
+  <div class="main-content">
     {%- include nextprev.html -%}
-
     <div id="c_widget"></div>
     <script>
         var script = document.createElement('script');
         script.src = "/meta/comment-widget.js";
         document.head.appendChild(script);
     </script>
-
+  </div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
 </article>

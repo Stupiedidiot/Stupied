@@ -1,3 +1,5 @@
+@import url(/meta/new-main.css);
+@import url(/meta/comment-widget.css);
 :root {
     --accent-color: #318ea3;
     --bg-color: white;
@@ -80,7 +82,7 @@ img.center{
 }
 
 #c_widget{
-    margin-top: 2rem;
+    margin: 2rem 0;
     --text-color: var(--txt-color);
     --bg-color: var(--bg-color);
     --form-color: var(--txt-color);
@@ -139,7 +141,7 @@ img.center{
 
 
 /*=== PAGE LAYOUT STYLING ===*/
-#container header { grid-area: header; }
+#container header.main { grid-area: header; }
 #container #nav{ grid-area: nav; }
 #container main { grid-area: main; }
 #container footer { grid-area: footer; }
@@ -160,9 +162,9 @@ img.center{
     position: relative;
 }
 
-header { user-select: none; }
+header.main { user-select: none; }
 
-header > div {
+header.main > div {
     box-sizing: border-box;
     text-align: right;
     writing-mode: sideways-lr;
@@ -175,7 +177,7 @@ header > div {
     height: 100vh;
 }
 
-header a {
+header.main a {
     position: absolute;
     bottom: 0.5rem;
     left: 50%;
@@ -226,7 +228,7 @@ footer > div a:not(:last-of-type)::after{
 }
 
 @media only screen and (max-width: 600px) {
-    header > div { font-size: 1rem; }
+    header.main > div { font-size: 1rem; }
 }
 /*=== BLOG LIST STYLING ===*/
 /* Use these tags to hide certain elements in the blog list */

@@ -8,7 +8,6 @@ github_username:  stupiedidiot
 # Build settings
 source: blog
 destination: public/blog/
-theme: minima
 plugins:
   - jekyll-feed
 
