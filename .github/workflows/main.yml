@@ -27,6 +27,12 @@ jobs:
         bundle install
         bundle exec jekyll build
 
+    - name: Brotli compress
+      id: brotli
+      uses: charlesworth/compress-action@1.0
+      with:
+        target-directory: public
+
     - name: Deploy to main neocities
       uses: bcomnes/deploy-to-neocities@v2
       with:
