@@ -16,11 +16,9 @@
                             {{ post.excerpt }}
                         </div>
                     {%- endif -%}
-
                     {%- if post.thumb -%}
                         <div class="item-img"><img src="{{ post.thumb | relative_url }}"></div>
                     {%- endif -%}
-
                 </div>
             </a>
         {%- endfor -%}

@@ -1,0 +1,33 @@
+@import url(/meta/new-main.css);
+#container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+.colorswatch{
+    background-color: var(--color);
+    border: 1px solid black;
+    min-height: 100px;
+    margin-top: 0.3rem;
+}
+
+#values {
+    display: flex;
+    gap: 1rem;
+    > div {flex: 1;}
+}
+
+input {
+    border: none;
+    display: block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#mix {
+    margin-top: 1rem;
+}

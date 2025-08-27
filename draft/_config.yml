@@ -8,8 +8,6 @@ github_username:  stupiedidiot
 # Build settings
 source: blog
 destination: public/blog/
-plugins:
-  - jekyll-feed
 
 collections:
   posts:
