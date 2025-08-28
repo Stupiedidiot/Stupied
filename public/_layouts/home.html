@@ -204,7 +204,7 @@ main {
  margin: auto;
  padding: 1rem;
  width: 95%;
- max-width: 700px;
+ max-width: 750px;
  box-sizing: border-box;
 }
 
@@ -236,11 +236,13 @@ article { display: flex; gap: 1rem; }
 
 #intro a:hover {color: var(--accent-color);}
 
-#temp iframe {
+#temp #webrings {
+    flex: 300px;
     box-sizing: border-box;
     border: 3px solid black;
     width: 100%;
     aspect-ratio: 1/1;
+    overflow-x: hidden;
 }
 
 nav, footer {
@@ -262,7 +264,7 @@ nav, footer {
 
 @media only screen and (max-width: 600px) {
     article { display: block; }
-    #temp iframe {
+    #temp #webrings {
         aspect-ratio: 2/1;
     }
 }
