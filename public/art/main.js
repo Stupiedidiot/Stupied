@@ -1,4 +1,7 @@
 function wrap(el, wrapper) {el.parentNode.insertBefore(wrapper, el);wrapper.appendChild(el);}
+var script = document.createElement('script');
+script.src = "/meta/js/global.js";
+document.head.appendChild(script);
 
 //template stuff
 const navigation =
@@ -235,7 +238,7 @@ if(urlHref.includes("https://stupied.neocities.org/")){
 
 // Add Color Script
 var script = document.createElement('script');
-script.src = "./../meta/js/jscolor.js";
+script.src = "/meta/js/jscolor.js";
 document.head.appendChild(script);
 
 // Cookie Test

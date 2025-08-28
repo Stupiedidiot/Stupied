@@ -1,3 +1,7 @@
+var script = document.createElement('script');
+script.src = "/meta/js/global.js";
+document.head.appendChild(script);
+
 masterlist = [
     {
         "volume":"muse-adriade",
@@ -362,6 +366,6 @@ document.querySelector("head").innerHTML += '<link rel="icon" type="image/x-icon
 // COMMENTS
 if (document.getElementById("c_widget")){
   var script = document.createElement('script');
-  script.src = "./../../meta/comment-widget.js";
+  script.src = "/meta/js/comment-widget.js";
   document.head.appendChild(script);
 }
