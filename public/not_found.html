@@ -1,0 +1,68 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Looks like you're lost!">
+    <link rel="stylesheet" id="styles">
+    <title>redirecting... | stupied</title>
+<style>
+    :root{
+        --yellow: #ffcb67;
+        --orange: #ec7239;
+        --gray: #6c6371;
+        --blue: #44a3c6;
+        --dark-blue: #142943;
+        --darker-blue:#0d0d1f;
+        --darkest-blue:#0c0716;
+        --accent-color: var(--yellow);
+        --display-font:grandstander;
+        --body-font:Arial, Helvetica, sans-serif;
+    }
+    body{
+        position: relative;
+        height: 100vh;
+        min-width: 300px;
+    }
+    p{
+        text-align: center;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top:50%; left:50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: white;
+    }
+    span{
+        color: var(--yellow);
+        font-family: var(--display-font);
+        font-size: 1.5rem;
+    }
+</style>
+</head>
+<body class="default">
+    <p><span>Please Hold On!</span><br> Redirecting you to new page</p>
+<script>
+    // should probably make this redirect to the map instead
+    url = window.location.pathname;
+    relativePath = "./";
+    urlPath = url.split('/');
+    if(urlPath.length > 2){for(i=0;i<urlPath.length;i++){relativePath+="../"}}
+    document.getElementById("styles").href = relativePath+"meta/css/main.css"
+
+    // not gonna bother touching this
+    if(url.includes("art/viewer")){window.location.pathname=window.location.pathname.replaceAll("viewer","view")}
+    
+    redirectLink = relativePath + "map.html#broken-link" 
+    if(url.includes("about")){redirectLink = relativePath + "about/index.html"}
+    if(url.includes("tabvoid/")){redirectLink = "https://tabvoid.neocities.org/" + url.replace("/tabvoid/","")}
+    if(url.includes("psych/")){redirectLink = "https://psych-comic.neocities.org/" + url.replace("/comic/psych/","")}
+    if(url.includes("pmd/")){redirectLink = "https://stupied-pmd.neocities.org/" + url.replace("/comic/pmd/","")}
+    
+    window.location.replace(redirectLink)
+</script>
+</body>
+</html>

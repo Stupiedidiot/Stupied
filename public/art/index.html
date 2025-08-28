@@ -1,0 +1,230 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website galley where you'll find all my art related stuff!">
+  <link rel="stylesheet" href="./main.css">
+  <title>gallery</title>
+  <style>
+    body{
+      overflow-x:hidden;
+    }
+
+    #about{
+      padding:1rem 1rem 0 1rem;
+      display:flex;
+      gap:1rem
+    }
+  
+    #list{
+      flex: 2;
+      margin-bottom: 1rem;
+    }
+  
+    #recent{
+      flex: 2;
+      border: 2px solid black;
+      box-shadow: 0 0 0 2px var(--accent-color);
+      border-radius: 5px;
+      max-width:300px;
+      max-height: 400px;
+      overflow: hidden;
+      position: relative;
+      transform: translateY(-2rem) rotate(2deg);
+      user-select: none;
+    }
+  
+    #recent h5 {
+      position: absolute;
+      margin-left: 10px;
+      bottom: 5%;
+      right: 5%;
+      color: white;
+      z-index: 1;
+    }
+  
+    #recent img{
+      width: 100%;
+      height:100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.3s;
+    }
+
+    #recent a:hover img{transform: scale(110%);}
+
+    #sketchbooks > div {
+      --space: 1rem;
+      --min-height: 110px;
+      user-select: none;
+    }
+
+    #sketchbooks > div {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: var(--space);
+    list-style: none;
+    margin-bottom:0.5rem;
+    padding:1rem;
+    }
+
+    #sketchbooks > div:not(:last-of-type){
+      padding-bottom:0;
+    }
+
+    #sketchbooks > div > *{
+    width:100%;
+    flex-grow: calc(var(--width) * (100000 / var(--height)));
+    flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+    aspect-ratio: var(--width) / var(--height);
+    position: relative;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    }
+
+    #sketchbooks > div > * > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+  
+    #sketchbooks > div a{
+      box-shadow:0 0 5px rgba(0, 0, 0, 0.8);
+      transition: 0.2s;
+    }
+
+    #sketchbooks > div a:nth-child(odd):hover{transform: scale(110%) rotate(-3deg);z-index:1;}
+    #sketchbooks > div a:nth-child(even):hover{transform: scale(110%) rotate(3deg);z-index:1;}
+
+    #sketchbooks > div a:hover img{
+      transform: none;
+    }
+    
+    #commission{
+      display: block;
+      margin-top: 1rem;
+      font-family: var(--display-font);
+      font-weight: bold;
+      &:hover{color:var(--accent-color);}
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-content">
+  <h1>Stupied Art!</h1>
+  <div id="about">
+    <div id="list">
+      <p>
+        Instagram used to be the main website I would post art in but I've grown tired of the lack of customizability. These pages still need a lot of organizing but I'm quite happy with it :3
+      </p>
+      <p>
+        You are allowed to do whatever with my art just as long it's for personal use.
+      </p>
+
+      <h3>Archive</h3>
+        <ul style="margin-bottom:0;padding-left:1rem;columns:2;max-width: 200px;">
+          <li><a href="./2025.html">2025</a></li>
+          <li><a href="./2024.html">2024</a></li>
+          <li><a href="./2023.html">2023</a></li>
+          <li><a href="./2022.html">2022</a></li>
+          <li><a href="./2021.html">2021</a></li>
+          <li><a href="./2020.html">2020</a></li>
+          <li><a href="./2019.html">2019</a></li>
+        </ul>
+    </div>
+    <div id="recent">
+      <h5 class="outline" style="--color:black;">Most Recent Drawing,,</h5>
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="justified-gallery">
+    <img src="./img/2024-Introspection.png" style="--width: 922; --height: 1149;">
+    <img src="./img/2025-Forgotten.png" style="--width: 634; --height: 845;">
+  </div>
+
+  <div class="justified-gallery">
+    <img src="./img/2022-Scott.png" style="--width: 922; --height: 890;">
+    <img src="./img/2022-Jedog.png" style="--width: 922; --height: 1152;">  
+  </div>
+
+  <div class="justified-gallery" style="--min-height:180px">
+    <img src="./img/2023-Parking-Lot.png" style="--width: 922; --height: 922;">
+    <img src="./img/2024-Hoodie.png" style="--width: 922; --height: 706;">
+  </div>
+</div>
+
+<div class="main-content" id="sketchbooks" >
+  <h1>Sketchbooks!!</h1>
+  <div>
+    <a href="./2024.html#raffidelle" style="--width: 500; --height: 767;">
+      <img src="./img/cover/2024-Raffidelle.png">
+    </a>
+
+    <a href="./bear.html" style="--width: 318; --height: 472;">
+      <img src="./img/cover/2024-Bear.png">
+    </a>
+  
+    <a href="./2023.html#venda" style="--width: 659; --height: 434;">
+      <img src="./img/cover/2023-Vanda.png">
+    </a>
+    </a>
+  </div>
+
+  <div>
+    <a href="./2020.html#heeton" style="--width: 1519; --height: 1113;">
+      <img src="./img/cover/2020-Heeton.png">
+    </a>
+
+    <a href="./2019.html#cupcake" style="--width: 1519; --height: 2220;">
+      <img src="./img/cover/2019-Cupcake.png">
+    </a>
+  </div>
+</div>
+
+<div class="main-content">
+  <h1>Portfolio</h1>
+  <div style="padding: 1rem;">
+    <p>This gallery contains most of the art - including the embarrassing ones dating back as far as my elementary days. If you'd prefer a curated archive of my work or have any interest in commissioning me, check out my <a href="https://stupied-portfolio.neocities.org/" target="_blank">portfolio</a> instead.</p>
+  </div>
+</div>
+
+<div id="aside-1-content">
+  <h3>Hell Yeah</h3>
+  <ul style="margin-bottom:0;padding-left:1rem;columns:2;max-width: 200px;">
+    <li><a href="./2025.html">2025</a></li>
+    <li><a href="https://stupied-portfolio.neocities.org/">portfolio</a></li>
+    <li><a href="./artfight.html">artfight</a></li>
+    <li><a href="./fanart.html">fanart</a></li>
+  </ul>
+  <a href="https://stupied-portfolio.neocities.org/c/" id="commission">Commission me! »</a>
+</div>
+
+<script type="text/javascript" src="./main.js"></script>
+<script type="">
+fetch("./main.json")
+  .then((response) => response.json())
+  .then((art) => {
+    recentLink=document.createElement("a")
+    recentLink.href="~?"+art[0].img
+    
+    recent=document.createElement("img")
+    recent.src="./img/" + art[0].img
+    recentLink.append(recent)
+
+    document.getElementById("recent").append(recentLink)
+})
+
+function update(picker,target) {
+  console.log(picker.toBackground())
+}
+</script>
+</body>
+</html>

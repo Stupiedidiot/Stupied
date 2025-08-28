@@ -1,0 +1,139 @@
+---
+layout: default
+---
+<style>
+:root {
+    --blue: #5177a9;
+    --border: 3px solid black;
+    --border-radius: 10px;
+}
+
+body {
+    background-image: url(./img/bg.png);
+    min-width: 300px;
+}
+
+img { max-width: 100%; display: block; }
+
+#container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+}
+
+#info {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--blue);
+    outline: var(--border);
+    border-radius: var(--border-radius);
+    color: white;
+    overflow: hidden;
+}
+
+#info a:not(:hover){ text-decoration: none; }
+
+#info a {
+    font-weight: bolder;
+}
+
+#lists > div {
+    flex: auto;
+    margin-bottom: 1rem;
+    background-color: white;
+    outline: var(--border);
+    border-radius: var(--border-radius);
+    break-inside: avoid;
+}
+
+#lists > div:has(h2) { padding:1rem; }
+
+@media only screen and (min-width: 500px) {
+    #lists{columns:2;}
+}
+
+@media only screen and (min-width: 850px) {
+    #lists{columns:3;}
+}
+
+li { position: relative; }
+
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
+
+#music span {
+    color: lightgray;
+}
+
+#meirl img {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+#kins { --min-height:10px; }
+
+#kins img {
+    --width: 200;
+    --height: 200; 
+}
+
+#strings li::marker { color: lightgray; }
+</style>
+
+<div id="container">
+    <div id="info">
+        <h2>Listography</h2>
+        <p>This page is inspired by <a href="https://listography.com/">listography.com</a>, where you make list of whatever. These lists are mostly about stuff I like and things I want to keep pinned. It is constantly updating whenever :3</p>
+    </div>
+
+    <div id="lists">
+        <div>
+            <h2>Table of Contents</h2>
+            <ul id="table"></ul>
+        </div>
+
+        {{ content }}
+
+        <div>
+            <h2>Okay that's all!</h2>
+            <ul>
+                <li><a href="#table">Back to Top</a></li>
+                <li><a href="./../index.html">Head Back</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="">
+var lists = document.querySelectorAll("#lists > div:has(h2)")
+var final = ""
+
+for (var i=0; i < lists.length;i++){
+    if (lists[i].id){
+        id = lists[i].id
+        title = lists[i].querySelector("h2").innerHTML
+        result = `
+            <li>
+                <a href="#${id}"> ${title} </a>
+            </li>
+        `
+        final = final + result
+        console.log(final)
+    }
+}
+document.getElementById("table").innerHTML = final
+</script>

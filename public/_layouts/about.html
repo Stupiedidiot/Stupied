@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<style>
+    :root{
+    --dark-brown:#1d1515;
+    --brown:#615651;
+    --blue:#5177a9;
+    --yellow: #deab31;
+    --wheat:#e9eae2;
+}
+
+body{
+    user-select: none;
+    min-width:280px;
+    background-color: var(--wheat);
+}
+
+#first{
+    width:90%;
+    max-width: 600px;
+    margin:1rem auto;
+}
+
+#doll{
+    float: left;
+    width: 50%;
+    margin-bottom: 2rem;
+    transition: 0.2s;
+}
+
+#textbox{
+    width: 50%;
+    margin-top:3rem;
+    margin-bottom:1.5rem;
+    transform: scale(115%);
+}
+
+#intro{
+    text-align: right;
+    margin-bottom: 2rem;
+    hyphens: auto;
+}
+
+#list {
+    margin-bottom:2rem;
+    margin-left: calc(50% + 25%/3);
+    white-space: nowrap;
+    h1{color: var(--blue);}
+}
+
+#website{
+    margin-bottom: 0.8rem;
+}
+
+#links img{
+    filter: invert(100%);
+    width:30px;
+}
+
+#second {
+    background-color: blue;
+    background-image: url(./art/img/bg.png);
+}
+
+#first-divider, #second-divider{
+    margin:0;
+    border:0;
+}
+
+#headBack{
+    font-family: grandstander;
+    margin: 1rem auto;
+}
+
+@media only screen and (max-width: 570px){
+    #second-divider{clear: both;}
+    #website{margin-top: 2rem;}
+}
+
+@media only screen and (max-width: 450px) {
+    #first-divider{clear: both;}
+    #list{
+        margin-left: 0;
+        margin-bottom:0;
+    }
+    #headBack{margin-bottom:3rem;}
+}
+
+.btn-container{
+    right:0.5rem;
+    bottom:0.5rem;
+    position: fixed;
+}
+
+#list a:hover {
+    font-weight: bold;
+}
+</style>
+
+{{ content }}
+
+<script type=''>
+var previous = document.URL;
+if(previous.includes("#from-") === true){
+    previous = previous.split('#from-')[1];
+    document.querySelector("#headBack a").href=`./../${previous}/index.html`;
+}
+</script>
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+<script type=''>kofiwidget2.init('Gimme Money!! >:D', '#000000', 'I3I11C0X4L');kofiwidget2.draw();</script>

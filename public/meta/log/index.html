@@ -1,0 +1,264 @@
+---
+layout: default
+title: Changelog
+---
+<style>
+:root {
+    --yellow: #ffcb67;
+    --orange: #ec7239;
+    --gray: #6c6371;
+    --blue: #44a3c6;
+    --dark-blue: #142943;
+    --darker-blue:#0d0d1f;
+    --darkest-blue:#0c0716;
+    --accent-color: var(--yellow);
+}
+body { min-width: 300px;}
+h2 { color: var(--yellow);}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--dark-blue);
+    background-image: url(./img/scribble.png);
+    color: white;
+}
+
+#container #home { grid-area: home; }
+#container main { grid-area: main; }
+#container aside { grid-area: aside; }
+#container footer { grid-area: footer; }
+
+#container {
+    display: grid;
+    grid-template:
+    'main home' 
+    'main aside'
+    'footer footer';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto 1fr;
+    max-width: 1800px;
+    margin: auto;
+}
+
+#home a {
+    margin-left: auto;
+    display: block;
+    background: url(./img/sunburst.svg), radial-gradient(circle at 50% 50%, rgba(108, 99, 113, 1) 0%, rgba(236, 114, 57, 1) 35%, rgba(236, 114, 57, 1) 72%, rgba(108, 99, 113, 1) 100%);
+    background-size: 130%;
+    background-position: -20% 25%;
+}
+
+#home a:hover { background: var(--orange); }
+
+#home img {
+    width: 100%;
+    display: block;
+}
+
+main { 
+    padding: 2rem ;
+    padding-bottom: 0 ;
+}
+
+#top{
+    margin:auto;
+    margin-bottom: 1rem;
+    display: flex;
+    gap:1rem;
+    width:max-content;
+}
+
+#updateStatus {
+    position: relative;
+    padding-left:1rem;
+    border-left:3px solid white;
+}
+
+#updateStatus div {
+    position: relative;top:50%;transform: translateY(-50%);
+}
+
+#updateStatus p {
+    font-weight:bold;
+    font-family:grandstander;
+    margin-bottom:0;
+}
+
+#lastupdate { color:var(--yellow); }
+
+@media only screen and (max-width: 700px) {
+    #container { display: block; }
+    #date{display: block;}
+}
+
+@media only screen and (max-width: 450px) {
+    #top{display: block;}
+    #updateStatus div{all:revert;}
+}
+
+a:hover { color: var(--orange); }
+
+aside { padding: 1rem; }
+
+aside > div { margin-bottom: 1.5rem; }
+
+footer{
+    color: var(--gray);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer a:hover {color:white;}
+
+footer > a:not(:last-of-type):after {
+    content: "|";
+    margin: auto 1rem;
+    color:var(--gray);
+}
+
+#button { margin-top: 1rem; }
+</style>
+
+<div id="container">
+    <div id="home">
+        <a href="./../../index.html">
+            <img src="./img/hole.png" alt="">
+        </a>
+    </div>
+
+    <main>
+        <div id="archive">
+            <div id="top" class="outline" style="--color:var(--darker-blue);">
+                <div>
+                    <h1>This website is <span title="created on April 6, 2023" id="date"></span></h1>
+                </div>
+                <div id="updateStatus">
+                    <div>
+                        <p>Last updated</p>
+                        <span id="lastupdate">[ Insert Time ]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="justified-gallery" style="--min-height: 150px;">
+                <img src="./img/2023-06.png" alt="" style="--width: 1086; --height: 825;">
+                <img src="./img/2024-01.png" alt="" style="--width: 1086; --height: 1405;">
+                <img src="./img/2024-06.png" alt="" style="--width: 1086; --height: 892;">
+                <img src="./img/2024-11.png" alt="" style="--width: 1086; --height: 734;">
+                <img src="./img/2025-05.png" alt="" style="--width: 1097; --height: 874;">
+                <img src="./img/2025-08.png" alt="" style="--width: 1080; --height: 810;">
+            </div>
+            <a href="https://stupiedidiot.github.io/archive/" style="font-weight: bolder;font-family: var(--display-font);margin: 1rem;display: block;">View Live Archive »</a>
+        </div>
+        <div id="rss">
+            <h2>[<span id="feed_length">Insert Length</span>] Recent Updates</h2>
+            <p>Updates are from my <a href="./../../feed.xml">RSS feed!</a></p>
+            {%- include rss-feed.html -%}
+            <!-- Change this to be w/ liquid -->
+        </div>
+    </main>
+
+    <aside>
+        <div id="thanks">
+            <h2>Website History</h2>
+            <p>Without prior knowledge about the indieweb culture, I impulsive created this website back in 2023. Pretty sure I found neocities by googling "free hosting" and used what little html skills I garnered from junior high. Either way, I haven't been the same since then.</p>
+        </div>
+        
+        <div id="roadmap">
+            <h2>Roadmap</h2>
+            <p>A list of things I will implement in the near future</p>
+
+            <ul class="checklist">
+                <li class="x">Decorate this page</li>
+                <li>Turbo FAST Shrine</li>
+                <li>Kyman Shrine</li>
+                <li>Southpark Webring</li>
+                <li>Raffidelle Shrine</li>
+                <li>Redesign PMD Comic Pages</li>
+                <li>Tabvoid Documentation</li>
+                <li>Add achive for listography</li>
+                <li>Sorting for listography</li>
+                <li>Modify comic framework</li>
+                <li class="x">Redesign Gallery</li>
+                <li>Redesign Blog</li>
+                <li>Index for Askal</li>
+                <li>Make Code page functional</li>
+                <li>Make Chez page functional</li>
+                <li class="x">Add RSS Feed Widget to index</li>
+                <li>Add OC interaction thingy</li>
+                <li class="x">Make a guestbook</li>
+                <li>decorate guestbook</li>
+                <li>Rename folders for Art</li>
+            </ul>
+        </div>
+
+        <div id="resources">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://medium.com/@ehtmlu/css-image-grid-gallery-4ec8824560a1">CSS Justified Gallery</a></li>
+                <li><a href="https://www.magicpattern.design/tools/css-backgrounds">CSS Background Generator</a></li>
+                <li><a href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp">Responsive Youtube Embeds</a></li>
+                <li><a href="https://vidstack.io/">VidStack</a></li>
+                <li><a href="https://ultraabox.github.io/">Ultraabox</a></li>
+                <li><a href="https://codepen.io/nsxccxjd-the-builder/pen/myJbedw">Custom Tooltips</a></li>
+                <li><a href="https://jscolor.com/">JS Color Picker</a></li>
+                <li><a href="https://dannarchy.com/tut/tut_002">Native Neocties Hit Counter</a></li>
+                <li><a href="https://virtualobserver.moe/ayano/comment-widget">Ayano's Comment Widget</a></li>
+                <li><a href="https://www.htmlcommentbox.com/">Html Comment Box</a></li>
+                <li><a href="https://www.cbox.ws/">CBox</a></li>
+            </ul>
+        </div>
+
+        <a href="./../../index.html">✮ Head Back »</a>
+
+    </aside>
+    <footer>
+        <a href="./../../about/index.html">about</a>
+        <a href="./../../map.html">map</a>
+        <a href="./../../feed.xml">rss</a>
+        <div id="button">
+            <a href="https://neocities.org/site/stupied" target="_blank">
+                <img src="./../button.png">
+            </a>
+        </div>
+    </footer>
+</div>
+
+<script type="">
+// get website's age
+dateCurrent = new Date().getTime()
+dateCurrent /= 3.154e+10
+
+dateCreated = new Date("2023-04-06").getTime();
+dateCreated /= 3.154e+10
+
+pageAge = Math.floor(dateCurrent - dateCreated)
+document.getElementById("date").innerHTML = pageAge + " years old!!";
+
+// get website's last update date
+// stole the code from here: https://dannarchy.com/tut/tut_002
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    var site_data = JSON.parse(this.responseText);
+
+    var date_str = site_data.info.last_updated;
+    var date_obj = new Date(date_str);
+    date_mod=(new Date().getTime()- date_obj.getTime())/1000
+
+    // should probably change this
+    if (date_mod<60){date_mod=Math.floor(date_mod); if(date_mod===1){date_mod+=" second ago"}else{date_mod+=" seconds ago"}}
+    if (date_mod<3600){date_mod=Math.floor(date_mod/60);if(date_mod===1){date_mod+=" minute ago"}else{date_mod+=" minutes ago"}}
+    if (date_mod<86400){date_mod=Math.floor(date_mod/3600);if(date_mod===1){date_mod+=" hour ago"}else{date_mod+=" hours ago"}}
+    if (date_mod<31540000){date_mod=Math.floor(date_mod/86400);if(date_mod===1){date_mod+=" day ago"}else{date_mod+=" days ago"}}
+    if (date_mod>31540000){date_mod=Math.floor(date_mod/3.154e+10);if(date_mod===1){date_mod+=" year ago"}else{date_mod+=" years ago"}}
+
+    e=document.getElementById("lastupdate")
+    e.title = date_obj;
+    e.innerHTML = date_mod;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=stupied", true);
+xhttp.send();
+</script>

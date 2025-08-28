@@ -1,0 +1,108 @@
+<style>
+#rss { margin-top: 2rem; }
+
+.feed-item {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--darker-blue);
+    margin-bottom: 1rem;
+}
+
+.feed-item p:last-of-type { margin-bottom:0; }
+
+.feed-thumb { flex: 40%; }
+
+.feed-thumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feed-info {
+    flex: 60%;
+    padding: 0.5rem;
+}
+
+.feed-title { color: var(--yellow); }
+
+.feed-title span { display: none; }
+
+.feed-tag {
+    display: inline-block;
+    background-color: var(--gray);
+    border-radius: 1rem;
+    padding: 0.2rem;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    margin-bottom: 0.3rem;
+}
+
+.feed-date { color: var(--gray); }
+
+.feed-desc img { display: none; }
+.feed-desc > p:last-of-type { margin-bottom: 1rem; }
+.feed-desc ul { padding-left: 1.5rem; }
+
+.feed-desc > a:last-child, .feed-desc li > a {
+    display: inline-block;
+    font-family: var(--display-font);
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 550px) { #feed{columns:2;} }
+</style>
+
+<div id="feed"></div>
+
+<script defer>
+fetch("./../../feed.xml")
+.then((response) => response.text())
+.then((feed) => {
+    const parser = new DOMParser();
+    feed = parser.parseFromString(feed, "text/xml");
+    final = ""
+
+    feedItems = feed.querySelectorAll("item")
+    document.getElementById('feed_length').innerHTML = feedItems.length
+    for (i=0; i < feedItems.length ;i++){
+        title = getTitle(feedItems[i])
+        date = convDate(feedItems[i])
+        desc = feedItems[i].querySelector("description").innerHTML
+        thumb  = feedItems[i].querySelector("description img").getAttribute("src")
+        
+        result = `
+            <div class="feed-item">
+                <div class="feed-thumb tooltip">
+                    <span><img src="${thumb}" style="max-height:65vh"></span>
+                    <img src="${thumb}">
+                </div>
+                <div class="feed-info">
+                    <h4 class="feed-title">${title}</h4>
+                    <h5 class="feed-date">${date}</h5>
+                    <div class="feed-desc">${desc}</div>    
+                </div>
+            </div>
+        `
+        final += result
+    }
+    document.getElementById("feed").innerHTML = final
+
+    var script = document.createElement('script');
+    script.src = "./../js/tooltip.js";
+    document.head.appendChild(script);
+})
+
+function getTitle (e){
+    e = e.querySelector("title").innerHTML
+    result = e.replace("[","<span>#")
+    result = result.replace("]","</span>")
+    return result
+}
+
+function convDate(e){
+    e = e.querySelector("pubDate").innerHTML
+    result = e.slice(4, e.length - 13)
+    return result
+}
+</script>

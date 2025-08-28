@@ -1,0 +1,41 @@
+---
+layout: blog
+---
+<style>
+#stupied:target #c_inputDiv {display: block!important;}
+#c_widgetTitle { display: none; }
+
+@media only screen and (min-width: 500px) {
+    #c_container{columns:2;}
+}
+
+#c_container > div.c-unmoderated { display: none!important;}
+#c_container > div {
+    break-inside: avoid;
+    > img { display: block; }
+}
+
+#stickers img{
+    height: 7rem;
+    width: auto;
+}
+</style>
+<div id="stupied" class="main-content">
+    <h1>Microblog</h1>
+    <div id="c_widget" style="margin-top:0;"></div>
+</div>
+
+<script type="">
+years = [2025]
+
+current = {}
+current.year = window.location.search.replace("?","")
+if(current.year === ""){
+    current.year = years[0]
+    window.location.replace("./?" + current.year);
+}
+
+var script = document.createElement('script');
+script.src = "./micro.js";
+document.head.appendChild(script);
+</script>

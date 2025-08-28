@@ -1,0 +1,69 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page to share code I've made">
+    <link rel="stylesheet" href="/meta/css/main.css">
+    <title>Codez!! | stupied</title>
+
+<style>
+#container {
+    max-width: 380px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+section { margin-bottom: 1.5rem; }
+a[href="#"]{ color: gray; }
+a:not([href="#"]):hover { color: var(--accent-color); }
+li a:after {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+li a:hover:after{
+    opacity: 1;
+    transform: none;
+}
+</style>
+</head>
+<body class="default">
+    <main id="container">
+        <h1 style="color: var(--accent-color);">Codez!!</h1>
+        <p>I am very fond of DIY-ing stuff in javascript.</p>
+
+        <section>
+            <h2>Utility</h2>
+            <ul>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/gbpdEOE">Listography</a></li>
+                <li><a href="https://tabvoid.neocities.org/">Tabvoid - Bloggin</a></li>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/ByoamxX">JS Image Lightbox</a></li>
+                <li><a href="https://codepen.io/Stupiedidiot/pen/Byozeyq">Justified Gallery</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Archive</h2>
+            <ul>
+                <li><a href="https://stupiedidiot.github.io/archive/2023-05/">2023-05</a></li>
+                <li><a href="#" mew="https://stupiedidiot.github.io/archive/2023-05/">2024-03</a></li>
+                <li><a href="#" mew="https://stupiedidiot.github.io/archive/2023-05/">2024-10</a></li>
+                <li><a href="#" mew="https://stupiedidiot.github.io/archive/2023-05/">2025-04</a></li>
+            </ul>
+        </section>
+
+        <p>
+            Feel free to use my code - Credit is not needed. <br>
+            <span style="color: gray;">In fact, you should claim you made it!!</span>
+        </p>
+        <a href="/index.html">✮ Head Back »</a>
+    </main>
+</body>
+</html>

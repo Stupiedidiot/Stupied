@@ -1,0 +1,163 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Every single art piece uploaded on this website">
+  <link rel="stylesheet" href="./main.css">
+  <title>archive</title>
+<style>
+  #hell-yeah{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    padding:10px;
+  }
+
+  #hell-yeah a:nth-child(odd):hover{transform: scale(115%) rotate(3deg);}
+  #hell-yeah a:nth-child(even):hover{transform: scale(115%) rotate(-3deg);}
+
+  #hell-yeah a{
+    flex: 20%;
+    overflow: hidden;
+    min-width:150px;
+    border: 1px solid var(--accent-color);
+    border-radius:10px;
+    background-color: black;    
+    transition: 0.2s;
+  }
+
+  #hell-yeah img{
+    display:block;
+    aspect-ratio: 1/1;
+    width:100%;
+    object-fit: cover;
+
+  }
+
+  #hell-yeah span{
+    display: inline-block;
+    padding:0.5rem;
+    color: var(--brown);
+  }
+
+
+  #archive-buttons{
+    padding:1rem;
+    text-align: right;
+  }
+
+
+  @media only screen and (max-width: 650px) {
+    #hell-yeah a{
+      min-width:120px;
+    }
+  }
+
+  #download{
+    font-family: var(--display-font);
+    font-weight: bold;
+    &:hover{color:var(--blue);}
+  }
+</style>
+</head>
+<body>
+
+<div class="main-content">
+<h1>Art Archive <span id="meow"></span></h1>
+<div id="hell-yeah"></div>
+<div id="archive-buttons">
+  <button onclick="addItems(32)">Load More</button>
+  <button onclick="addItems(totalItem)">See EVERYTHING!!</button>
+</div>
+</div>
+
+<div id="aside-1-content">
+  <p>This page has every single art piece uploaded here,, Will add a sorting thing here eventually.</p>
+  <a href="https://drive.google.com/drive/folders/1ztrdHAutxasiE2v2o5Ni26qH1zHjyqEI?usp=sharing" id="download">Download Art »</a>
+</div>
+
+<script type="text/javascript" src="./main.js"></script>
+<script type="">
+counter=64
+loadItems(0,counter)
+
+  function addItems(add){
+    prevCounter=counter
+    counter+=add
+    if(counter>totalItem){
+      counter=totalItem;
+      document.getElementById("archive-buttons").style.display="none"
+    }
+    loadItems(prevCounter,counter)
+  }
+
+    function loadItems(start,counter){
+      fetch("./main.json")
+        .then((response) => response.json())
+        .then((art) => {
+            totalItem=art.length
+            document.getElementById("meow").innerHTML="(" + counter + "/" + totalItem + ")"
+            if(counter===undefined){counter=totalItem}
+            result=""
+
+            for(i=start; i<counter;i++){
+                  itemFolder=" "
+                  itemYear=art[i].img
+
+                  if(itemYear.includes("/")){
+                    itemSplit=itemYear.split("/")
+                    itemFolder+=itemSplit[0]
+                    itemYear=itemSplit[1]
+                  }
+                  itemYear=itemYear.slice(0,4)
+
+                  if(art[i].title!==undefined){
+                    title=art[i].title
+                  } else {
+                    e = art[i].img
+                    title = e
+                    if(e.includes("/")){title = e.slice(e.indexOf("/"),e.length)}
+                    title = title.slice(5,title.length-4)
+                    title = title.replaceAll("-"," ")
+                  }
+                  
+                  // add tags and sorting
+                  result+=`
+                  <a href="./~?` + art[i].img + `" class="` + itemYear + itemFolder + `">
+                  <div>
+                      <img src="./img/` + art[i].img + `" alt="">
+                      <span>` + title + `</span>
+                  </div>
+                  </a>`
+              }
+
+              document.getElementById("hell-yeah").innerHTML+=result
+
+              windowHeight = window.innerHeight
+              unloadedImgs = document.querySelectorAll("#hell-yeah img[src='#']");
+
+              //loadOnScroll()
+              //window.onscroll = loadOnScroll
+        })
+    }
+
+/**
+Decommissioning the lazy loading cuz it makes it feel sluggish :/
+
+function loadOnScroll(){ 
+  for (i=0; i < unloadedImgs.length ;i++) {
+    if (unloadedImgs[i].offsetTop - windowHeight < window.pageYOffset){
+        unloadedImgs[i].src=unloadedImgs[i].dataset.src
+    };
+  }
+};
+
+**/
+</script>
+</body>
+</html>

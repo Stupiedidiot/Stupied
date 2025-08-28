@@ -1,0 +1,93 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./meta/css/main.css">
+    <link rel="stylesheet" href="./meta/css/comment-widget.css">
+    <title>guestbook | stupied</title>
+<style>
+:root{
+    --yellow: #ffcb67;
+    --orange: #ec7239;
+    --gray: #6c6371;
+    --blue: #44a3c6;
+    --dark-blue: #142943;
+    --darker-blue:#0d0d1f;
+    --darkest-blue:#0c0716;
+    --accent-color: var(--yellow);
+    --display-font:grandstander;
+    --body-font:Arial, Helvetica, sans-serif;
+}
+
+.default{
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--dark-blue);
+    background-image: url(/meta/img/scribble.png);
+    color: white;
+}
+
+body {min-width: 300px;}
+
+body::after{
+    content: "";
+    display: block;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: color-mix(in hsl, var(--dark-blue), var(--darker-blue));
+    background-image: url(/meta/img/bg-doodles.png);
+    animation: sliding 240s linear infinite;
+
+}
+
+/* Fix sliding whenever I find the chance to lol */
+@keyframes sliding {
+    0% { background-position: -50% 150% }
+    100% { background-position: 150% -50%; }
+}
+
+#container{
+    max-width: 600px;
+    margin:auto;
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    box-shadow: 0 0 10px black;
+}
+
+h1{ color: var(--yellow); }
+
+#container > a { padding-left: 1rem; }
+#container > a:hover { color:var(--yellow); }
+
+#c_widget{
+    --bg-color: var(--darker-blue);
+    --text-color: white;
+    --form-bg: var(--dark-blue);
+    --form-border:black;
+    --form-color: white;
+    --padding: 1rem;
+}
+#c_widgetTitle { display: none; }
+</style>
+</head>
+<body class="default">
+    <div id="container" class="default">
+        <h1>Guestbook</h1>
+        <p>Tell me anything about whatever</p>
+        <div id="c_widget"></div>
+        <a href="./index.html">✮ Head Back »</a>
+    </div>
+
+<script src="./meta/comment-widget.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/blog/meta/main.css">
+<div id="container">
+    <!-- Navigation -->
+    <div id="nav">
+        <div>
+            <nav>
+                <a href="/blog/index">🏠︎</a>
+                <a href="/about/index.html#from-blog">about me</a>
+                <a href="/blog/archive">archive</a>
+                <a href="/blog/micro/">micro</a>
+                <a href="#" onclick="randomPost()">random</a>
+                <a href="/index.html">✮ head back »</a>
+                <div id="nextprev-dup"></div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main">
+        <div>
+            <a href="#">🢂</a>
+            Da Blog!!
+        </div>
+    </header>
+    <main class="page-content" aria-label="Content">
+    {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <a href="/about/index.html">about</a>
+            <a href="/map.html">map</a>
+            <a href="/blog/feed.xml">rss</a>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="/blog/meta/main.js"></script>
+<script type="">
+function randomPost(){
+    fetch("/blog/meta/posts.json")
+        .then((response) => response.json())
+        .then((posts) => {
+            randomNum = Math.floor(Math.random() * posts.length);
+            window.location.href = posts[randomNum]
+    })
+}
+</script>

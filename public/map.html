@@ -1,0 +1,264 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A linear outline of the content in this website">
+    <meta name="keywords" content="map, stupied map, stupied, stupiedidiot, stupied.idiot, stupied_idiot, art, comics, blog, tabvoid">
+    <link rel="stylesheet" href="./meta/css/main.css">
+    <title>Map | stupied</title>
+<style>
+:root{
+    --yellow: #ffcb67;
+    --orange: #ec7239;
+    --gray: #6c6371;
+    --blue: #44a3c6;
+    --dark-blue: #142943;
+    --darker-blue:#0d0d1f;
+    --darkest-blue:#0c0716;
+    --accent-color: var(--yellow);
+    --display-font:grandstander;
+    --body-font:Arial, Helvetica, sans-serif;
+}
+
+.default{
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--dark-blue);
+    background-image: url(/meta/img/scribble.png);
+    color: white;
+}
+
+body.default{ color: var(--yellow)!important; }
+
+#container {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+main {
+    max-width: 350px;
+}
+
+img {
+    display: block;
+    margin: 1rem 0;
+    width: 50%;
+}
+
+#list > a:before, #list > div > a:before {
+    content: "✮ ";
+}
+
+#list > a {
+    margin-bottom: 0.5rem;
+}
+
+#list a {
+    font-size: 1.5rem;
+    display: block;
+    font-family: var(--display-font);
+    position: relative;
+}
+
+#list a:after {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    display:inline-block;
+    margin-left: 0.5rem;
+    content: " »";
+    transition: 0.1s;
+}
+
+#list a:hover:after{
+    opacity: 1;
+    transform: none;
+}
+
+
+#list > div {
+    break-inside: avoid;
+}
+
+#list ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#list ul li {
+    color: white;
+    padding-left: 0.5rem;
+    list-style: "↳ "!important;
+}
+
+aside {
+    max-width: 300px;
+}
+
+aside > div {
+    top: 3rem ;
+    position: sticky;
+}
+#broken-link { margin-bottom: 3rem; }
+
+#broken-link p { color:white; }
+
+#broken-link:not(:target) .broken-text { display:none; }
+
+
+</style>
+</head>
+<body class="default">
+    <div id="container">
+        <main>
+            <img src="./meta/img/loss.png" alt="">
+            <div id="broken-link">
+                <h1>Henlo There!</h1>
+                <p class="broken-text">It appears the link you are attempting to access does not work.</p>
+                <p>This is a general outline of everything I have. If you are feeling lost, kindly consult it!</p>
+            </div>
+
+            <div id="list">
+                <a href="./index.html">Home</a>
+
+                <div id="about">
+                    <a href="./about/index.html">About</a>
+                    <ul>
+                        <li><a href="./about/listography.html">Listography</a></li>
+                    </ul>
+                </div>
+
+                <a href="#">Map <span style="color: var(--gray);">(You're Here!)</span></a>
+                <div id="gallery">
+                    <a href="./art/index.html">Gallery</a>
+                    <ul>
+                        <li><a href="./art/~">Most Recent</a></li>
+                        <li><a href="./art/archive">Archive</a></li>
+                    </ul>
+                </div>
+            
+                <div id="library">
+                    <a href="./comic/index.html">Library</a>
+                    <ul></ul>
+                </div>
+            
+                <div id="blog">
+                    <a href="./blog/index.html">Blog</a>
+                    <ul>
+                        <li><a href="./blog/archive.html">Archive</a></li>
+                        <li><a href="./blog/micro/index.html">Mirco</a></li>
+                    </ul>
+                </div>
+             
+                <div id="chez">
+                    <a href="./chez/index.html">Chez <span style="color: var(--gray);">(To Do)</span></a>
+                    <ul>
+                        <li><a href="#">Turbo (2013)</a></li>
+                        <li><a href="#">Ctrl-Alt-Delete</a></li>
+                        <li><a href="#">Raffidelle</a></li>
+                        <li><a href="https://southpark-webring.neocities.org/kyman/">Kyman</a></li>
+                    </ul>
+                </div>
+
+                <div id="drawin">
+                    <a href="https://drawin-club.neocities.org/">Drawin</a>
+                    <ul>
+                        <li><a href="https://drawin-club.neocities.org/rules">Rules</a></li>
+                        <li><a href="https://drawin-club.neocities.org/prompts/">Prompts</a></li>
+                        <li><a href="https://drawin-club.neocities.org/entries/">Entries</a></li>
+                        <li><a href="https://drawin-club.neocities.org/members/">Members</a></li>
+                        <li><a href="https://drawin-club.neocities.org/members/join">Join</a></li>
+                        <li><a href="https://drawin-club.neocities.org/meta/help">Help</a></li>
+                    </ul>
+                </div>
+
+                <div id="code">
+                    <a href="./code/index.html">Code</a>
+                    <ul>
+                        <li><a href="https://codepen.io/Stupiedidiot/pen/gbpdEOE">Listography</a></li>
+                        <li><a href="https://codepen.io/Stupiedidiot/pen/ByoamxX">JS Image Lightbox</a></li>
+                        <li><a href="https://codepen.io/Stupiedidiot/pen/Byozeyq">Justified Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div id="tabvoid">
+                    <a href="https://tabvoid.neocities.org/">Tabvoid</a>
+                    <ul>
+                        <li><a href="https://tabvoid.neocities.org/about">About</a></li>
+                        <li><a href="https://tabvoid.neocities.org/post/2024-11-17-Set-Up">Setup</a></li>
+                        <li><a href="https://tabvoid.neocities.org/post/0000-00-00-Themes">Themes</a></li>
+                        <li><a href="https://tabvoid.neocities.org/demo/">Live Demo</a></li>
+                        <li><a href="https://tabvoid.neocities.org/archive">Archive</a></li>
+                        <li><a href="https://tabvoid.neocities.org/bug">Help</a></li>
+                    </ul>
+                </div>
+
+                <div id="webrings">
+                    <a href="#webrings">Webrings <span style="color: var(--gray);">(To Do)</span></a>
+                    <ul>
+                        <li><a href="https://southpark-webring.neocities.org/">South Park</a></li>
+                        <li><a href="https://neoflat.neocities.org/">neoflat</a></li>
+                    </ul>
+                </div>
+
+                <div id="ocs">
+                    <a href="https://stupied-ocs.neocities.org/">My OCs</a>
+                    <ul>
+                        <li><a href="https://stupied-ocs.neocities.org/psych/">Psych</a></li>
+                        <li><a href="https://stupied-ocs.neocities.org/eighty-four/">Pinwin</a></li>
+                        <li><a href="https://stupied-ocs.neocities.org/pepup/">Pepup</a></li>
+                        <li><a href="https://stupied-ocs.neocities.org/gayme/">Gayme</a></li>
+                        <li><a href="https://stupied-ocs.neocities.org/misc/">Misc</a></li>
+                    </ul>
+                </div>
+
+                <div id="dawgtown">
+                    <a href="https://dawgtown.neocities.org/">Dawgtown <span style="color: var(--gray);">(To Do)</span></a>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+
+                <div id="commissions">
+                    <a href="https://stupied-portfolio.neocities.org/">Shop</a>
+                    <ul>
+                        <li><a href="https://stupied-portfolio.neocities.org/c/">Commission</a></li>
+                        <li><a href="https://stupied-portfolio.neocities.org/a/">Adoptables</a></li>
+                        <li><a href="https://stupied-portfolio.neocities.org/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div id="changelog">
+                    <a href="./meta/log/index.html">Changelog</a>
+                    <ul>
+                        <li><a href="./feed.xml">RSS</a></li>
+                    </ul>
+                </div>
+                
+                <a href="./guestbook.html">Guestbook</a>
+                <a href="./outlinks/index.html">Outlinks</a>
+            </div>
+        </main>
+    </div>
+
+<script src="./comic/main.js"></script>
+<script>
+    libraryHTML = ""
+    for (i = 0; i < masterlist.length; i++){
+        current = masterlist[i]
+        currentTitle = masterlist[i].title
+        currentLink = "./comic/" + masterlist[i].volume + "/index.html"
+        libraryHTML += '<li><a href="' + currentLink + '">' + currentTitle + '</a></li>'
+    }
+    document.querySelector("#library > ul").innerHTML = libraryHTML
+
+    // for troubleshooting lol   
+    console.log("Prev: " + document.referrer)
+</script>
+</body>
+</html>

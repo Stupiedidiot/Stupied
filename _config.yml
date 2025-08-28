@@ -1,0 +1,21 @@
+url: "https://stupied.neocities.org" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "stupied stuff!" # the name of your site, e.g. ACME Corp.
+description: "Website for me to scream into the void to"
+
+# Build settings
+source: public
+destination: _site
+
+plugins:
+  - jekyll-minifier
+  - jekyll-datapage-generator
+
+jekyll-minifier:
+  compress_css: false
+  compress_javascript: false
+  exclude: feed.xml
+
+collections:
+  posts:
+    permalink: /blog/:categories/:year-:title

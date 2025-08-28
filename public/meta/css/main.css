@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --wheat: #fff0d7;
+    --dk-blue: #001745;
+    --accent-color: #0ebde4;
+    --display-font:grandstander;
+    --body-font:Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding:0;margin:0;
+    font-family:var(--body-font);
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    font-family:var(--display-font);
+}
+
+ol,ul{margin-top:0;}
+a{text-decoration:none;color:inherit;}
+p{margin-top:0;}
+
+p > a {
+    text-decoration:underline;
+}
+
+hr.clear{
+    margin:0;
+    border:0;
+    clear:both;
+}
+
+p:last-child,ol:last-child,ul:last-child{
+    margin-bottom:0;
+}
+
+ul li {list-style-type:"★ ";}
+ul > *:nth-child(2n){list-style-type:"✮ ";}
+
+.outline, .outline-hover:hover {
+    --color:white;
+    --width:2px;
+    --width-negative: -2px; 
+    filter:
+    drop-shadow(var(--width)0 0 var(--color))
+    drop-shadow(var(--width-negative) 0 0 var(--color))
+    drop-shadow(0 var(--width)0 var(--color))
+    drop-shadow(0 var(--width-negative) 0 var(--color));
+}
+
+.justified-gallery {
+    --space: 5px;
+    --min-height: 200px;
+}
+
+.justified-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: var(--space);
+    list-style: none;
+}
+
+.justified-gallery > *{
+    width:100%;
+    flex-grow: calc(var(--width) * (100000 / var(--height)));
+    flex-basis: calc(var(--min-height) * (var(--width) / var(--height)));
+    aspect-ratio: var(--width) / var(--height);
+    position: relative;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.justified-gallery > * > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.yt-embed {
+    --embed-thumb: unset;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.yt-embed > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yt-embed > button {
+    transition: 0.5s;
+    content: "";
+    display: block;
+    z-index: 100;
+    position: absolute;
+    top:0;
+    background-image: var(--embed-thumb);
+    background-color: unset;
+    background-size: 100%;
+    background-position: center;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+        content: var(--embed-title);
+        position: absolute;
+        display: block;
+        color: white;
+        font-family: var(--display-font);
+        font-size: 1.5rem;
+        left: 0.5rem;
+        bottom: 0.5rem;
+        --color:black;
+        --width:2px;
+        filter:drop-shadow(var(--width)0 0 var(--color))drop-shadow(calc(-1*var(--width))0 0 var(--color))drop-shadow(0 var(--width)0 var(--color))drop-shadow(0 calc(-1*var(--width)) 0 var(--color))
+    }
+
+    &:hover { background-size: 110%; }
+}
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+}
+.tooltip span {
+    color: #000;
+    display:none;
+    background: #fff;
+    outline: 1px solid #000;
+    padding: 0.3rem;
+    z-index: 100;
+}
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+    z-index: 1000;
+}
+
+.tape {
+    height: 10%;
+    position: relative;
+    z-index: 2;
+    --scale: 100%;
+    --y-offset: 0;
+    --rotate: 0;
+    --skew: 0;
+    transform:translateY(var(--y-offset)) rotate(var(--rotate)) skew(var(--skew)) scale(var(--scale));
+}
+
+.tape::after {
+    content: "";
+    display: block;
+    background-image: url(/meta/img/tape.png);
+    background-size: auto 200%;
+    height:100%;
+    max-height:4rem;
+    animation:scroll-right 60s infinite linear;
+}
+
+@keyframes scroll-right {
+    0%{ background-position: 0; }
+    100%{ background-position: 100%; }
+}
+
+.float-right{float:right;margin-left:1rem;margin-bottom:1rem;display:block;}
+.float-left{float:left;margin-right:1rem;margin-bottom:1rem;display:block;}
+
+@media only screen and (max-width: 450px) {
+.float-right,.float-left{float:none;margin:1rem auto;}
+}
+
+@media only screen and (min-width: 450px) {
+    .db-list{columns:2;}
+}
+
+.txt-left{text-align: left;}
+.txt-center{text-align: center;}
+.txt-right{text-align: right;}
+    
+.highlight{
+    background-color:var(--orange);
+    padding:0.5rem;
+    margin-bottom:0.5rem;
+}
+
+.checklist > li { list-style-type: "□ "; }
+
+.x { 
+    text-decoration: line-through;
+    list-style-type: "■ "!important;
+}
+
+::selection{
+    background-color: var(--yellow);
+    color:var(--darkest-blue);
+}
